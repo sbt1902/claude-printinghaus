@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Printing Haus Homepage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#F9F7F3}
+img{max-width:100%;display:block}
+.brxe-section{display:flex;flex-direction:column;align-items:center;width:100%}
+.brxe-container{display:flex;flex-direction:column;align-items:flex-start;width:1100px;max-width:100%;margin:0 auto}
+.brxe-block{display:flex;flex-direction:column;width:100%}
+.brxe-button{display:inline-flex}
+.brxe-text-link{display:inline-flex}
+
+
+.ph-section {
+  --ph-paper: #F9F7F3;
+  --ph-ink: #0A0A0A;
+  --ph-sand: #E8E1D6;
+  --ph-stone: #D6D1CA;
+  --ph-olive: #6B6A5A;
+  --ph-muted: #777069;
+  --ph-oxblood: #54151B;
+  --ph-midnight: #1636D9;
+  --ph-blush: #E7C9D2;
+  --ph-chartreuse: #C6D600;
+  --ph-sans: "Neue Haas Grotesk Display", "neue-haas-grotesk-display", "Neue Haas Grotesk Text", "neue-haas-grotesk-text", "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ph-serif: "Tiempos Headline", "Tiempos Text", "Newsreader", Georgia, "Times New Roman", serif;
+  --ph-gutter: clamp(20px, 5vw, 72px);
+  --ph-space: clamp(80px, 11vw, 160px);
+  --ph-max: 1360px;
+
+  width: 100%;
+  padding: var(--ph-space) var(--ph-gutter);
+  background: var(--ph-paper);
+  color: var(--ph-ink);
+  font-family: var(--ph-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.ph-section *, .ph-section *::before, .ph-section *::after { box-sizing: border-box; }
+:where(.ph-section a) { color: inherit; }
+
+.ph-section--sand { background: var(--ph-sand); }
+.ph-section--ink { background: var(--ph-ink); color: var(--ph-paper); }
+.ph-section--oxblood { background: var(--ph-oxblood); color: var(--ph-paper); }
+.ph-section--tight { padding-top: 0; padding-bottom: 0; }
+
+.ph-container {
+  width: 100%;
+  max-width: var(--ph-max);
+  margin: 0 auto;
+}
+
+
+.ph-eyebrow {
+  margin: 0 0 28px;
+  font-family: var(--ph-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ph-olive);
+}
+
+.ph-eyebrow--light { color: var(--ph-stone); }
+
+.ph-h2 {
+  margin: 0;
+  max-width: 16ch;
+  font-family: var(--ph-sans);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+.ph-h2 em { font-family: var(--ph-serif); font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+
+
+.ph-lead {
+  margin: 0;
+  max-width: 46ch;
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.55;
+  color: inherit;
+  opacity: 0.82;
+}
+
+
+.ph-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 4px;
+  transition: gap .25s ease, opacity .25s ease;
+}
+.ph-link:hover { gap: 16px; opacity: .7; }
+
+
+.ph-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 54px;
+  padding: 0 30px;
+  border: 1px solid var(--ph-ink);
+  border-radius: 999px;
+  font-family: var(--ph-sans);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+}
+.ph-btn:hover { transform: translateY(-2px); }
+.ph-btn:focus-visible { outline: 2px solid var(--ph-midnight); outline-offset: 3px; }
+
+
+.ph-btn--dark { background: var(--ph-ink); color: var(--ph-paper); }
+.ph-btn--dark:hover { background: var(--ph-oxblood); border-color: var(--ph-oxblood); color: var(--ph-paper); }
+
+
+.ph-btn--ghost { background: transparent; color: var(--ph-ink); }
+.ph-btn--ghost:hover { background: var(--ph-ink); color: var(--ph-paper); }
+
+
+.ph-btn--light { background: var(--ph-paper); color: var(--ph-ink); border-color: var(--ph-paper); }
+.ph-btn--light:hover { background: var(--ph-blush); border-color: var(--ph-blush); color: var(--ph-ink); }
+
+
+.ph-btn--ghost-light { background: transparent; color: var(--ph-paper); border-color: rgba(249,247,243,.5); }
+.ph-btn--ghost-light:hover { background: var(--ph-paper); color: var(--ph-ink); border-color: var(--ph-paper); }
+
+
+.ph-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+
+
+.ph-media {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 2px;
+  background:
+    radial-gradient(120% 80% at 20% 15%, rgba(255,255,255,.55), transparent 60%),
+    linear-gradient(160deg, var(--ph-sand) 0%, var(--ph-stone) 100%);
+}
+.ph-media img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+
+.ph-media--blush { background: linear-gradient(160deg, #F1DDE3 0%, var(--ph-blush) 100%); }
+.ph-media--olive { background: linear-gradient(160deg, #8C8B7A 0%, var(--ph-olive) 100%); }
+.ph-media--oxblood { background: linear-gradient(160deg, #6E2229 0%, #3E0F14 100%); }
+.ph-media--wide { aspect-ratio: 16 / 10; }
+.ph-media--square { aspect-ratio: 1 / 1; }
+
+.ph-hero { padding-top: clamp(48px, 7vw, 110px); padding-bottom: clamp(56px, 7vw, 110px); }
+
+
+.ph-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: end;
+}
+@media (max-width: 991px) { .ph-hero__grid { grid-template-columns: 1fr; } }
+
+
+.ph-hero__title {
+  margin: 0;
+  font-family: var(--ph-sans);
+  font-size: clamp(54px, 8.4vw, 132px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+.ph-hero__title em {
+  display: block;
+  font-family: var(--ph-serif);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: -0.03em;
+  color: var(--ph-oxblood);
+}
+
+.ph-hero__lead { margin-top: 36px; }
+
+.ph-hero__visual { position: relative; }
+
+
+.ph-hero__tag {
+  position: absolute;
+  left: clamp(-56px, -4vw, -16px);
+  bottom: 40px;
+  max-width: 230px;
+  padding: 22px 24px;
+  background: var(--ph-paper);
+  box-shadow: 0 30px 60px -30px rgba(10,10,10,.35);
+}
+.ph-hero__tag p { margin: 0; }
+@media (max-width: 991px) { .ph-hero__tag { left: 16px; bottom: 16px; } }
+
+
+.ph-hero__tag-title { margin: 0 0 6px; font-family: var(--ph-serif); font-style: italic; font-size: 24px; line-height: 1.1; }
+
+.ph-hero__tag-text { font-size: 13px; line-height: 1.5; color: var(--ph-muted); }
+
+.ph-hero__points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: clamp(56px, 7vw, 96px);
+  padding-top: 28px;
+  border-top: 1px solid var(--ph-stone);
+}
+@media (max-width: 767px) { .ph-hero__points { grid-template-columns: 1fr; gap: 16px; } }
+
+
+.ph-point { margin: 0; font-size: 14px; line-height: 1.5; color: var(--ph-muted); }
+.ph-point strong { display: block; margin-bottom: 4px; font-weight: 500; color: var(--ph-ink); letter-spacing: 0.01em; }
+
+
+.ph-marquee {
+  overflow: hidden;
+  padding: 22px 0;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+
+.ph-marquee__track {
+  display: inline-flex;
+  margin: 0;
+  font-size: clamp(18px, 2vw, 26px);
+  letter-spacing: -0.01em;
+  animation: ph-marquee 38s linear infinite;
+}
+.ph-marquee__track span { padding: 0 28px; }
+.ph-marquee__track span:nth-child(even) { font-family: var(--ph-serif); font-style: italic; color: var(--ph-stone); }
+.ph-marquee__track i { font-style: normal; color: var(--ph-chartreuse); }
+@keyframes ph-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ph-marquee__track { animation: none; } }
+
+
+.ph-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+.ph-head__aside { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; max-width: 420px; }
+
+.ph-cards {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 44px) clamp(16px, 2vw, 28px);
+}
+.ph-cards > :nth-child(-n+2) { grid-column: span 3; }
+.ph-cards > :nth-child(n+3) { grid-column: span 2; }
+.ph-cards > :nth-child(-n+2) .ph-media { aspect-ratio: 5 / 4; }
+@media (max-width: 991px) {
+  .ph-cards > :nth-child(n) { grid-column: span 3; }
+  .ph-cards > :last-child { grid-column: 1 / -1; }
+  .ph-cards > :last-child .ph-media { aspect-ratio: 16 / 9; }
+}
+@media (max-width: 600px) { .ph-cards > :nth-child(n) { grid-column: 1 / -1; } }
+
+
+.ph-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: inherit;
+  text-decoration: none;
+}
+.ph-card:hover .ph-media img { transform: scale(1.04); }
+.ph-card:hover .ph-card__more { gap: 16px; }
+
+
+.ph-card__meta { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+
+
+.ph-card__title { margin: 0; font-size: clamp(20px, 1.8vw, 26px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; }
+
+.ph-card__num { margin: 0; font-size: 12px; letter-spacing: .16em; color: var(--ph-muted); }
+.ph-card__text { margin: 0; max-width: 40ch; font-size: 15px; line-height: 1.55; color: var(--ph-muted); }
+
+.ph-card__more { display: inline-flex; gap: 10px; font-size: 14px; font-weight: 500; transition: gap .25s ease; }
+
+
+.ph-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(40px, 7vw, 120px);
+  align-items: center;
+}
+@media (max-width: 991px) { .ph-split { grid-template-columns: 1fr; } }
+
+
+.ph-split--reverse > :first-child { order: 2; }
+@media (max-width: 991px) { .ph-split--reverse > :first-child { order: 0; } }
+
+
+.ph-statement {
+  margin: 0;
+  font-family: var(--ph-serif);
+  font-size: clamp(44px, 6.4vw, 104px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+.ph-statement em { font-style: italic; color: var(--ph-blush); }
+
+.ph-stack { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
+
+.ph-details {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(10,10,10,.18);
+}
+@media (max-width: 991px) { .ph-details { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .ph-details { grid-template-columns: 1fr; } }
+
+
+.ph-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 32px 28px 8px 0;
+}
+.ph-detail + .ph-detail { padding-left: 28px; border-left: 1px solid rgba(10,10,10,.18); }
+@media (max-width: 991px) {
+  .ph-detail, .ph-detail + .ph-detail { padding: 32px 24px 24px 0; border-left: 0; border-bottom: 1px solid rgba(10,10,10,.18); }
+}
+
+
+.ph-detail__num { margin: 0 0 24px; font-family: var(--ph-serif); font-style: italic; font-size: 40px; line-height: 1; color: var(--ph-oxblood); }
+
+.ph-detail__title { margin: 0; font-size: 20px; font-weight: 500; letter-spacing: -0.01em; }
+.ph-detail__text { margin: 0; font-size: 15px; line-height: 1.6; color: #4C4A44; }
+
+.ph-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 48px);
+  counter-reset: ph-step;
+}
+@media (max-width: 991px) { .ph-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .ph-steps { grid-template-columns: 1fr; } }
+
+
+.ph-step { display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid var(--ph-ink); }
+
+.ph-step__num { margin: 0 0 18px; font-size: 13px; letter-spacing: .16em; color: var(--ph-muted); }
+.ph-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+
+.ph-tag {
+  margin: 0;
+  padding: 9px 16px;
+  border: 1px solid var(--ph-stone);
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--ph-ink);
+  background: rgba(255,255,255,.4);
+}
+
+.ph-cta { text-align: center; }
+.ph-cta__inner { display: flex; flex-direction: column; align-items: center; }
+
+.ph-cta__title {
+  margin: 0;
+  font-family: var(--ph-sans);
+  font-size: clamp(48px, 9vw, 150px);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+}
+.ph-cta__title em {
+  font-family: var(--ph-serif);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: -0.03em;
+  color: var(--ph-blush);
+}
+
+.ph-cta__lead { margin: 36px auto 0; text-align: center; }
+.ph-actions--center { justify-content: center; }</style></head>
+<body><section class="brxe-section ph-section ph-hero"><div class="brxe-container ph-container"><div class="brxe-div ph-hero__grid"><div class="brxe-div"><p class="brxe-text-basic ph-eyebrow">Printing Haus &mdash; Design-led print studio</p><h1 class="brxe-heading ph-hero__title">Good ideas look <em>better printed.</em></h1><p class="brxe-text-basic ph-lead ph-hero__lead">Business cards, stationery, invitations and packaging, thoughtfully produced on beautiful paper. Made to be held onto.</p><div class="brxe-div ph-actions"><a class="brxe-button ph-btn ph-btn--dark" href="/shop/">Start your order</a><a class="brxe-button ph-btn ph-btn--ghost" href="/design-studio/">Book a design consult</a></div></div><div class="brxe-div ph-hero__visual"><div class="brxe-div ph-media"></div><div class="brxe-div ph-hero__tag"><p class="brxe-text-basic ph-hero__tag-title">Details you can feel.</p><p class="brxe-text-basic ph-hero__tag-text">Foil, emboss and letterpress finishes on considered stocks.</p></div></div></div><div class="brxe-div ph-hero__points"><p class="brxe-text-basic ph-point"><strong>Considered paper</strong>Stocks chosen for how they look and how they feel in hand.</p><p class="brxe-text-basic ph-point"><strong>Specialty finishes</strong>Foil, embossing and letterpress for the moments that deserve them.</p><p class="brxe-text-basic ph-point"><strong>Design support</strong>Bring your files, or let our studio shape the idea with you.</p></div></div></section><section class="brxe-section ph-section ph-section--ink ph-section--tight"><div class="brxe-div ph-marquee"><div class="brxe-text-basic ph-marquee__track"><span>Letterpress</span><i aria-hidden="true">/</i><span>Foil stamping</span><i aria-hidden="true">/</i><span>Blind embossing</span><i aria-hidden="true">/</i><span>Painted edges</span><i aria-hidden="true">/</i><span>Duplex stocks</span><i aria-hidden="true">/</i><span>Cotton paper</span><i aria-hidden="true">/</i><span>Die cutting</span><i aria-hidden="true">/</i><span>Spot gloss</span><i aria-hidden="true">/</i><span>Letterpress</span><i aria-hidden="true">/</i><span>Foil stamping</span><i aria-hidden="true">/</i><span>Blind embossing</span><i aria-hidden="true">/</i><span>Painted edges</span><i aria-hidden="true">/</i><span>Duplex stocks</span><i aria-hidden="true">/</i><span>Cotton paper</span><i aria-hidden="true">/</i><span>Die cutting</span><i aria-hidden="true">/</i><span>Spot gloss</span><i aria-hidden="true">/</i></div></div></section><section class="brxe-section ph-section"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-eyebrow">01 / The collection</p><h2 class="brxe-heading ph-h2">Printed matter, <em>thoughtfully</em> produced.</h2></div><div class="brxe-div ph-head__aside"><p class="brxe-text-basic ph-lead">From the card you hand over to the box it arrives in, every piece is designed to make a quiet, lasting impression.</p><a class="brxe-text-link ph-link" href="/shop/">Shop everything &rarr;</a></div></div><div class="brxe-div ph-cards"><a class="brxe-div ph-card" href="/product-category/business-cards/"><div class="brxe-div ph-media"></div><div class="brxe-div ph-card__meta"><h3 class="brxe-heading ph-card__title">Business cards &amp; stationery</h3><p class="brxe-text-basic ph-card__num">01</p></div><p class="brxe-text-basic ph-card__text">First impressions, weighted properly. Cards, letterheads and notecards on stocks worth keeping.</p><span class="brxe-text-basic ph-card__more">Explore &rarr;</span></a><a class="brxe-div ph-card" href="/product-category/invitations/"><div class="brxe-div ph-media ph-media--blush"></div><div class="brxe-div ph-card__meta"><h3 class="brxe-heading ph-card__title">Invitations &amp; correspondence</h3><p class="brxe-text-basic ph-card__num">02</p></div><p class="brxe-text-basic ph-card__text">For the dates that matter. Suites, save-the-dates and thank-yous with a sense of occasion.</p><span class="brxe-text-basic ph-card__more">Explore &rarr;</span></a><a class="brxe-div ph-card" href="/product-category/packaging/"><div class="brxe-div ph-media ph-media--olive"></div><div class="brxe-div ph-card__meta"><h3 class="brxe-heading ph-card__title">Packaging &amp; collateral</h3><p class="brxe-text-basic ph-card__num">03</p></div><p class="brxe-text-basic ph-card__text">Boxes, sleeves, tags and stickers that make the unboxing part of the brand.</p><span class="brxe-text-basic ph-card__more">Explore &rarr;</span></a><a class="brxe-div ph-card" href="/product-category/art-prints/"><div class="brxe-div ph-media"></div><div class="brxe-div ph-card__meta"><h3 class="brxe-heading ph-card__title">Art prints &amp; specialty finishes</h3><p class="brxe-text-basic ph-card__num">04</p></div><p class="brxe-text-basic ph-card__text">Gallery-quality prints and finishing touches you notice with your fingertips.</p><span class="brxe-text-basic ph-card__more">Explore &rarr;</span></a><a class="brxe-div ph-card" href="/design-studio/"><div class="brxe-div ph-media ph-media--oxblood"></div><div class="brxe-div ph-card__meta"><h3 class="brxe-heading ph-card__title">Bespoke design studio</h3><p class="brxe-text-basic ph-card__num">05</p></div><p class="brxe-text-basic ph-card__text">No artwork yet? Our designers will take you from idea to print-ready.</p><span class="brxe-text-basic ph-card__more">Explore &rarr;</span></a></div></div></section><section class="brxe-section ph-section ph-section--oxblood"><div class="brxe-container ph-container"><div class="brxe-div ph-split"><div class="brxe-div ph-media ph-media--square"></div><div class="brxe-div ph-stack"><p class="brxe-text-basic ph-eyebrow ph-eyebrow--light">Our approach</p><h2 class="brxe-heading ph-statement">Made to be <em>held onto.</em></h2><p class="brxe-text-basic ph-lead">Print is the part of your brand people can pick up. So we sweat the small things: the weight of the stock, the bite of the press, the edge of the card. Elevated, never precious, and always within reach.</p><a class="brxe-button ph-btn ph-btn--light" href="/finishes/">Explore our finishes</a></div></div></div></section><section class="brxe-section ph-section ph-section--sand"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-eyebrow">02 / Details you can feel</p><h2 class="brxe-heading ph-h2">The difference is in <em>the details.</em></h2></div><div class="brxe-div ph-head__aside"><p class="brxe-text-basic ph-lead">Not sure what to choose? Here's what we consider on every job, and we're always happy to talk it through.</p></div></div><div class="brxe-div ph-details"><div class="brxe-div ph-detail"><p class="brxe-text-basic ph-detail__num">i.</p><h3 class="brxe-heading ph-detail__title">Paper</h3><p class="brxe-text-basic ph-detail__text">Cotton, textured and recycled stocks, chosen for colour, weight and how they feel in hand.</p></div><div class="brxe-div ph-detail"><p class="brxe-text-basic ph-detail__num">ii.</p><h3 class="brxe-heading ph-detail__title">Finish</h3><p class="brxe-text-basic ph-detail__text">Foil, blind embossing, letterpress and painted edges, used with restraint for maximum effect.</p></div><div class="brxe-div ph-detail"><p class="brxe-text-basic ph-detail__num">iii.</p><h3 class="brxe-heading ph-detail__title">Colour</h3><p class="brxe-text-basic ph-detail__text">Warm neutrals and curated accents, matched carefully and checked before anything goes to press.</p></div><div class="brxe-div ph-detail"><p class="brxe-text-basic ph-detail__num">iv.</p><h3 class="brxe-heading ph-detail__title">Craft</h3><p class="brxe-text-basic ph-detail__text">A real person reviews every file, so what arrives is exactly what you imagined.</p></div></div></div></section><section class="brxe-section ph-section"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-eyebrow">03 / How it works</p><h2 class="brxe-heading ph-h2">From idea to <em>in hand.</em></h2></div><div class="brxe-div ph-head__aside"><a class="brxe-button ph-btn ph-btn--dark" href="/shop/">Start your order</a></div></div><div class="brxe-div ph-steps"><div class="brxe-div ph-step"><p class="brxe-text-basic ph-step__num">Step 01</p><h3 class="brxe-heading ph-detail__title">Choose your piece</h3><p class="brxe-text-basic ph-detail__text">Browse the collection and pick your format, paper and finish.</p></div><div class="brxe-div ph-step"><p class="brxe-text-basic ph-step__num">Step 02</p><h3 class="brxe-heading ph-detail__title">Upload or design with us</h3><p class="brxe-text-basic ph-detail__text">Send print-ready artwork, or brief our studio and we'll design it for you.</p></div><div class="brxe-div ph-step"><p class="brxe-text-basic ph-step__num">Step 03</p><h3 class="brxe-heading ph-detail__title">Approve your proof</h3><p class="brxe-text-basic ph-detail__text">We check your file and share a proof. Nothing prints until you're happy.</p></div><div class="brxe-div ph-step"><p class="brxe-text-basic ph-step__num">Step 04</p><h3 class="brxe-heading ph-detail__title">Printed &amp; delivered</h3><p class="brxe-text-basic ph-detail__text">Carefully produced, packed with care and sent to your door.</p></div></div></div></section><section class="brxe-section ph-section ph-section--sand"><div class="brxe-container ph-container"><div class="brxe-div ph-split ph-split--reverse"><div class="brxe-div ph-media ph-media--blush"></div><div class="brxe-div ph-stack"><p class="brxe-text-basic ph-eyebrow">04 / The Haus studio</p><h2 class="brxe-heading ph-h2">Need a designer? <em>We'd love to help.</em></h2><p class="brxe-text-basic ph-lead">From a single business card to a full identity and packaging system, our studio turns good ideas into things worth printing. Clear advice, no jargon, and a finished piece you'll be proud to hand over.</p><div class="brxe-div ph-tags"><span class="brxe-text-basic ph-tag">Small businesses</span><span class="brxe-text-basic ph-tag">Weddings &amp; events</span><span class="brxe-text-basic ph-tag">Studios &amp; agencies</span><span class="brxe-text-basic ph-tag">Hospitality</span><span class="brxe-text-basic ph-tag">Makers &amp; retail</span></div><a class="brxe-button ph-btn ph-btn--dark" href="/design-studio/">Book a design consult</a></div></div></div></section><section class="brxe-section ph-section ph-section--ink ph-cta"><div class="brxe-container ph-container"><div class="brxe-div ph-cta__inner"><p class="brxe-text-basic ph-eyebrow ph-eyebrow--light">Let's make something</p><h2 class="brxe-heading ph-cta__title">Good ideas look <em>better printed.</em></h2><p class="brxe-text-basic ph-lead ph-cta__lead">Tell us what you're working on and we'll help you choose the paper, finish and format to bring it to life.</p><div class="brxe-div ph-actions ph-actions--center"><a class="brxe-button ph-btn ph-btn--light" href="/shop/">Start your order</a><a class="brxe-button ph-btn ph-btn--ghost-light" href="/contact/">Talk to the studio</a></div></div></div></section></body></html>
