@@ -52,6 +52,29 @@ If the selector doesn't appear, add a Shortcode element with `[phs_selector]` ab
 the [Confirm] finishes in the guide, and delivery times in each shipping method. The delivery estimate only
 appears when those times are set.
 
+## Printing Haus Site plugin (stylesheet + checkout)
+
+`wordpress/printing-haus-site.zip` is a small WordPress plugin. Install it under **Plugins → Add New → Upload Plugin**.
+
+- **Loads the brand stylesheet on every page** (`assets/printinghaus.css`, a copy of `bricks/printinghaus.css`) plus the
+  interim fonts. Once it's active, clear the Bricks **Custom CSS** box so the styles aren't loaded twice.
+- **Shopify-style checkout** (classic WooCommerce checkout):
+  - Two columns: contact, billing and delivery fields, then **Payment** on the left. A sticky grey **Order summary**
+    on the right shows product thumbnails, print specs from Printing Haus Selector, shipping options with
+    delivery estimates, and a large total.
+  - Clean 48px fields with a subtle radius and a black focus ring, payment methods in one bordered list, and a
+    full-width **Pay now** button.
+  - The header menu is hidden on checkout, so only the logo, account and cart show. Delete the first rule in `assets/checkout.css` to keep the menu.
+  - On phones, the order summary sits above the form.
+- PHP changes: payment moves under the address fields, with an "Order summary" heading, thumbnails in the summary,
+  "Pay now" button text, and "Billing details" renamed to "Contact & billing". None of this changes how orders,
+  payment gateways or the selector plugin work.
+
+If the checkout page uses the WooCommerce **Checkout block** instead of the classic checkout, none of this applies.
+Switch the page to the `[woocommerce_checkout]` shortcode, or ask for block-checkout styles.
+
+Preview: `preview/checkout.html`.
+
 ## Visual system
 
 - **Type:** Tiempos (editorial serif) for headlines and Neue Haas Grotesk for body, navigation and labels.

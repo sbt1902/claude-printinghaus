@@ -1210,8 +1210,18 @@ if __name__ == "__main__":
         path = HERE / f"printinghaus-{key}.bricks.json"
         path.write_text(json.dumps(build_json(key), indent=2, ensure_ascii=False) + "\n")
         print("wrote", path.relative_to(HERE.parent))
-    (HERE / "printinghaus.css").write_text(build_css())
+    css = build_css()
+    (HERE / "printinghaus.css").write_text(css)
     print("wrote bricks/printinghaus.css")
+    # Same stylesheet inside the Printing Haus Site plugin (fonts are enqueued there, so no @import)
+    plugin = HERE.parent / "wordpress" / "printing-haus-site"
+    (plugin / "assets" / "printinghaus.css").write_text(css.split("\n", 1)[1] if css.startswith("@import") else css)
+    import zipfile
+    with zipfile.ZipFile(plugin.parent / "printing-haus-site.zip", "w", zipfile.ZIP_DEFLATED) as z:
+        for f in sorted(plugin.rglob("*")):
+            if f.is_file():
+                z.write(f, f.relative_to(plugin.parent))
+    print("wrote wordpress/printing-haus-site.zip")
     OUT_PREVIEW.parent.mkdir(parents=True, exist_ok=True)
     OUT_PREVIEW.write_text(page("Printing Haus Homepage", HEADER + HOME + FOOTER))
     (OUT_PREVIEW.parent / "product.html").write_text(page("Printing Haus Product", HEADER + PRODUCT + FOOTER))
