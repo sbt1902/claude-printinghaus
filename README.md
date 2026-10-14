@@ -79,6 +79,26 @@ appears when those times are set.
 4. Add a second **Shortcode** element below it containing `[ph_checkout_coupon]`.
 5. Save, and test with a real code and an address that has several shipping options.
 
+### USPS address check
+
+When a customer clicks **Pay now**, the delivery address (US and territories) is checked with the USPS Addresses API
+before payment:
+
+- **USPS has a better version.** A dialog shows **Suggested** next to **As entered**, and the customer picks one. Small
+  differences such as "Street" vs "St" or a missing ZIP+4 pass silently.
+- **Mixed-up fields** (neighborhood in Street address, street in Apartment, a common autocomplete slip) are detected.
+  The street is offered back in the right field.
+- **Building needs a unit:** "Add your apartment or suite?" offers **Add unit number** or **Continue without**.
+- **Not found:** "We couldn't find this address" offers **Edit address** or **Use as entered**.
+- Customers are never blocked. If USPS is down, slow or rate-limited, checkout continues unchecked.
+
+Setup:
+1. Create a free account at developer.usps.com, add an app, and copy its **Consumer Key** and **Consumer Secret**.
+2. In WordPress, go to **Settings → Address check**, paste both, save, and click **Test connection**.
+3. New USPS apps have a low hourly request limit. Results are cached for a day, and you can request a higher limit from USPS.
+
+Code: `includes/class-ph-address-check.php` (server) and the address dialog in `assets/checkout.js`.
+
 Preview: `preview/checkout.html`.
 
 ## Visual system

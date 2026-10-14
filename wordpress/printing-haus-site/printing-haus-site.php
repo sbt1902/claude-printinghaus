@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Printing Haus Site
- * Description: Loads the Printing Haus brand stylesheet for the Bricks templates and gives the Bricks (Checkout v2) WooCommerce checkout a calm, Shopify-style finish, with a shipping dropdown and a slide-open discount code.
- * Version:     1.2.2
+ * Description: Loads the Printing Haus brand stylesheet for the Bricks templates and gives the Bricks (Checkout v2) WooCommerce checkout a calm, Shopify-style finish, with a shipping dropdown, a slide-open discount code and a USPS address check.
+ * Version:     1.3.0
  * Author:      Printing Haus
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -13,7 +13,10 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PH_SITE_VERSION', '1.2.2' );
+define( 'PH_SITE_VERSION', '1.3.0' );
+
+require_once __DIR__ . '/includes/class-ph-address-check.php';
+add_action( 'plugins_loaded', array( 'PH_Address_Check', 'init' ) );
 
 /**
  * Styles and scripts. Priority 20 so they load after Bricks and WooCommerce and win ties.
@@ -29,7 +32,10 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_enqueue_style( 'ph-checkout', $url . 'checkout.css', array( 'ph-site' ), PH_SITE_VERSION );
 		wp_enqueue_script( 'ph-checkout', $url . 'checkout.js', array( 'jquery', 'wc-checkout' ), PH_SITE_VERSION, true );
 		wp_localize_script( 'ph-checkout', 'phCheckout', array(
-			'emptyCode' => __( 'Please enter a discount code.', 'printing-haus-site' ),
+			'emptyCode'      => __( 'Please enter a discount code.', 'printing-haus-site' ),
+			'addressCheck'   => PH_Address_Check::enabled(),
+			'addressConfirm' => PH_Address_Check::CONFIRM,
+			'addressMessage' => PH_Address_Check::message(),
 		) );
 	}
 }, 20 );
