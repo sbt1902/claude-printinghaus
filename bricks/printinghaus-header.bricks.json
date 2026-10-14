@@ -148,58 +148,42 @@
     {
       "id": "oaihfg",
       "name": "ph-container",
-      "settings": {
-        "_cssCustom": "%root% { width: 100%; max-width: var(--ph-max); margin: 0 auto; }"
-      }
+      "settings": {}
     },
     {
       "id": "mmpacd",
       "name": "ph-header",
-      "settings": {
-        "_cssCustom": "%root% {\n  --ph-paper: #F9F7F3;\n  --ph-ink: #0A0A0A;\n  --ph-sand: #E8E1D6;\n  --ph-stone: #DEDAD3;\n  --ph-rule: #CFC9BF;\n  --ph-olive: #5F5E4F;\n  --ph-muted: #5E5A54;\n  --ph-oxblood: #54151B;\n  --ph-blush: #E7C9D2;\n  --ph-display: \"Tiempos Headline\", \"Tiempos Text\", \"Newsreader\", Georgia, \"Times New Roman\", serif;\n  --ph-sans: \"Neue Haas Grotesk Text\", \"neue-haas-grotesk-text\", \"Neue Haas Grotesk Display\", \"neue-haas-grotesk-display\", \"Inter Tight\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  --ph-gutter: clamp(20px, 5vw, 64px);\n  --ph-space: clamp(72px, 9vw, 136px);\n  --ph-max: 1320px;\n\n  width: 100%;\n  background: var(--ph-paper);\n  color: var(--ph-ink);\n  font-family: var(--ph-sans);\n  font-size: 16px;\n  line-height: 1.6;\n  -webkit-font-smoothing: antialiased;\n}\n%root% *, %root% *::before, %root% *::after { box-sizing: border-box; }\n:where(%root% a) { color: inherit; }\n%root% a:focus-visible, %root% button:focus-visible, %root% input:focus-visible {\n  outline: 2px solid currentColor; outline-offset: 3px;\n}\n\n%root% { padding: 0 var(--ph-gutter); border-bottom: 1px solid var(--ph-rule); }"
-      }
+      "settings": {}
     },
     {
       "id": "mlnjkm",
       "name": "ph-header__bar",
-      "settings": {
-        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: auto 1fr auto;\n  align-items: center;\n  gap: 48px;\n  width: 100%;\n  min-height: 76px;\n}\n@media (max-width: 767px) { %root% { grid-template-columns: 1fr auto auto; gap: 16px; } }"
-      }
+      "settings": {}
     },
     {
       "id": "elnaja",
       "name": "ph-logo",
-      "settings": {
-        "_cssCustom": "%root% { display: inline-flex; align-items: center; } %root% img { height: 28px; width: auto; }"
-      }
+      "settings": {}
     },
     {
       "id": "emjcnd",
       "name": "ph-nav",
-      "settings": {
-        "_cssCustom": "%root% { font-size: 15px; }\n%root% ul { display: flex; gap: 32px; margin: 0; padding: 0; list-style: none; }\n%root% a { display: inline-block; padding: 6px 0; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s ease; }\n%root% a:hover, %root% .current-menu-item > a { border-bottom-color: currentColor; }"
-      }
+      "settings": {}
     },
     {
       "id": "hhpiio",
       "name": "ph-utility",
-      "settings": {
-        "_cssCustom": "%root% { display: flex; align-items: center; justify-content: flex-end; gap: 24px; font-size: 15px; }\n%root% a { text-decoration: none; }\n%root% a:hover { text-decoration: underline; text-underline-offset: 5px; }"
-      }
+      "settings": {}
     },
     {
       "id": "mogech",
       "name": "ph-hide-mobile",
-      "settings": {
-        "_cssCustom": "@media (max-width: 767px) { %root% { display: none !important; } }"
-      }
+      "settings": {}
     },
     {
       "id": "pikoio",
       "name": "ph-show-mobile-only",
-      "settings": {
-        "_cssCustom": "@media (min-width: 768px) { %root% { display: none !important; } }"
-      }
+      "settings": {}
     }
   ],
   "version": "1.10"

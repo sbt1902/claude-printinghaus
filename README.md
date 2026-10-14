@@ -8,6 +8,7 @@ the *Printing Haus Brand System, Vol. 01* and the *Website Design & Brand Voice 
 | `bricks/printinghaus-header.bricks.json` | Header template (logo, Shop / Design Studio / About / Contact, Search, Account, Cart) |
 | `bricks/printinghaus-homepage.bricks.json` | Homepage content, sections A–H |
 | `bricks/printinghaus-footer.bricks.json` | Footer template (contact, shipping, FAQs, artwork, returns, privacy, terms) |
+| `bricks/printinghaus.css` | **The stylesheet.** Paste it into Bricks → Settings → Custom code → Custom CSS |
 | `bricks/build_homepage.py` | Source of truth for copy, links and styles. Re-run it to regenerate all files |
 | `preview/homepage.html` | Static draft preview. Gray blocks and [bracketed] text are placeholders |
 
@@ -39,20 +40,24 @@ the *Printing Haus Brand System, Vol. 01* and the *Website Design & Brand Voice 
 
 ## Install in Bricks
 
-1. **Import:** go to **Bricks → Templates → Import** and upload all three JSON files. Their `ph-*`
-   global classes come with them.
-2. **Header and footer:** open each template, then in **Template settings → Conditions** set it to *Entire website*.
+1. **Stylesheet (required):** copy all of `bricks/printinghaus.css` into
+   **Bricks → Settings → Custom code → Custom CSS** and save. All the styling lives in that file.
+   Without it the templates show as plain unstyled text. (Alternatively, add it as a site-wide CSS snippet in WPCode.)
+   If Bricks is set to load CSS from external files, click **Settings → Performance → Regenerate CSS files** afterwards.
+2. **Import:** go to **Bricks → Templates → Import** and upload the JSON files. If you imported an
+   earlier version, delete that one first.
+3. **Header and footer (optional):** you can keep your existing header and footer. To use these instead, open each template, then in **Template settings → Conditions** set it to *Entire website*.
    - Choose your **approved logo** in each Logo element. The footer sits on black, so it needs a light version.
    - Create a WordPress menu (**Appearance → Menus**) with *Shop, Design Studio, About, Contact*, then select it
      in both Nav Menu elements. One is for desktop and one shows as a "Menu" toggle on mobile.
    - The Cart element uses Bricks' WooCommerce mini cart.
-3. **Homepage:** open the Home page in Bricks and insert *Printing Haus - Homepage* from **Templates**.
-4. **Featured products:** select the "Featured product loop" element and open its **Query** settings.
+4. **Homepage:** open the Home page in Bricks and insert *Printing Haus - Homepage* from **Templates**.
+5. **Featured products:** select the "Featured product loop" element and open its **Query** settings.
    Filter it to featured products (or a specific category), or pick the products by hand.
-5. **Category images:** these come from each WooCommerce category's thumbnail (**Products → Categories**).
-6. **Newsletter:** the form currently emails each sign-up to the site admin. In the form's
+6. **Category images:** these come from each WooCommerce category's thumbnail (**Products → Categories**).
+7. **Newsletter:** the form currently emails each sign-up to the site admin. In the form's
    **Actions**, connect Mailchimp, Sendinblue or a webhook instead.
-7. **Links:** placeholder URLs are listed in `LINKS` in `build_homepage.py`. Change them there or in Bricks.
+8. **Links:** placeholder URLs are listed in `LINKS` in `build_homepage.py`. Change them there or in Bricks.
 
 ## Must be supplied before launch
 
