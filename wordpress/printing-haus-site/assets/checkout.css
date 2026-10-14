@@ -147,19 +147,29 @@ body.woocommerce-checkout .brxe-woocommerce-payment-options ul.payment_methods {
 }
 body.woocommerce-checkout .brxe-woocommerce-payment-options ul.payment_methods > li {
   margin: 0;
-  padding: 16px;
+  padding: 0;
   border: 0;
   border-bottom: 1px solid var(--co-line);
   border-radius: 0;
+  background: var(--co-field) !important;
 }
 body.woocommerce-checkout .brxe-woocommerce-payment-options ul.payment_methods > li:last-child { border-bottom: 0; }
+/* One clean white row per option, selected or not (no tinted highlight) */
+body.woocommerce-checkout .brxe-woocommerce-payment-options .brx-payment-options__option {
+  margin: 0;
+  padding: 18px 16px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--co-field) !important;
+  box-shadow: none !important;
+}
 body.woocommerce-checkout .brxe-woocommerce-payment-options .brx-payment-options__label { font-family: var(--co-sans); font-size: 15px; font-weight: 500; }
 body.woocommerce-checkout .brxe-woocommerce-payment-options .payment_box {
-  margin: 14px -16px -16px;
-  padding: 16px;
-  border-top: 1px solid var(--co-line);
+  margin: 0;
+  padding: 4px 16px 20px;
+  border: 0;
   border-radius: 0;
-  background: var(--co-panel);
+  background: var(--co-field) !important;
 }
 body.woocommerce-checkout .brxe-woocommerce-payment-options .payment_box::before { display: none; }
 

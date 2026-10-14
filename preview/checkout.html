@@ -152,19 +152,29 @@ body.woocommerce-checkout .brxe-woocommerce-payment-options ul.payment_methods {
 }
 body.woocommerce-checkout .brxe-woocommerce-payment-options ul.payment_methods > li {
   margin: 0;
-  padding: 16px;
+  padding: 0;
   border: 0;
   border-bottom: 1px solid var(--co-line);
   border-radius: 0;
+  background: var(--co-field) !important;
 }
 body.woocommerce-checkout .brxe-woocommerce-payment-options ul.payment_methods > li:last-child { border-bottom: 0; }
+/* One clean white row per option, selected or not (no tinted highlight) */
+body.woocommerce-checkout .brxe-woocommerce-payment-options .brx-payment-options__option {
+  margin: 0;
+  padding: 18px 16px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--co-field) !important;
+  box-shadow: none !important;
+}
 body.woocommerce-checkout .brxe-woocommerce-payment-options .brx-payment-options__label { font-family: var(--co-sans); font-size: 15px; font-weight: 500; }
 body.woocommerce-checkout .brxe-woocommerce-payment-options .payment_box {
-  margin: 14px -16px -16px;
-  padding: 16px;
-  border-top: 1px solid var(--co-line);
+  margin: 0;
+  padding: 4px 16px 20px;
+  border: 0;
   border-radius: 0;
-  background: var(--co-panel);
+  background: var(--co-field) !important;
 }
 body.woocommerce-checkout .brxe-woocommerce-payment-options .payment_box::before { display: none; }
 
@@ -413,9 +423,9 @@ body.woocommerce-checkout .screen-reader-text {
 
       <h3 class="brxe-heading">Payment options</h3>
       <div class="brxe-woocommerce-payment-options"><ul class="wc_payment_methods payment_methods methods">
-        <li><label class="brx-payment-options__label"><input type="radio" name="pm" checked> Card</label><div class="payment_box"><p style="margin:0">[WooPayments card fields]</p></div></li>
-        <li><label class="brx-payment-options__label"><input type="radio" name="pm"> Cash App Afterpay</label></li>
-        <li><label class="brx-payment-options__label"><input type="radio" name="pm"> Klarna</label></li>
+        <li><div class="brx-payment-options__option"><label class="brx-payment-options__label"><input type="radio" name="pm" checked> Card</label></div><div class="payment_box"><p style="margin:0">[WooPayments card fields]</p></div></li>
+        <li><div class="brx-payment-options__option"><label class="brx-payment-options__label"><input type="radio" name="pm"> Cash App Afterpay</label></div></li>
+        <li><div class="brx-payment-options__option"><label class="brx-payment-options__label"><input type="radio" name="pm"> Klarna</label></div></li>
       </ul></div>
 
       <div class="woocommerce-privacy-policy-text"><p>Your personal data will be used to process your order, as described in our <a href="#">privacy policy</a>.</p></div>
