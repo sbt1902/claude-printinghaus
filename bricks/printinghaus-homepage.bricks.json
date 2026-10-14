@@ -3,11 +3,11 @@
   "templateType": "content",
   "content": [
     {
-      "id": "npjmol",
+      "id": "deljgp",
       "name": "section",
       "parent": 0,
       "children": [
-        "jjmmjb"
+        "lmdohc"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -15,15 +15,14 @@
           "aobjkp"
         ]
       },
-      "label": "Hero"
+      "label": "A. Hero"
     },
     {
-      "id": "jjmmjb",
+      "id": "lmdohc",
       "name": "container",
-      "parent": "npjmol",
+      "parent": "deljgp",
       "children": [
-        "leophe",
-        "ieabgh"
+        "ggiimk"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -32,12 +31,12 @@
       }
     },
     {
-      "id": "leophe",
+      "id": "ggiimk",
       "name": "div",
-      "parent": "jjmmjb",
+      "parent": "lmdohc",
       "children": [
-        "fflacl",
-        "bmlmoh"
+        "febifk",
+        "dkeiaf"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -46,37 +45,23 @@
       }
     },
     {
-      "id": "fflacl",
+      "id": "febifk",
       "name": "div",
-      "parent": "leophe",
+      "parent": "ggiimk",
       "children": [
-        "npbkkk",
-        "ejfmkb",
-        "pfkgom",
-        "podode"
+        "fdgenj",
+        "hdicji",
+        "lflemm"
       ],
       "settings": {}
     },
     {
-      "id": "npbkkk",
-      "name": "text-basic",
-      "parent": "fflacl",
-      "children": [],
-      "settings": {
-        "text": "Premium printing &mdash; Cards, stationery &amp; packaging",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pdjlmb"
-        ]
-      }
-    },
-    {
-      "id": "ejfmkb",
+      "id": "fdgenj",
       "name": "heading",
-      "parent": "fflacl",
+      "parent": "febifk",
       "children": [],
       "settings": {
-        "text": "Good ideas look <em>better printed.</em>",
+        "text": "Make an Impression.",
         "tag": "h1",
         "_cssGlobalClasses": [
           "lfhblh"
@@ -84,12 +69,12 @@
       }
     },
     {
-      "id": "pfkgom",
+      "id": "hdicji",
       "name": "text-basic",
-      "parent": "fflacl",
+      "parent": "febifk",
       "children": [],
       "settings": {
-        "text": "Exceptional paper, specialty finishes and print you can feel the difference in. Upload your design, approve your proof, and we'll handle the rest.",
+        "text": "Considered paper. Distinctive finishes. Print that feels like you.",
         "tag": "p",
         "_cssGlobalClasses": [
           "bkklom",
@@ -98,12 +83,12 @@
       }
     },
     {
-      "id": "podode",
+      "id": "lflemm",
       "name": "div",
-      "parent": "fflacl",
+      "parent": "febifk",
       "children": [
-        "nhpckm",
-        "ccmjfn"
+        "idkfkb",
+        "ajpcep"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -112,15 +97,15 @@
       }
     },
     {
-      "id": "nhpckm",
+      "id": "idkfkb",
       "name": "button",
-      "parent": "podode",
+      "parent": "lflemm",
       "children": [],
       "settings": {
-        "text": "Shop business cards",
+        "text": "Shop the Collection",
         "link": {
           "type": "external",
-          "url": "/product-category/business-cards/"
+          "url": "/shop/"
         },
         "_cssGlobalClasses": [
           "gigmbh",
@@ -129,217 +114,103 @@
       }
     },
     {
-      "id": "ccmjfn",
-      "name": "button",
-      "parent": "podode",
+      "id": "ajpcep",
+      "name": "text-link",
+      "parent": "lflemm",
       "children": [],
       "settings": {
-        "text": "Get a sample pack",
+        "text": "Explore the Design Studio",
         "link": {
           "type": "external",
-          "url": "/sample-pack/"
+          "url": "/design-studio/"
         },
         "_cssGlobalClasses": [
-          "gigmbh",
-          "mcfkfp"
+          "nmifba"
         ]
       }
     },
     {
-      "id": "bmlmoh",
+      "id": "dkeiaf",
       "name": "div",
-      "parent": "leophe",
+      "parent": "ggiimk",
       "children": [
-        "nmllef",
-        "ggnjhj"
+        "fjgdfk",
+        "idkonk"
       ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ebkncd"
-        ]
-      }
+      "settings": {}
     },
     {
-      "id": "nmllef",
+      "id": "fjgdfk",
       "name": "div",
-      "parent": "bmlmoh",
+      "parent": "dkeiaf",
       "children": [
-        "gknhmd"
+        "pkjgbc",
+        "hbhklf"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "cdogle"
+          "cdogle",
+          "ofijmm"
         ]
       },
       "label": "Photo slot"
     },
     {
-      "id": "gknhmd",
-      "name": "image",
-      "parent": "nmllef",
+      "id": "pkjgbc",
+      "name": "text-basic",
+      "parent": "fjgdfk",
       "children": [],
       "settings": {
-        "altText": "Foil-stamped business cards on thick cotton paper in soft daylight"
-      },
+        "text": "[Photo: one strong product composition, e.g. business cards showing their edge and raised spot UV in natural light]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "jgodhd"
+        ]
+      }
+    },
+    {
+      "id": "hbhklf",
+      "name": "image",
+      "parent": "fjgdfk",
+      "children": [],
+      "settings": {},
       "label": "Photo"
     },
     {
-      "id": "ggnjhj",
-      "name": "div",
-      "parent": "bmlmoh",
-      "children": [
-        "fjlcoa",
-        "cplobp"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "alknon"
-        ]
-      }
-    },
-    {
-      "id": "fjlcoa",
+      "id": "idkonk",
       "name": "text-basic",
-      "parent": "ggnjhj",
+      "parent": "dkeiaf",
       "children": [],
       "settings": {
-        "text": "Details you can feel.",
+        "text": "[Shown: product name, stock and finish]",
         "tag": "p",
         "_cssGlobalClasses": [
-          "hhokin"
+          "eljmmp"
         ]
       }
     },
     {
-      "id": "cplobp",
-      "name": "text-basic",
-      "parent": "ggnjhj",
-      "children": [],
-      "settings": {
-        "text": "Foil, letterpress and embossing on cotton, duplex and recycled stocks.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "oeeeab"
-        ]
-      }
-    },
-    {
-      "id": "ieabgh",
-      "name": "div",
-      "parent": "jjmmjb",
-      "children": [
-        "cbnndo",
-        "llgdfp",
-        "lhidad"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "ioholh"
-        ]
-      }
-    },
-    {
-      "id": "cbnndo",
-      "name": "text-basic",
-      "parent": "ieabgh",
-      "children": [],
-      "settings": {
-        "text": "<strong>Proof before print</strong>Every order is checked and proofed before it goes to press.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "jbkjbi"
-        ]
-      }
-    },
-    {
-      "id": "llgdfp",
-      "name": "text-basic",
-      "parent": "ieabgh",
-      "children": [],
-      "settings": {
-        "text": "<strong>Premium papers</strong>Cotton, duplex and recycled stocks, chosen for feel and finish.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "jbkjbi"
-        ]
-      }
-    },
-    {
-      "id": "lhidad",
-      "name": "text-basic",
-      "parent": "ieabgh",
-      "children": [],
-      "settings": {
-        "text": "<strong>Specialty finishes</strong>Foil, letterpress, embossing and painted edges.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "jbkjbi"
-        ]
-      }
-    },
-    {
-      "id": "imfcgl",
+      "id": "hdljpn",
       "name": "section",
       "parent": 0,
       "children": [
-        "aodhln"
+        "ljkdmi"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "gehlmi",
-          "conjkh",
-          "eokdip"
+          "baffgj"
         ]
       },
-      "label": "Finishes marquee"
+      "label": "B. Shop by category"
     },
     {
-      "id": "aodhln",
-      "name": "div",
-      "parent": "imfcgl",
-      "children": [
-        "apecje"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "lfmeja"
-        ]
-      }
-    },
-    {
-      "id": "apecje",
-      "name": "text-basic",
-      "parent": "aodhln",
-      "children": [],
-      "settings": {
-        "text": "<span>Letterpress</span><i aria-hidden=\"true\">/</i><span>Foil stamping</span><i aria-hidden=\"true\">/</i><span>Embossing</span><i aria-hidden=\"true\">/</i><span>Painted edges</span><i aria-hidden=\"true\">/</i><span>Duplex stocks</span><i aria-hidden=\"true\">/</i><span>Cotton paper</span><i aria-hidden=\"true\">/</i><span>Debossing</span><i aria-hidden=\"true\">/</i><span>Die cutting</span><i aria-hidden=\"true\">/</i><span>Letterpress</span><i aria-hidden=\"true\">/</i><span>Foil stamping</span><i aria-hidden=\"true\">/</i><span>Embossing</span><i aria-hidden=\"true\">/</i><span>Painted edges</span><i aria-hidden=\"true\">/</i><span>Duplex stocks</span><i aria-hidden=\"true\">/</i><span>Cotton paper</span><i aria-hidden=\"true\">/</i><span>Debossing</span><i aria-hidden=\"true\">/</i><span>Die cutting</span><i aria-hidden=\"true\">/</i>",
-        "tag": "div",
-        "_cssGlobalClasses": [
-          "icohan"
-        ]
-      }
-    },
-    {
-      "id": "hfmbig",
-      "name": "section",
-      "parent": 0,
-      "children": [
-        "pdhkil"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi"
-        ]
-      },
-      "label": "Shop by product"
-    },
-    {
-      "id": "pdhkil",
+      "id": "ljkdmi",
       "name": "container",
-      "parent": "hfmbig",
+      "parent": "hdljpn",
       "children": [
-        "ojdbdd",
-        "caagpf"
+        "koopcl",
+        "iebokl"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -348,12 +219,12 @@
       }
     },
     {
-      "id": "ojdbdd",
+      "id": "koopcl",
       "name": "div",
-      "parent": "pdhkil",
+      "parent": "ljkdmi",
       "children": [
-        "ajjpgb",
-        "icgnhd"
+        "gdnbfk",
+        "glgfek"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -362,35 +233,35 @@
       }
     },
     {
-      "id": "ajjpgb",
+      "id": "gdnbfk",
       "name": "div",
-      "parent": "ojdbdd",
+      "parent": "koopcl",
       "children": [
-        "dacakf",
-        "licikh"
+        "jhdfgn",
+        "nmmjbd"
       ],
       "settings": {}
     },
     {
-      "id": "dacakf",
+      "id": "jhdfgn",
       "name": "text-basic",
-      "parent": "ajjpgb",
+      "parent": "gdnbfk",
       "children": [],
       "settings": {
-        "text": "01 / Shop by product",
+        "text": "Shop",
         "tag": "p",
         "_cssGlobalClasses": [
-          "pdjlmb"
+          "lofmpg"
         ]
       }
     },
     {
-      "id": "licikh",
+      "id": "nmmjbd",
       "name": "heading",
-      "parent": "ajjpgb",
+      "parent": "gdnbfk",
       "children": [],
       "settings": {
-        "text": "Everything worth <em>printing well.</em>",
+        "text": "Shop by category",
         "tag": "h2",
         "_cssGlobalClasses": [
           "fcehpe"
@@ -398,39 +269,12 @@
       }
     },
     {
-      "id": "icgnhd",
-      "name": "div",
-      "parent": "ojdbdd",
-      "children": [
-        "nmnhoc",
-        "bfofai"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdifab"
-        ]
-      }
-    },
-    {
-      "id": "nmnhoc",
-      "name": "text-basic",
-      "parent": "icgnhd",
-      "children": [],
-      "settings": {
-        "text": "Professional print for business and life's occasions, from a box of cards to a full stationery suite.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "bkklom"
-        ]
-      }
-    },
-    {
-      "id": "bfofai",
+      "id": "glgfek",
       "name": "text-link",
-      "parent": "icgnhd",
+      "parent": "koopcl",
       "children": [],
       "settings": {
-        "text": "Shop all products &rarr;",
+        "text": "View all products",
         "link": {
           "type": "external",
           "url": "/shop/"
@@ -441,51 +285,53 @@
       }
     },
     {
-      "id": "caagpf",
+      "id": "iebokl",
       "name": "div",
-      "parent": "pdhkil",
+      "parent": "ljkdmi",
       "children": [
-        "okacco",
-        "mpjmlm",
-        "pmloln",
-        "hpndjp",
-        "pklhld",
-        "ijfjbj"
+        "fhjhkh"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "kjddnn"
+          "pidfbc"
         ]
       }
     },
     {
-      "id": "okacco",
+      "id": "fhjhkh",
       "name": "div",
-      "parent": "caagpf",
+      "parent": "iebokl",
       "children": [
-        "ljmgfa",
-        "lclgma",
-        "fcmnmp",
-        "glckcl",
-        "meicgo"
+        "gfnkjk",
+        "glbpei"
       ],
       "settings": {
         "tag": "a",
         "link": {
-          "type": "external",
-          "url": "/product-category/business-cards/"
+          "type": "dynamic",
+          "dynamicData": "{term_url}"
+        },
+        "hasLoop": true,
+        "query": {
+          "objectType": "term",
+          "taxonomy": [
+            "product_cat"
+          ],
+          "number": "6",
+          "hide_empty": true
         },
         "_cssGlobalClasses": [
           "fcohbo"
         ]
-      }
+      },
+      "label": "Category loop (live WooCommerce product categories)"
     },
     {
-      "id": "ljmgfa",
+      "id": "gfnkjk",
       "name": "div",
-      "parent": "okacco",
+      "parent": "fhjhkh",
       "children": [
-        "elbndm"
+        "ikgnhe"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -495,583 +341,52 @@
       "label": "Photo slot"
     },
     {
-      "id": "elbndm",
+      "id": "ikgnhe",
       "name": "image",
-      "parent": "ljmgfa",
+      "parent": "gfnkjk",
       "children": [],
       "settings": {
-        "altText": "Stack of duplex business cards with a painted edge"
+        "image": {
+          "useDynamicData": "{woo_product_cat_image}",
+          "size": "large"
+        }
       },
       "label": "Photo"
     },
     {
-      "id": "lclgma",
+      "id": "glbpei",
       "name": "heading",
-      "parent": "okacco",
+      "parent": "fhjhkh",
       "children": [],
       "settings": {
-        "text": "Business Cards",
+        "text": "{term_name}",
         "tag": "h3",
         "_cssGlobalClasses": [
-          "cabgmp"
+          "ohcajg"
         ]
       }
     },
     {
-      "id": "fcmnmp",
-      "name": "text-basic",
-      "parent": "okacco",
-      "children": [],
-      "settings": {
-        "text": "Cotton &middot; Duplex &middot; Foil",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pbbdge"
-        ]
-      }
-    },
-    {
-      "id": "glckcl",
-      "name": "text-basic",
-      "parent": "okacco",
-      "children": [],
-      "settings": {
-        "text": "The card you hand over says it first. Make it weighty, tactile and unmistakably yours.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "alphmm"
-        ]
-      }
-    },
-    {
-      "id": "meicgo",
-      "name": "text-basic",
-      "parent": "okacco",
-      "children": [],
-      "settings": {
-        "text": "Shop now &rarr;",
-        "tag": "span",
-        "_cssGlobalClasses": [
-          "diofom"
-        ]
-      }
-    },
-    {
-      "id": "mpjmlm",
-      "name": "div",
-      "parent": "caagpf",
-      "children": [
-        "kkddca",
-        "pmgain",
-        "hdiddm",
-        "dgepjp",
-        "mcihfh"
-      ],
-      "settings": {
-        "tag": "a",
-        "link": {
-          "type": "external",
-          "url": "/product-category/letterhead-envelopes/"
-        },
-        "_cssGlobalClasses": [
-          "fcohbo"
-        ]
-      }
-    },
-    {
-      "id": "kkddca",
-      "name": "div",
-      "parent": "mpjmlm",
-      "children": [
-        "alanpg"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "ihkiae"
-        ]
-      },
-      "label": "Photo slot"
-    },
-    {
-      "id": "alanpg",
-      "name": "image",
-      "parent": "kkddca",
-      "children": [],
-      "settings": {
-        "altText": "Letterhead and envelopes on a linen surface"
-      },
-      "label": "Photo"
-    },
-    {
-      "id": "pmgain",
-      "name": "heading",
-      "parent": "mpjmlm",
-      "children": [],
-      "settings": {
-        "text": "Letterhead &amp; Envelopes",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "cabgmp"
-        ]
-      }
-    },
-    {
-      "id": "hdiddm",
-      "name": "text-basic",
-      "parent": "mpjmlm",
-      "children": [],
-      "settings": {
-        "text": "Matching stationery",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pbbdge"
-        ]
-      }
-    },
-    {
-      "id": "dgepjp",
-      "name": "text-basic",
-      "parent": "mpjmlm",
-      "children": [],
-      "settings": {
-        "text": "Correspondence that feels considered, on stocks that pair with your cards.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "alphmm"
-        ]
-      }
-    },
-    {
-      "id": "mcihfh",
-      "name": "text-basic",
-      "parent": "mpjmlm",
-      "children": [],
-      "settings": {
-        "text": "Shop now &rarr;",
-        "tag": "span",
-        "_cssGlobalClasses": [
-          "diofom"
-        ]
-      }
-    },
-    {
-      "id": "pmloln",
-      "name": "div",
-      "parent": "caagpf",
-      "children": [
-        "dpdamn",
-        "kbjdip",
-        "hfdjeg",
-        "plpife",
-        "ohgiid"
-      ],
-      "settings": {
-        "tag": "a",
-        "link": {
-          "type": "external",
-          "url": "/product-category/notecards-postcards/"
-        },
-        "_cssGlobalClasses": [
-          "fcohbo"
-        ]
-      }
-    },
-    {
-      "id": "dpdamn",
-      "name": "div",
-      "parent": "pmloln",
-      "children": [
-        "compfj"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "hmkhog"
-        ]
-      },
-      "label": "Photo slot"
-    },
-    {
-      "id": "compfj",
-      "name": "image",
-      "parent": "dpdamn",
-      "children": [],
-      "settings": {
-        "altText": "Folded notecards with envelopes"
-      },
-      "label": "Photo"
-    },
-    {
-      "id": "kbjdip",
-      "name": "heading",
-      "parent": "pmloln",
-      "children": [],
-      "settings": {
-        "text": "Notecards &amp; Postcards",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "cabgmp"
-        ]
-      }
-    },
-    {
-      "id": "hfdjeg",
-      "name": "text-basic",
-      "parent": "pmloln",
-      "children": [],
-      "settings": {
-        "text": "Flat &middot; Folded",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pbbdge"
-        ]
-      }
-    },
-    {
-      "id": "plpife",
-      "name": "text-basic",
-      "parent": "pmloln",
-      "children": [],
-      "settings": {
-        "text": "Thank-yous, notes and mailers worth keeping on the fridge.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "alphmm"
-        ]
-      }
-    },
-    {
-      "id": "ohgiid",
-      "name": "text-basic",
-      "parent": "pmloln",
-      "children": [],
-      "settings": {
-        "text": "Shop now &rarr;",
-        "tag": "span",
-        "_cssGlobalClasses": [
-          "diofom"
-        ]
-      }
-    },
-    {
-      "id": "hpndjp",
-      "name": "div",
-      "parent": "caagpf",
-      "children": [
-        "aimchc",
-        "fepafh",
-        "ibimfk",
-        "kgnndk",
-        "ndhbbc"
-      ],
-      "settings": {
-        "tag": "a",
-        "link": {
-          "type": "external",
-          "url": "/product-category/invitations/"
-        },
-        "_cssGlobalClasses": [
-          "fcohbo"
-        ]
-      }
-    },
-    {
-      "id": "aimchc",
-      "name": "div",
-      "parent": "hpndjp",
-      "children": [
-        "lbgipb"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "gdpanp"
-        ]
-      },
-      "label": "Photo slot"
-    },
-    {
-      "id": "lbgipb",
-      "name": "image",
-      "parent": "aimchc",
-      "children": [],
-      "settings": {
-        "altText": "Letterpress wedding invitation suite with wax seal"
-      },
-      "label": "Photo"
-    },
-    {
-      "id": "fepafh",
-      "name": "heading",
-      "parent": "hpndjp",
-      "children": [],
-      "settings": {
-        "text": "Invitations",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "cabgmp"
-        ]
-      }
-    },
-    {
-      "id": "ibimfk",
-      "name": "text-basic",
-      "parent": "hpndjp",
-      "children": [],
-      "settings": {
-        "text": "Weddings &middot; Events",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pbbdge"
-        ]
-      }
-    },
-    {
-      "id": "kgnndk",
-      "name": "text-basic",
-      "parent": "hpndjp",
-      "children": [],
-      "settings": {
-        "text": "Suites, save-the-dates and menus with a real sense of occasion.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "alphmm"
-        ]
-      }
-    },
-    {
-      "id": "ndhbbc",
-      "name": "text-basic",
-      "parent": "hpndjp",
-      "children": [],
-      "settings": {
-        "text": "Shop now &rarr;",
-        "tag": "span",
-        "_cssGlobalClasses": [
-          "diofom"
-        ]
-      }
-    },
-    {
-      "id": "pklhld",
-      "name": "div",
-      "parent": "caagpf",
-      "children": [
-        "dgocbm",
-        "ljicif",
-        "opgggh",
-        "fkledn",
-        "cbjfla"
-      ],
-      "settings": {
-        "tag": "a",
-        "link": {
-          "type": "external",
-          "url": "/product-category/packaging-labels/"
-        },
-        "_cssGlobalClasses": [
-          "fcohbo"
-        ]
-      }
-    },
-    {
-      "id": "dgocbm",
-      "name": "div",
-      "parent": "pklhld",
-      "children": [
-        "pgkcjd"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fopncl"
-        ]
-      },
-      "label": "Photo slot"
-    },
-    {
-      "id": "pgkcjd",
-      "name": "image",
-      "parent": "dgocbm",
-      "children": [],
-      "settings": {
-        "altText": "Branded boxes, sleeves and stickers"
-      },
-      "label": "Photo"
-    },
-    {
-      "id": "ljicif",
-      "name": "heading",
-      "parent": "pklhld",
-      "children": [],
-      "settings": {
-        "text": "Packaging &amp; Labels",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "cabgmp"
-        ]
-      }
-    },
-    {
-      "id": "opgggh",
-      "name": "text-basic",
-      "parent": "pklhld",
-      "children": [],
-      "settings": {
-        "text": "Boxes &middot; Sleeves &middot; Stickers",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pbbdge"
-        ]
-      }
-    },
-    {
-      "id": "fkledn",
-      "name": "text-basic",
-      "parent": "pklhld",
-      "children": [],
-      "settings": {
-        "text": "Branded packaging, tags and labels that make the unboxing part of the experience.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "alphmm"
-        ]
-      }
-    },
-    {
-      "id": "cbjfla",
-      "name": "text-basic",
-      "parent": "pklhld",
-      "children": [],
-      "settings": {
-        "text": "Shop now &rarr;",
-        "tag": "span",
-        "_cssGlobalClasses": [
-          "diofom"
-        ]
-      }
-    },
-    {
-      "id": "ijfjbj",
-      "name": "div",
-      "parent": "caagpf",
-      "children": [
-        "ialfja",
-        "jpflkm",
-        "klljmi",
-        "oebikc",
-        "ajgccf"
-      ],
-      "settings": {
-        "tag": "a",
-        "link": {
-          "type": "external",
-          "url": "/product-category/art-prints/"
-        },
-        "_cssGlobalClasses": [
-          "fcohbo"
-        ]
-      }
-    },
-    {
-      "id": "ialfja",
-      "name": "div",
-      "parent": "ijfjbj",
-      "children": [
-        "opfaac"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdogle"
-        ]
-      },
-      "label": "Photo slot"
-    },
-    {
-      "id": "opfaac",
-      "name": "image",
-      "parent": "ialfja",
-      "children": [],
-      "settings": {
-        "altText": "Close-up of an art print on textured paper"
-      },
-      "label": "Photo"
-    },
-    {
-      "id": "jpflkm",
-      "name": "heading",
-      "parent": "ijfjbj",
-      "children": [],
-      "settings": {
-        "text": "Art Prints",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "cabgmp"
-        ]
-      }
-    },
-    {
-      "id": "klljmi",
-      "name": "text-basic",
-      "parent": "ijfjbj",
-      "children": [],
-      "settings": {
-        "text": "Fine art papers",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pbbdge"
-        ]
-      }
-    },
-    {
-      "id": "oebikc",
-      "name": "text-basic",
-      "parent": "ijfjbj",
-      "children": [],
-      "settings": {
-        "text": "Gallery-quality prints with rich colour and a beautiful surface.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "alphmm"
-        ]
-      }
-    },
-    {
-      "id": "ajgccf",
-      "name": "text-basic",
-      "parent": "ijfjbj",
-      "children": [],
-      "settings": {
-        "text": "Shop now &rarr;",
-        "tag": "span",
-        "_cssGlobalClasses": [
-          "diofom"
-        ]
-      }
-    },
-    {
-      "id": "najbec",
+      "id": "ohkjal",
       "name": "section",
       "parent": 0,
       "children": [
-        "heddbk"
+        "bgejpe"
       ],
       "settings": {
         "_cssGlobalClasses": [
           "gehlmi",
-          "kgkkif"
+          "baffgj"
         ]
       },
-      "label": "Papers"
+      "label": "C. Featured products"
     },
     {
-      "id": "heddbk",
+      "id": "bgejpe",
       "name": "container",
-      "parent": "najbec",
+      "parent": "ohkjal",
       "children": [
-        "mohfep",
-        "cjdpai"
+        "epblak"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1080,12 +395,26 @@
       }
     },
     {
-      "id": "mohfep",
+      "id": "epblak",
       "name": "div",
-      "parent": "heddbk",
+      "parent": "bgejpe",
       "children": [
-        "djhbck",
-        "pljbag"
+        "ghgnhj",
+        "lajhak"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cnhppl"
+        ]
+      }
+    },
+    {
+      "id": "ghgnhj",
+      "name": "div",
+      "parent": "epblak",
+      "children": [
+        "lmaflj",
+        "djjoga"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1094,35 +423,35 @@
       }
     },
     {
-      "id": "djhbck",
+      "id": "lmaflj",
       "name": "div",
-      "parent": "mohfep",
+      "parent": "ghgnhj",
       "children": [
-        "bhifgl",
-        "lplbhn"
+        "cpdped",
+        "gadogc"
       ],
       "settings": {}
     },
     {
-      "id": "bhifgl",
+      "id": "cpdped",
       "name": "text-basic",
-      "parent": "djhbck",
+      "parent": "lmaflj",
       "children": [],
       "settings": {
-        "text": "02 / Choose your paper",
+        "text": "Featured",
         "tag": "p",
         "_cssGlobalClasses": [
-          "pdjlmb"
+          "lofmpg"
         ]
       }
     },
     {
-      "id": "lplbhn",
+      "id": "gadogc",
       "name": "heading",
-      "parent": "djhbck",
+      "parent": "lmaflj",
       "children": [],
       "settings": {
-        "text": "It starts with <em>the paper.</em>",
+        "text": "A few favorites",
         "tag": "h2",
         "_cssGlobalClasses": [
           "fcehpe"
@@ -1130,42 +459,15 @@
       }
     },
     {
-      "id": "pljbag",
-      "name": "div",
-      "parent": "mohfep",
-      "children": [
-        "fbddnj",
-        "beboip"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdifab"
-        ]
-      }
-    },
-    {
-      "id": "fbddnj",
-      "name": "text-basic",
-      "parent": "pljbag",
-      "children": [],
-      "settings": {
-        "text": "The right stock changes everything: how a card feels, how ink sits, how it's remembered. Here's what we print on.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "bkklom"
-        ]
-      }
-    },
-    {
-      "id": "beboip",
+      "id": "djjoga",
       "name": "text-link",
-      "parent": "pljbag",
+      "parent": "ghgnhj",
       "children": [],
       "settings": {
-        "text": "Compare our papers &rarr;",
+        "text": "Shop the Collection",
         "link": {
           "type": "external",
-          "url": "/paper/"
+          "url": "/shop/"
         },
         "_cssGlobalClasses": [
           "nmifba"
@@ -1173,124 +475,55 @@
       }
     },
     {
-      "id": "cjdpai",
+      "id": "lajhak",
       "name": "div",
-      "parent": "heddbk",
+      "parent": "epblak",
       "children": [
-        "ldelho",
-        "dedjcg",
-        "clljhd",
-        "dkbnln"
+        "leidef"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "ibehmg"
+          "mkogab"
         ]
       }
     },
     {
-      "id": "ldelho",
+      "id": "leidef",
       "name": "div",
-      "parent": "cjdpai",
+      "parent": "lajhak",
       "children": [
-        "gddcdl",
-        "ogdpmd",
-        "ndbllm",
-        "fgaoge"
+        "akhbia",
+        "ldknbh",
+        "dgpfip"
       ],
       "settings": {
+        "tag": "a",
+        "link": {
+          "type": "dynamic",
+          "dynamicData": "{post_url}"
+        },
+        "hasLoop": true,
+        "query": {
+          "objectType": "post",
+          "post_type": [
+            "product"
+          ],
+          "posts_per_page": "4",
+          "orderby": "menu_order",
+          "order": "ASC"
+        },
         "_cssGlobalClasses": [
-          "mgoefg"
-        ]
-      }
-    },
-    {
-      "id": "gddcdl",
-      "name": "div",
-      "parent": "ldelho",
-      "children": [
-        "hnepkl"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fioghi",
-          "ihkiae"
+          "fcohbo"
         ]
       },
-      "label": "Photo slot"
+      "label": "Featured product loop (filter Query to featured products)"
     },
     {
-      "id": "hnepkl",
-      "name": "image",
-      "parent": "gddcdl",
-      "children": [],
-      "settings": {
-        "altText": "Smooth paper swatch, close-up"
-      },
-      "label": "Photo"
-    },
-    {
-      "id": "ogdpmd",
-      "name": "heading",
-      "parent": "ldelho",
-      "children": [],
-      "settings": {
-        "text": "Smooth",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "ndbllm",
-      "name": "text-basic",
-      "parent": "ldelho",
-      "children": [],
-      "settings": {
-        "text": "Crisp &middot; Bright",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pbbdge"
-        ]
-      }
-    },
-    {
-      "id": "fgaoge",
-      "name": "text-basic",
-      "parent": "ldelho",
-      "children": [],
-      "settings": {
-        "text": "A refined everyday premium. Sharp detail and true colour on an elegant uncoated finish.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "dedjcg",
+      "id": "akhbia",
       "name": "div",
-      "parent": "cjdpai",
+      "parent": "leidef",
       "children": [
-        "nogkoi",
-        "placio",
-        "eeilij",
-        "eopeog"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "mgoefg"
-        ]
-      }
-    },
-    {
-      "id": "nogkoi",
-      "name": "div",
-      "parent": "dedjcg",
-      "children": [
-        "knojlb"
+        "aogeae"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1301,238 +534,67 @@
       "label": "Photo slot"
     },
     {
-      "id": "knojlb",
+      "id": "aogeae",
       "name": "image",
-      "parent": "nogkoi",
+      "parent": "akhbia",
       "children": [],
       "settings": {
-        "altText": "Cotton paper swatch, close-up"
+        "image": {
+          "useDynamicData": "{featured_image}",
+          "size": "large"
+        }
       },
       "label": "Photo"
     },
     {
-      "id": "placio",
+      "id": "ldknbh",
       "name": "heading",
-      "parent": "dedjcg",
+      "parent": "leidef",
       "children": [],
       "settings": {
-        "text": "Cotton",
+        "text": "{post_title}",
         "tag": "h3",
         "_cssGlobalClasses": [
-          "fkckbf"
+          "ohcajg"
         ]
       }
     },
     {
-      "id": "eeilij",
+      "id": "dgpfip",
       "name": "text-basic",
-      "parent": "dedjcg",
+      "parent": "leidef",
       "children": [],
       "settings": {
-        "text": "Soft &middot; Tactile",
-        "tag": "p",
+        "text": "{woo_product_price}",
+        "tag": "div",
         "_cssGlobalClasses": [
-          "pbbdge"
+          "hajbpb"
         ]
       }
     },
     {
-      "id": "eopeog",
-      "name": "text-basic",
-      "parent": "dedjcg",
-      "children": [],
-      "settings": {
-        "text": "Made from cotton fibres with a gentle tooth that takes letterpress and embossing beautifully.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "clljhd",
-      "name": "div",
-      "parent": "cjdpai",
-      "children": [
-        "gmcfil",
-        "hnafek",
-        "hombkh",
-        "iknnkm"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "mgoefg"
-        ]
-      }
-    },
-    {
-      "id": "gmcfil",
-      "name": "div",
-      "parent": "clljhd",
-      "children": [
-        "hcamki"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fioghi",
-          "hpoblo"
-        ]
-      },
-      "label": "Photo slot"
-    },
-    {
-      "id": "hcamki",
-      "name": "image",
-      "parent": "gmcfil",
-      "children": [],
-      "settings": {
-        "altText": "Duplex paper swatch, close-up"
-      },
-      "label": "Photo"
-    },
-    {
-      "id": "hnafek",
-      "name": "heading",
-      "parent": "clljhd",
-      "children": [],
-      "settings": {
-        "text": "Duplex",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "hombkh",
-      "name": "text-basic",
-      "parent": "clljhd",
-      "children": [],
-      "settings": {
-        "text": "Thick &middot; Substantial",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pbbdge"
-        ]
-      }
-    },
-    {
-      "id": "iknnkm",
-      "name": "text-basic",
-      "parent": "clljhd",
-      "children": [],
-      "settings": {
-        "text": "Two sheets bonded together for serious weight and a contrasting colour edge.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "dkbnln",
-      "name": "div",
-      "parent": "cjdpai",
-      "children": [
-        "jfhjfh",
-        "kecpfk",
-        "ndmnai",
-        "bfaiob"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "mgoefg"
-        ]
-      }
-    },
-    {
-      "id": "jfhjfh",
-      "name": "div",
-      "parent": "dkbnln",
-      "children": [
-        "badejd"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fioghi",
-          "hmkhog"
-        ]
-      },
-      "label": "Photo slot"
-    },
-    {
-      "id": "badejd",
-      "name": "image",
-      "parent": "jfhjfh",
-      "children": [],
-      "settings": {
-        "altText": "Recycled paper swatch, close-up"
-      },
-      "label": "Photo"
-    },
-    {
-      "id": "kecpfk",
-      "name": "heading",
-      "parent": "dkbnln",
-      "children": [],
-      "settings": {
-        "text": "Recycled",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "ndmnai",
-      "name": "text-basic",
-      "parent": "dkbnln",
-      "children": [],
-      "settings": {
-        "text": "Natural &middot; Considered",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pbbdge"
-        ]
-      }
-    },
-    {
-      "id": "bfaiob",
-      "name": "text-basic",
-      "parent": "dkbnln",
-      "children": [],
-      "settings": {
-        "text": "Characterful recycled stocks for brands who care how things are made.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "oddjga",
+      "id": "ojcnjg",
       "name": "section",
       "parent": 0,
       "children": [
-        "nbalbe"
+        "jebeei"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "gehlmi"
+          "gehlmi",
+          "kgkkif"
         ]
       },
-      "label": "Print methods"
+      "label": "D. Paper & finishes"
     },
     {
-      "id": "nbalbe",
+      "id": "jebeei",
       "name": "container",
-      "parent": "oddjga",
+      "parent": "ojcnjg",
       "children": [
-        "bcopol",
-        "hijjhp",
-        "jpbndf"
+        "khpkbk",
+        "bpplcm",
+        "jlmhdp"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1541,12 +603,12 @@
       }
     },
     {
-      "id": "bcopol",
+      "id": "khpkbk",
       "name": "div",
-      "parent": "nbalbe",
+      "parent": "jebeei",
       "children": [
-        "agbcpp",
-        "pmiddg"
+        "gkoepb",
+        "bhhjek"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -1555,35 +617,35 @@
       }
     },
     {
-      "id": "agbcpp",
+      "id": "gkoepb",
       "name": "div",
-      "parent": "bcopol",
+      "parent": "khpkbk",
       "children": [
-        "ppdpam",
-        "jikkdo"
+        "dmmpkc",
+        "ebljpg"
       ],
       "settings": {}
     },
     {
-      "id": "ppdpam",
+      "id": "dmmpkc",
       "name": "text-basic",
-      "parent": "agbcpp",
+      "parent": "gkoepb",
       "children": [],
       "settings": {
-        "text": "03 / Print methods &amp; finishes",
+        "text": "Paper &amp; finishes",
         "tag": "p",
         "_cssGlobalClasses": [
-          "pdjlmb"
+          "lofmpg"
         ]
       }
     },
     {
-      "id": "jikkdo",
+      "id": "ebljpg",
       "name": "heading",
-      "parent": "agbcpp",
+      "parent": "gkoepb",
       "children": [],
       "settings": {
-        "text": "Printing methods, <em>done properly.</em>",
+        "text": "Details you can feel",
         "tag": "h2",
         "_cssGlobalClasses": [
           "fcehpe"
@@ -1591,408 +653,570 @@
       }
     },
     {
-      "id": "pmiddg",
-      "name": "div",
-      "parent": "bcopol",
-      "children": [
-        "efainm"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdifab"
-        ]
-      }
-    },
-    {
-      "id": "efainm",
+      "id": "bhhjek",
       "name": "text-basic",
-      "parent": "pmiddg",
+      "parent": "khpkbk",
       "children": [],
       "settings": {
-        "text": "From fast, full-colour digital to traditional letterpress, we match the method to the piece.",
+        "text": "What each paper and finish looks and feels like, in plain language. Not sure which to choose? We're happy to help.",
         "tag": "p",
         "_cssGlobalClasses": [
-          "bkklom"
+          "cbhfjj"
         ]
       }
     },
     {
-      "id": "hijjhp",
+      "id": "bpplcm",
       "name": "div",
-      "parent": "nbalbe",
+      "parent": "jebeei",
       "children": [
-        "cbdgho",
-        "gnjaif",
-        "oeecmm",
-        "iclaib",
-        "fijfof",
-        "ldmhfg"
+        "bebalg",
+        "gbcboe",
+        "jdflnm",
+        "nnhkai",
+        "ikidhh",
+        "bdfdkc",
+        "kohjlg",
+        "iciheo"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "jdfcgd"
+          "celpph"
         ]
       }
     },
     {
-      "id": "cbdgho",
-      "name": "div",
-      "parent": "hijjhp",
-      "children": [
-        "ieoenk",
-        "eoegfm",
-        "hfeiln"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "deecla"
-        ]
-      }
-    },
-    {
-      "id": "ieoenk",
+      "id": "bebalg",
       "name": "text-basic",
-      "parent": "cbdgho",
+      "parent": "bpplcm",
       "children": [],
       "settings": {
-        "text": "01",
+        "text": "Paper",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mikecg"
+          "lofmpg",
+          "hmcfbp"
         ]
       }
     },
     {
-      "id": "eoegfm",
+      "id": "gbcboe",
+      "name": "div",
+      "parent": "bpplcm",
+      "children": [
+        "cdlhgd",
+        "paihke",
+        "pnlaga"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "lmpbgh"
+        ]
+      }
+    },
+    {
+      "id": "cdlhgd",
+      "name": "div",
+      "parent": "gbcboe",
+      "children": [
+        "lnmaia",
+        "lpgpjk"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cdogle",
+          "fmnglg"
+        ]
+      },
+      "label": "Photo slot"
+    },
+    {
+      "id": "lnmaia",
+      "name": "text-basic",
+      "parent": "cdlhgd",
+      "children": [],
+      "settings": {
+        "text": "[Photo: smooth matte stock in raking light]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "jgodhd"
+        ]
+      }
+    },
+    {
+      "id": "lpgpjk",
+      "name": "image",
+      "parent": "cdlhgd",
+      "children": [],
+      "settings": {},
+      "label": "Photo"
+    },
+    {
+      "id": "paihke",
       "name": "heading",
-      "parent": "cbdgho",
+      "parent": "gbcboe",
       "children": [],
       "settings": {
-        "text": "Digital",
+        "text": "[Confirm stock] Smooth matte",
         "tag": "h3",
         "_cssGlobalClasses": [
-          "kiojcc"
+          "ohcajg"
         ]
       }
     },
     {
-      "id": "hfeiln",
+      "id": "pnlaga",
       "name": "text-basic",
-      "parent": "cbdgho",
+      "parent": "gbcboe",
       "children": [],
       "settings": {
-        "text": "Sharp, vibrant and quick. Ideal for full-colour designs and shorter runs.",
+        "text": "A soft matte surface. Smooth to the touch, with even, true color.",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mphfcp"
+          "cbhfjj"
         ]
       }
     },
     {
-      "id": "gnjaif",
+      "id": "jdflnm",
       "name": "div",
-      "parent": "hijjhp",
+      "parent": "bpplcm",
       "children": [
-        "gidepf",
-        "jciaac",
-        "hdgeej"
+        "megghm",
+        "bpmcfg",
+        "delcjh"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "deecla"
+          "lmpbgh"
         ]
       }
     },
     {
-      "id": "gidepf",
+      "id": "megghm",
+      "name": "div",
+      "parent": "jdflnm",
+      "children": [
+        "enmfbm",
+        "cghejb"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cdogle",
+          "fmnglg"
+        ]
+      },
+      "label": "Photo slot"
+    },
+    {
+      "id": "enmfbm",
       "name": "text-basic",
-      "parent": "gnjaif",
+      "parent": "megghm",
       "children": [],
       "settings": {
-        "text": "02",
+        "text": "[Photo: textured stock close-up, paper fibers visible]",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mikecg"
+          "jgodhd"
         ]
       }
     },
     {
-      "id": "jciaac",
+      "id": "cghejb",
+      "name": "image",
+      "parent": "megghm",
+      "children": [],
+      "settings": {},
+      "label": "Photo"
+    },
+    {
+      "id": "bpmcfg",
       "name": "heading",
-      "parent": "gnjaif",
+      "parent": "jdflnm",
       "children": [],
       "settings": {
-        "text": "Offset",
+        "text": "[Confirm stock] Textured",
         "tag": "h3",
         "_cssGlobalClasses": [
-          "kiojcc"
+          "ohcajg"
         ]
       }
     },
     {
-      "id": "hdgeej",
+      "id": "delcjh",
       "name": "text-basic",
-      "parent": "gnjaif",
+      "parent": "jdflnm",
       "children": [],
       "settings": {
-        "text": "Precise, consistent colour for larger runs and brand-critical work.",
+        "text": "Paper with presence. A gentle texture you can feel under your fingertips.",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mphfcp"
+          "cbhfjj"
         ]
       }
     },
     {
-      "id": "oeecmm",
+      "id": "nnhkai",
       "name": "div",
-      "parent": "hijjhp",
+      "parent": "bpplcm",
       "children": [
-        "eigoda",
-        "jipgpb",
-        "cnodjj"
+        "pikgoc",
+        "jlhcim",
+        "ebfanf"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "deecla"
+          "lmpbgh"
         ]
       }
     },
     {
-      "id": "eigoda",
+      "id": "pikgoc",
+      "name": "div",
+      "parent": "nnhkai",
+      "children": [
+        "mejdhh",
+        "fdefbn"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cdogle",
+          "fmnglg"
+        ]
+      },
+      "label": "Photo slot"
+    },
+    {
+      "id": "mejdhh",
       "name": "text-basic",
-      "parent": "oeecmm",
+      "parent": "pikgoc",
       "children": [],
       "settings": {
-        "text": "03",
+        "text": "[Photo: stack of thick cards showing the edge]",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mikecg"
+          "jgodhd"
         ]
       }
     },
     {
-      "id": "jipgpb",
+      "id": "fdefbn",
+      "name": "image",
+      "parent": "pikgoc",
+      "children": [],
+      "settings": {},
+      "label": "Photo"
+    },
+    {
+      "id": "jlhcim",
       "name": "heading",
-      "parent": "oeecmm",
+      "parent": "nnhkai",
       "children": [],
       "settings": {
-        "text": "Letterpress",
+        "text": "[Confirm stock] Heavyweight",
         "tag": "h3",
         "_cssGlobalClasses": [
-          "kiojcc"
+          "ohcajg"
         ]
       }
     },
     {
-      "id": "cnodjj",
+      "id": "ebfanf",
       "name": "text-basic",
-      "parent": "oeecmm",
+      "parent": "nnhkai",
       "children": [],
       "settings": {
-        "text": "Ink pressed deep into soft cotton paper for an impression you can feel.",
+        "text": "A substantial stock with a visible edge, so your card feels considered in hand.",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mphfcp"
+          "cbhfjj"
         ]
       }
     },
     {
-      "id": "iclaib",
+      "id": "ikidhh",
+      "name": "text-basic",
+      "parent": "bpplcm",
+      "children": [],
+      "settings": {
+        "text": "Finishes",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "lofmpg",
+          "hmcfbp"
+        ]
+      }
+    },
+    {
+      "id": "bdfdkc",
       "name": "div",
-      "parent": "hijjhp",
+      "parent": "bpplcm",
       "children": [
-        "cgbfoe",
-        "naomdi",
-        "hjmfce"
+        "ilkijd",
+        "elhkik",
+        "mpknog"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "deecla"
+          "lmpbgh"
         ]
       }
     },
     {
-      "id": "cgbfoe",
+      "id": "ilkijd",
+      "name": "div",
+      "parent": "bdfdkc",
+      "children": [
+        "dkcnjk",
+        "fgbfdg"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cdogle",
+          "fmnglg"
+        ]
+      },
+      "label": "Photo slot"
+    },
+    {
+      "id": "dkcnjk",
       "name": "text-basic",
-      "parent": "iclaib",
+      "parent": "ilkijd",
       "children": [],
       "settings": {
-        "text": "04",
+        "text": "[Photo: light catching raised spot UV]",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mikecg"
+          "jgodhd"
         ]
       }
     },
     {
-      "id": "naomdi",
+      "id": "fgbfdg",
+      "name": "image",
+      "parent": "ilkijd",
+      "children": [],
+      "settings": {},
+      "label": "Photo"
+    },
+    {
+      "id": "elhkik",
       "name": "heading",
-      "parent": "iclaib",
+      "parent": "bdfdkc",
       "children": [],
       "settings": {
-        "text": "Foil <em>stamping</em>",
+        "text": "Raised spot UV",
         "tag": "h3",
         "_cssGlobalClasses": [
-          "kiojcc"
+          "ohcajg"
         ]
       }
     },
     {
-      "id": "hjmfce",
+      "id": "mpknog",
       "name": "text-basic",
-      "parent": "iclaib",
+      "parent": "bdfdkc",
       "children": [],
       "settings": {
-        "text": "Metallic and pigment foils that catch the light: gold, copper, silver and more.",
+        "text": "A little gloss where it counts. Raised spot UV adds shine and dimension to selected details.",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mphfcp"
+          "cbhfjj"
         ]
       }
     },
     {
-      "id": "fijfof",
+      "id": "kohjlg",
       "name": "div",
-      "parent": "hijjhp",
+      "parent": "bpplcm",
       "children": [
-        "bbelif",
-        "hkcdbb",
-        "aodchj"
+        "mfgdem",
+        "malank",
+        "mekclf"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "deecla"
+          "lmpbgh"
         ]
       }
     },
     {
-      "id": "bbelif",
+      "id": "mfgdem",
+      "name": "div",
+      "parent": "kohjlg",
+      "children": [
+        "kogphk",
+        "gnbpon"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cdogle",
+          "fmnglg"
+        ]
+      },
+      "label": "Photo slot"
+    },
+    {
+      "id": "kogphk",
       "name": "text-basic",
-      "parent": "fijfof",
+      "parent": "mfgdem",
       "children": [],
       "settings": {
-        "text": "05",
+        "text": "[Photo: foil detail on a textured stock]",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mikecg"
+          "jgodhd"
         ]
       }
     },
     {
-      "id": "hkcdbb",
+      "id": "gnbpon",
+      "name": "image",
+      "parent": "mfgdem",
+      "children": [],
+      "settings": {},
+      "label": "Photo"
+    },
+    {
+      "id": "malank",
       "name": "heading",
-      "parent": "fijfof",
+      "parent": "kohjlg",
       "children": [],
       "settings": {
-        "text": "Embossing",
+        "text": "[Confirm] Foil",
         "tag": "h3",
         "_cssGlobalClasses": [
-          "kiojcc"
+          "ohcajg"
         ]
       }
     },
     {
-      "id": "aodchj",
+      "id": "mekclf",
       "name": "text-basic",
-      "parent": "fijfof",
+      "parent": "kohjlg",
       "children": [],
       "settings": {
-        "text": "Raised or recessed detail, with or without ink, for quiet, tactile impact.",
+        "text": "A metallic finish applied to selected parts of your design, so it catches the light.",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mphfcp"
+          "cbhfjj"
         ]
       }
     },
     {
-      "id": "ldmhfg",
+      "id": "iciheo",
       "name": "div",
-      "parent": "hijjhp",
+      "parent": "bpplcm",
       "children": [
-        "koipck",
-        "elmabd",
-        "ehfnlk"
+        "hlmkpb",
+        "bljdap",
+        "camcdl"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "deecla"
+          "lmpbgh"
         ]
       }
     },
     {
-      "id": "koipck",
+      "id": "hlmkpb",
+      "name": "div",
+      "parent": "iciheo",
+      "children": [
+        "dleamg",
+        "nnpeai"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cdogle",
+          "fmnglg"
+        ]
+      },
+      "label": "Photo slot"
+    },
+    {
+      "id": "dleamg",
       "name": "text-basic",
-      "parent": "ldmhfg",
+      "parent": "hlmkpb",
       "children": [],
       "settings": {
-        "text": "06",
+        "text": "[Photo: embossed detail in soft side light]",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mikecg"
+          "jgodhd"
         ]
       }
     },
     {
-      "id": "elmabd",
+      "id": "nnpeai",
+      "name": "image",
+      "parent": "hlmkpb",
+      "children": [],
+      "settings": {},
+      "label": "Photo"
+    },
+    {
+      "id": "bljdap",
       "name": "heading",
-      "parent": "ldmhfg",
+      "parent": "iciheo",
       "children": [],
       "settings": {
-        "text": "Painted <em>edges</em>",
+        "text": "[Confirm] Embossing",
         "tag": "h3",
         "_cssGlobalClasses": [
-          "kiojcc"
+          "ohcajg"
         ]
       }
     },
     {
-      "id": "ehfnlk",
+      "id": "camcdl",
       "name": "text-basic",
-      "parent": "ldmhfg",
+      "parent": "iciheo",
       "children": [],
       "settings": {
-        "text": "A flash of colour along the edge of thick stocks. A small detail with a big effect.",
+        "text": "A raised impression pressed into the paper, so your design can be felt as well as seen.",
         "tag": "p",
         "_cssGlobalClasses": [
-          "mphfcp"
+          "cbhfjj"
         ]
       }
     },
     {
-      "id": "jpbndf",
+      "id": "jlmhdp",
       "name": "div",
-      "parent": "nbalbe",
+      "parent": "jebeei",
       "children": [
-        "gdlpph"
+        "gbljfa"
       ],
       "settings": {
         "_cssGlobalClasses": [
-          "kkkkci"
+          "pnljbb"
         ]
       }
     },
     {
-      "id": "gdlpph",
-      "name": "text-link",
-      "parent": "jpbndf",
+      "id": "gbljfa",
+      "name": "button",
+      "parent": "jlmhdp",
       "children": [],
       "settings": {
-        "text": "Not sure which? Talk to a print specialist &rarr;",
+        "text": "Explore Paper &amp; Finishes",
         "link": {
           "type": "external",
-          "url": "/contact/"
+          "url": "/paper-and-finishes/"
         },
         "_cssGlobalClasses": [
-          "nmifba"
+          "gigmbh",
+          "pchbdf"
         ]
       }
     },
     {
-      "id": "legggp",
+      "id": "hahcao",
       "name": "section",
       "parent": 0,
       "children": [
-        "kkhoac"
+        "ccbcjh"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -2000,14 +1224,14 @@
           "jdgjck"
         ]
       },
-      "label": "Statement"
+      "label": "E. Design studio"
     },
     {
-      "id": "kkhoac",
+      "id": "ccbcjh",
       "name": "container",
-      "parent": "legggp",
+      "parent": "hahcao",
       "children": [
-        "hhmbcb"
+        "dhildd"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -2016,12 +1240,12 @@
       }
     },
     {
-      "id": "hhmbcb",
+      "id": "dhildd",
       "name": "div",
-      "parent": "kkhoac",
+      "parent": "ccbcjh",
       "children": [
-        "cjcgen",
-        "ddbkhd"
+        "hgihmg",
+        "njkald"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -2030,39 +1254,15 @@
       }
     },
     {
-      "id": "cjcgen",
+      "id": "hgihmg",
       "name": "div",
-      "parent": "hhmbcb",
+      "parent": "dhildd",
       "children": [
-        "adbdmp"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fioghi"
-        ]
-      },
-      "label": "Photo slot"
-    },
-    {
-      "id": "adbdmp",
-      "name": "image",
-      "parent": "cjcgen",
-      "children": [],
-      "settings": {
-        "altText": "Macro shot of a blind emboss on cotton paper"
-      },
-      "label": "Photo"
-    },
-    {
-      "id": "ddbkhd",
-      "name": "div",
-      "parent": "hhmbcb",
-      "children": [
-        "ipjkjf",
-        "alfhbi",
-        "jkfhoi",
-        "benakl"
+        "lkelbm",
+        "dkkgdc",
+        "jlacam",
+        "ggjhag",
+        "nknhhn"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -2071,39 +1271,39 @@
       }
     },
     {
-      "id": "ipjkjf",
+      "id": "lkelbm",
       "name": "text-basic",
-      "parent": "ddbkhd",
+      "parent": "hgihmg",
       "children": [],
       "settings": {
-        "text": "Why Printing Haus",
+        "text": "Design Studio",
         "tag": "p",
         "_cssGlobalClasses": [
-          "pdjlmb",
-          "donhmm"
+          "lofmpg",
+          "kbajbo"
         ]
       }
     },
     {
-      "id": "alfhbi",
+      "id": "dkkgdc",
       "name": "heading",
-      "parent": "ddbkhd",
+      "parent": "hgihmg",
       "children": [],
       "settings": {
-        "text": "Made to be <em>held onto.</em>",
+        "text": "An idea worth putting on paper.",
         "tag": "h2",
         "_cssGlobalClasses": [
-          "noinjf"
+          "fcehpe"
         ]
       }
     },
     {
-      "id": "jkfhoi",
+      "id": "jlacam",
       "name": "text-basic",
-      "parent": "ddbkhd",
+      "parent": "hgihmg",
       "children": [],
       "settings": {
-        "text": "Print is the part of your brand people can pick up. So we obsess over the details: the weight of the stock, the bite of the press, the colour on the edge. Elevated print, made accessible.",
+        "text": "Something more individual? Our design studio brings a considered eye to your next print project, from the first idea to the finishing detail.",
         "tag": "p",
         "_cssGlobalClasses": [
           "bkklom"
@@ -2111,872 +1311,25 @@
       }
     },
     {
-      "id": "benakl",
-      "name": "button",
-      "parent": "ddbkhd",
+      "id": "ggjhag",
+      "name": "text-basic",
+      "parent": "hgihmg",
       "children": [],
       "settings": {
-        "text": "Get a sample pack",
-        "link": {
-          "type": "external",
-          "url": "/sample-pack/"
-        },
+        "tag": "ul",
+        "text": "<li>Custom artwork</li><li>Stationery</li><li>Packaging</li><li>[Confirm any other studio services]</li>",
         "_cssGlobalClasses": [
-          "gigmbh",
-          "ldfdbc"
-        ]
-      }
-    },
-    {
-      "id": "napfia",
-      "name": "section",
-      "parent": 0,
-      "children": [
-        "hagcek"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi"
+          "ofikhl"
         ]
       },
-      "label": "How to order"
+      "label": "Studio services"
     },
     {
-      "id": "hagcek",
-      "name": "container",
-      "parent": "napfia",
-      "children": [
-        "ebbidg",
-        "fbiaal"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
-      }
-    },
-    {
-      "id": "ebbidg",
+      "id": "nknhhn",
       "name": "div",
-      "parent": "hagcek",
+      "parent": "hgihmg",
       "children": [
-        "hbdjce",
-        "hidndh"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cajggf"
-        ]
-      }
-    },
-    {
-      "id": "hbdjce",
-      "name": "div",
-      "parent": "ebbidg",
-      "children": [
-        "nfcmce",
-        "gonmlj"
-      ],
-      "settings": {}
-    },
-    {
-      "id": "nfcmce",
-      "name": "text-basic",
-      "parent": "hbdjce",
-      "children": [],
-      "settings": {
-        "text": "04 / How to order",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pdjlmb"
-        ]
-      }
-    },
-    {
-      "id": "gonmlj",
-      "name": "heading",
-      "parent": "hbdjce",
-      "children": [],
-      "settings": {
-        "text": "From file to <em>in hand.</em>",
-        "tag": "h2",
-        "_cssGlobalClasses": [
-          "fcehpe"
-        ]
-      }
-    },
-    {
-      "id": "hidndh",
-      "name": "div",
-      "parent": "ebbidg",
-      "children": [
-        "nbnafm"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdifab"
-        ]
-      }
-    },
-    {
-      "id": "nbnafm",
-      "name": "button",
-      "parent": "hidndh",
-      "children": [],
-      "settings": {
-        "text": "Start your order",
-        "link": {
-          "type": "external",
-          "url": "/shop/"
-        },
-        "_cssGlobalClasses": [
-          "gigmbh",
-          "hodbfg"
-        ]
-      }
-    },
-    {
-      "id": "fbiaal",
-      "name": "div",
-      "parent": "hagcek",
-      "children": [
-        "jipepm",
-        "cmkakf",
-        "ljblol",
-        "cdchgb"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "dbgnng"
-        ]
-      }
-    },
-    {
-      "id": "jipepm",
-      "name": "div",
-      "parent": "fbiaal",
-      "children": [
-        "ldamel",
-        "cfenpk",
-        "fpiami"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "fcdkjj"
-        ]
-      }
-    },
-    {
-      "id": "ldamel",
-      "name": "text-basic",
-      "parent": "jipepm",
-      "children": [],
-      "settings": {
-        "text": "Step 01",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pppjjg"
-        ]
-      }
-    },
-    {
-      "id": "cfenpk",
-      "name": "heading",
-      "parent": "jipepm",
-      "children": [],
-      "settings": {
-        "text": "Pick your product",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "fpiami",
-      "name": "text-basic",
-      "parent": "jipepm",
-      "children": [],
-      "settings": {
-        "text": "Choose your format, paper and finish. Not sure? Order a sample pack first.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "cmkakf",
-      "name": "div",
-      "parent": "fbiaal",
-      "children": [
-        "dpagbb",
-        "ibkmbg",
-        "akdbhd"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "fcdkjj"
-        ]
-      }
-    },
-    {
-      "id": "dpagbb",
-      "name": "text-basic",
-      "parent": "cmkakf",
-      "children": [],
-      "settings": {
-        "text": "Step 02",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pppjjg"
-        ]
-      }
-    },
-    {
-      "id": "ibkmbg",
-      "name": "heading",
-      "parent": "cmkakf",
-      "children": [],
-      "settings": {
-        "text": "Upload your design",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "akdbhd",
-      "name": "text-basic",
-      "parent": "cmkakf",
-      "children": [],
-      "settings": {
-        "text": "Send print-ready artwork, or let our team set up your file for you.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "ljblol",
-      "name": "div",
-      "parent": "fbiaal",
-      "children": [
-        "mhfmdf",
-        "eikbod",
-        "kmdiha"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "fcdkjj"
-        ]
-      }
-    },
-    {
-      "id": "mhfmdf",
-      "name": "text-basic",
-      "parent": "ljblol",
-      "children": [],
-      "settings": {
-        "text": "Step 03",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pppjjg"
-        ]
-      }
-    },
-    {
-      "id": "eikbod",
-      "name": "heading",
-      "parent": "ljblol",
-      "children": [],
-      "settings": {
-        "text": "Approve your proof",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "kmdiha",
-      "name": "text-basic",
-      "parent": "ljblol",
-      "children": [],
-      "settings": {
-        "text": "We check every file and send a proof. Nothing prints until you're happy.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "cdchgb",
-      "name": "div",
-      "parent": "fbiaal",
-      "children": [
-        "hocgla",
-        "ihopgi",
-        "dgmfhp"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "fcdkjj"
-        ]
-      }
-    },
-    {
-      "id": "hocgla",
-      "name": "text-basic",
-      "parent": "cdchgb",
-      "children": [],
-      "settings": {
-        "text": "Step 04",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pppjjg"
-        ]
-      }
-    },
-    {
-      "id": "ihopgi",
-      "name": "heading",
-      "parent": "cdchgb",
-      "children": [],
-      "settings": {
-        "text": "Printed &amp; shipped",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "dgmfhp",
-      "name": "text-basic",
-      "parent": "cdchgb",
-      "children": [],
-      "settings": {
-        "text": "Carefully printed, finished and packed to arrive in perfect condition.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "bbmdle",
-      "name": "section",
-      "parent": 0,
-      "children": [
-        "nobfgh"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi",
-          "conjkh"
-        ]
-      },
-      "label": "Promise"
-    },
-    {
-      "id": "nobfgh",
-      "name": "container",
-      "parent": "bbmdle",
-      "children": [
-        "clkolp",
-        "hcefde"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
-      }
-    },
-    {
-      "id": "clkolp",
-      "name": "div",
-      "parent": "nobfgh",
-      "children": [
-        "gjchii"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cajggf"
-        ]
-      }
-    },
-    {
-      "id": "gjchii",
-      "name": "div",
-      "parent": "clkolp",
-      "children": [
-        "afnibc",
-        "jlepnl"
-      ],
-      "settings": {}
-    },
-    {
-      "id": "afnibc",
-      "name": "text-basic",
-      "parent": "gjchii",
-      "children": [],
-      "settings": {
-        "text": "The Haus promise",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pdjlmb",
-          "donhmm"
-        ]
-      }
-    },
-    {
-      "id": "jlepnl",
-      "name": "heading",
-      "parent": "gjchii",
-      "children": [],
-      "settings": {
-        "text": "Print you can <em>count on.</em>",
-        "tag": "h2",
-        "_cssGlobalClasses": [
-          "fcehpe"
-        ]
-      }
-    },
-    {
-      "id": "hcefde",
-      "name": "div",
-      "parent": "nobfgh",
-      "children": [
-        "gffeib",
-        "jjjcpi",
-        "gencpa",
-        "hknlap"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "hffocg",
-          "nieipk"
-        ]
-      }
-    },
-    {
-      "id": "gffeib",
-      "name": "div",
-      "parent": "hcefde",
-      "children": [
-        "idingp",
-        "mgcmho",
-        "bndmli"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "hfacdc"
-        ]
-      }
-    },
-    {
-      "id": "idingp",
-      "name": "text-basic",
-      "parent": "gffeib",
-      "children": [],
-      "settings": {
-        "text": "i.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "eibbop"
-        ]
-      }
-    },
-    {
-      "id": "mgcmho",
-      "name": "heading",
-      "parent": "gffeib",
-      "children": [],
-      "settings": {
-        "text": "Checked by people",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "bndmli",
-      "name": "text-basic",
-      "parent": "gffeib",
-      "children": [],
-      "settings": {
-        "text": "A real person reviews every file before it goes to press.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "jjjcpi",
-      "name": "div",
-      "parent": "hcefde",
-      "children": [
-        "hapgic",
-        "meoelh",
-        "njkkbd"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "hfacdc"
-        ]
-      }
-    },
-    {
-      "id": "hapgic",
-      "name": "text-basic",
-      "parent": "jjjcpi",
-      "children": [],
-      "settings": {
-        "text": "ii.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "eibbop"
-        ]
-      }
-    },
-    {
-      "id": "meoelh",
-      "name": "heading",
-      "parent": "jjjcpi",
-      "children": [],
-      "settings": {
-        "text": "Proof before print",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "njkkbd",
-      "name": "text-basic",
-      "parent": "jjjcpi",
-      "children": [],
-      "settings": {
-        "text": "Nothing is printed until you've approved your proof.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "gencpa",
-      "name": "div",
-      "parent": "hcefde",
-      "children": [
-        "llhkek",
-        "oambck",
-        "meeelp"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "hfacdc"
-        ]
-      }
-    },
-    {
-      "id": "llhkek",
-      "name": "text-basic",
-      "parent": "gencpa",
-      "children": [],
-      "settings": {
-        "text": "iii.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "eibbop"
-        ]
-      }
-    },
-    {
-      "id": "oambck",
-      "name": "heading",
-      "parent": "gencpa",
-      "children": [],
-      "settings": {
-        "text": "Made right",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "meeelp",
-      "name": "text-basic",
-      "parent": "gencpa",
-      "children": [],
-      "settings": {
-        "text": "If something isn't right with your order, we'll make it right.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "hknlap",
-      "name": "div",
-      "parent": "hcefde",
-      "children": [
-        "gfbknh",
-        "hikjee",
-        "beplkc"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "hfacdc"
-        ]
-      }
-    },
-    {
-      "id": "gfbknh",
-      "name": "text-basic",
-      "parent": "hknlap",
-      "children": [],
-      "settings": {
-        "text": "iv.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "eibbop"
-        ]
-      }
-    },
-    {
-      "id": "hikjee",
-      "name": "heading",
-      "parent": "hknlap",
-      "children": [],
-      "settings": {
-        "text": "Packed with care",
-        "tag": "h3",
-        "_cssGlobalClasses": [
-          "fkckbf"
-        ]
-      }
-    },
-    {
-      "id": "beplkc",
-      "name": "text-basic",
-      "parent": "hknlap",
-      "children": [],
-      "settings": {
-        "text": "Protected, flat-packed and ready to hand out the day it arrives.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "mphfcp"
-        ]
-      }
-    },
-    {
-      "id": "ehnnbc",
-      "name": "section",
-      "parent": 0,
-      "children": [
-        "cbdkbm"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi",
-          "kgkkif"
-        ]
-      },
-      "label": "For business"
-    },
-    {
-      "id": "cbdkbm",
-      "name": "container",
-      "parent": "ehnnbc",
-      "children": [
-        "pkpalp"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
-      }
-    },
-    {
-      "id": "pkpalp",
-      "name": "div",
-      "parent": "cbdkbm",
-      "children": [
-        "fekaji",
-        "hphhah"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "gkmobc",
-          "dkofim"
-        ]
-      }
-    },
-    {
-      "id": "fekaji",
-      "name": "div",
-      "parent": "pkpalp",
-      "children": [
-        "kcddkj"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "gdpanp"
-        ]
-      },
-      "label": "Photo slot"
-    },
-    {
-      "id": "kcddkj",
-      "name": "image",
-      "parent": "fekaji",
-      "children": [],
-      "settings": {
-        "altText": "Branded packaging and stationery for a boutique business"
-      },
-      "label": "Photo"
-    },
-    {
-      "id": "hphhah",
-      "name": "div",
-      "parent": "pkpalp",
-      "children": [
-        "bffoop",
-        "behlol",
-        "gblifj",
-        "kajipp",
-        "ibjhbn"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "aofpme"
-        ]
-      }
-    },
-    {
-      "id": "bffoop",
-      "name": "text-basic",
-      "parent": "hphhah",
-      "children": [],
-      "settings": {
-        "text": "05 / For business",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pdjlmb"
-        ]
-      }
-    },
-    {
-      "id": "behlol",
-      "name": "heading",
-      "parent": "hphhah",
-      "children": [],
-      "settings": {
-        "text": "Your print partner, <em>run after run.</em>",
-        "tag": "h2",
-        "_cssGlobalClasses": [
-          "fcehpe"
-        ]
-      }
-    },
-    {
-      "id": "gblifj",
-      "name": "text-basic",
-      "parent": "hphhah",
-      "children": [],
-      "settings": {
-        "text": "Larger runs, custom packaging, brand-matched colour and easy reorders. Tell us about your project and we'll put together a custom quote.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "bkklom"
-        ]
-      }
-    },
-    {
-      "id": "kajipp",
-      "name": "div",
-      "parent": "hphhah",
-      "children": [
-        "noodgh",
-        "jkmffo",
-        "kkenhe",
-        "dbpihm"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "okamlf"
-        ]
-      }
-    },
-    {
-      "id": "noodgh",
-      "name": "text-basic",
-      "parent": "kajipp",
-      "children": [],
-      "settings": {
-        "text": "Bulk &amp; repeat orders",
-        "tag": "span",
-        "_cssGlobalClasses": [
-          "doiama"
-        ]
-      }
-    },
-    {
-      "id": "jkmffo",
-      "name": "text-basic",
-      "parent": "kajipp",
-      "children": [],
-      "settings": {
-        "text": "Brand colour matching",
-        "tag": "span",
-        "_cssGlobalClasses": [
-          "doiama"
-        ]
-      }
-    },
-    {
-      "id": "kkenhe",
-      "name": "text-basic",
-      "parent": "kajipp",
-      "children": [],
-      "settings": {
-        "text": "Custom packaging",
-        "tag": "span",
-        "_cssGlobalClasses": [
-          "doiama"
-        ]
-      }
-    },
-    {
-      "id": "dbpihm",
-      "name": "text-basic",
-      "parent": "kajipp",
-      "children": [],
-      "settings": {
-        "text": "File setup &amp; design help",
-        "tag": "span",
-        "_cssGlobalClasses": [
-          "doiama"
-        ]
-      }
-    },
-    {
-      "id": "ibjhbn",
-      "name": "div",
-      "parent": "hphhah",
-      "children": [
-        "efcfhn"
+        "fcgijp"
       ],
       "settings": {
         "_cssGlobalClasses": [
@@ -2985,133 +1338,15 @@
       }
     },
     {
-      "id": "efcfhn",
+      "id": "fcgijp",
       "name": "button",
-      "parent": "ibjhbn",
+      "parent": "nknhhn",
       "children": [],
       "settings": {
-        "text": "Request a quote",
+        "text": "Tell Us About Your Project",
         "link": {
           "type": "external",
-          "url": "/request-a-quote/"
-        },
-        "_cssGlobalClasses": [
-          "gigmbh",
-          "hodbfg"
-        ]
-      }
-    },
-    {
-      "id": "glehkn",
-      "name": "section",
-      "parent": 0,
-      "children": [
-        "ionfhp"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi",
-          "conjkh",
-          "oombnn"
-        ]
-      },
-      "label": "Closing CTA"
-    },
-    {
-      "id": "ionfhp",
-      "name": "container",
-      "parent": "glehkn",
-      "children": [
-        "bcmfko"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
-      }
-    },
-    {
-      "id": "bcmfko",
-      "name": "div",
-      "parent": "ionfhp",
-      "children": [
-        "jahbgp",
-        "mlbief",
-        "iadpld",
-        "chopck"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "adclka"
-        ]
-      }
-    },
-    {
-      "id": "jahbgp",
-      "name": "text-basic",
-      "parent": "bcmfko",
-      "children": [],
-      "settings": {
-        "text": "Feel the difference",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "pdjlmb",
-          "donhmm"
-        ]
-      }
-    },
-    {
-      "id": "mlbief",
-      "name": "heading",
-      "parent": "bcmfko",
-      "children": [],
-      "settings": {
-        "text": "Good ideas look <em>better printed.</em>",
-        "tag": "h2",
-        "_cssGlobalClasses": [
-          "kcnmmd"
-        ]
-      }
-    },
-    {
-      "id": "iadpld",
-      "name": "text-basic",
-      "parent": "bcmfko",
-      "children": [],
-      "settings": {
-        "text": "Not sure which paper is right? Order a sample pack and feel our stocks and finishes in hand before you print.",
-        "tag": "p",
-        "_cssGlobalClasses": [
-          "bkklom",
-          "fenmao"
-        ]
-      }
-    },
-    {
-      "id": "chopck",
-      "name": "div",
-      "parent": "bcmfko",
-      "children": [
-        "abmdhp",
-        "fkhole"
-      ],
-      "settings": {
-        "_cssGlobalClasses": [
-          "pnljbb",
-          "cjhpmg"
-        ]
-      }
-    },
-    {
-      "id": "abmdhp",
-      "name": "button",
-      "parent": "chopck",
-      "children": [],
-      "settings": {
-        "text": "Shop business cards",
-        "link": {
-          "type": "external",
-          "url": "/product-category/business-cards/"
+          "url": "/design-studio/#project-form"
         },
         "_cssGlobalClasses": [
           "gigmbh",
@@ -3120,19 +1355,767 @@
       }
     },
     {
-      "id": "fkhole",
-      "name": "button",
-      "parent": "chopck",
+      "id": "njkald",
+      "name": "div",
+      "parent": "dhildd",
+      "children": [
+        "pngabl",
+        "jcbnmc"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cdogle"
+        ]
+      },
+      "label": "Photo slot"
+    },
+    {
+      "id": "pngabl",
+      "name": "text-basic",
+      "parent": "njkald",
       "children": [],
       "settings": {
-        "text": "Get a sample pack",
-        "link": {
-          "type": "external",
-          "url": "/sample-pack/"
-        },
+        "text": "[Photo: studio table with proofs, paper samples and a finished stationery set]",
+        "tag": "p",
         "_cssGlobalClasses": [
-          "gigmbh",
-          "hkiebg"
+          "jgodhd"
+        ]
+      }
+    },
+    {
+      "id": "jcbnmc",
+      "name": "image",
+      "parent": "njkald",
+      "children": [],
+      "settings": {},
+      "label": "Photo"
+    },
+    {
+      "id": "gomjjj",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "decjgn"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gehlmi"
+        ]
+      },
+      "label": "F. Customer work"
+    },
+    {
+      "id": "decjgn",
+      "name": "container",
+      "parent": "gomjjj",
+      "children": [
+        "gepigc",
+        "eakmlg"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "oaihfg"
+        ]
+      }
+    },
+    {
+      "id": "gepigc",
+      "name": "div",
+      "parent": "decjgn",
+      "children": [
+        "pjobcl",
+        "inmali"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cajggf"
+        ]
+      }
+    },
+    {
+      "id": "pjobcl",
+      "name": "div",
+      "parent": "gepigc",
+      "children": [
+        "idadok",
+        "opincb"
+      ],
+      "settings": {}
+    },
+    {
+      "id": "idadok",
+      "name": "text-basic",
+      "parent": "pjobcl",
+      "children": [],
+      "settings": {
+        "text": "Customer work",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "lofmpg"
+        ]
+      }
+    },
+    {
+      "id": "opincb",
+      "name": "heading",
+      "parent": "pjobcl",
+      "children": [],
+      "settings": {
+        "text": "Recently printed",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "fcehpe"
+        ]
+      }
+    },
+    {
+      "id": "inmali",
+      "name": "text-basic",
+      "parent": "gepigc",
+      "children": [],
+      "settings": {
+        "text": "[Approved customer projects only. Hide this section in Bricks until you have them.]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "nekelh"
+        ]
+      }
+    },
+    {
+      "id": "eakmlg",
+      "name": "div",
+      "parent": "decjgn",
+      "children": [
+        "aljmkg",
+        "lhmgeb",
+        "cjppnl"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "pidfbc"
+        ]
+      }
+    },
+    {
+      "id": "aljmkg",
+      "name": "div",
+      "parent": "eakmlg",
+      "children": [
+        "hejeof",
+        "lidnpe",
+        "ahffcg"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "fcohbo"
+        ]
+      }
+    },
+    {
+      "id": "hejeof",
+      "name": "div",
+      "parent": "aljmkg",
+      "children": [
+        "jngnjk",
+        "omffhc"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cdogle"
+        ]
+      },
+      "label": "Photo slot"
+    },
+    {
+      "id": "jngnjk",
+      "name": "text-basic",
+      "parent": "hejeof",
+      "children": [],
+      "settings": {
+        "text": "[Photo: approved customer project]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "jgodhd"
+        ]
+      }
+    },
+    {
+      "id": "omffhc",
+      "name": "image",
+      "parent": "hejeof",
+      "children": [],
+      "settings": {},
+      "label": "Photo"
+    },
+    {
+      "id": "lidnpe",
+      "name": "heading",
+      "parent": "aljmkg",
+      "children": [],
+      "settings": {
+        "text": "[Customer or project name]",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ohcajg"
+        ]
+      }
+    },
+    {
+      "id": "ahffcg",
+      "name": "text-basic",
+      "parent": "aljmkg",
+      "children": [],
+      "settings": {
+        "text": "[Product &middot; stock &middot; finish]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "cbhfjj"
+        ]
+      }
+    },
+    {
+      "id": "lhmgeb",
+      "name": "div",
+      "parent": "eakmlg",
+      "children": [
+        "hojdoc",
+        "mlkkfc",
+        "hebcap"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "fcohbo"
+        ]
+      }
+    },
+    {
+      "id": "hojdoc",
+      "name": "div",
+      "parent": "lhmgeb",
+      "children": [
+        "afeehh",
+        "mkihel"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cdogle"
+        ]
+      },
+      "label": "Photo slot"
+    },
+    {
+      "id": "afeehh",
+      "name": "text-basic",
+      "parent": "hojdoc",
+      "children": [],
+      "settings": {
+        "text": "[Photo: approved customer project]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "jgodhd"
+        ]
+      }
+    },
+    {
+      "id": "mkihel",
+      "name": "image",
+      "parent": "hojdoc",
+      "children": [],
+      "settings": {},
+      "label": "Photo"
+    },
+    {
+      "id": "mlkkfc",
+      "name": "heading",
+      "parent": "lhmgeb",
+      "children": [],
+      "settings": {
+        "text": "[Customer or project name]",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ohcajg"
+        ]
+      }
+    },
+    {
+      "id": "hebcap",
+      "name": "text-basic",
+      "parent": "lhmgeb",
+      "children": [],
+      "settings": {
+        "text": "[Product &middot; stock &middot; finish]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "cbhfjj"
+        ]
+      }
+    },
+    {
+      "id": "cjppnl",
+      "name": "div",
+      "parent": "eakmlg",
+      "children": [
+        "jaekal",
+        "lenama",
+        "hecheg"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "fcohbo"
+        ]
+      }
+    },
+    {
+      "id": "jaekal",
+      "name": "div",
+      "parent": "cjppnl",
+      "children": [
+        "pfhldc",
+        "gcoojo"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cdogle"
+        ]
+      },
+      "label": "Photo slot"
+    },
+    {
+      "id": "pfhldc",
+      "name": "text-basic",
+      "parent": "jaekal",
+      "children": [],
+      "settings": {
+        "text": "[Photo: approved customer project]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "jgodhd"
+        ]
+      }
+    },
+    {
+      "id": "gcoojo",
+      "name": "image",
+      "parent": "jaekal",
+      "children": [],
+      "settings": {},
+      "label": "Photo"
+    },
+    {
+      "id": "lenama",
+      "name": "heading",
+      "parent": "cjppnl",
+      "children": [],
+      "settings": {
+        "text": "[Customer or project name]",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ohcajg"
+        ]
+      }
+    },
+    {
+      "id": "hecheg",
+      "name": "text-basic",
+      "parent": "cjppnl",
+      "children": [],
+      "settings": {
+        "text": "[Product &middot; stock &middot; finish]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "cbhfjj"
+        ]
+      }
+    },
+    {
+      "id": "aenmmo",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "ojnldf"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gehlmi",
+          "baffgj"
+        ]
+      },
+      "label": "G. Material approach"
+    },
+    {
+      "id": "ojnldf",
+      "name": "container",
+      "parent": "aenmmo",
+      "children": [
+        "aaejfl"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "oaihfg"
+        ]
+      }
+    },
+    {
+      "id": "aaejfl",
+      "name": "div",
+      "parent": "ojnldf",
+      "children": [
+        "cefmja",
+        "oapfod"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "cnhppl",
+          "efnbbo"
+        ]
+      }
+    },
+    {
+      "id": "cefmja",
+      "name": "div",
+      "parent": "aaejfl",
+      "children": [
+        "jdcdkc",
+        "kopfhf"
+      ],
+      "settings": {}
+    },
+    {
+      "id": "jdcdkc",
+      "name": "text-basic",
+      "parent": "cefmja",
+      "children": [],
+      "settings": {
+        "text": "Material approach",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "lofmpg"
+        ]
+      }
+    },
+    {
+      "id": "kopfhf",
+      "name": "heading",
+      "parent": "cefmja",
+      "children": [],
+      "settings": {
+        "text": "How we choose and print",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "fcehpe"
+        ]
+      }
+    },
+    {
+      "id": "oapfod",
+      "name": "div",
+      "parent": "aaejfl",
+      "children": [
+        "ceghco",
+        "faajhi",
+        "lpmoal",
+        "cgcacj"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "fnjpkk"
+        ]
+      }
+    },
+    {
+      "id": "ceghco",
+      "name": "div",
+      "parent": "oapfod",
+      "children": [
+        "jeaibf",
+        "niphod"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "pohgdb"
+        ]
+      }
+    },
+    {
+      "id": "jeaibf",
+      "name": "heading",
+      "parent": "ceghco",
+      "children": [],
+      "settings": {
+        "text": "Paper first",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ohcajg"
+        ]
+      }
+    },
+    {
+      "id": "niphod",
+      "name": "text-basic",
+      "parent": "ceghco",
+      "children": [],
+      "settings": {
+        "text": "We choose each stock for how it prints and how it feels in hand, then match the finish to the paper.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "cbhfjj"
+        ]
+      }
+    },
+    {
+      "id": "faajhi",
+      "name": "div",
+      "parent": "oapfod",
+      "children": [
+        "mbhjpi",
+        "hepmec"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "pohgdb"
+        ]
+      }
+    },
+    {
+      "id": "mbhjpi",
+      "name": "heading",
+      "parent": "faajhi",
+      "children": [],
+      "settings": {
+        "text": "Our printing partners",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ohcajg"
+        ]
+      }
+    },
+    {
+      "id": "hepmec",
+      "name": "text-basic",
+      "parent": "faajhi",
+      "children": [],
+      "settings": {
+        "text": "We work with printing partners that hold FSC certifications. If certified paper matters for your project, ask us about the options.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "cbhfjj"
+        ]
+      }
+    },
+    {
+      "id": "lpmoal",
+      "name": "div",
+      "parent": "oapfod",
+      "children": [
+        "hhbopo",
+        "dajpni"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "pohgdb"
+        ]
+      }
+    },
+    {
+      "id": "hhbopo",
+      "name": "heading",
+      "parent": "lpmoal",
+      "children": [],
+      "settings": {
+        "text": "[Verified practice]",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ohcajg"
+        ]
+      }
+    },
+    {
+      "id": "dajpni",
+      "name": "text-basic",
+      "parent": "lpmoal",
+      "children": [],
+      "settings": {
+        "text": "[Add a specific, verified sourcing or production practice.]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "cbhfjj"
+        ]
+      }
+    },
+    {
+      "id": "cgcacj",
+      "name": "div",
+      "parent": "oapfod",
+      "children": [
+        "ginbcn",
+        "fdffpm"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "pohgdb"
+        ]
+      }
+    },
+    {
+      "id": "ginbcn",
+      "name": "heading",
+      "parent": "cgcacj",
+      "children": [],
+      "settings": {
+        "text": "[Verified practice]",
+        "tag": "h3",
+        "_cssGlobalClasses": [
+          "ohcajg"
+        ]
+      }
+    },
+    {
+      "id": "fdffpm",
+      "name": "text-basic",
+      "parent": "cgcacj",
+      "children": [],
+      "settings": {
+        "text": "[Add a specific, verified sourcing or production practice.]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "cbhfjj"
+        ]
+      }
+    },
+    {
+      "id": "hfhecn",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "bhhnob"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "gehlmi",
+          "kgkkif"
+        ]
+      },
+      "label": "H. Email sign-up"
+    },
+    {
+      "id": "bhhnob",
+      "name": "container",
+      "parent": "hfhecn",
+      "children": [
+        "ldhiic"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "oaihfg"
+        ]
+      }
+    },
+    {
+      "id": "ldhiic",
+      "name": "div",
+      "parent": "bhhnob",
+      "children": [
+        "gaookd",
+        "bendll"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "aejgpb"
+        ]
+      }
+    },
+    {
+      "id": "gaookd",
+      "name": "div",
+      "parent": "ldhiic",
+      "children": [
+        "bjohbi",
+        "mmhjfe"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "aofpme"
+        ]
+      }
+    },
+    {
+      "id": "bjohbi",
+      "name": "heading",
+      "parent": "gaookd",
+      "children": [],
+      "settings": {
+        "text": "Notes from the Haus.",
+        "tag": "h2",
+        "_cssGlobalClasses": [
+          "fcehpe"
+        ]
+      }
+    },
+    {
+      "id": "mmhjfe",
+      "name": "text-basic",
+      "parent": "gaookd",
+      "children": [],
+      "settings": {
+        "text": "New collections, paper discoveries, and studio news. A considered addition to your inbox.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "bkklom"
+        ]
+      }
+    },
+    {
+      "id": "bendll",
+      "name": "div",
+      "parent": "ldhiic",
+      "children": [
+        "fleijh",
+        "innfia"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "aofpme"
+        ]
+      }
+    },
+    {
+      "id": "fleijh",
+      "name": "form",
+      "parent": "bendll",
+      "children": [],
+      "settings": {
+        "fields": [
+          {
+            "id": "hneghd",
+            "type": "email",
+            "label": "Email address",
+            "placeholder": "",
+            "required": true
+          }
+        ],
+        "submitButtonText": "Subscribe",
+        "actions": [
+          "email"
+        ],
+        "emailSubject": "New newsletter sign-up",
+        "emailTo": "admin_email",
+        "successMessage": "Thank you. You're on the list.",
+        "_cssGlobalClasses": [
+          "idpjno"
+        ]
+      },
+      "label": "Newsletter form (connect your email platform)"
+    },
+    {
+      "id": "innfia",
+      "name": "text-basic",
+      "parent": "bendll",
+      "children": [],
+      "settings": {
+        "text": "Unsubscribe at any time. See our <a href=\"/privacy-policy/\">privacy policy</a>.",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "nekelh"
         ]
       }
     }
@@ -3144,7 +2127,7 @@
       "id": "gehlmi",
       "name": "ph-section",
       "settings": {
-        "_cssCustom": "%root% {\n  --ph-paper: #F9F7F3;\n  --ph-ink: #0A0A0A;\n  --ph-sand: #E8E1D6;\n  --ph-stone: #D6D1CA;\n  --ph-olive: #6B6A5A;\n  --ph-muted: #777069;\n  --ph-oxblood: #54151B;\n  --ph-midnight: #1636D9;\n  --ph-blush: #E7C9D2;\n  --ph-chartreuse: #C6D600;\n  --ph-sans: \"Neue Haas Grotesk Display\", \"neue-haas-grotesk-display\", \"Neue Haas Grotesk Text\", \"neue-haas-grotesk-text\", \"Inter Tight\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  --ph-serif: \"Tiempos Headline\", \"Tiempos Text\", \"Newsreader\", Georgia, \"Times New Roman\", serif;\n  --ph-gutter: clamp(20px, 5vw, 72px);\n  --ph-space: clamp(80px, 11vw, 160px);\n  --ph-max: 1360px;\n\n  width: 100%;\n  padding: var(--ph-space) var(--ph-gutter);\n  background: var(--ph-paper);\n  color: var(--ph-ink);\n  font-family: var(--ph-sans);\n  -webkit-font-smoothing: antialiased;\n}\n%root% *, %root% *::before, %root% *::after { box-sizing: border-box; }\n:where(%root% a) { color: inherit; }"
+        "_cssCustom": "%root% {\n  --ph-paper: #F9F7F3;\n  --ph-ink: #0A0A0A;\n  --ph-sand: #E8E1D6;\n  --ph-stone: #DEDAD3;\n  --ph-rule: #CFC9BF;\n  --ph-olive: #5F5E4F;\n  --ph-muted: #5E5A54;\n  --ph-oxblood: #54151B;\n  --ph-blush: #E7C9D2;\n  --ph-display: \"Tiempos Headline\", \"Tiempos Text\", \"Newsreader\", Georgia, \"Times New Roman\", serif;\n  --ph-sans: \"Neue Haas Grotesk Text\", \"neue-haas-grotesk-text\", \"Neue Haas Grotesk Display\", \"neue-haas-grotesk-display\", \"Inter Tight\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  --ph-gutter: clamp(20px, 5vw, 64px);\n  --ph-space: clamp(72px, 9vw, 136px);\n  --ph-max: 1320px;\n\n  width: 100%;\n  background: var(--ph-paper);\n  color: var(--ph-ink);\n  font-family: var(--ph-sans);\n  font-size: 16px;\n  line-height: 1.6;\n  -webkit-font-smoothing: antialiased;\n}\n%root% *, %root% *::before, %root% *::after { box-sizing: border-box; }\n:where(%root% a) { color: inherit; }\n%root% a:focus-visible, %root% button:focus-visible, %root% input:focus-visible {\n  outline: 2px solid currentColor; outline-offset: 3px;\n}\n\n%root% { padding: var(--ph-space) var(--ph-gutter); }"
       }
     },
     {
@@ -3155,13 +2138,6 @@
       }
     },
     {
-      "id": "conjkh",
-      "name": "ph-section--ink",
-      "settings": {
-        "_cssCustom": "%root% { background: var(--ph-ink); color: var(--ph-paper); }"
-      }
-    },
-    {
       "id": "jdgjck",
       "name": "ph-section--oxblood",
       "settings": {
@@ -3169,71 +2145,92 @@
       }
     },
     {
-      "id": "eokdip",
-      "name": "ph-section--tight",
+      "id": "baffgj",
+      "name": "ph-section--flush",
       "settings": {
-        "_cssCustom": "%root% { padding-top: 0; padding-bottom: 0; }"
+        "_cssCustom": "%root% { padding-top: 0; }"
       }
     },
     {
       "id": "oaihfg",
       "name": "ph-container",
       "settings": {
-        "_cssCustom": "%root% {\n  width: 100%;\n  max-width: var(--ph-max);\n  margin: 0 auto;\n}"
+        "_cssCustom": "%root% { width: 100%; max-width: var(--ph-max); margin: 0 auto; }"
       }
     },
     {
-      "id": "pdjlmb",
-      "name": "ph-eyebrow",
+      "id": "cnhppl",
+      "name": "ph-rule",
       "settings": {
-        "_cssCustom": "%root% {\n  margin: 0 0 28px;\n  font-family: var(--ph-sans);\n  font-size: 12px;\n  font-weight: 500;\n  letter-spacing: 0.18em;\n  text-transform: uppercase;\n  color: var(--ph-olive);\n}"
+        "_cssCustom": "%root% { width: 100%; padding-top: var(--ph-space); border-top: 1px solid var(--ph-rule); }"
       }
     },
     {
-      "id": "donhmm",
-      "name": "ph-eyebrow--light",
+      "id": "lofmpg",
+      "name": "ph-label",
       "settings": {
-        "_cssCustom": "%root% { color: var(--ph-stone); }"
+        "_cssCustom": "%root% {\n  margin: 0 0 18px;\n  font-family: var(--ph-sans);\n  font-size: 12px;\n  font-weight: 500;\n  letter-spacing: 0.08em;\n  line-height: 1.4;\n  text-transform: uppercase;\n  color: var(--ph-olive);\n}"
+      }
+    },
+    {
+      "id": "kbajbo",
+      "name": "ph-label--light",
+      "settings": {
+        "_cssCustom": "%root% { color: var(--ph-blush); }"
       }
     },
     {
       "id": "fcehpe",
       "name": "ph-h2",
       "settings": {
-        "_cssCustom": "%root% {\n  margin: 0;\n  max-width: 16ch;\n  font-family: var(--ph-sans);\n  font-size: clamp(36px, 5vw, 72px);\n  font-weight: 500;\n  line-height: 0.98;\n  letter-spacing: -0.035em;\n}\n%root% em { font-family: var(--ph-serif); font-style: italic; font-weight: 400; letter-spacing: -0.02em; }"
+        "_cssCustom": "%root% {\n  margin: 0;\n  max-width: 18ch;\n  font-family: var(--ph-display);\n  font-size: clamp(34px, 4.2vw, 56px);\n  font-weight: 400;\n  line-height: 1.04;\n  letter-spacing: -0.015em;\n}"
+      }
+    },
+    {
+      "id": "ohcajg",
+      "name": "ph-h3",
+      "settings": {
+        "_cssCustom": "%root% { margin: 0; font-family: var(--ph-sans); font-size: 18px; font-weight: 500; line-height: 1.3; letter-spacing: -0.005em; }"
+      }
+    },
+    {
+      "id": "cbhfjj",
+      "name": "ph-body",
+      "settings": {
+        "_cssCustom": "%root% { margin: 0; max-width: 46ch; font-size: 15px; line-height: 1.6; color: var(--ph-muted); }"
       }
     },
     {
       "id": "bkklom",
       "name": "ph-lead",
       "settings": {
-        "_cssCustom": "%root% {\n  margin: 0;\n  max-width: 46ch;\n  font-size: clamp(17px, 1.4vw, 20px);\n  line-height: 1.55;\n  color: inherit;\n  opacity: 0.82;\n}"
+        "_cssCustom": "%root% { margin: 0; max-width: 44ch; font-size: clamp(17px, 1.3vw, 19px); line-height: 1.55; }"
       }
     },
     {
       "id": "nmifba",
       "name": "ph-link",
       "settings": {
-        "_cssCustom": "%root% {\n  display: inline-flex;\n  align-items: center;\n  gap: 10px;\n  font-size: 14px;\n  font-weight: 500;\n  letter-spacing: 0.04em;\n  text-decoration: none;\n  border-bottom: 1px solid currentColor;\n  padding-bottom: 4px;\n  transition: gap .25s ease, opacity .25s ease;\n}\n%root%:hover { gap: 16px; opacity: .7; }"
+        "_cssCustom": "%root% {\n  display: inline-flex;\n  align-items: center;\n  min-height: 44px;\n  font-size: 15px;\n  font-weight: 500;\n  text-decoration: underline;\n  text-decoration-thickness: 1px;\n  text-underline-offset: 6px;\n  transition: opacity .2s ease;\n}\n%root%:hover { opacity: .65; }"
       }
     },
     {
       "id": "gigmbh",
       "name": "ph-btn",
       "settings": {
-        "_cssCustom": "%root% {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n  min-height: 54px;\n  padding: 0 30px;\n  border: 1px solid var(--ph-ink);\n  border-radius: 999px;\n  font-family: var(--ph-sans);\n  font-size: 15px;\n  font-weight: 500;\n  letter-spacing: 0.01em;\n  line-height: 1;\n  text-decoration: none;\n  cursor: pointer;\n  transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;\n}\n%root%:hover { transform: translateY(-2px); }\n%root%:focus-visible { outline: 2px solid var(--ph-midnight); outline-offset: 3px; }"
+        "_cssCustom": "%root% {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  min-height: 52px;\n  padding: 0 28px;\n  border: 1px solid var(--ph-ink);\n  border-radius: 0;\n  font-family: var(--ph-sans);\n  font-size: 15px;\n  font-weight: 500;\n  line-height: 1.2;\n  text-decoration: none;\n  cursor: pointer;\n  transition: background .2s ease, color .2s ease, border-color .2s ease;\n}"
       }
     },
     {
       "id": "hodbfg",
       "name": "ph-btn--dark",
       "settings": {
-        "_cssCustom": "%root% { background: var(--ph-ink); color: var(--ph-paper); }\n%root%:hover { background: var(--ph-oxblood); border-color: var(--ph-oxblood); color: var(--ph-paper); }"
+        "_cssCustom": "%root% { background: var(--ph-ink); color: var(--ph-paper); }\n%root%:hover { background: #2E2B28; border-color: #2E2B28; }"
       }
     },
     {
-      "id": "mcfkfp",
-      "name": "ph-btn--ghost",
+      "id": "pchbdf",
+      "name": "ph-btn--outline",
       "settings": {
         "_cssCustom": "%root% { background: transparent; color: var(--ph-ink); }\n%root%:hover { background: var(--ph-ink); color: var(--ph-paper); }"
       }
@@ -3242,49 +2239,35 @@
       "id": "ldfdbc",
       "name": "ph-btn--light",
       "settings": {
-        "_cssCustom": "%root% { background: var(--ph-paper); color: var(--ph-ink); border-color: var(--ph-paper); }\n%root%:hover { background: var(--ph-blush); border-color: var(--ph-blush); color: var(--ph-ink); }"
-      }
-    },
-    {
-      "id": "hkiebg",
-      "name": "ph-btn--ghost-light",
-      "settings": {
-        "_cssCustom": "%root% { background: transparent; color: var(--ph-paper); border-color: rgba(249,247,243,.5); }\n%root%:hover { background: var(--ph-paper); color: var(--ph-ink); border-color: var(--ph-paper); }"
+        "_cssCustom": "%root% { background: var(--ph-paper); color: var(--ph-ink); border-color: var(--ph-paper); }\n%root%:hover { background: var(--ph-sand); border-color: var(--ph-sand); }"
       }
     },
     {
       "id": "pnljbb",
       "name": "ph-actions",
       "settings": {
-        "_cssCustom": "%root% { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }"
+        "_cssCustom": "%root% { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 36px; }"
       }
     },
     {
       "id": "cdogle",
       "name": "ph-media",
       "settings": {
-        "_cssCustom": "%root% {\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n  aspect-ratio: 4 / 5;\n  border-radius: 2px;\n  background:\n    radial-gradient(120% 80% at 20% 15%, rgba(255,255,255,.55), transparent 60%),\n    linear-gradient(160deg, var(--ph-sand) 0%, var(--ph-stone) 100%);\n}\n%root% img {\n  position: absolute; inset: 0;\n  width: 100%; height: 100%;\n  object-fit: cover;\n  transition: transform 1.2s cubic-bezier(.2,.7,.2,1);\n}"
+        "_cssCustom": "%root% {\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n  aspect-ratio: 4 / 5;\n  background: var(--ph-stone);\n}\n%root% img {\n  position: absolute; inset: 0; z-index: 1;\n  width: 100%; height: 100%;\n  object-fit: cover;\n  transition: transform .8s cubic-bezier(.2,.7,.2,1);\n}\n@media (prefers-reduced-motion: reduce) { %root% img { transition: none; } }"
       }
     },
     {
-      "id": "gdpanp",
-      "name": "ph-media--blush",
+      "id": "jgodhd",
+      "name": "ph-media__label",
       "settings": {
-        "_cssCustom": "%root% { background: linear-gradient(160deg, #F1DDE3 0%, var(--ph-blush) 100%); }"
+        "_cssCustom": "%root% {\n  position: absolute; left: 16px; bottom: 14px; right: 16px;\n  margin: 0;\n  font-size: 12px; line-height: 1.4;\n  color: var(--ph-muted);\n}"
       }
     },
     {
-      "id": "hmkhog",
-      "name": "ph-media--olive",
+      "id": "fmnglg",
+      "name": "ph-media--landscape",
       "settings": {
-        "_cssCustom": "%root% { background: linear-gradient(160deg, #8C8B7A 0%, var(--ph-olive) 100%); }"
-      }
-    },
-    {
-      "id": "fopncl",
-      "name": "ph-media--oxblood",
-      "settings": {
-        "_cssCustom": "%root% { background: linear-gradient(160deg, #6E2229 0%, #3E0F14 100%); }"
+        "_cssCustom": "%root% { aspect-ratio: 4 / 3; }"
       }
     },
     {
@@ -3295,346 +2278,164 @@
       }
     },
     {
+      "id": "ofijmm",
+      "name": "ph-media--hero",
+      "settings": {
+        "_cssCustom": "%root% { aspect-ratio: 6 / 5; }"
+      }
+    },
+    {
+      "id": "eljmmp",
+      "name": "ph-caption",
+      "settings": {
+        "_cssCustom": "%root% { margin: 12px 0 0; font-size: 13px; color: var(--ph-muted); }"
+      }
+    },
+    {
       "id": "aobjkp",
       "name": "ph-hero",
       "settings": {
-        "_cssCustom": "%root% { padding-top: clamp(48px, 7vw, 110px); padding-bottom: clamp(56px, 7vw, 110px); }"
+        "_cssCustom": "%root% { padding-top: clamp(40px, 6vw, 88px); padding-bottom: clamp(64px, 8vw, 120px); }"
       }
     },
     {
       "id": "ggfpfh",
       "name": "ph-hero__grid",
       "settings": {
-        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);\n  gap: clamp(40px, 6vw, 96px);\n  align-items: end;\n}\n@media (max-width: 991px) { %root% { grid-template-columns: 1fr; } }"
+        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);\n  gap: clamp(40px, 6vw, 96px);\n  align-items: center;\n}\n@media (max-width: 991px) { %root% { grid-template-columns: 1fr; } }"
       }
     },
     {
       "id": "lfhblh",
       "name": "ph-hero__title",
       "settings": {
-        "_cssCustom": "%root% {\n  margin: 0;\n  font-family: var(--ph-sans);\n  font-size: clamp(54px, 8.4vw, 132px);\n  font-weight: 500;\n  line-height: 0.9;\n  letter-spacing: -0.05em;\n  text-transform: uppercase;\n}\n%root% em {\n  display: block;\n  font-family: var(--ph-serif);\n  font-style: italic;\n  font-weight: 400;\n  text-transform: none;\n  letter-spacing: -0.03em;\n  color: var(--ph-oxblood);\n}"
+        "_cssCustom": "%root% {\n  margin: 0;\n  font-family: var(--ph-display);\n  font-size: clamp(48px, 6.4vw, 92px);\n  font-weight: 400;\n  line-height: 0.98;\n  letter-spacing: -0.025em;\n}"
       }
     },
     {
       "id": "ikjnfo",
       "name": "ph-hero__lead",
       "settings": {
-        "_cssCustom": "%root% { margin-top: 36px; }"
-      }
-    },
-    {
-      "id": "ebkncd",
-      "name": "ph-hero__visual",
-      "settings": {
-        "_cssCustom": "%root% { position: relative; }"
-      }
-    },
-    {
-      "id": "alknon",
-      "name": "ph-hero__tag",
-      "settings": {
-        "_cssCustom": "%root% {\n  position: absolute;\n  left: clamp(-56px, -4vw, -16px);\n  bottom: 40px;\n  max-width: 230px;\n  padding: 22px 24px;\n  background: var(--ph-paper);\n  box-shadow: 0 30px 60px -30px rgba(10,10,10,.35);\n}\n%root% p { margin: 0; }\n@media (max-width: 991px) { %root% { left: 16px; bottom: 16px; } }"
-      }
-    },
-    {
-      "id": "hhokin",
-      "name": "ph-hero__tag-title",
-      "settings": {
-        "_cssCustom": "%root% { margin: 0 0 6px; font-family: var(--ph-serif); font-style: italic; font-size: 24px; line-height: 1.1; }"
-      }
-    },
-    {
-      "id": "oeeeab",
-      "name": "ph-hero__tag-text",
-      "settings": {
-        "_cssCustom": "%root% { font-size: 13px; line-height: 1.5; color: var(--ph-muted); }"
-      }
-    },
-    {
-      "id": "ioholh",
-      "name": "ph-hero__points",
-      "settings": {
-        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: 24px;\n  margin-top: clamp(56px, 7vw, 96px);\n  padding-top: 28px;\n  border-top: 1px solid var(--ph-stone);\n}\n@media (max-width: 767px) { %root% { grid-template-columns: 1fr; gap: 16px; } }"
-      }
-    },
-    {
-      "id": "jbkjbi",
-      "name": "ph-point",
-      "settings": {
-        "_cssCustom": "%root% { margin: 0; font-size: 14px; line-height: 1.5; color: var(--ph-muted); }\n%root% strong { display: block; margin-bottom: 4px; font-weight: 500; color: var(--ph-ink); letter-spacing: 0.01em; }"
-      }
-    },
-    {
-      "id": "lfmeja",
-      "name": "ph-marquee",
-      "settings": {
-        "_cssCustom": "%root% {\n  overflow: hidden;\n  padding: 22px 0;\n  white-space: nowrap;\n  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);\n          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);\n}"
-      }
-    },
-    {
-      "id": "icohan",
-      "name": "ph-marquee__track",
-      "settings": {
-        "_cssCustom": "%root% {\n  display: inline-flex;\n  margin: 0;\n  font-size: clamp(18px, 2vw, 26px);\n  letter-spacing: -0.01em;\n  animation: ph-marquee 38s linear infinite;\n}\n%root% span { padding: 0 28px; }\n%root% span:nth-child(even) { font-family: var(--ph-serif); font-style: italic; color: var(--ph-stone); }\n%root% i { font-style: normal; color: var(--ph-chartreuse); }\n@keyframes ph-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }\n@media (prefers-reduced-motion: reduce) { %root% { animation: none; } }"
+        "_cssCustom": "%root% { margin-top: 28px; max-width: 30ch; }"
       }
     },
     {
       "id": "cajggf",
       "name": "ph-head",
       "settings": {
-        "_cssCustom": "%root% {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: flex-end;\n  gap: 32px;\n  margin-bottom: clamp(48px, 6vw, 80px);\n}"
+        "_cssCustom": "%root% {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: flex-end;\n  gap: 24px 48px;\n  width: 100%;\n  margin-bottom: clamp(36px, 4.5vw, 64px);\n}"
       }
     },
     {
-      "id": "cdifab",
-      "name": "ph-head__aside",
+      "id": "pidfbc",
+      "name": "ph-grid-3",
       "settings": {
-        "_cssCustom": "%root% { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; max-width: 420px; }"
+        "_cssCustom": "%root% { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(32px, 4vw, 56px) clamp(16px, 2vw, 32px); width: 100%; }\n@media (max-width: 767px) { %root% { grid-template-columns: repeat(2, minmax(0, 1fr)); } }"
+      }
+    },
+    {
+      "id": "mkogab",
+      "name": "ph-grid-4",
+      "settings": {
+        "_cssCustom": "%root% { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(32px, 4vw, 48px) clamp(16px, 2vw, 28px); width: 100%; }\n@media (max-width: 991px) { %root% { grid-template-columns: repeat(2, minmax(0, 1fr)); } }"
       }
     },
     {
       "id": "fcohbo",
       "name": "ph-card",
       "settings": {
-        "_cssCustom": "%root% {\n  display: flex;\n  flex-direction: column;\n  gap: 18px;\n  color: inherit;\n  text-decoration: none;\n}\n%root%:hover .ph-media img { transform: scale(1.04); }\n%root%:hover .ph-card__more { gap: 16px; }"
+        "_cssCustom": "%root% { display: flex; flex-direction: column; gap: 6px; color: inherit; text-decoration: none; }\n%root% .ph-media { margin-bottom: 14px; }\n%root%:hover .ph-media img { transform: scale(1.03); }\n%root%:hover .ph-h3 { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }\n@media (prefers-reduced-motion: reduce) { %root%:hover .ph-media img { transform: none; } }"
       }
     },
     {
-      "id": "cabgmp",
-      "name": "ph-card__title",
+      "id": "hajbpb",
+      "name": "ph-price",
       "settings": {
-        "_cssCustom": "%root% { margin: 0; font-size: clamp(20px, 1.8vw, 26px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; }"
+        "_cssCustom": "%root% { margin: 0; font-size: 15px; color: var(--ph-muted); } %root% del { opacity: .6; margin-right: 6px; }"
       }
     },
     {
-      "id": "mikecg",
-      "name": "ph-card__num",
+      "id": "celpph",
+      "name": "ph-materials",
       "settings": {
-        "_cssCustom": "%root% { margin: 0; font-size: 12px; letter-spacing: .16em; color: var(--ph-muted); }"
+        "_cssCustom": "%root% { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(16px, 2vw, 32px); width: 100%; }\n@media (max-width: 767px) { %root% { grid-template-columns: 1fr; } }"
       }
     },
     {
-      "id": "alphmm",
-      "name": "ph-card__text",
+      "id": "lmpbgh",
+      "name": "ph-material",
       "settings": {
-        "_cssCustom": "%root% { margin: 0; max-width: 40ch; font-size: 15px; line-height: 1.55; color: var(--ph-muted); }"
+        "_cssCustom": "%root% { display: flex; flex-direction: column; gap: 8px; padding: 0 0 48px; }\n%root% .ph-media { margin-bottom: 16px; }"
       }
     },
     {
-      "id": "diofom",
-      "name": "ph-card__more",
+      "id": "hmcfbp",
+      "name": "ph-material__group",
       "settings": {
-        "_cssCustom": "%root% { display: inline-flex; gap: 10px; font-size: 14px; font-weight: 500; transition: gap .25s ease; }"
+        "_cssCustom": "%root% { grid-column: 1 / -1; margin: 0; padding: 16px 0 24px; border-top: 1px solid var(--ph-rule); }"
       }
     },
     {
       "id": "gkmobc",
       "name": "ph-split",
       "settings": {
-        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);\n  gap: clamp(40px, 7vw, 120px);\n  align-items: center;\n}\n@media (max-width: 991px) { %root% { grid-template-columns: 1fr; } }"
-      }
-    },
-    {
-      "id": "dkofim",
-      "name": "ph-split--reverse",
-      "settings": {
-        "_cssCustom": "%root% > :first-child { order: 2; }\n@media (max-width: 991px) { %root% > :first-child { order: 0; } }"
-      }
-    },
-    {
-      "id": "noinjf",
-      "name": "ph-statement",
-      "settings": {
-        "_cssCustom": "%root% {\n  margin: 0;\n  font-family: var(--ph-serif);\n  font-size: clamp(44px, 6.4vw, 104px);\n  font-weight: 400;\n  line-height: 0.98;\n  letter-spacing: -0.03em;\n}\n%root% em { font-style: italic; color: var(--ph-blush); }"
+        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);\n  gap: clamp(40px, 7vw, 112px);\n  align-items: center;\n  width: 100%;\n}\n@media (max-width: 991px) { %root% { grid-template-columns: 1fr; } }"
       }
     },
     {
       "id": "aofpme",
       "name": "ph-stack",
       "settings": {
-        "_cssCustom": "%root% { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }"
+        "_cssCustom": "%root% { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }"
       }
     },
     {
-      "id": "hffocg",
-      "name": "ph-details",
+      "id": "ofikhl",
+      "name": "ph-list",
       "settings": {
-        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: repeat(4, minmax(0, 1fr));\n  border-top: 1px solid rgba(10,10,10,.18);\n}\n@media (max-width: 991px) { %root% { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@media (max-width: 600px) { %root% { grid-template-columns: 1fr; } }"
+        "_cssCustom": "%root% { width: 100%; max-width: 440px; margin: 8px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(249,247,243,.28); }\n%root% li { padding: 14px 0; border-bottom: 1px solid rgba(249,247,243,.28); font-size: 15px; }"
       }
     },
     {
-      "id": "hfacdc",
-      "name": "ph-detail",
+      "id": "efnbbo",
+      "name": "ph-approach",
       "settings": {
-        "_cssCustom": "%root% {\n  display: flex;\n  flex-direction: column;\n  gap: 14px;\n  padding: 32px 28px 8px 0;\n}\n%root% + %root% { padding-left: 28px; border-left: 1px solid rgba(10,10,10,.18); }\n@media (max-width: 991px) {\n  %root%, %root% + %root% { padding: 32px 24px 24px 0; border-left: 0; border-bottom: 1px solid rgba(10,10,10,.18); }\n}"
+        "_cssCustom": "%root% { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 96px); }\n@media (max-width: 991px) { %root% { grid-template-columns: 1fr; } }"
       }
     },
     {
-      "id": "eibbop",
-      "name": "ph-detail__num",
+      "id": "fnjpkk",
+      "name": "ph-facts",
       "settings": {
-        "_cssCustom": "%root% { margin: 0 0 24px; font-family: var(--ph-serif); font-style: italic; font-size: 40px; line-height: 1; color: var(--ph-oxblood); }"
+        "_cssCustom": "%root% { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px clamp(24px, 3vw, 48px); }\n@media (max-width: 600px) { %root% { grid-template-columns: 1fr; } }"
       }
     },
     {
-      "id": "fkckbf",
-      "name": "ph-detail__title",
+      "id": "pohgdb",
+      "name": "ph-fact",
       "settings": {
-        "_cssCustom": "%root% { margin: 0; font-size: 20px; font-weight: 500; letter-spacing: -0.01em; }"
+        "_cssCustom": "%root% { display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 1px solid var(--ph-rule); }"
       }
     },
     {
-      "id": "mphfcp",
-      "name": "ph-detail__text",
+      "id": "aejgpb",
+      "name": "ph-signup",
       "settings": {
-        "_cssCustom": "%root% { margin: 0; font-size: 15px; line-height: 1.6; color: #4C4A44; }"
+        "_cssCustom": "%root% { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px clamp(40px, 6vw, 96px); align-items: end; width: 100%; }\n@media (max-width: 991px) { %root% { grid-template-columns: 1fr; } }"
       }
     },
     {
-      "id": "dbgnng",
-      "name": "ph-steps",
+      "id": "idpjno",
+      "name": "ph-form",
       "settings": {
-        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: repeat(4, minmax(0, 1fr));\n  gap: clamp(24px, 3vw, 48px);\n  counter-reset: ph-step;\n}\n@media (max-width: 991px) { %root% { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@media (max-width: 600px) { %root% { grid-template-columns: 1fr; } }"
+        "_cssCustom": "%root% { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: end; width: 100%; }\n%root% .form-group { margin: 0; padding: 0; width: 100%; }\n%root% label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 500; }\n%root% input[type=email] {\n  width: 100%; min-height: 52px; padding: 0 16px;\n  border: 1px solid var(--ph-ink); border-radius: 0; background: var(--ph-paper);\n  font: inherit; font-size: 16px; color: var(--ph-ink);\n}\n%root% button[type=submit], %root% .bricks-button {\n  min-height: 52px; padding: 0 28px; border: 1px solid var(--ph-ink); border-radius: 0;\n  background: var(--ph-ink); color: var(--ph-paper); font: inherit; font-size: 15px; font-weight: 500; cursor: pointer;\n}\n%root% .submit-button-wrapper { margin: 0; }\n@media (max-width: 480px) { %root% { grid-template-columns: 1fr; } }"
       }
     },
     {
-      "id": "fcdkjj",
-      "name": "ph-step",
+      "id": "nekelh",
+      "name": "ph-small",
       "settings": {
-        "_cssCustom": "%root% { display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid var(--ph-ink); }"
-      }
-    },
-    {
-      "id": "pppjjg",
-      "name": "ph-step__num",
-      "settings": {
-        "_cssCustom": "%root% { margin: 0 0 18px; font-size: 13px; letter-spacing: .16em; color: var(--ph-muted); }"
-      }
-    },
-    {
-      "id": "okamlf",
-      "name": "ph-tags",
-      "settings": {
-        "_cssCustom": "%root% { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }"
-      }
-    },
-    {
-      "id": "doiama",
-      "name": "ph-tag",
-      "settings": {
-        "_cssCustom": "%root% {\n  margin: 0;\n  padding: 9px 16px;\n  border: 1px solid var(--ph-stone);\n  border-radius: 999px;\n  font-size: 13px;\n  letter-spacing: 0.02em;\n  color: var(--ph-ink);\n  background: rgba(255,255,255,.4);\n}"
-      }
-    },
-    {
-      "id": "kjddnn",
-      "name": "ph-products",
-      "settings": {
-        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: clamp(36px, 4vw, 56px) clamp(16px, 2vw, 28px);\n}\n@media (max-width: 991px) { %root% { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@media (max-width: 480px) { %root% { gap: 32px 12px; } %root% .ph-card__text { display: none; } }"
-      }
-    },
-    {
-      "id": "pbbdge",
-      "name": "ph-card__spec",
-      "settings": {
-        "_cssCustom": "%root% { margin: -8px 0 0; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ph-olive); }"
-      }
-    },
-    {
-      "id": "ibehmg",
-      "name": "ph-papers",
-      "settings": {
-        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: repeat(4, minmax(0, 1fr));\n  gap: clamp(16px, 2vw, 28px);\n}\n@media (max-width: 991px) { %root% { grid-template-columns: repeat(2, minmax(0, 1fr)); } }\n@media (max-width: 480px) { %root% { grid-template-columns: 1fr; } }"
-      }
-    },
-    {
-      "id": "mgoefg",
-      "name": "ph-paper",
-      "settings": {
-        "_cssCustom": "%root% { display: flex; flex-direction: column; gap: 12px; }\n%root% .ph-media { margin-bottom: 10px; box-shadow: 0 24px 40px -28px rgba(10,10,10,.45); }"
-      }
-    },
-    {
-      "id": "ihkiae",
-      "name": "ph-media--paper",
-      "settings": {
-        "_cssCustom": "%root% { background: radial-gradient(120% 80% at 25% 20%, #fff, transparent 65%), linear-gradient(160deg, #FDFCFA 0%, #ECE8E1 100%); }"
-      }
-    },
-    {
-      "id": "hpoblo",
-      "name": "ph-media--duplex",
-      "settings": {
-        "_cssCustom": "%root% { background: linear-gradient(160deg, var(--ph-paper) 0%, var(--ph-sand) 100%); }\n%root%::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: var(--ph-oxblood); }"
-      }
-    },
-    {
-      "id": "jdfcgd",
-      "name": "ph-methods",
-      "settings": {
-        "_cssCustom": "%root% { display: flex; flex-direction: column; border-bottom: 1px solid var(--ph-stone); }"
-      }
-    },
-    {
-      "id": "deecla",
-      "name": "ph-method",
-      "settings": {
-        "_cssCustom": "%root% {\n  display: grid;\n  grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1fr);\n  gap: 24px;\n  align-items: baseline;\n  padding: 30px 0;\n  border-top: 1px solid var(--ph-stone);\n  transition: padding .3s ease, color .3s ease;\n}\n%root%:hover { padding-left: 12px; }\n%root%:hover .ph-method__title { color: var(--ph-oxblood); }\n@media (max-width: 767px) { %root% { grid-template-columns: 48px minmax(0, 1fr); } %root% > :last-child { grid-column: 2; } }"
-      }
-    },
-    {
-      "id": "kiojcc",
-      "name": "ph-method__title",
-      "settings": {
-        "_cssCustom": "%root% { margin: 0; font-size: clamp(26px, 3vw, 44px); font-weight: 500; letter-spacing: -0.03em; line-height: 1; transition: color .3s ease; }\n%root% em { font-family: var(--ph-serif); font-style: italic; font-weight: 400; }"
-      }
-    },
-    {
-      "id": "kkkkci",
-      "name": "ph-methods__foot",
-      "settings": {
-        "_cssCustom": "%root% { margin-top: 36px; }"
-      }
-    },
-    {
-      "id": "nieipk",
-      "name": "ph-details--light",
-      "settings": {
-        "_cssCustom": "%root% { border-top-color: rgba(249,247,243,.22); }\n%root% .ph-detail + .ph-detail { border-left-color: rgba(249,247,243,.22); }\n%root% .ph-detail__text { color: var(--ph-stone); }\n%root% .ph-detail__num { color: var(--ph-blush); }\n@media (max-width: 991px) { %root% .ph-detail { border-bottom-color: rgba(249,247,243,.22); } }"
-      }
-    },
-    {
-      "id": "oombnn",
-      "name": "ph-cta",
-      "settings": {
-        "_cssCustom": "%root% { text-align: center; }"
-      }
-    },
-    {
-      "id": "adclka",
-      "name": "ph-cta__inner",
-      "settings": {
-        "_cssCustom": "%root% { display: flex; flex-direction: column; align-items: center; }"
-      }
-    },
-    {
-      "id": "kcnmmd",
-      "name": "ph-cta__title",
-      "settings": {
-        "_cssCustom": "%root% {\n  margin: 0;\n  font-family: var(--ph-sans);\n  font-size: clamp(48px, 9vw, 150px);\n  font-weight: 500;\n  line-height: 0.88;\n  letter-spacing: -0.055em;\n  text-transform: uppercase;\n}\n%root% em {\n  font-family: var(--ph-serif);\n  font-style: italic;\n  font-weight: 400;\n  text-transform: none;\n  letter-spacing: -0.03em;\n  color: var(--ph-blush);\n}"
-      }
-    },
-    {
-      "id": "fenmao",
-      "name": "ph-cta__lead",
-      "settings": {
-        "_cssCustom": "%root% { margin: 36px auto 0; text-align: center; }"
-      }
-    },
-    {
-      "id": "cjhpmg",
-      "name": "ph-actions--center",
-      "settings": {
-        "_cssCustom": "%root% { justify-content: center; }"
+        "_cssCustom": "%root% { margin: 0; font-size: 13px; color: var(--ph-muted); }"
       }
     }
   ],

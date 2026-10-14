@@ -1,66 +1,84 @@
 # claude-printinghaus
 
-Homepage for printinghaus.co, built as a **Bricks Builder** template from the
-*Printing Haus Brand System, Vol. 01* (Paper / Ink / Sand / Olive / Oxblood
-palette, Neue Haas Grotesk + Tiempos type, "refined but never precious" voice).
+The Printing Haus header, homepage and footer, built as **Bricks Builder** templates. They follow
+the *Printing Haus Brand System, Vol. 01* and the *Website Design & Brand Voice Brief*.
 
 | File | What it is |
 | --- | --- |
-| `bricks/printinghaus-homepage.bricks.json` | Bricks template to import into WordPress |
-| `bricks/build_homepage.py` | Source of truth: copy, links, and styles. Re-run it to regenerate |
-| `preview/homepage.html` | Static preview of the same layout (open it in a browser) |
+| `bricks/printinghaus-header.bricks.json` | Header template (logo, Shop / Design Studio / About / Contact, Search, Account, Cart) |
+| `bricks/printinghaus-homepage.bricks.json` | Homepage content, sections A–H |
+| `bricks/printinghaus-footer.bricks.json` | Footer template (contact, shipping, FAQs, artwork, returns, privacy, terms) |
+| `bricks/build_homepage.py` | Source of truth for copy, links and styles. Re-run it to regenerate all files |
+| `preview/homepage.html` | Static draft preview. Gray blocks and [bracketed] text are placeholders |
 
-## Page structure
+## Homepage sequence
 
-The page positions Printing Haus as an elevated printer, not a design studio. It takes the
-product-led shopping of MOO and the print-craft authority of Paper Chase Press.
+| | Section | Content source |
+| --- | --- | --- |
+| A | **Hero**: "Make an Impression." with *Shop the Collection* and *Explore the Design Studio* | Brief copy, plus your hero photo |
+| B | **Shop by category** | **Live**: a Bricks query loop over WooCommerce product categories (empty categories are hidden) |
+| C | **Featured products** | **Live**: a query loop over WooCommerce products, showing the real name, image and price (Woo shows a price range only when the price varies) |
+| D | **Paper & finishes** | Plain-language descriptions. Items marked [Confirm] need checking |
+| E | **Design studio**: "An idea worth putting on paper." with *Tell Us About Your Project* | Brief copy |
+| F | **Customer work** | Placeholder. Hide it until you have approved projects |
+| G | **Material approach** | One verified statement (FSC certification is attributed to partners) plus placeholders |
+| H | **Email sign-up**: "Notes from the Haus." | Bricks form. Connect it to your email platform |
+| I | **Footer** | Separate template |
 
-1. **Hero**: "Good ideas look *better printed.*" with "Shop business cards" and "Get a sample pack" buttons, plus three points: proof before print, premium papers, specialty finishes
-2. **Finishes marquee**: letterpress, foil, embossing and other finishes on Ink
-3. **Shop by product**: six product cards (business cards, letterhead and envelopes, notecards, invitations, packaging and labels, art prints)
-4. **Choose your paper** (Sand): Smooth, Cotton, Duplex and Recycled swatches
-5. **Print methods & finishes**: an editorial list of digital, offset, letterpress, foil, embossing and painted edges
-6. **Statement** (Oxblood): "Made to be *held onto.*"
-7. **How to order**: pick a product, upload, approve the proof, printed and shipped
-8. **The Haus promise** (Ink): checked by people, proof before print, made right, packed with care
-9. **For business** (Sand): bulk and repeat orders, colour matching, custom packaging, with a "Request a quote" button
-10. **Closing CTA** (Ink): a sample pack and business-card push
+## Visual system
+
+- **Type:** Tiempos (editorial serif) for headlines and Neue Haas Grotesk for body, navigation and labels.
+  Until the licensed fonts are added, the page uses Newsreader / Inter Tight, then Georgia / Helvetica.
+- **Color:** warm neutrals (Paper `#F9F7F3`, Ink `#0A0A0A`, Sand `#E8E1D6`, Paper gray `#DEDAD3`).
+  Oxblood is used once, for the design-studio section.
+- **Controls:** rectangular buttons, thin rules and underlined text links. No pills, gradients, heavy
+  shadows or scrolling slogans.
+- **Motion:** only a gentle image zoom and underline on hover, and it turns off for visitors who
+  have reduced motion turned on. Nothing important is shown only on hover.
+- **Accessibility:** visible focus outlines, a labeled email field, buttons at least 44px tall, and no horizontal scrolling at 390px.
 
 ## Install in Bricks
 
-1. In WP admin, go to **Bricks → Templates → Import** and upload `printinghaus-homepage.bricks.json`.
-   The `ph-*` global classes come with it, and all styling lives in those classes.
-2. Open the Home page in Bricks. Use **Templates (folder icon) → My templates → Printing Haus - Homepage → Insert**.
-   Delete or keep your existing sections as needed.
-3. **Photos:** every "Photo slot" holds an Image element. Click it and pick a photo. Until then
-   a warm paper-toned placeholder shows. Follow the guide's image direction: close-up paper
-   fibres, embossing, soft daylight, art-directed still lifes. Each slot's alt text already describes the
-   shot it was designed for.
-4. **Links:** the buttons point to placeholder URLs (`/shop/`, `/sample-pack/`, `/request-a-quote/`, `/product-category/...`).
-   Update them in Bricks, or edit `LINKS` in `build_homepage.py` and rebuild.
-5. **Fonts:** the CSS asks for *Neue Haas Grotesk* and *Tiempos* first. Add them as licensed
-   fonts (Adobe Fonts / Klim) in **Bricks → Custom fonts**, or through a header link in
-   **Bricks → Settings → Custom code**. Until then it falls back to Inter Tight / Newsreader
-   if loaded, then Helvetica / Georgia.
-6. Your header and footer stay in your Bricks header and footer templates. This template is page content only.
+1. **Import:** go to **Bricks → Templates → Import** and upload all three JSON files. Their `ph-*`
+   global classes come with them.
+2. **Header and footer:** open each template, then in **Template settings → Conditions** set it to *Entire website*.
+   - Choose your **approved logo** in each Logo element. The footer sits on black, so it needs a light version.
+   - Create a WordPress menu (**Appearance → Menus**) with *Shop, Design Studio, About, Contact*, then select it
+     in both Nav Menu elements. One is for desktop and one shows as a "Menu" toggle on mobile.
+   - The Cart element uses Bricks' WooCommerce mini cart.
+3. **Homepage:** open the Home page in Bricks and insert *Printing Haus - Homepage* from **Templates**.
+4. **Featured products:** select the "Featured product loop" element and open its **Query** settings.
+   Filter it to featured products (or a specific category), or pick the products by hand.
+5. **Category images:** these come from each WooCommerce category's thumbnail (**Products → Categories**).
+6. **Newsletter:** the form currently emails each sign-up to the site admin. In the form's
+   **Actions**, connect Mailchimp, Sendinblue or a webhook instead.
+7. **Links:** placeholder URLs are listed in `LINKS` in `build_homepage.py`. Change them there or in Bricks.
 
-## Copy to confirm before launch
+## Must be supplied before launch
 
-The page makes promises about the service, so check that each one is true for you:
+**Assets**
+- Approved logo files, in dark and light versions
+- Hero product photo, plus the "[Shown: …]" caption naming the product, stock and finish
+- Photos for the six paper and finish tiles and the studio section. These should show real products and
+  finishes, not generated images, and any illustrative mockup should be labeled
+- Licensed Tiempos and Neue Haas Grotesk web fonts (Klim and Adobe Fonts)
 
-- **Papers:** Smooth, Cotton, Duplex, Recycled. Rename them to your real stock names.
-- **Methods and finishes:** digital, offset, letterpress, foil, embossing, painted edges, die cutting
-- **Sample pack:** the page links to one in three places. If you don't offer one, change those buttons to "Contact us".
-- **Promise:** "A real person reviews every file", "Nothing prints until you approve", "If it isn't right, we'll make it right"
-- **For business:** bulk and repeat orders, brand colour matching, custom packaging, file setup
+**Verified business information**
+- Paper and finish tiles marked [Confirm]: smooth matte, textured and heavyweight stocks, foil and embossing.
+  Raised spot UV comes from the brief, so it's assumed to be offered.
+- Any extra design-studio services besides custom artwork, stationery and packaging
+- Approved customer projects (section F), naming the product, stock and finish. Never invent these
+- Two more specific, verified material and production practices (section G)
+- Footer contact details: email, phone, address or service area
+- Pages the footer links to: shipping, FAQs, artwork guidelines, returns and order issues, privacy, terms
 
-To make the page sell harder, add two things that MOO uses well:
-
-- **Starting prices** on each product card, such as "From $XX / 50 cards". Add a Basic Text element under each card's spec line.
-- **Real reviews or a review score** in a band between "How to order" and the promise section
+**Already verified in the brief**
+- "We work with printing partners that hold FSC certifications." This is attributed to partners only,
+  no FSC mark is used, and it is not a headline message.
+- "Part of Production Haus" appears only in the footer.
 
 ## Editing
 
 ```sh
-python3 bricks/build_homepage.py   # rewrites the JSON + preview
+python3 bricks/build_homepage.py   # rewrites all three JSON files + the preview
 ```

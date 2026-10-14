@@ -1,0 +1,445 @@
+{
+  "title": "Printing Haus - Footer",
+  "templateType": "footer",
+  "content": [
+    {
+      "id": "naoino",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "kojolk"
+      ],
+      "settings": {
+        "tag": "custom",
+        "customTag": "footer",
+        "_cssGlobalClasses": [
+          "dikkak"
+        ]
+      },
+      "label": "Footer"
+    },
+    {
+      "id": "kojolk",
+      "name": "container",
+      "parent": "naoino",
+      "children": [
+        "oolgfa",
+        "dockcp"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "oaihfg"
+        ]
+      }
+    },
+    {
+      "id": "oolgfa",
+      "name": "div",
+      "parent": "kojolk",
+      "children": [
+        "jbfdbi",
+        "ildioj",
+        "mchfoe",
+        "gmhfdg"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "onafcp"
+        ]
+      }
+    },
+    {
+      "id": "jbfdbi",
+      "name": "div",
+      "parent": "oolgfa",
+      "children": [
+        "nbgpmf",
+        "fdlfoa"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "bedndl"
+        ]
+      }
+    },
+    {
+      "id": "nbgpmf",
+      "name": "logo",
+      "parent": "jbfdbi",
+      "children": [],
+      "settings": {
+        "link": {
+          "type": "external",
+          "url": "/"
+        },
+        "_cssGlobalClasses": [
+          "elnaja"
+        ]
+      },
+      "label": "Logo (choose the approved light logo file)"
+    },
+    {
+      "id": "fdlfoa",
+      "name": "text-basic",
+      "parent": "jbfdbi",
+      "children": [],
+      "settings": {
+        "text": "[Email address]<br>[Phone number]<br>[Studio address or service area]",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "cbhfjj",
+          "gmmipf"
+        ]
+      }
+    },
+    {
+      "id": "ildioj",
+      "name": "div",
+      "parent": "oolgfa",
+      "children": [
+        "loaifl",
+        "midmod",
+        "efjiaj",
+        "hoaiei"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "bedndl"
+        ]
+      }
+    },
+    {
+      "id": "loaifl",
+      "name": "text-basic",
+      "parent": "ildioj",
+      "children": [],
+      "settings": {
+        "text": "Shop",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "kcpceg"
+        ]
+      }
+    },
+    {
+      "id": "midmod",
+      "name": "text-link",
+      "parent": "ildioj",
+      "children": [],
+      "settings": {
+        "text": "All products",
+        "link": {
+          "type": "external",
+          "url": "/shop/"
+        }
+      }
+    },
+    {
+      "id": "efjiaj",
+      "name": "text-link",
+      "parent": "ildioj",
+      "children": [],
+      "settings": {
+        "text": "Paper &amp; finishes",
+        "link": {
+          "type": "external",
+          "url": "/paper-and-finishes/"
+        }
+      }
+    },
+    {
+      "id": "hoaiei",
+      "name": "text-link",
+      "parent": "ildioj",
+      "children": [],
+      "settings": {
+        "text": "Design Studio",
+        "link": {
+          "type": "external",
+          "url": "/design-studio/"
+        }
+      }
+    },
+    {
+      "id": "mchfoe",
+      "name": "div",
+      "parent": "oolgfa",
+      "children": [
+        "cjgpmk",
+        "cfmffn",
+        "neghbe",
+        "nmfgln",
+        "kggigm"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "bedndl"
+        ]
+      }
+    },
+    {
+      "id": "cjgpmk",
+      "name": "text-basic",
+      "parent": "mchfoe",
+      "children": [],
+      "settings": {
+        "text": "Help",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "kcpceg"
+        ]
+      }
+    },
+    {
+      "id": "cfmffn",
+      "name": "text-link",
+      "parent": "mchfoe",
+      "children": [],
+      "settings": {
+        "text": "Shipping information",
+        "link": {
+          "type": "external",
+          "url": "/shipping/"
+        }
+      }
+    },
+    {
+      "id": "neghbe",
+      "name": "text-link",
+      "parent": "mchfoe",
+      "children": [],
+      "settings": {
+        "text": "FAQs",
+        "link": {
+          "type": "external",
+          "url": "/faq/"
+        }
+      }
+    },
+    {
+      "id": "nmfgln",
+      "name": "text-link",
+      "parent": "mchfoe",
+      "children": [],
+      "settings": {
+        "text": "Artwork guidelines",
+        "link": {
+          "type": "external",
+          "url": "/artwork-guidelines/"
+        }
+      }
+    },
+    {
+      "id": "kggigm",
+      "name": "text-link",
+      "parent": "mchfoe",
+      "children": [],
+      "settings": {
+        "text": "Returns &amp; order issues",
+        "link": {
+          "type": "external",
+          "url": "/returns-and-order-issues/"
+        }
+      }
+    },
+    {
+      "id": "gmhfdg",
+      "name": "div",
+      "parent": "oolgfa",
+      "children": [
+        "gpkcdd",
+        "ofoodh",
+        "hfcpng",
+        "gfkioj"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "bedndl"
+        ]
+      }
+    },
+    {
+      "id": "gpkcdd",
+      "name": "text-basic",
+      "parent": "gmhfdg",
+      "children": [],
+      "settings": {
+        "text": "Printing Haus",
+        "tag": "p",
+        "_cssGlobalClasses": [
+          "kcpceg"
+        ]
+      }
+    },
+    {
+      "id": "ofoodh",
+      "name": "text-link",
+      "parent": "gmhfdg",
+      "children": [],
+      "settings": {
+        "text": "About",
+        "link": {
+          "type": "external",
+          "url": "/about/"
+        }
+      }
+    },
+    {
+      "id": "hfcpng",
+      "name": "text-link",
+      "parent": "gmhfdg",
+      "children": [],
+      "settings": {
+        "text": "Contact",
+        "link": {
+          "type": "external",
+          "url": "/contact/"
+        }
+      }
+    },
+    {
+      "id": "gfkioj",
+      "name": "text-link",
+      "parent": "gmhfdg",
+      "children": [],
+      "settings": {
+        "text": "Account",
+        "link": {
+          "type": "external",
+          "url": "/my-account/"
+        }
+      }
+    },
+    {
+      "id": "dockcp",
+      "name": "div",
+      "parent": "kojolk",
+      "children": [
+        "nmmppe",
+        "jdmkag"
+      ],
+      "settings": {
+        "_cssGlobalClasses": [
+          "lbnaim"
+        ]
+      }
+    },
+    {
+      "id": "nmmppe",
+      "name": "text-basic",
+      "parent": "dockcp",
+      "children": [],
+      "settings": {
+        "text": "&copy; {current_date:Y} Printing Haus. Part of Production Haus.",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "jdmkag",
+      "name": "div",
+      "parent": "dockcp",
+      "children": [
+        "boddpi",
+        "agpfjf"
+      ],
+      "settings": {
+        "tag": "custom",
+        "customTag": "nav"
+      }
+    },
+    {
+      "id": "boddpi",
+      "name": "text-link",
+      "parent": "jdmkag",
+      "children": [],
+      "settings": {
+        "text": "Privacy policy",
+        "link": {
+          "type": "external",
+          "url": "/privacy-policy/"
+        }
+      }
+    },
+    {
+      "id": "agpfjf",
+      "name": "text-link",
+      "parent": "jdmkag",
+      "children": [],
+      "settings": {
+        "text": "Terms",
+        "link": {
+          "type": "external",
+          "url": "/terms/"
+        }
+      }
+    }
+  ],
+  "pageSettings": [],
+  "templateSettings": [],
+  "globalClasses": [
+    {
+      "id": "oaihfg",
+      "name": "ph-container",
+      "settings": {
+        "_cssCustom": "%root% { width: 100%; max-width: var(--ph-max); margin: 0 auto; }"
+      }
+    },
+    {
+      "id": "cbhfjj",
+      "name": "ph-body",
+      "settings": {
+        "_cssCustom": "%root% { margin: 0; max-width: 46ch; font-size: 15px; line-height: 1.6; color: var(--ph-muted); }"
+      }
+    },
+    {
+      "id": "gmmipf",
+      "name": "ph-body--light",
+      "settings": {
+        "_cssCustom": "%root% { color: rgba(249,247,243,.82); }"
+      }
+    },
+    {
+      "id": "elnaja",
+      "name": "ph-logo",
+      "settings": {
+        "_cssCustom": "%root% { display: inline-flex; align-items: center; } %root% img { height: 28px; width: auto; }"
+      }
+    },
+    {
+      "id": "dikkak",
+      "name": "ph-footer",
+      "settings": {
+        "_cssCustom": "%root% {\n  --ph-paper: #F9F7F3;\n  --ph-ink: #0A0A0A;\n  --ph-sand: #E8E1D6;\n  --ph-stone: #DEDAD3;\n  --ph-rule: #CFC9BF;\n  --ph-olive: #5F5E4F;\n  --ph-muted: #5E5A54;\n  --ph-oxblood: #54151B;\n  --ph-blush: #E7C9D2;\n  --ph-display: \"Tiempos Headline\", \"Tiempos Text\", \"Newsreader\", Georgia, \"Times New Roman\", serif;\n  --ph-sans: \"Neue Haas Grotesk Text\", \"neue-haas-grotesk-text\", \"Neue Haas Grotesk Display\", \"neue-haas-grotesk-display\", \"Inter Tight\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  --ph-gutter: clamp(20px, 5vw, 64px);\n  --ph-space: clamp(72px, 9vw, 136px);\n  --ph-max: 1320px;\n\n  width: 100%;\n  background: var(--ph-paper);\n  color: var(--ph-ink);\n  font-family: var(--ph-sans);\n  font-size: 16px;\n  line-height: 1.6;\n  -webkit-font-smoothing: antialiased;\n}\n%root% *, %root% *::before, %root% *::after { box-sizing: border-box; }\n:where(%root% a) { color: inherit; }\n%root% a:focus-visible, %root% button:focus-visible, %root% input:focus-visible {\n  outline: 2px solid currentColor; outline-offset: 3px;\n}\n\n%root% { padding: clamp(64px, 7vw, 104px) var(--ph-gutter) 32px; background: var(--ph-ink); color: var(--ph-paper); }\n%root% a { text-decoration: none; }\n%root% a:hover { text-decoration: underline; text-underline-offset: 4px; }"
+      }
+    },
+    {
+      "id": "onafcp",
+      "name": "ph-footer__grid",
+      "settings": {
+        "_cssCustom": "%root% { display: grid; grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)); gap: 48px clamp(24px, 3vw, 48px); width: 100%; }\n@media (max-width: 991px) { %root% { grid-template-columns: repeat(2, minmax(0, 1fr)); } %root% > :first-child { grid-column: 1 / -1; } }"
+      }
+    },
+    {
+      "id": "bedndl",
+      "name": "ph-footer__col",
+      "settings": {
+        "_cssCustom": "%root% { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; font-size: 15px; }"
+      }
+    },
+    {
+      "id": "kcpceg",
+      "name": "ph-footer__head",
+      "settings": {
+        "_cssCustom": "%root% { margin: 0 0 8px; font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--ph-rule); }"
+      }
+    },
+    {
+      "id": "lbnaim",
+      "name": "ph-footer__legal",
+      "settings": {
+        "_cssCustom": "%root% {\n  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px;\n  width: 100%;\n  margin-top: clamp(56px, 6vw, 88px); padding-top: 24px;\n  border-top: 1px solid rgba(249,247,243,.2);\n  font-size: 13px; color: var(--ph-rule);\n}\n%root% p { margin: 0; }\n%root% nav { display: flex; gap: 24px; }"
+      }
+    }
+  ],
+  "version": "1.10"
+}

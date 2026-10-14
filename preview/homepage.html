@@ -3,448 +3,368 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Printing Haus Homepage</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Newsreader:opsz,wght@6..72,400&display=swap">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:#F9F7F3}
 img{max-width:100%;display:block}
 .brxe-section{display:flex;flex-direction:column;align-items:center;width:100%}
 .brxe-container{display:flex;flex-direction:column;align-items:flex-start;width:1100px;max-width:100%;margin:0 auto}
-.brxe-block{display:flex;flex-direction:column;width:100%}
-.brxe-button{display:inline-flex}
-.brxe-text-link{display:inline-flex}
+.brxe-button,.brxe-text-link{display:inline-flex}
+.brxe-logo{font:600 14px/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;border:1px dashed currentColor;padding:8px 10px;text-decoration:none}
+.preview-flag{position:fixed;right:12px;bottom:12px;z-index:9;padding:8px 12px;background:#0A0A0A;color:#F9F7F3;font:12px/1.3 Helvetica,Arial,sans-serif}
 
 
 .ph-section {
   --ph-paper: #F9F7F3;
   --ph-ink: #0A0A0A;
   --ph-sand: #E8E1D6;
-  --ph-stone: #D6D1CA;
-  --ph-olive: #6B6A5A;
-  --ph-muted: #777069;
+  --ph-stone: #DEDAD3;
+  --ph-rule: #CFC9BF;
+  --ph-olive: #5F5E4F;
+  --ph-muted: #5E5A54;
   --ph-oxblood: #54151B;
-  --ph-midnight: #1636D9;
   --ph-blush: #E7C9D2;
-  --ph-chartreuse: #C6D600;
-  --ph-sans: "Neue Haas Grotesk Display", "neue-haas-grotesk-display", "Neue Haas Grotesk Text", "neue-haas-grotesk-text", "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --ph-serif: "Tiempos Headline", "Tiempos Text", "Newsreader", Georgia, "Times New Roman", serif;
-  --ph-gutter: clamp(20px, 5vw, 72px);
-  --ph-space: clamp(80px, 11vw, 160px);
-  --ph-max: 1360px;
+  --ph-display: "Tiempos Headline", "Tiempos Text", "Newsreader", Georgia, "Times New Roman", serif;
+  --ph-sans: "Neue Haas Grotesk Text", "neue-haas-grotesk-text", "Neue Haas Grotesk Display", "neue-haas-grotesk-display", "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ph-gutter: clamp(20px, 5vw, 64px);
+  --ph-space: clamp(72px, 9vw, 136px);
+  --ph-max: 1320px;
 
   width: 100%;
-  padding: var(--ph-space) var(--ph-gutter);
   background: var(--ph-paper);
   color: var(--ph-ink);
   font-family: var(--ph-sans);
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 .ph-section *, .ph-section *::before, .ph-section *::after { box-sizing: border-box; }
 :where(.ph-section a) { color: inherit; }
-
-.ph-section--sand { background: var(--ph-sand); }
-.ph-section--ink { background: var(--ph-ink); color: var(--ph-paper); }
-.ph-section--oxblood { background: var(--ph-oxblood); color: var(--ph-paper); }
-.ph-section--tight { padding-top: 0; padding-bottom: 0; }
-
-.ph-container {
-  width: 100%;
-  max-width: var(--ph-max);
-  margin: 0 auto;
+.ph-section a:focus-visible, .ph-section button:focus-visible, .ph-section input:focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
 }
 
+.ph-section { padding: var(--ph-space) var(--ph-gutter); }
 
-.ph-eyebrow {
-  margin: 0 0 28px;
+.ph-section--sand { background: var(--ph-sand); }
+.ph-section--oxblood { background: var(--ph-oxblood); color: var(--ph-paper); }
+.ph-section--flush { padding-top: 0; }
+.ph-container { width: 100%; max-width: var(--ph-max); margin: 0 auto; }
+.ph-rule { width: 100%; padding-top: var(--ph-space); border-top: 1px solid var(--ph-rule); }
+
+.ph-label {
+  margin: 0 0 18px;
   font-family: var(--ph-sans);
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
   text-transform: uppercase;
   color: var(--ph-olive);
 }
 
-.ph-eyebrow--light { color: var(--ph-stone); }
+.ph-label--light { color: var(--ph-blush); }
 
 .ph-h2 {
   margin: 0;
-  max-width: 16ch;
-  font-family: var(--ph-sans);
-  font-size: clamp(36px, 5vw, 72px);
-  font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: -0.035em;
-}
-.ph-h2 em { font-family: var(--ph-serif); font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
-
-
-.ph-lead {
-  margin: 0;
-  max-width: 46ch;
-  font-size: clamp(17px, 1.4vw, 20px);
-  line-height: 1.55;
-  color: inherit;
-  opacity: 0.82;
+  max-width: 18ch;
+  font-family: var(--ph-display);
+  font-size: clamp(34px, 4.2vw, 56px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
 }
 
+
+.ph-h3 { margin: 0; font-family: var(--ph-sans); font-size: 18px; font-weight: 500; line-height: 1.3; letter-spacing: -0.005em; }
+
+.ph-body { margin: 0; max-width: 46ch; font-size: 15px; line-height: 1.6; color: var(--ph-muted); }
+.ph-body--light { color: rgba(249,247,243,.82); }
+.ph-lead { margin: 0; max-width: 44ch; font-size: clamp(17px, 1.3vw, 19px); line-height: 1.55; }
 
 .ph-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 14px;
+  min-height: 44px;
+  font-size: 15px;
   font-weight: 500;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 4px;
-  transition: gap .25s ease, opacity .25s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  transition: opacity .2s ease;
 }
-.ph-link:hover { gap: 16px; opacity: .7; }
+.ph-link:hover { opacity: .65; }
 
 
 .ph-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  min-height: 54px;
-  padding: 0 30px;
+  min-height: 52px;
+  padding: 0 28px;
   border: 1px solid var(--ph-ink);
-  border-radius: 999px;
+  border-radius: 0;
   font-family: var(--ph-sans);
   font-size: 15px;
   font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1;
+  line-height: 1.2;
   text-decoration: none;
   cursor: pointer;
-  transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
-.ph-btn:hover { transform: translateY(-2px); }
-.ph-btn:focus-visible { outline: 2px solid var(--ph-midnight); outline-offset: 3px; }
 
 
 .ph-btn--dark { background: var(--ph-ink); color: var(--ph-paper); }
-.ph-btn--dark:hover { background: var(--ph-oxblood); border-color: var(--ph-oxblood); color: var(--ph-paper); }
+.ph-btn--dark:hover { background: #2E2B28; border-color: #2E2B28; }
 
 
-.ph-btn--ghost { background: transparent; color: var(--ph-ink); }
-.ph-btn--ghost:hover { background: var(--ph-ink); color: var(--ph-paper); }
+.ph-btn--outline { background: transparent; color: var(--ph-ink); }
+.ph-btn--outline:hover { background: var(--ph-ink); color: var(--ph-paper); }
 
 
 .ph-btn--light { background: var(--ph-paper); color: var(--ph-ink); border-color: var(--ph-paper); }
-.ph-btn--light:hover { background: var(--ph-blush); border-color: var(--ph-blush); color: var(--ph-ink); }
+.ph-btn--light:hover { background: var(--ph-sand); border-color: var(--ph-sand); }
 
-
-.ph-btn--ghost-light { background: transparent; color: var(--ph-paper); border-color: rgba(249,247,243,.5); }
-.ph-btn--ghost-light:hover { background: var(--ph-paper); color: var(--ph-ink); border-color: var(--ph-paper); }
-
-
-.ph-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
-
+.ph-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 36px; }
 
 .ph-media {
   position: relative;
   overflow: hidden;
   width: 100%;
   aspect-ratio: 4 / 5;
-  border-radius: 2px;
-  background:
-    radial-gradient(120% 80% at 20% 15%, rgba(255,255,255,.55), transparent 60%),
-    linear-gradient(160deg, var(--ph-sand) 0%, var(--ph-stone) 100%);
+  background: var(--ph-stone);
 }
 .ph-media img {
-  position: absolute; inset: 0;
+  position: absolute; inset: 0; z-index: 1;
   width: 100%; height: 100%;
   object-fit: cover;
-  transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+  transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+@media (prefers-reduced-motion: reduce) { .ph-media img { transition: none; } }
+
+
+.ph-media__label {
+  position: absolute; left: 16px; bottom: 14px; right: 16px;
+  margin: 0;
+  font-size: 12px; line-height: 1.4;
+  color: var(--ph-muted);
 }
 
-.ph-media--blush { background: linear-gradient(160deg, #F1DDE3 0%, var(--ph-blush) 100%); }
-.ph-media--olive { background: linear-gradient(160deg, #8C8B7A 0%, var(--ph-olive) 100%); }
-.ph-media--oxblood { background: linear-gradient(160deg, #6E2229 0%, #3E0F14 100%); }
-.ph-media--wide { aspect-ratio: 16 / 10; }
+.ph-media--landscape { aspect-ratio: 4 / 3; }
 .ph-media--square { aspect-ratio: 1 / 1; }
+.ph-media--hero { aspect-ratio: 6 / 5; }
+.ph-caption { margin: 12px 0 0; font-size: 13px; color: var(--ph-muted); }
 
-.ph-hero { padding-top: clamp(48px, 7vw, 110px); padding-bottom: clamp(56px, 7vw, 110px); }
+.ph-header {
+  --ph-paper: #F9F7F3;
+  --ph-ink: #0A0A0A;
+  --ph-sand: #E8E1D6;
+  --ph-stone: #DEDAD3;
+  --ph-rule: #CFC9BF;
+  --ph-olive: #5F5E4F;
+  --ph-muted: #5E5A54;
+  --ph-oxblood: #54151B;
+  --ph-blush: #E7C9D2;
+  --ph-display: "Tiempos Headline", "Tiempos Text", "Newsreader", Georgia, "Times New Roman", serif;
+  --ph-sans: "Neue Haas Grotesk Text", "neue-haas-grotesk-text", "Neue Haas Grotesk Display", "neue-haas-grotesk-display", "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ph-gutter: clamp(20px, 5vw, 64px);
+  --ph-space: clamp(72px, 9vw, 136px);
+  --ph-max: 1320px;
 
+  width: 100%;
+  background: var(--ph-paper);
+  color: var(--ph-ink);
+  font-family: var(--ph-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.ph-header *, .ph-header *::before, .ph-header *::after { box-sizing: border-box; }
+:where(.ph-header a) { color: inherit; }
+.ph-header a:focus-visible, .ph-header button:focus-visible, .ph-header input:focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
+}
+
+.ph-header { padding: 0 var(--ph-gutter); border-bottom: 1px solid var(--ph-rule); }
+
+
+.ph-header__bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  min-height: 76px;
+}
+@media (max-width: 767px) { .ph-header__bar { grid-template-columns: 1fr auto auto; gap: 16px; } }
+
+.ph-logo { display: inline-flex; align-items: center; } .ph-logo img { height: 28px; width: auto; }
+
+.ph-nav { font-size: 15px; }
+.ph-nav ul { display: flex; gap: 32px; margin: 0; padding: 0; list-style: none; }
+.ph-nav a { display: inline-block; padding: 6px 0; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+.ph-nav a:hover, .ph-nav .current-menu-item > a { border-bottom-color: currentColor; }
+
+
+.ph-utility { display: flex; align-items: center; justify-content: flex-end; gap: 24px; font-size: 15px; }
+.ph-utility a { text-decoration: none; }
+.ph-utility a:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+@media (max-width: 767px) { .ph-hide-mobile { display: none !important; } }
+@media (min-width: 768px) { .ph-show-mobile-only { display: none !important; } }
+.ph-hero { padding-top: clamp(40px, 6vw, 88px); padding-bottom: clamp(64px, 8vw, 120px); }
 
 .ph-hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: clamp(40px, 6vw, 96px);
-  align-items: end;
+  align-items: center;
 }
 @media (max-width: 991px) { .ph-hero__grid { grid-template-columns: 1fr; } }
 
 
 .ph-hero__title {
   margin: 0;
-  font-family: var(--ph-sans);
-  font-size: clamp(54px, 8.4vw, 132px);
-  font-weight: 500;
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
-}
-.ph-hero__title em {
-  display: block;
-  font-family: var(--ph-serif);
-  font-style: italic;
+  font-family: var(--ph-display);
+  font-size: clamp(48px, 6.4vw, 92px);
   font-weight: 400;
-  text-transform: none;
-  letter-spacing: -0.03em;
-  color: var(--ph-oxblood);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
 }
 
-.ph-hero__lead { margin-top: 36px; }
-
-.ph-hero__visual { position: relative; }
-
-
-.ph-hero__tag {
-  position: absolute;
-  left: clamp(-56px, -4vw, -16px);
-  bottom: 40px;
-  max-width: 230px;
-  padding: 22px 24px;
-  background: var(--ph-paper);
-  box-shadow: 0 30px 60px -30px rgba(10,10,10,.35);
-}
-.ph-hero__tag p { margin: 0; }
-@media (max-width: 991px) { .ph-hero__tag { left: 16px; bottom: 16px; } }
-
-
-.ph-hero__tag-title { margin: 0 0 6px; font-family: var(--ph-serif); font-style: italic; font-size: 24px; line-height: 1.1; }
-
-.ph-hero__tag-text { font-size: 13px; line-height: 1.5; color: var(--ph-muted); }
-
-.ph-hero__points {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  margin-top: clamp(56px, 7vw, 96px);
-  padding-top: 28px;
-  border-top: 1px solid var(--ph-stone);
-}
-@media (max-width: 767px) { .ph-hero__points { grid-template-columns: 1fr; gap: 16px; } }
-
-
-.ph-point { margin: 0; font-size: 14px; line-height: 1.5; color: var(--ph-muted); }
-.ph-point strong { display: block; margin-bottom: 4px; font-weight: 500; color: var(--ph-ink); letter-spacing: 0.01em; }
-
-
-.ph-marquee {
-  overflow: hidden;
-  padding: 22px 0;
-  white-space: nowrap;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-}
-
-
-.ph-marquee__track {
-  display: inline-flex;
-  margin: 0;
-  font-size: clamp(18px, 2vw, 26px);
-  letter-spacing: -0.01em;
-  animation: ph-marquee 38s linear infinite;
-}
-.ph-marquee__track span { padding: 0 28px; }
-.ph-marquee__track span:nth-child(even) { font-family: var(--ph-serif); font-style: italic; color: var(--ph-stone); }
-.ph-marquee__track i { font-style: normal; color: var(--ph-chartreuse); }
-@keyframes ph-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: reduce) { .ph-marquee__track { animation: none; } }
-
+.ph-hero__lead { margin-top: 28px; max-width: 30ch; }
 
 .ph-head {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 32px;
-  margin-bottom: clamp(48px, 6vw, 80px);
+  gap: 24px 48px;
+  width: 100%;
+  margin-bottom: clamp(36px, 4.5vw, 64px);
 }
 
-.ph-head__aside { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; max-width: 420px; }
 
-.ph-card {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  color: inherit;
-  text-decoration: none;
-}
-.ph-card:hover .ph-media img { transform: scale(1.04); }
-.ph-card:hover .ph-card__more { gap: 16px; }
+.ph-grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(32px, 4vw, 56px) clamp(16px, 2vw, 32px); width: 100%; }
+@media (max-width: 767px) { .ph-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 
-.ph-card__title { margin: 0; font-size: clamp(20px, 1.8vw, 26px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; }
+.ph-grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(32px, 4vw, 48px) clamp(16px, 2vw, 28px); width: 100%; }
+@media (max-width: 991px) { .ph-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-.ph-card__num { margin: 0; font-size: 12px; letter-spacing: .16em; color: var(--ph-muted); }
-.ph-card__text { margin: 0; max-width: 40ch; font-size: 15px; line-height: 1.55; color: var(--ph-muted); }
 
-.ph-card__more { display: inline-flex; gap: 10px; font-size: 14px; font-weight: 500; transition: gap .25s ease; }
+.ph-card { display: flex; flex-direction: column; gap: 6px; color: inherit; text-decoration: none; }
+.ph-card .ph-media { margin-bottom: 14px; }
+.ph-card:hover .ph-media img { transform: scale(1.03); }
+.ph-card:hover .ph-h3 { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+@media (prefers-reduced-motion: reduce) { .ph-card:hover .ph-media img { transform: none; } }
 
+.ph-price { margin: 0; font-size: 15px; color: var(--ph-muted); } .ph-price del { opacity: .6; margin-right: 6px; }
+
+.ph-materials { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(16px, 2vw, 32px); width: 100%; }
+@media (max-width: 767px) { .ph-materials { grid-template-columns: 1fr; } }
+
+
+.ph-material { display: flex; flex-direction: column; gap: 8px; padding: 0 0 48px; }
+.ph-material .ph-media { margin-bottom: 16px; }
+
+.ph-material__group { grid-column: 1 / -1; margin: 0; padding: 16px 0 24px; border-top: 1px solid var(--ph-rule); }
 
 .ph-split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(40px, 7vw, 120px);
+  gap: clamp(40px, 7vw, 112px);
   align-items: center;
+  width: 100%;
 }
 @media (max-width: 991px) { .ph-split { grid-template-columns: 1fr; } }
 
+.ph-stack { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
 
-.ph-split--reverse > :first-child { order: 2; }
-@media (max-width: 991px) { .ph-split--reverse > :first-child { order: 0; } }
+.ph-list { width: 100%; max-width: 440px; margin: 8px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(249,247,243,.28); }
+.ph-list li { padding: 14px 0; border-bottom: 1px solid rgba(249,247,243,.28); font-size: 15px; }
 
 
-.ph-statement {
-  margin: 0;
-  font-family: var(--ph-serif);
-  font-size: clamp(44px, 6.4vw, 104px);
-  font-weight: 400;
-  line-height: 0.98;
-  letter-spacing: -0.03em;
+.ph-approach { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 96px); }
+@media (max-width: 991px) { .ph-approach { grid-template-columns: 1fr; } }
+
+
+.ph-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px clamp(24px, 3vw, 48px); }
+@media (max-width: 600px) { .ph-facts { grid-template-columns: 1fr; } }
+
+.ph-fact { display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 1px solid var(--ph-rule); }
+
+.ph-signup { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px clamp(40px, 6vw, 96px); align-items: end; width: 100%; }
+@media (max-width: 991px) { .ph-signup { grid-template-columns: 1fr; } }
+
+
+.ph-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: end; width: 100%; }
+.ph-form .form-group { margin: 0; padding: 0; width: 100%; }
+.ph-form label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 500; }
+.ph-form input[type=email] {
+  width: 100%; min-height: 52px; padding: 0 16px;
+  border: 1px solid var(--ph-ink); border-radius: 0; background: var(--ph-paper);
+  font: inherit; font-size: 16px; color: var(--ph-ink);
 }
-.ph-statement em { font-style: italic; color: var(--ph-blush); }
-
-.ph-stack { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
-
-.ph-details {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid rgba(10,10,10,.18);
+.ph-form button[type=submit], .ph-form .bricks-button {
+  min-height: 52px; padding: 0 28px; border: 1px solid var(--ph-ink); border-radius: 0;
+  background: var(--ph-ink); color: var(--ph-paper); font: inherit; font-size: 15px; font-weight: 500; cursor: pointer;
 }
-@media (max-width: 991px) { .ph-details { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) { .ph-details { grid-template-columns: 1fr; } }
+.ph-form .submit-button-wrapper { margin: 0; }
+@media (max-width: 480px) { .ph-form { grid-template-columns: 1fr; } }
 
+.ph-small { margin: 0; font-size: 13px; color: var(--ph-muted); }
 
-.ph-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding: 32px 28px 8px 0;
-}
-.ph-detail + .ph-detail { padding-left: 28px; border-left: 1px solid rgba(10,10,10,.18); }
-@media (max-width: 991px) {
-  .ph-detail, .ph-detail + .ph-detail { padding: 32px 24px 24px 0; border-left: 0; border-bottom: 1px solid rgba(10,10,10,.18); }
-}
+.ph-footer {
+  --ph-paper: #F9F7F3;
+  --ph-ink: #0A0A0A;
+  --ph-sand: #E8E1D6;
+  --ph-stone: #DEDAD3;
+  --ph-rule: #CFC9BF;
+  --ph-olive: #5F5E4F;
+  --ph-muted: #5E5A54;
+  --ph-oxblood: #54151B;
+  --ph-blush: #E7C9D2;
+  --ph-display: "Tiempos Headline", "Tiempos Text", "Newsreader", Georgia, "Times New Roman", serif;
+  --ph-sans: "Neue Haas Grotesk Text", "neue-haas-grotesk-text", "Neue Haas Grotesk Display", "neue-haas-grotesk-display", "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ph-gutter: clamp(20px, 5vw, 64px);
+  --ph-space: clamp(72px, 9vw, 136px);
+  --ph-max: 1320px;
 
-
-.ph-detail__num { margin: 0 0 24px; font-family: var(--ph-serif); font-style: italic; font-size: 40px; line-height: 1; color: var(--ph-oxblood); }
-
-.ph-detail__title { margin: 0; font-size: 20px; font-weight: 500; letter-spacing: -0.01em; }
-.ph-detail__text { margin: 0; font-size: 15px; line-height: 1.6; color: #4C4A44; }
-
-.ph-steps {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(24px, 3vw, 48px);
-  counter-reset: ph-step;
-}
-@media (max-width: 991px) { .ph-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) { .ph-steps { grid-template-columns: 1fr; } }
-
-
-.ph-step { display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid var(--ph-ink); }
-
-.ph-step__num { margin: 0 0 18px; font-size: 13px; letter-spacing: .16em; color: var(--ph-muted); }
-.ph-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
-
-.ph-tag {
-  margin: 0;
-  padding: 9px 16px;
-  border: 1px solid var(--ph-stone);
-  border-radius: 999px;
-  font-size: 13px;
-  letter-spacing: 0.02em;
+  width: 100%;
+  background: var(--ph-paper);
   color: var(--ph-ink);
-  background: rgba(255,255,255,.4);
-}
-
-
-.ph-products {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(36px, 4vw, 56px) clamp(16px, 2vw, 28px);
-}
-@media (max-width: 991px) { .ph-products { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 480px) { .ph-products { gap: 32px 12px; } .ph-products .ph-card__text { display: none; } }
-
-
-.ph-card__spec { margin: -8px 0 0; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ph-olive); }
-
-
-.ph-papers {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(16px, 2vw, 28px);
-}
-@media (max-width: 991px) { .ph-papers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 480px) { .ph-papers { grid-template-columns: 1fr; } }
-
-
-.ph-paper { display: flex; flex-direction: column; gap: 12px; }
-.ph-paper .ph-media { margin-bottom: 10px; box-shadow: 0 24px 40px -28px rgba(10,10,10,.45); }
-
-
-.ph-media--paper { background: radial-gradient(120% 80% at 25% 20%, #fff, transparent 65%), linear-gradient(160deg, #FDFCFA 0%, #ECE8E1 100%); }
-
-
-.ph-media--duplex { background: linear-gradient(160deg, var(--ph-paper) 0%, var(--ph-sand) 100%); }
-.ph-media--duplex::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: var(--ph-oxblood); }
-
-.ph-methods { display: flex; flex-direction: column; border-bottom: 1px solid var(--ph-stone); }
-
-.ph-method {
-  display: grid;
-  grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1fr);
-  gap: 24px;
-  align-items: baseline;
-  padding: 30px 0;
-  border-top: 1px solid var(--ph-stone);
-  transition: padding .3s ease, color .3s ease;
-}
-.ph-method:hover { padding-left: 12px; }
-.ph-method:hover .ph-method__title { color: var(--ph-oxblood); }
-@media (max-width: 767px) { .ph-method { grid-template-columns: 48px minmax(0, 1fr); } .ph-method > :last-child { grid-column: 2; } }
-
-
-.ph-method__title { margin: 0; font-size: clamp(26px, 3vw, 44px); font-weight: 500; letter-spacing: -0.03em; line-height: 1; transition: color .3s ease; }
-.ph-method__title em { font-family: var(--ph-serif); font-style: italic; font-weight: 400; }
-
-.ph-methods__foot { margin-top: 36px; }
-
-.ph-details--light { border-top-color: rgba(249,247,243,.22); }
-.ph-details--light .ph-detail + .ph-detail { border-left-color: rgba(249,247,243,.22); }
-.ph-details--light .ph-detail__text { color: var(--ph-stone); }
-.ph-details--light .ph-detail__num { color: var(--ph-blush); }
-@media (max-width: 991px) { .ph-details--light .ph-detail { border-bottom-color: rgba(249,247,243,.22); } }
-
-.ph-cta { text-align: center; }
-.ph-cta__inner { display: flex; flex-direction: column; align-items: center; }
-
-.ph-cta__title {
-  margin: 0;
   font-family: var(--ph-sans);
-  font-size: clamp(48px, 9vw, 150px);
-  font-weight: 500;
-  line-height: 0.88;
-  letter-spacing: -0.055em;
-  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
-.ph-cta__title em {
-  font-family: var(--ph-serif);
-  font-style: italic;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: -0.03em;
-  color: var(--ph-blush);
+.ph-footer *, .ph-footer *::before, .ph-footer *::after { box-sizing: border-box; }
+:where(.ph-footer a) { color: inherit; }
+.ph-footer a:focus-visible, .ph-footer button:focus-visible, .ph-footer input:focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
 }
 
-.ph-cta__lead { margin: 36px auto 0; text-align: center; }
-.ph-actions--center { justify-content: center; }</style></head>
-<body><section class="brxe-section ph-section ph-hero"><div class="brxe-container ph-container"><div class="brxe-div ph-hero__grid"><div class="brxe-div"><p class="brxe-text-basic ph-eyebrow">Premium printing &mdash; Cards, stationery &amp; packaging</p><h1 class="brxe-heading ph-hero__title">Good ideas look <em>better printed.</em></h1><p class="brxe-text-basic ph-lead ph-hero__lead">Exceptional paper, specialty finishes and print you can feel the difference in. Upload your design, approve your proof, and we'll handle the rest.</p><div class="brxe-div ph-actions"><a class="brxe-button ph-btn ph-btn--dark" href="/product-category/business-cards/">Shop business cards</a><a class="brxe-button ph-btn ph-btn--ghost" href="/sample-pack/">Get a sample pack</a></div></div><div class="brxe-div ph-hero__visual"><div class="brxe-div ph-media"></div><div class="brxe-div ph-hero__tag"><p class="brxe-text-basic ph-hero__tag-title">Details you can feel.</p><p class="brxe-text-basic ph-hero__tag-text">Foil, letterpress and embossing on cotton, duplex and recycled stocks.</p></div></div></div><div class="brxe-div ph-hero__points"><p class="brxe-text-basic ph-point"><strong>Proof before print</strong>Every order is checked and proofed before it goes to press.</p><p class="brxe-text-basic ph-point"><strong>Premium papers</strong>Cotton, duplex and recycled stocks, chosen for feel and finish.</p><p class="brxe-text-basic ph-point"><strong>Specialty finishes</strong>Foil, letterpress, embossing and painted edges.</p></div></div></section><section class="brxe-section ph-section ph-section--ink ph-section--tight"><div class="brxe-div ph-marquee"><div class="brxe-text-basic ph-marquee__track"><span>Letterpress</span><i aria-hidden="true">/</i><span>Foil stamping</span><i aria-hidden="true">/</i><span>Embossing</span><i aria-hidden="true">/</i><span>Painted edges</span><i aria-hidden="true">/</i><span>Duplex stocks</span><i aria-hidden="true">/</i><span>Cotton paper</span><i aria-hidden="true">/</i><span>Debossing</span><i aria-hidden="true">/</i><span>Die cutting</span><i aria-hidden="true">/</i><span>Letterpress</span><i aria-hidden="true">/</i><span>Foil stamping</span><i aria-hidden="true">/</i><span>Embossing</span><i aria-hidden="true">/</i><span>Painted edges</span><i aria-hidden="true">/</i><span>Duplex stocks</span><i aria-hidden="true">/</i><span>Cotton paper</span><i aria-hidden="true">/</i><span>Debossing</span><i aria-hidden="true">/</i><span>Die cutting</span><i aria-hidden="true">/</i></div></div></section><section class="brxe-section ph-section"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-eyebrow">01 / Shop by product</p><h2 class="brxe-heading ph-h2">Everything worth <em>printing well.</em></h2></div><div class="brxe-div ph-head__aside"><p class="brxe-text-basic ph-lead">Professional print for business and life's occasions, from a box of cards to a full stationery suite.</p><a class="brxe-text-link ph-link" href="/shop/">Shop all products &rarr;</a></div></div><div class="brxe-div ph-products"><a class="brxe-div ph-card" href="/product-category/business-cards/"><div class="brxe-div ph-media"></div><h3 class="brxe-heading ph-card__title">Business Cards</h3><p class="brxe-text-basic ph-card__spec">Cotton &middot; Duplex &middot; Foil</p><p class="brxe-text-basic ph-card__text">The card you hand over says it first. Make it weighty, tactile and unmistakably yours.</p><span class="brxe-text-basic ph-card__more">Shop now &rarr;</span></a><a class="brxe-div ph-card" href="/product-category/letterhead-envelopes/"><div class="brxe-div ph-media ph-media--paper"></div><h3 class="brxe-heading ph-card__title">Letterhead &amp; Envelopes</h3><p class="brxe-text-basic ph-card__spec">Matching stationery</p><p class="brxe-text-basic ph-card__text">Correspondence that feels considered, on stocks that pair with your cards.</p><span class="brxe-text-basic ph-card__more">Shop now &rarr;</span></a><a class="brxe-div ph-card" href="/product-category/notecards-postcards/"><div class="brxe-div ph-media ph-media--olive"></div><h3 class="brxe-heading ph-card__title">Notecards &amp; Postcards</h3><p class="brxe-text-basic ph-card__spec">Flat &middot; Folded</p><p class="brxe-text-basic ph-card__text">Thank-yous, notes and mailers worth keeping on the fridge.</p><span class="brxe-text-basic ph-card__more">Shop now &rarr;</span></a><a class="brxe-div ph-card" href="/product-category/invitations/"><div class="brxe-div ph-media ph-media--blush"></div><h3 class="brxe-heading ph-card__title">Invitations</h3><p class="brxe-text-basic ph-card__spec">Weddings &middot; Events</p><p class="brxe-text-basic ph-card__text">Suites, save-the-dates and menus with a real sense of occasion.</p><span class="brxe-text-basic ph-card__more">Shop now &rarr;</span></a><a class="brxe-div ph-card" href="/product-category/packaging-labels/"><div class="brxe-div ph-media ph-media--oxblood"></div><h3 class="brxe-heading ph-card__title">Packaging &amp; Labels</h3><p class="brxe-text-basic ph-card__spec">Boxes &middot; Sleeves &middot; Stickers</p><p class="brxe-text-basic ph-card__text">Branded packaging, tags and labels that make the unboxing part of the experience.</p><span class="brxe-text-basic ph-card__more">Shop now &rarr;</span></a><a class="brxe-div ph-card" href="/product-category/art-prints/"><div class="brxe-div ph-media"></div><h3 class="brxe-heading ph-card__title">Art Prints</h3><p class="brxe-text-basic ph-card__spec">Fine art papers</p><p class="brxe-text-basic ph-card__text">Gallery-quality prints with rich colour and a beautiful surface.</p><span class="brxe-text-basic ph-card__more">Shop now &rarr;</span></a></div></div></section><section class="brxe-section ph-section ph-section--sand"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-eyebrow">02 / Choose your paper</p><h2 class="brxe-heading ph-h2">It starts with <em>the paper.</em></h2></div><div class="brxe-div ph-head__aside"><p class="brxe-text-basic ph-lead">The right stock changes everything: how a card feels, how ink sits, how it's remembered. Here's what we print on.</p><a class="brxe-text-link ph-link" href="/paper/">Compare our papers &rarr;</a></div></div><div class="brxe-div ph-papers"><div class="brxe-div ph-paper"><div class="brxe-div ph-media ph-media--square ph-media--paper"></div><h3 class="brxe-heading ph-detail__title">Smooth</h3><p class="brxe-text-basic ph-card__spec">Crisp &middot; Bright</p><p class="brxe-text-basic ph-detail__text">A refined everyday premium. Sharp detail and true colour on an elegant uncoated finish.</p></div><div class="brxe-div ph-paper"><div class="brxe-div ph-media ph-media--square"></div><h3 class="brxe-heading ph-detail__title">Cotton</h3><p class="brxe-text-basic ph-card__spec">Soft &middot; Tactile</p><p class="brxe-text-basic ph-detail__text">Made from cotton fibres with a gentle tooth that takes letterpress and embossing beautifully.</p></div><div class="brxe-div ph-paper"><div class="brxe-div ph-media ph-media--square ph-media--duplex"></div><h3 class="brxe-heading ph-detail__title">Duplex</h3><p class="brxe-text-basic ph-card__spec">Thick &middot; Substantial</p><p class="brxe-text-basic ph-detail__text">Two sheets bonded together for serious weight and a contrasting colour edge.</p></div><div class="brxe-div ph-paper"><div class="brxe-div ph-media ph-media--square ph-media--olive"></div><h3 class="brxe-heading ph-detail__title">Recycled</h3><p class="brxe-text-basic ph-card__spec">Natural &middot; Considered</p><p class="brxe-text-basic ph-detail__text">Characterful recycled stocks for brands who care how things are made.</p></div></div></div></section><section class="brxe-section ph-section"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-eyebrow">03 / Print methods &amp; finishes</p><h2 class="brxe-heading ph-h2">Printing methods, <em>done properly.</em></h2></div><div class="brxe-div ph-head__aside"><p class="brxe-text-basic ph-lead">From fast, full-colour digital to traditional letterpress, we match the method to the piece.</p></div></div><div class="brxe-div ph-methods"><div class="brxe-div ph-method"><p class="brxe-text-basic ph-card__num">01</p><h3 class="brxe-heading ph-method__title">Digital</h3><p class="brxe-text-basic ph-detail__text">Sharp, vibrant and quick. Ideal for full-colour designs and shorter runs.</p></div><div class="brxe-div ph-method"><p class="brxe-text-basic ph-card__num">02</p><h3 class="brxe-heading ph-method__title">Offset</h3><p class="brxe-text-basic ph-detail__text">Precise, consistent colour for larger runs and brand-critical work.</p></div><div class="brxe-div ph-method"><p class="brxe-text-basic ph-card__num">03</p><h3 class="brxe-heading ph-method__title">Letterpress</h3><p class="brxe-text-basic ph-detail__text">Ink pressed deep into soft cotton paper for an impression you can feel.</p></div><div class="brxe-div ph-method"><p class="brxe-text-basic ph-card__num">04</p><h3 class="brxe-heading ph-method__title">Foil <em>stamping</em></h3><p class="brxe-text-basic ph-detail__text">Metallic and pigment foils that catch the light: gold, copper, silver and more.</p></div><div class="brxe-div ph-method"><p class="brxe-text-basic ph-card__num">05</p><h3 class="brxe-heading ph-method__title">Embossing</h3><p class="brxe-text-basic ph-detail__text">Raised or recessed detail, with or without ink, for quiet, tactile impact.</p></div><div class="brxe-div ph-method"><p class="brxe-text-basic ph-card__num">06</p><h3 class="brxe-heading ph-method__title">Painted <em>edges</em></h3><p class="brxe-text-basic ph-detail__text">A flash of colour along the edge of thick stocks. A small detail with a big effect.</p></div></div><div class="brxe-div ph-methods__foot"><a class="brxe-text-link ph-link" href="/contact/">Not sure which? Talk to a print specialist &rarr;</a></div></div></section><section class="brxe-section ph-section ph-section--oxblood"><div class="brxe-container ph-container"><div class="brxe-div ph-split"><div class="brxe-div ph-media ph-media--square"></div><div class="brxe-div ph-stack"><p class="brxe-text-basic ph-eyebrow ph-eyebrow--light">Why Printing Haus</p><h2 class="brxe-heading ph-statement">Made to be <em>held onto.</em></h2><p class="brxe-text-basic ph-lead">Print is the part of your brand people can pick up. So we obsess over the details: the weight of the stock, the bite of the press, the colour on the edge. Elevated print, made accessible.</p><a class="brxe-button ph-btn ph-btn--light" href="/sample-pack/">Get a sample pack</a></div></div></div></section><section class="brxe-section ph-section"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-eyebrow">04 / How to order</p><h2 class="brxe-heading ph-h2">From file to <em>in hand.</em></h2></div><div class="brxe-div ph-head__aside"><a class="brxe-button ph-btn ph-btn--dark" href="/shop/">Start your order</a></div></div><div class="brxe-div ph-steps"><div class="brxe-div ph-step"><p class="brxe-text-basic ph-step__num">Step 01</p><h3 class="brxe-heading ph-detail__title">Pick your product</h3><p class="brxe-text-basic ph-detail__text">Choose your format, paper and finish. Not sure? Order a sample pack first.</p></div><div class="brxe-div ph-step"><p class="brxe-text-basic ph-step__num">Step 02</p><h3 class="brxe-heading ph-detail__title">Upload your design</h3><p class="brxe-text-basic ph-detail__text">Send print-ready artwork, or let our team set up your file for you.</p></div><div class="brxe-div ph-step"><p class="brxe-text-basic ph-step__num">Step 03</p><h3 class="brxe-heading ph-detail__title">Approve your proof</h3><p class="brxe-text-basic ph-detail__text">We check every file and send a proof. Nothing prints until you're happy.</p></div><div class="brxe-div ph-step"><p class="brxe-text-basic ph-step__num">Step 04</p><h3 class="brxe-heading ph-detail__title">Printed &amp; shipped</h3><p class="brxe-text-basic ph-detail__text">Carefully printed, finished and packed to arrive in perfect condition.</p></div></div></div></section><section class="brxe-section ph-section ph-section--ink"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-eyebrow ph-eyebrow--light">The Haus promise</p><h2 class="brxe-heading ph-h2">Print you can <em>count on.</em></h2></div></div><div class="brxe-div ph-details ph-details--light"><div class="brxe-div ph-detail"><p class="brxe-text-basic ph-detail__num">i.</p><h3 class="brxe-heading ph-detail__title">Checked by people</h3><p class="brxe-text-basic ph-detail__text">A real person reviews every file before it goes to press.</p></div><div class="brxe-div ph-detail"><p class="brxe-text-basic ph-detail__num">ii.</p><h3 class="brxe-heading ph-detail__title">Proof before print</h3><p class="brxe-text-basic ph-detail__text">Nothing is printed until you've approved your proof.</p></div><div class="brxe-div ph-detail"><p class="brxe-text-basic ph-detail__num">iii.</p><h3 class="brxe-heading ph-detail__title">Made right</h3><p class="brxe-text-basic ph-detail__text">If something isn't right with your order, we'll make it right.</p></div><div class="brxe-div ph-detail"><p class="brxe-text-basic ph-detail__num">iv.</p><h3 class="brxe-heading ph-detail__title">Packed with care</h3><p class="brxe-text-basic ph-detail__text">Protected, flat-packed and ready to hand out the day it arrives.</p></div></div></div></section><section class="brxe-section ph-section ph-section--sand"><div class="brxe-container ph-container"><div class="brxe-div ph-split ph-split--reverse"><div class="brxe-div ph-media ph-media--blush"></div><div class="brxe-div ph-stack"><p class="brxe-text-basic ph-eyebrow">05 / For business</p><h2 class="brxe-heading ph-h2">Your print partner, <em>run after run.</em></h2><p class="brxe-text-basic ph-lead">Larger runs, custom packaging, brand-matched colour and easy reorders. Tell us about your project and we'll put together a custom quote.</p><div class="brxe-div ph-tags"><span class="brxe-text-basic ph-tag">Bulk &amp; repeat orders</span><span class="brxe-text-basic ph-tag">Brand colour matching</span><span class="brxe-text-basic ph-tag">Custom packaging</span><span class="brxe-text-basic ph-tag">File setup &amp; design help</span></div><div class="brxe-div ph-actions"><a class="brxe-button ph-btn ph-btn--dark" href="/request-a-quote/">Request a quote</a></div></div></div></div></section><section class="brxe-section ph-section ph-section--ink ph-cta"><div class="brxe-container ph-container"><div class="brxe-div ph-cta__inner"><p class="brxe-text-basic ph-eyebrow ph-eyebrow--light">Feel the difference</p><h2 class="brxe-heading ph-cta__title">Good ideas look <em>better printed.</em></h2><p class="brxe-text-basic ph-lead ph-cta__lead">Not sure which paper is right? Order a sample pack and feel our stocks and finishes in hand before you print.</p><div class="brxe-div ph-actions ph-actions--center"><a class="brxe-button ph-btn ph-btn--light" href="/product-category/business-cards/">Shop business cards</a><a class="brxe-button ph-btn ph-btn--ghost-light" href="/sample-pack/">Get a sample pack</a></div></div></div></section></body></html>
+.ph-footer { padding: clamp(64px, 7vw, 104px) var(--ph-gutter) 32px; background: var(--ph-ink); color: var(--ph-paper); }
+.ph-footer a { text-decoration: none; }
+.ph-footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+
+.ph-footer__grid { display: grid; grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)); gap: 48px clamp(24px, 3vw, 48px); width: 100%; }
+@media (max-width: 991px) { .ph-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ph-footer__grid > :first-child { grid-column: 1 / -1; } }
+
+.ph-footer__col { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; font-size: 15px; }
+.ph-footer__head { margin: 0 0 8px; font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--ph-rule); }
+
+.ph-footer__legal {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px;
+  width: 100%;
+  margin-top: clamp(56px, 6vw, 88px); padding-top: 24px;
+  border-top: 1px solid rgba(249,247,243,.2);
+  font-size: 13px; color: var(--ph-rule);
+}
+.ph-footer__legal p { margin: 0; }
+.ph-footer__legal nav { display: flex; gap: 24px; }
+</style></head>
+<body><header class="brxe-section ph-header"><div class="brxe-container ph-container"><div class="brxe-div ph-header__bar"><a class="brxe-logo ph-logo" href="/">[LOGO]</a><nav class="brxe-nav-menu ph-nav ph-hide-mobile" aria-label="Primary"><ul><li><a href="#">Shop</a></li><li><a href="#">Design Studio</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul></nav><div class="brxe-div ph-utility"><a class="brxe-search ph-hide-mobile" href="#">Search</a><a class="brxe-text-link ph-hide-mobile" href="/my-account/">Account</a><a class="brxe-woocommerce-mini-cart" href="#">Cart (0)</a><a class="brxe-nav-menu ph-show-mobile-only" href="#">Menu</a></div></div></div></header><section class="brxe-section ph-section ph-hero"><div class="brxe-container ph-container"><div class="brxe-div ph-hero__grid"><div class="brxe-div"><h1 class="brxe-heading ph-hero__title">Make an Impression.</h1><p class="brxe-text-basic ph-lead ph-hero__lead">Considered paper. Distinctive finishes. Print that feels like you.</p><div class="brxe-div ph-actions"><a class="brxe-button ph-btn ph-btn--dark" href="/shop/">Shop the Collection</a><a class="brxe-text-link ph-link" href="/design-studio/">Explore the Design Studio</a></div></div><div class="brxe-div"><div class="brxe-div ph-media ph-media--hero"><p class="brxe-text-basic ph-media__label">[Photo: one strong product composition, e.g. business cards showing their edge and raised spot UV in natural light]</p></div><p class="brxe-text-basic ph-caption">[Shown: product name, stock and finish]</p></div></div></div></section><section class="brxe-section ph-section ph-section--flush"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-label">Shop</p><h2 class="brxe-heading ph-h2">Shop by category</h2></div><a class="brxe-text-link ph-link" href="/shop/">View all products</a></div><div class="brxe-div ph-grid-3"><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media"></div><h3 class="brxe-heading ph-h3">[Category from your store]</h3></a><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media"></div><h3 class="brxe-heading ph-h3">[Category from your store]</h3></a><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media"></div><h3 class="brxe-heading ph-h3">[Category from your store]</h3></a></div></div></section><section class="brxe-section ph-section ph-section--flush"><div class="brxe-container ph-container"><div class="brxe-div ph-rule"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-label">Featured</p><h2 class="brxe-heading ph-h2">A few favorites</h2></div><a class="brxe-text-link ph-link" href="/shop/">Shop the Collection</a></div><div class="brxe-div ph-grid-4"><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media ph-media--square"></div><h3 class="brxe-heading ph-h3">[Product name]</h3><div class="brxe-text-basic ph-price">[Price from store]</div></a><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media ph-media--square"></div><h3 class="brxe-heading ph-h3">[Product name]</h3><div class="brxe-text-basic ph-price">[Price from store]</div></a><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media ph-media--square"></div><h3 class="brxe-heading ph-h3">[Product name]</h3><div class="brxe-text-basic ph-price">[Price from store]</div></a><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media ph-media--square"></div><h3 class="brxe-heading ph-h3">[Product name]</h3><div class="brxe-text-basic ph-price">[Price from store]</div></a></div></div></div></section><section class="brxe-section ph-section ph-section--sand"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-label">Paper &amp; finishes</p><h2 class="brxe-heading ph-h2">Details you can feel</h2></div><p class="brxe-text-basic ph-body">What each paper and finish looks and feels like, in plain language. Not sure which to choose? We're happy to help.</p></div><div class="brxe-div ph-materials"><p class="brxe-text-basic ph-label ph-material__group">Paper</p><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: smooth matte stock in raking light]</p></div><h3 class="brxe-heading ph-h3">[Confirm stock] Smooth matte</h3><p class="brxe-text-basic ph-body">A soft matte surface. Smooth to the touch, with even, true color.</p></div><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: textured stock close-up, paper fibers visible]</p></div><h3 class="brxe-heading ph-h3">[Confirm stock] Textured</h3><p class="brxe-text-basic ph-body">Paper with presence. A gentle texture you can feel under your fingertips.</p></div><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: stack of thick cards showing the edge]</p></div><h3 class="brxe-heading ph-h3">[Confirm stock] Heavyweight</h3><p class="brxe-text-basic ph-body">A substantial stock with a visible edge, so your card feels considered in hand.</p></div><p class="brxe-text-basic ph-label ph-material__group">Finishes</p><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: light catching raised spot UV]</p></div><h3 class="brxe-heading ph-h3">Raised spot UV</h3><p class="brxe-text-basic ph-body">A little gloss where it counts. Raised spot UV adds shine and dimension to selected details.</p></div><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: foil detail on a textured stock]</p></div><h3 class="brxe-heading ph-h3">[Confirm] Foil</h3><p class="brxe-text-basic ph-body">A metallic finish applied to selected parts of your design, so it catches the light.</p></div><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: embossed detail in soft side light]</p></div><h3 class="brxe-heading ph-h3">[Confirm] Embossing</h3><p class="brxe-text-basic ph-body">A raised impression pressed into the paper, so your design can be felt as well as seen.</p></div></div><div class="brxe-div ph-actions"><a class="brxe-button ph-btn ph-btn--outline" href="/paper-and-finishes/">Explore Paper &amp; Finishes</a></div></div></section><section class="brxe-section ph-section ph-section--oxblood"><div class="brxe-container ph-container"><div class="brxe-div ph-split"><div class="brxe-div ph-stack"><p class="brxe-text-basic ph-label ph-label--light">Design Studio</p><h2 class="brxe-heading ph-h2">An idea worth putting on paper.</h2><p class="brxe-text-basic ph-lead">Something more individual? Our design studio brings a considered eye to your next print project, from the first idea to the finishing detail.</p><ul class="brxe-text-basic ph-list"><li>Custom artwork</li><li>Stationery</li><li>Packaging</li><li>[Confirm any other studio services]</li></ul><div class="brxe-div ph-actions"><a class="brxe-button ph-btn ph-btn--light" href="/design-studio/#project-form">Tell Us About Your Project</a></div></div><div class="brxe-div ph-media"><p class="brxe-text-basic ph-media__label">[Photo: studio table with proofs, paper samples and a finished stationery set]</p></div></div></div></section><section class="brxe-section ph-section"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-label">Customer work</p><h2 class="brxe-heading ph-h2">Recently printed</h2></div><p class="brxe-text-basic ph-small">[Approved customer projects only. Hide this section in Bricks until you have them.]</p></div><div class="brxe-div ph-grid-3"><div class="brxe-div ph-card"><div class="brxe-div ph-media"><p class="brxe-text-basic ph-media__label">[Photo: approved customer project]</p></div><h3 class="brxe-heading ph-h3">[Customer or project name]</h3><p class="brxe-text-basic ph-body">[Product &middot; stock &middot; finish]</p></div><div class="brxe-div ph-card"><div class="brxe-div ph-media"><p class="brxe-text-basic ph-media__label">[Photo: approved customer project]</p></div><h3 class="brxe-heading ph-h3">[Customer or project name]</h3><p class="brxe-text-basic ph-body">[Product &middot; stock &middot; finish]</p></div><div class="brxe-div ph-card"><div class="brxe-div ph-media"><p class="brxe-text-basic ph-media__label">[Photo: approved customer project]</p></div><h3 class="brxe-heading ph-h3">[Customer or project name]</h3><p class="brxe-text-basic ph-body">[Product &middot; stock &middot; finish]</p></div></div></div></section><section class="brxe-section ph-section ph-section--flush"><div class="brxe-container ph-container"><div class="brxe-div ph-rule ph-approach"><div class="brxe-div"><p class="brxe-text-basic ph-label">Material approach</p><h2 class="brxe-heading ph-h2">How we choose and print</h2></div><div class="brxe-div ph-facts"><div class="brxe-div ph-fact"><h3 class="brxe-heading ph-h3">Paper first</h3><p class="brxe-text-basic ph-body">We choose each stock for how it prints and how it feels in hand, then match the finish to the paper.</p></div><div class="brxe-div ph-fact"><h3 class="brxe-heading ph-h3">Our printing partners</h3><p class="brxe-text-basic ph-body">We work with printing partners that hold FSC certifications. If certified paper matters for your project, ask us about the options.</p></div><div class="brxe-div ph-fact"><h3 class="brxe-heading ph-h3">[Verified practice]</h3><p class="brxe-text-basic ph-body">[Add a specific, verified sourcing or production practice.]</p></div><div class="brxe-div ph-fact"><h3 class="brxe-heading ph-h3">[Verified practice]</h3><p class="brxe-text-basic ph-body">[Add a specific, verified sourcing or production practice.]</p></div></div></div></div></section><section class="brxe-section ph-section ph-section--sand"><div class="brxe-container ph-container"><div class="brxe-div ph-signup"><div class="brxe-div ph-stack"><h2 class="brxe-heading ph-h2">Notes from the Haus.</h2><p class="brxe-text-basic ph-lead">New collections, paper discoveries, and studio news. A considered addition to your inbox.</p></div><div class="brxe-div ph-stack"><form class="brxe-form ph-form" onsubmit="return false"><div class="form-group"><label for="pv-email">Email address</label><input id="pv-email" type="email" required></div><div class="submit-button-wrapper"><button type="submit">Subscribe</button></div></form><p class="brxe-text-basic ph-small">Unsubscribe at any time. See our <a href="/privacy-policy/">privacy policy</a>.</p></div></div></div></section><footer class="brxe-section ph-footer"><div class="brxe-container ph-container"><div class="brxe-div ph-footer__grid"><div class="brxe-div ph-footer__col"><a class="brxe-logo ph-logo" href="/">[LOGO]</a><p class="brxe-text-basic ph-body ph-body--light">[Email address]<br>[Phone number]<br>[Studio address or service area]</p></div><div class="brxe-div ph-footer__col"><p class="brxe-text-basic ph-footer__head">Shop</p><a class="brxe-text-link" href="/shop/">All products</a><a class="brxe-text-link" href="/paper-and-finishes/">Paper &amp; finishes</a><a class="brxe-text-link" href="/design-studio/">Design Studio</a></div><div class="brxe-div ph-footer__col"><p class="brxe-text-basic ph-footer__head">Help</p><a class="brxe-text-link" href="/shipping/">Shipping information</a><a class="brxe-text-link" href="/faq/">FAQs</a><a class="brxe-text-link" href="/artwork-guidelines/">Artwork guidelines</a><a class="brxe-text-link" href="/returns-and-order-issues/">Returns &amp; order issues</a></div><div class="brxe-div ph-footer__col"><p class="brxe-text-basic ph-footer__head">Printing Haus</p><a class="brxe-text-link" href="/about/">About</a><a class="brxe-text-link" href="/contact/">Contact</a><a class="brxe-text-link" href="/my-account/">Account</a></div></div><div class="brxe-div ph-footer__legal"><p class="brxe-text-basic">&copy; 2026 Printing Haus. Part of Production Haus.</p><nav class="brxe-div"><a class="brxe-text-link" href="/privacy-policy/">Privacy policy</a><a class="brxe-text-link" href="/terms/">Terms</a></nav></div></div></footer><div class="preview-flag">Draft preview &middot; [bracketed] text and gray blocks are placeholders</div></body></html>
