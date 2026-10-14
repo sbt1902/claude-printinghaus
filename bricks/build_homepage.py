@@ -438,7 +438,10 @@ def heading(text, tag="h2", classes="ph-h2"):
 
 
 def text(html, classes="", tag="p"):
-    return El("text-basic", classes, text=html, tag=tag)
+    if tag in ("p", "span", "div"):
+        return El("text-basic", classes, text=html, tag=tag)
+    # Other tags (ul, dl, details...) go through Basic Text's "Custom" tag option
+    return El("text-basic", classes, text=html, tag="custom", customTag=tag)
 
 
 def button(label, href, variant):
@@ -607,9 +610,8 @@ HOME = [
                 text("Something more individual? Our design studio brings a considered eye "
                      "to your next print project, from the first idea to the finishing detail.",
                      "ph-lead"),
-                El("text-basic", "ph-list", tag="ul", label="Studio services",
-                   text="<li>Custom artwork</li><li>Stationery</li><li>Packaging</li>"
-                        "<li>[Confirm any other studio services]</li>"),
+                text("<li>Custom artwork</li><li>Stationery</li><li>Packaging</li>"
+                     "<li>[Confirm any other studio services]</li>", "ph-list", tag="ul"),
                 div("ph-actions", [button("Tell Us About Your Project", LINKS["studio_brief"],
                                           "ph-btn--light")]),
             ]),
@@ -722,10 +724,243 @@ FOOTER = [
     ])], label="Footer", tag="custom", customTag="footer"),
 ]
 
+# ---------------------------------------------------------------------------
+# PRODUCT PAGE  (WooCommerce single product, brief section 7)
+# Woo elements render the real product: gallery, title, price, options,
+# upload field and Add to Cart all come from the store.
+# ---------------------------------------------------------------------------
+CLASSES.update({
+    "ph-crumbs": """
+%root% { margin: 0 0 clamp(24px, 3vw, 40px); font-size: 13px; color: var(--ph-muted); }
+%root% a { text-decoration: none; }
+%root% a:hover { text-decoration: underline; text-underline-offset: 4px; }
+""",
+    "ph-pdp": """
+%root% {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+  width: 100%;
+}
+@media (max-width: 991px) { %root% { grid-template-columns: 1fr; } }
+""",
+    "ph-pdp__gallery": """
+%root% .woocommerce-product-gallery { margin: 0; width: 100% !important; float: none !important; }
+%root% .woocommerce-product-gallery__image img, %root% .woocommerce-product-gallery img { width: 100%; height: auto; display: block; background: var(--ph-stone); }
+%root% .flex-control-thumbs { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin: 8px 0 0 !important; padding: 0; list-style: none; }
+%root% .flex-control-thumbs li { width: auto !important; float: none !important; margin: 0 !important; }
+%root% .flex-control-thumbs img { opacity: .55; cursor: pointer; transition: opacity .2s ease; }
+%root% .flex-control-thumbs img.flex-active, %root% .flex-control-thumbs img:hover { opacity: 1; }
+""",
+    "ph-pdp__summary": "%root% { display: flex; flex-direction: column; align-items: stretch; gap: 0; }",
+    "ph-pdp__title": """
+%root%, %root% h1 {
+  margin: 0 0 12px;
+  font-family: var(--ph-display);
+  font-size: clamp(36px, 3.6vw, 52px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-transform: none;
+  color: var(--ph-ink);
+}
+""",
+    "ph-pdp__price": """
+%root%, %root% .price { margin: 0 0 20px; font-size: 18px; font-weight: 500; color: var(--ph-ink); }
+%root% del { opacity: .55; margin-right: 8px; font-weight: 400; }
+%root% ins { text-decoration: none; }
+""",
+    "ph-pdp__intro": "%root%, %root% p { margin: 0 0 28px; font-size: 17px; line-height: 1.6; max-width: 46ch; }",
+    "ph-pdp__buy": """
+%root% { padding: 24px 0 28px; border-top: 1px solid var(--ph-rule); }
+%root% form.cart { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; }
+%root% table.variations { width: 100%; margin: 0 0 8px; border: 0; border-collapse: collapse; }
+%root% table.variations tr { display: block; margin-bottom: 16px; }
+%root% table.variations th, %root% table.variations td { display: block; padding: 0; border: 0; text-align: left; background: none; }
+%root% label { display: block; margin: 0 0 8px; font-size: 13px; font-weight: 500; color: var(--ph-ink); text-transform: none; letter-spacing: normal; }
+%root% select, %root% input[type=number], %root% input[type=text], %root% input[type=file], %root% textarea {
+  width: 100%; min-height: 48px; padding: 0 14px;
+  border: 1px solid var(--ph-ink); border-radius: 0; background: var(--ph-paper);
+  font-family: var(--ph-sans); font-size: 16px; color: var(--ph-ink);
+}
+%root% input[type=file] { padding: 12px 14px; }
+%root% .reset_variations { display: inline-block; margin-top: 8px; font-size: 13px; }
+%root% .single_variation_wrap, %root% .woocommerce-variation-add-to-cart { width: 100%; }
+%root% .woocommerce-variation-add-to-cart { display: flex; flex-wrap: wrap; gap: 12px; }
+%root% .woocommerce-variation-price { margin: 0 0 12px; font-size: 18px; font-weight: 500; }
+%root% .quantity input.qty { width: 88px; text-align: center; padding: 0 8px; }
+%root% .single_add_to_cart_button {
+  flex: 1 1 200px; min-height: 52px !important; padding: 0 28px !important;
+  border: 1px solid var(--ph-ink) !important; border-radius: 0 !important;
+  background: var(--ph-ink) !important; color: var(--ph-paper) !important;
+  font-family: var(--ph-sans) !important; font-size: 15px !important; font-weight: 500 !important;
+  letter-spacing: normal !important; text-transform: none !important; cursor: pointer;
+}
+%root% .single_add_to_cart_button:hover { background: #2E2B28 !important; border-color: #2E2B28 !important; }
+%root% .single_add_to_cart_button.disabled { opacity: .45; cursor: not-allowed; }
+%root% .stock { width: 100%; margin: 0 0 8px; font-size: 14px; }
+""",
+    "ph-pdp__facts": """
+%root% { margin: 0; padding: 0; border-top: 1px solid var(--ph-rule); }
+%root% > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--ph-rule); }
+%root% dt { margin: 0; font-size: 13px; font-weight: 500; }
+%root% dd { margin: 0; font-size: 14px; line-height: 1.55; color: var(--ph-muted); }
+%root% dd a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 480px) { %root% > div { grid-template-columns: 1fr; gap: 4px; } }
+""",
+    "ph-pdp__help": """
+%root% { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 28px; padding: 22px 24px; background: var(--ph-sand); }
+""",
+    "ph-pdp__content": """
+%root% { max-width: 62ch; font-size: 16px; line-height: 1.7; }
+%root% p { margin: 0 0 1em; }
+%root% h2, %root% h3 { font-family: var(--ph-sans); font-size: 18px; font-weight: 500; margin: 1.6em 0 .5em; }
+%root% ul { padding-left: 1.2em; }
+""",
+    "ph-glossary": """
+%root% { margin: 0; border-top: 1px solid var(--ph-rule); }
+%root% > div { padding: 18px 0; border-bottom: 1px solid var(--ph-rule); }
+%root% dt { margin: 0 0 4px; font-size: 16px; font-weight: 500; }
+%root% dd { margin: 0; font-size: 15px; line-height: 1.6; color: var(--ph-muted); }
+""",
+    "ph-faq": """
+%root% { width: 100%; max-width: 860px; border-top: 1px solid var(--ph-rule); }
+%root% details { border-bottom: 1px solid var(--ph-rule); }
+%root% summary {
+  display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  min-height: 64px; padding: 16px 0; cursor: pointer; list-style: none;
+  font-size: 17px; font-weight: 500;
+}
+%root% summary::-webkit-details-marker { display: none; }
+%root% summary::after { content: "+"; font-size: 22px; font-weight: 400; line-height: 1; }
+%root% details[open] summary::after { content: "\\2212"; }
+%root% summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+%root% details p { margin: 0 0 20px; max-width: 64ch; font-size: 15px; line-height: 1.65; color: var(--ph-muted); }
+%root% details a { text-decoration: underline; text-underline-offset: 3px; }
+""",
+    "ph-related": """
+%root% { width: 100%; }
+%root% .related > h2, %root% .upsells > h2 { display: none; }
+%root% ul.products { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 24px; margin: 0 !important; padding: 0; list-style: none; }
+%root% ul.products::before, %root% ul.products::after { display: none !important; }
+%root% ul.products li.product { width: auto !important; margin: 0 !important; float: none !important; padding: 0; text-align: left; }
+%root% li.product a { text-decoration: none; color: inherit; }
+%root% li.product img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; margin: 0 0 14px; background: var(--ph-stone); }
+%root% .woocommerce-loop-product__title { margin: 0 0 4px; padding: 0; font-family: var(--ph-sans); font-size: 16px; font-weight: 500; text-transform: none; letter-spacing: normal; }
+%root% li.product .price { display: block; font-size: 15px; color: var(--ph-muted); }
+%root% li.product .button, %root% li.product .star-rating { display: none; }
+@media (max-width: 991px) { %root% ul.products { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+""",
+})
+
+
+def fact(term, html):
+    return text(f"<dt>{term}</dt><dd>{html}</dd>", "", tag="div")
+
+
+def gloss(term, html):
+    return text(f"<dt>{term}</dt><dd>{html}</dd>", "", tag="div")
+
+
+def faq(q, a):
+    return text(f"<summary>{q}</summary><p>{a}</p>", "", tag="details")
+
+
+PRODUCT = [
+    # Product summary -----------------------------------------------------
+    section("ph-hero", [container([
+        El("woocommerce-breadcrumbs", "ph-crumbs", label="Breadcrumbs"),
+        div("ph-pdp", [
+            div("ph-pdp__gallery", [El("product-gallery", "", label="Product gallery (real product photos)")]),
+            div("ph-pdp__summary", [
+                text("{post_terms_product_cat:plain}", "ph-label"),
+                El("product-title", "ph-pdp__title", label="Product name"),
+                El("product-price", "ph-pdp__price", label="Price (updates with the selection)"),
+                El("product-short-description", "ph-pdp__intro",
+                   label="Opening description (WooCommerce short description)"),
+                div("ph-pdp__buy", [El("product-add-to-cart", "",
+                                       label="Options, artwork upload and Add to Cart (from WooCommerce)")]),
+                div("ph-pdp__facts", [
+                    fact("Artwork",
+                         "[Accepted formats, e.g. PDF, PNG or JPG: list only what your upload accepts.] "
+                         f"Size, bleed and resolution are covered in our <a href=\"{LINKS['artwork']}\">artwork guidelines</a>."),
+                    fact("Proof",
+                         "[Describe your actual proof step, e.g. when a proof is sent and how to approve it.]"),
+                    fact("Production &amp; shipping",
+                         "[Verified production time]. [Verified shipping estimate]. "
+                         f"See <a href=\"{LINKS['shipping']}\">shipping information</a>."),
+                ], tag="custom", customTag="dl", label="Ordering facts (keep visible)"),
+                div("ph-pdp__help", [
+                    heading("Need help with the artwork?", "h2", "ph-h3"),
+                    text("Our design studio can set up your file or design something new.", "ph-body"),
+                    text_link("Request Design Support", LINKS["studio_brief"]),
+                ]),
+            ]),
+        ]),
+    ])], "Product summary"),
+
+    # Description + paper & finish guide ----------------------------------
+    section("ph-section--sand", [container([
+        div("ph-approach", [
+            div("ph-stack", [
+                text("About this product", "ph-label"),
+                El("product-content", "ph-pdp__content", label="Full description (WooCommerce)"),
+            ]),
+            div("ph-stack", [
+                text("Paper &amp; finish guide", "ph-label"),
+                div("ph-glossary", [
+                    gloss("Raised spot UV",
+                          "A little gloss where it counts. Raised spot UV adds shine and dimension to "
+                          "selected details: a glossy, raised finish you can see and feel."),
+                    gloss("[Confirm] Foil",
+                          "A metallic finish applied to selected parts of your design, so it catches the light."),
+                    gloss("[Confirm] Embossing",
+                          "A raised impression pressed into the paper, so your design can be felt as well as seen."),
+                    gloss("Paper weight",
+                          "How thick and substantial a stock feels. Heavier stocks feel more rigid in hand "
+                          "and show more of their edge."),
+                ], tag="custom", customTag="dl"),
+                text_link("Explore Paper &amp; Finishes", LINKS["paper"]),
+            ]),
+        ]),
+    ])], "Description & guide"),
+
+    # FAQs ----------------------------------------------------------------
+    section("", [container([
+        section_head("Questions", "Before you order"),
+        div("ph-faq", [
+            faq("What file types can I upload?",
+                "[List only the formats your upload accepts, e.g. PDF, PNG or JPG.] Our "
+                f"<a href=\"{LINKS['artwork']}\">artwork guidelines</a> cover size, bleed and resolution."),
+            faq("Will I see a proof before you print?",
+                "[Describe your actual proof process.]"),
+            faq("How long will my order take?",
+                "[Verified production time], plus shipping. See "
+                f"<a href=\"{LINKS['shipping']}\">shipping information</a> for delivery estimates."),
+            faq("I don't have artwork yet. Can you help?",
+                "Yes. Our design studio can set up your file or design something new. "
+                f"<a href=\"{LINKS['studio_brief']}\">Request design support</a>."),
+            faq("What if something is wrong with my order?",
+                f"Contact us and we'll look into it. See <a href=\"{LINKS['returns']}\">returns &amp; order issues</a>."),
+        ]),
+    ])], "FAQs"),
+
+    # Related -------------------------------------------------------------
+    section("ph-section--flush", [container([
+        div("ph-rule", [
+            section_head("More to explore", "You may also like"),
+            div("ph-related", [El("product-related", "", label="Related products (WooCommerce)")]),
+        ]),
+    ])], "Related products"),
+]
+
+
 TEMPLATES = {
     "header": ("Printing Haus - Header", "header", HEADER),
     "homepage": ("Printing Haus - Homepage", "content", HOME),
     "footer": ("Printing Haus - Footer", "footer", FOOTER),
+    "product": ("Printing Haus - Product", "wc_product", PRODUCT),
 }
 
 
@@ -806,7 +1041,8 @@ def render(node, sub=None):
     def s_(v):
         for k, r in (sub or {}).items():
             v = v.replace(k, r)
-        return v.replace("{current_date:Y}", "2026")
+        return (v.replace("{current_date:Y}", "2026")
+                 .replace("{post_terms_product_cat:plain}", "[Category]"))
 
     classes = " ".join(["brxe-" + node.name] + node.classes)
     s, n = node.settings, node.name
@@ -815,7 +1051,7 @@ def render(node, sub=None):
     if n == "heading":
         return f'<{s["tag"]} class="{classes}">{s_(s["text"])}</{s["tag"]}>'
     if n == "text-basic":
-        t = s.get("tag", "p")
+        t = s.get("customTag") or s.get("tag", "p")
         return f'<{t} class="{classes}">{s_(s["text"])}</{t}>'
     if n in ("button", "text-link"):
         return f'<a class="{classes}" href="{href}">{s["text"]}</a>'
@@ -833,6 +1069,8 @@ def render(node, sub=None):
         return f'<a class="{classes}" href="#">Search</a>'
     if n == "woocommerce-mini-cart":
         return f'<a class="{classes}" href="#">Cart (0)</a>'
+    if n in WOO_MOCK:
+        return f'<div class="{classes}">{WOO_MOCK[n]}</div>'
     if n == "form":
         f = s["fields"][0]
         return (f'<form class="{classes}" onsubmit="return false"><div class="form-group">'
@@ -860,13 +1098,38 @@ def build_css():
         for name, c in CLASSES.items())
 
 
-def build_preview():
+WOO_MOCK = {
+    "woocommerce-breadcrumbs": '<nav><a href="#">Home</a> / <a href="#">[Category]</a> / [Product name]</nav>',
+    "product-gallery": ('<div class="woocommerce-product-gallery"><div class="ph-media ph-media--square">'
+                        '<p class="ph-media__label">[Real product photo from WooCommerce]</p></div>'
+                        '<ol class="flex-control-thumbs">' + '<li><img alt="" style="aspect-ratio:1"></li>' * 5 + '</ol></div>'),
+    "product-title": '<h1 class="product_title">[Product name]</h1>',
+    "product-price": '<p class="price">[Price from store; updates with options]</p>',
+    "product-short-description": ('<p>[Short description, e.g. "A small introduction, thoughtfully made. '
+                                  'Choose your paper and finish, then make it yours."]</p>'),
+    "product-add-to-cart": (
+        '<form class="cart variations_form" onsubmit="return false"><table class="variations"><tbody>'
+        + "".join(f'<tr><th class="label"><label for="pv-{k}">{k.title()}</label></th><td class="value">'
+                  f'<select id="pv-{k}"><option>[{k.title()} options from WooCommerce]</option></select></td></tr>'
+                  for k in ("size", "paper", "finish", "quantity"))
+        + '<tr><th class="label"><label for="pv-file">Upload Your Artwork</label></th><td class="value">'
+          '<input id="pv-file" type="file"></td></tr></tbody></table>'
+          '<div class="woocommerce-variation-add-to-cart"><div class="quantity"><input class="qty" type="number" value="1" aria-label="Quantity"></div>'
+          '<button type="submit" class="single_add_to_cart_button button">Add to Cart</button></div></form>'),
+    "product-content": '<p>[Full product description from WooCommerce: sizes, stocks, finishes and what is included.]</p>',
+    "product-related": ('<section class="related products"><h2>Related products</h2><ul class="products">'
+                        + '<li class="product"><a href="#"><img alt=""><h2 class="woocommerce-loop-product__title">'
+                          '[Product name]</h2><span class="price">[Price]</span></a></li>' * 4 + '</ul></section>'),
+}
+
+
+def page(title, nodes):
     css = build_css()
-    body = "".join(render(n) for n in HEADER + HOME + FOOTER)
+    body = "".join(render(n) for n in nodes)
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Printing Haus Homepage</title>
+<title>{title}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Newsreader:opsz,wght@6..72,400&display=swap">
 <style>{BRICKS_BASE}
@@ -883,5 +1146,6 @@ if __name__ == "__main__":
     (HERE / "printinghaus.css").write_text(build_css())
     print("wrote bricks/printinghaus.css")
     OUT_PREVIEW.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PREVIEW.write_text(build_preview())
-    print("wrote", OUT_PREVIEW.relative_to(HERE.parent))
+    OUT_PREVIEW.write_text(page("Printing Haus Homepage", HEADER + HOME + FOOTER))
+    (OUT_PREVIEW.parent / "product.html").write_text(page("Printing Haus Product", HEADER + PRODUCT + FOOTER))
+    print("wrote preview/homepage.html and preview/product.html")

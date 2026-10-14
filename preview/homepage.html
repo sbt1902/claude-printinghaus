@@ -437,5 +437,131 @@ body .ph-footer__legal {
 }
 body .ph-footer__legal p { margin: 0; }
 body .ph-footer__legal nav { display: flex; gap: 24px; }
+
+/* ph-crumbs */
+body .ph-crumbs { margin: 0 0 clamp(24px, 3vw, 40px); font-size: 13px; color: var(--ph-muted); }
+body .ph-crumbs a { text-decoration: none; }
+body .ph-crumbs a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* ph-pdp */
+body .ph-pdp {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+  width: 100%;
+}
+@media (max-width: 991px) { body .ph-pdp { grid-template-columns: 1fr; } }
+
+/* ph-pdp__gallery */
+body .ph-pdp__gallery .woocommerce-product-gallery { margin: 0; width: 100% !important; float: none !important; }
+body .ph-pdp__gallery .woocommerce-product-gallery__image img, body .ph-pdp__gallery .woocommerce-product-gallery img { width: 100%; height: auto; display: block; background: var(--ph-stone); }
+body .ph-pdp__gallery .flex-control-thumbs { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin: 8px 0 0 !important; padding: 0; list-style: none; }
+body .ph-pdp__gallery .flex-control-thumbs li { width: auto !important; float: none !important; margin: 0 !important; }
+body .ph-pdp__gallery .flex-control-thumbs img { opacity: .55; cursor: pointer; transition: opacity .2s ease; }
+body .ph-pdp__gallery .flex-control-thumbs img.flex-active, body .ph-pdp__gallery .flex-control-thumbs img:hover { opacity: 1; }
+
+/* ph-pdp__summary */
+body .ph-pdp__summary { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+
+/* ph-pdp__title */
+body .ph-pdp__title, body .ph-pdp__title h1 {
+  margin: 0 0 12px;
+  font-family: var(--ph-display);
+  font-size: clamp(36px, 3.6vw, 52px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-transform: none;
+  color: var(--ph-ink);
+}
+
+/* ph-pdp__price */
+body .ph-pdp__price, body .ph-pdp__price .price { margin: 0 0 20px; font-size: 18px; font-weight: 500; color: var(--ph-ink); }
+body .ph-pdp__price del { opacity: .55; margin-right: 8px; font-weight: 400; }
+body .ph-pdp__price ins { text-decoration: none; }
+
+/* ph-pdp__intro */
+body .ph-pdp__intro, body .ph-pdp__intro p { margin: 0 0 28px; font-size: 17px; line-height: 1.6; max-width: 46ch; }
+
+/* ph-pdp__buy */
+body .ph-pdp__buy { padding: 24px 0 28px; border-top: 1px solid var(--ph-rule); }
+body .ph-pdp__buy form.cart { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; }
+body .ph-pdp__buy table.variations { width: 100%; margin: 0 0 8px; border: 0; border-collapse: collapse; }
+body .ph-pdp__buy table.variations tr { display: block; margin-bottom: 16px; }
+body .ph-pdp__buy table.variations th, body .ph-pdp__buy table.variations td { display: block; padding: 0; border: 0; text-align: left; background: none; }
+body .ph-pdp__buy label { display: block; margin: 0 0 8px; font-size: 13px; font-weight: 500; color: var(--ph-ink); text-transform: none; letter-spacing: normal; }
+body .ph-pdp__buy select, body .ph-pdp__buy input[type=number], body .ph-pdp__buy input[type=text], body .ph-pdp__buy input[type=file], body .ph-pdp__buy textarea {
+  width: 100%; min-height: 48px; padding: 0 14px;
+  border: 1px solid var(--ph-ink); border-radius: 0; background: var(--ph-paper);
+  font-family: var(--ph-sans); font-size: 16px; color: var(--ph-ink);
+}
+body .ph-pdp__buy input[type=file] { padding: 12px 14px; }
+body .ph-pdp__buy .reset_variations { display: inline-block; margin-top: 8px; font-size: 13px; }
+body .ph-pdp__buy .single_variation_wrap, body .ph-pdp__buy .woocommerce-variation-add-to-cart { width: 100%; }
+body .ph-pdp__buy .woocommerce-variation-add-to-cart { display: flex; flex-wrap: wrap; gap: 12px; }
+body .ph-pdp__buy .woocommerce-variation-price { margin: 0 0 12px; font-size: 18px; font-weight: 500; }
+body .ph-pdp__buy .quantity input.qty { width: 88px; text-align: center; padding: 0 8px; }
+body .ph-pdp__buy .single_add_to_cart_button {
+  flex: 1 1 200px; min-height: 52px !important; padding: 0 28px !important;
+  border: 1px solid var(--ph-ink) !important; border-radius: 0 !important;
+  background: var(--ph-ink) !important; color: var(--ph-paper) !important;
+  font-family: var(--ph-sans) !important; font-size: 15px !important; font-weight: 500 !important;
+  letter-spacing: normal !important; text-transform: none !important; cursor: pointer;
+}
+body .ph-pdp__buy .single_add_to_cart_button:hover { background: #2E2B28 !important; border-color: #2E2B28 !important; }
+body .ph-pdp__buy .single_add_to_cart_button.disabled { opacity: .45; cursor: not-allowed; }
+body .ph-pdp__buy .stock { width: 100%; margin: 0 0 8px; font-size: 14px; }
+
+/* ph-pdp__facts */
+body .ph-pdp__facts { margin: 0; padding: 0; border-top: 1px solid var(--ph-rule); }
+body .ph-pdp__facts > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--ph-rule); }
+body .ph-pdp__facts dt { margin: 0; font-size: 13px; font-weight: 500; }
+body .ph-pdp__facts dd { margin: 0; font-size: 14px; line-height: 1.55; color: var(--ph-muted); }
+body .ph-pdp__facts dd a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 480px) { body .ph-pdp__facts > div { grid-template-columns: 1fr; gap: 4px; } }
+
+/* ph-pdp__help */
+body .ph-pdp__help { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 28px; padding: 22px 24px; background: var(--ph-sand); }
+
+/* ph-pdp__content */
+body .ph-pdp__content { max-width: 62ch; font-size: 16px; line-height: 1.7; }
+body .ph-pdp__content p { margin: 0 0 1em; }
+body .ph-pdp__content h2, body .ph-pdp__content h3 { font-family: var(--ph-sans); font-size: 18px; font-weight: 500; margin: 1.6em 0 .5em; }
+body .ph-pdp__content ul { padding-left: 1.2em; }
+
+/* ph-glossary */
+body .ph-glossary { margin: 0; border-top: 1px solid var(--ph-rule); }
+body .ph-glossary > div { padding: 18px 0; border-bottom: 1px solid var(--ph-rule); }
+body .ph-glossary dt { margin: 0 0 4px; font-size: 16px; font-weight: 500; }
+body .ph-glossary dd { margin: 0; font-size: 15px; line-height: 1.6; color: var(--ph-muted); }
+
+/* ph-faq */
+body .ph-faq { width: 100%; max-width: 860px; border-top: 1px solid var(--ph-rule); }
+body .ph-faq details { border-bottom: 1px solid var(--ph-rule); }
+body .ph-faq summary {
+  display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  min-height: 64px; padding: 16px 0; cursor: pointer; list-style: none;
+  font-size: 17px; font-weight: 500;
+}
+body .ph-faq summary::-webkit-details-marker { display: none; }
+body .ph-faq summary::after { content: "+"; font-size: 22px; font-weight: 400; line-height: 1; }
+body .ph-faq details[open] summary::after { content: "\2212"; }
+body .ph-faq summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+body .ph-faq details p { margin: 0 0 20px; max-width: 64ch; font-size: 15px; line-height: 1.65; color: var(--ph-muted); }
+body .ph-faq details a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ph-related */
+body .ph-related { width: 100%; }
+body .ph-related .related > h2, body .ph-related .upsells > h2 { display: none; }
+body .ph-related ul.products { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 24px; margin: 0 !important; padding: 0; list-style: none; }
+body .ph-related ul.products::before, body .ph-related ul.products::after { display: none !important; }
+body .ph-related ul.products li.product { width: auto !important; margin: 0 !important; float: none !important; padding: 0; text-align: left; }
+body .ph-related li.product a { text-decoration: none; color: inherit; }
+body .ph-related li.product img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; margin: 0 0 14px; background: var(--ph-stone); }
+body .ph-related .woocommerce-loop-product__title { margin: 0 0 4px; padding: 0; font-family: var(--ph-sans); font-size: 16px; font-weight: 500; text-transform: none; letter-spacing: normal; }
+body .ph-related li.product .price { display: block; font-size: 15px; color: var(--ph-muted); }
+body .ph-related li.product .button, body .ph-related li.product .star-rating { display: none; }
+@media (max-width: 991px) { body .ph-related ul.products { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 </style></head>
 <body><header class="brxe-section ph-header"><div class="brxe-container ph-container"><div class="brxe-div ph-header__bar"><a class="brxe-logo ph-logo" href="/">[LOGO]</a><nav class="brxe-nav-menu ph-nav ph-hide-mobile" aria-label="Primary"><ul><li><a href="#">Shop</a></li><li><a href="#">Design Studio</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul></nav><div class="brxe-div ph-utility"><a class="brxe-search ph-hide-mobile" href="#">Search</a><a class="brxe-text-link ph-hide-mobile" href="/my-account/">Account</a><a class="brxe-woocommerce-mini-cart" href="#">Cart (0)</a><a class="brxe-nav-menu ph-show-mobile-only" href="#">Menu</a></div></div></div></header><section class="brxe-section ph-section ph-hero"><div class="brxe-container ph-container"><div class="brxe-div ph-hero__grid"><div class="brxe-div"><h1 class="brxe-heading ph-hero__title">Make an Impression.</h1><p class="brxe-text-basic ph-lead ph-hero__lead">Considered paper. Distinctive finishes. Print that feels like you.</p><div class="brxe-div ph-actions"><a class="brxe-text-link ph-btn ph-btn--dark" href="/shop/">Shop the Collection</a><a class="brxe-text-link ph-link" href="/design-studio/">Explore the Design Studio</a></div></div><div class="brxe-div"><div class="brxe-div ph-media ph-media--hero"><p class="brxe-text-basic ph-media__label">[Photo: one strong product composition, e.g. business cards showing their edge and raised spot UV in natural light]</p></div><p class="brxe-text-basic ph-caption">[Shown: product name, stock and finish]</p></div></div></div></section><section class="brxe-section ph-section ph-section--flush"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-label">Shop</p><h2 class="brxe-heading ph-h2">Shop by category</h2></div><a class="brxe-text-link ph-link" href="/shop/">View all products</a></div><div class="brxe-div ph-grid-3"><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media"></div><h3 class="brxe-heading ph-h3">[Category from your store]</h3></a><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media"></div><h3 class="brxe-heading ph-h3">[Category from your store]</h3></a><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media"></div><h3 class="brxe-heading ph-h3">[Category from your store]</h3></a></div></div></section><section class="brxe-section ph-section ph-section--flush"><div class="brxe-container ph-container"><div class="brxe-div ph-rule"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-label">Featured</p><h2 class="brxe-heading ph-h2">A few favorites</h2></div><a class="brxe-text-link ph-link" href="/shop/">Shop the Collection</a></div><div class="brxe-div ph-grid-4"><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media ph-media--square"></div><h3 class="brxe-heading ph-h3">[Product name]</h3><div class="brxe-text-basic ph-price">[Price from store]</div></a><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media ph-media--square"></div><h3 class="brxe-heading ph-h3">[Product name]</h3><div class="brxe-text-basic ph-price">[Price from store]</div></a><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media ph-media--square"></div><h3 class="brxe-heading ph-h3">[Product name]</h3><div class="brxe-text-basic ph-price">[Price from store]</div></a><a class="brxe-div ph-card" href="#"><div class="brxe-div ph-media ph-media--square"></div><h3 class="brxe-heading ph-h3">[Product name]</h3><div class="brxe-text-basic ph-price">[Price from store]</div></a></div></div></div></section><section class="brxe-section ph-section ph-section--sand"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-label">Paper &amp; finishes</p><h2 class="brxe-heading ph-h2">Details you can feel</h2></div><p class="brxe-text-basic ph-body">What each paper and finish looks and feels like, in plain language. Not sure which to choose? We're happy to help.</p></div><div class="brxe-div ph-materials"><p class="brxe-text-basic ph-label ph-material__group">Paper</p><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: smooth matte stock in raking light]</p></div><h3 class="brxe-heading ph-h3">[Confirm stock] Smooth matte</h3><p class="brxe-text-basic ph-body">A soft matte surface. Smooth to the touch, with even, true color.</p></div><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: textured stock close-up, paper fibers visible]</p></div><h3 class="brxe-heading ph-h3">[Confirm stock] Textured</h3><p class="brxe-text-basic ph-body">Paper with presence. A gentle texture you can feel under your fingertips.</p></div><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: stack of thick cards showing the edge]</p></div><h3 class="brxe-heading ph-h3">[Confirm stock] Heavyweight</h3><p class="brxe-text-basic ph-body">A substantial stock with a visible edge, so your card feels considered in hand.</p></div><p class="brxe-text-basic ph-label ph-material__group">Finishes</p><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: light catching raised spot UV]</p></div><h3 class="brxe-heading ph-h3">Raised spot UV</h3><p class="brxe-text-basic ph-body">A little gloss where it counts. Raised spot UV adds shine and dimension to selected details.</p></div><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: foil detail on a textured stock]</p></div><h3 class="brxe-heading ph-h3">[Confirm] Foil</h3><p class="brxe-text-basic ph-body">A metallic finish applied to selected parts of your design, so it catches the light.</p></div><div class="brxe-div ph-material"><div class="brxe-div ph-media ph-media--landscape"><p class="brxe-text-basic ph-media__label">[Photo: embossed detail in soft side light]</p></div><h3 class="brxe-heading ph-h3">[Confirm] Embossing</h3><p class="brxe-text-basic ph-body">A raised impression pressed into the paper, so your design can be felt as well as seen.</p></div></div><div class="brxe-div ph-actions"><a class="brxe-text-link ph-btn ph-btn--outline" href="/paper-and-finishes/">Explore Paper &amp; Finishes</a></div></div></section><section class="brxe-section ph-section ph-section--oxblood"><div class="brxe-container ph-container"><div class="brxe-div ph-split"><div class="brxe-div ph-stack"><p class="brxe-text-basic ph-label ph-label--light">Design Studio</p><h2 class="brxe-heading ph-h2">An idea worth putting on paper.</h2><p class="brxe-text-basic ph-lead">Something more individual? Our design studio brings a considered eye to your next print project, from the first idea to the finishing detail.</p><ul class="brxe-text-basic ph-list"><li>Custom artwork</li><li>Stationery</li><li>Packaging</li><li>[Confirm any other studio services]</li></ul><div class="brxe-div ph-actions"><a class="brxe-text-link ph-btn ph-btn--light" href="/design-studio/#project-form">Tell Us About Your Project</a></div></div><div class="brxe-div ph-media"><p class="brxe-text-basic ph-media__label">[Photo: studio table with proofs, paper samples and a finished stationery set]</p></div></div></div></section><section class="brxe-section ph-section"><div class="brxe-container ph-container"><div class="brxe-div ph-head"><div class="brxe-div"><p class="brxe-text-basic ph-label">Customer work</p><h2 class="brxe-heading ph-h2">Recently printed</h2></div><p class="brxe-text-basic ph-small">[Approved customer projects only. Hide this section in Bricks until you have them.]</p></div><div class="brxe-div ph-grid-3"><div class="brxe-div ph-card"><div class="brxe-div ph-media"><p class="brxe-text-basic ph-media__label">[Photo: approved customer project]</p></div><h3 class="brxe-heading ph-h3">[Customer or project name]</h3><p class="brxe-text-basic ph-body">[Product &middot; stock &middot; finish]</p></div><div class="brxe-div ph-card"><div class="brxe-div ph-media"><p class="brxe-text-basic ph-media__label">[Photo: approved customer project]</p></div><h3 class="brxe-heading ph-h3">[Customer or project name]</h3><p class="brxe-text-basic ph-body">[Product &middot; stock &middot; finish]</p></div><div class="brxe-div ph-card"><div class="brxe-div ph-media"><p class="brxe-text-basic ph-media__label">[Photo: approved customer project]</p></div><h3 class="brxe-heading ph-h3">[Customer or project name]</h3><p class="brxe-text-basic ph-body">[Product &middot; stock &middot; finish]</p></div></div></div></section><section class="brxe-section ph-section ph-section--flush"><div class="brxe-container ph-container"><div class="brxe-div ph-rule ph-approach"><div class="brxe-div"><p class="brxe-text-basic ph-label">Material approach</p><h2 class="brxe-heading ph-h2">How we choose and print</h2></div><div class="brxe-div ph-facts"><div class="brxe-div ph-fact"><h3 class="brxe-heading ph-h3">Paper first</h3><p class="brxe-text-basic ph-body">We choose each stock for how it prints and how it feels in hand, then match the finish to the paper.</p></div><div class="brxe-div ph-fact"><h3 class="brxe-heading ph-h3">Our printing partners</h3><p class="brxe-text-basic ph-body">We work with printing partners that hold FSC certifications. If certified paper matters for your project, ask us about the options.</p></div><div class="brxe-div ph-fact"><h3 class="brxe-heading ph-h3">[Verified practice]</h3><p class="brxe-text-basic ph-body">[Add a specific, verified sourcing or production practice.]</p></div><div class="brxe-div ph-fact"><h3 class="brxe-heading ph-h3">[Verified practice]</h3><p class="brxe-text-basic ph-body">[Add a specific, verified sourcing or production practice.]</p></div></div></div></div></section><section class="brxe-section ph-section ph-section--sand"><div class="brxe-container ph-container"><div class="brxe-div ph-signup"><div class="brxe-div ph-stack"><h2 class="brxe-heading ph-h2">Notes from the Haus.</h2><p class="brxe-text-basic ph-lead">New collections, paper discoveries, and studio news. A considered addition to your inbox.</p></div><div class="brxe-div ph-stack"><form class="brxe-form ph-form" onsubmit="return false"><div class="form-group"><label for="pv-email">Email address</label><input id="pv-email" type="email" required></div><div class="submit-button-wrapper"><button type="submit">Subscribe</button></div></form><p class="brxe-text-basic ph-small">Unsubscribe at any time. See our <a href="/privacy-policy/">privacy policy</a>.</p></div></div></div></section><footer class="brxe-section ph-footer"><div class="brxe-container ph-container"><div class="brxe-div ph-footer__grid"><div class="brxe-div ph-footer__col"><a class="brxe-logo ph-logo" href="/">[LOGO]</a><p class="brxe-text-basic ph-body ph-body--light">[Email address]<br>[Phone number]<br>[Studio address or service area]</p></div><div class="brxe-div ph-footer__col"><p class="brxe-text-basic ph-footer__head">Shop</p><a class="brxe-text-link" href="/shop/">All products</a><a class="brxe-text-link" href="/paper-and-finishes/">Paper &amp; finishes</a><a class="brxe-text-link" href="/design-studio/">Design Studio</a></div><div class="brxe-div ph-footer__col"><p class="brxe-text-basic ph-footer__head">Help</p><a class="brxe-text-link" href="/shipping/">Shipping information</a><a class="brxe-text-link" href="/faq/">FAQs</a><a class="brxe-text-link" href="/artwork-guidelines/">Artwork guidelines</a><a class="brxe-text-link" href="/returns-and-order-issues/">Returns &amp; order issues</a></div><div class="brxe-div ph-footer__col"><p class="brxe-text-basic ph-footer__head">Printing Haus</p><a class="brxe-text-link" href="/about/">About</a><a class="brxe-text-link" href="/contact/">Contact</a><a class="brxe-text-link" href="/my-account/">Account</a></div></div><div class="brxe-div ph-footer__legal"><p class="brxe-text-basic">&copy; 2026 Printing Haus. Part of Production Haus.</p><nav class="brxe-div"><a class="brxe-text-link" href="/privacy-policy/">Privacy policy</a><a class="brxe-text-link" href="/terms/">Terms</a></nav></div></div></footer><div class="preview-flag">Draft preview &middot; [bracketed] text and gray blocks are placeholders</div></body></html>

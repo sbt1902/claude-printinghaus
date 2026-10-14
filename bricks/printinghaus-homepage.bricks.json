@@ -1135,11 +1135,11 @@
       "parent": "hgihmg",
       "children": [],
       "settings": {
-        "tag": "ul",
         "text": "<li>Custom artwork</li><li>Stationery</li><li>Packaging</li><li>[Confirm any other studio services]</li>",
+        "tag": "custom",
+        "customTag": "ul",
         "_cssClasses": "ph-list"
-      },
-      "label": "Studio services"
+      }
     },
     {
       "id": "nknhhn",

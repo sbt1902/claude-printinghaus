@@ -7,10 +7,11 @@ the *Printing Haus Brand System, Vol. 01* and the *Website Design & Brand Voice 
 | --- | --- |
 | `bricks/printinghaus-header.bricks.json` | Header template (logo, Shop / Design Studio / About / Contact, Search, Account, Cart) |
 | `bricks/printinghaus-homepage.bricks.json` | Homepage content, sections A–H |
+| `bricks/printinghaus-product.bricks.json` | Single product template (WooCommerce) |
 | `bricks/printinghaus-footer.bricks.json` | Footer template (contact, shipping, FAQs, artwork, returns, privacy, terms) |
 | `bricks/printinghaus.css` | **The stylesheet.** Paste it into Bricks → Settings → Custom code → Custom CSS |
 | `bricks/build_homepage.py` | Source of truth for copy, links and styles. Re-run it to regenerate all files |
-| `preview/homepage.html` | Static draft preview. Gray blocks and [bracketed] text are placeholders |
+| `preview/homepage.html`, `preview/product.html` | Static draft previews. Gray blocks and [bracketed] text are placeholders |
 
 ## Homepage sequence
 
@@ -25,6 +26,27 @@ the *Printing Haus Brand System, Vol. 01* and the *Website Design & Brand Voice 
 | G | **Material approach** | One verified statement (FSC certification is attributed to partners) plus placeholders |
 | H | **Email sign-up**: "Notes from the Haus." | Bricks form. Connect it to your email platform |
 | I | **Footer** | Separate template |
+
+## Product page
+
+The product page is built from WooCommerce's own Bricks elements, so the gallery, name, price,
+options, artwork upload and Add to Cart all come from the store. Prices update as customers choose options.
+
+1. **Summary:** breadcrumbs, gallery, category, name, price and the short description as an opening line.
+   Then come the store's options, upload field and **Add to Cart**.
+2. **Ordering facts:** artwork formats, proofing, and production & shipping. These stay visible next to
+   Add to Cart instead of being hidden in tabs.
+3. **Design support:** "Need help with the artwork?" with a **Request Design Support** link.
+4. **About this product** (the full Woo description) beside a **paper & finish guide** in plain language.
+5. **FAQs:** native expanding questions that work with a keyboard.
+6. **Related products:** WooCommerce related items.
+
+To install: import `printinghaus-product.bricks.json`, then in **Template settings → Conditions**
+apply it to *All products*. You can also apply it to one category first to test.
+
+**To fill in before launch:** accepted upload formats (list only what the upload field accepts),
+the real proof process, verified production and shipping times, and the [Confirm] finishes in the guide.
+If these differ by product, they can come from per-product custom fields instead of fixed text.
 
 ## Visual system
 

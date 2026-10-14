@@ -1,0 +1,642 @@
+{
+  "title": "Printing Haus - Product",
+  "templateType": "wc_product",
+  "content": [
+    {
+      "id": "haedga",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "jkkbck"
+      ],
+      "settings": {
+        "_cssClasses": "ph-section ph-hero"
+      },
+      "label": "Product summary"
+    },
+    {
+      "id": "jkkbck",
+      "name": "container",
+      "parent": "haedga",
+      "children": [
+        "okihcb",
+        "mjfmnf"
+      ],
+      "settings": {
+        "_cssClasses": "ph-container"
+      }
+    },
+    {
+      "id": "okihcb",
+      "name": "woocommerce-breadcrumbs",
+      "parent": "jkkbck",
+      "children": [],
+      "settings": {
+        "_cssClasses": "ph-crumbs"
+      },
+      "label": "Breadcrumbs"
+    },
+    {
+      "id": "mjfmnf",
+      "name": "div",
+      "parent": "jkkbck",
+      "children": [
+        "gnpmlk",
+        "pbaifl"
+      ],
+      "settings": {
+        "_cssClasses": "ph-pdp"
+      }
+    },
+    {
+      "id": "gnpmlk",
+      "name": "div",
+      "parent": "mjfmnf",
+      "children": [
+        "dcmnil"
+      ],
+      "settings": {
+        "_cssClasses": "ph-pdp__gallery"
+      }
+    },
+    {
+      "id": "dcmnil",
+      "name": "product-gallery",
+      "parent": "gnpmlk",
+      "children": [],
+      "settings": {},
+      "label": "Product gallery (real product photos)"
+    },
+    {
+      "id": "pbaifl",
+      "name": "div",
+      "parent": "mjfmnf",
+      "children": [
+        "dckhkm",
+        "lcbbgd",
+        "pdeeac",
+        "emiefk",
+        "nphckk",
+        "koojbf",
+        "emiojf"
+      ],
+      "settings": {
+        "_cssClasses": "ph-pdp__summary"
+      }
+    },
+    {
+      "id": "dckhkm",
+      "name": "text-basic",
+      "parent": "pbaifl",
+      "children": [],
+      "settings": {
+        "text": "{post_terms_product_cat:plain}",
+        "tag": "p",
+        "_cssClasses": "ph-label"
+      }
+    },
+    {
+      "id": "lcbbgd",
+      "name": "product-title",
+      "parent": "pbaifl",
+      "children": [],
+      "settings": {
+        "_cssClasses": "ph-pdp__title"
+      },
+      "label": "Product name"
+    },
+    {
+      "id": "pdeeac",
+      "name": "product-price",
+      "parent": "pbaifl",
+      "children": [],
+      "settings": {
+        "_cssClasses": "ph-pdp__price"
+      },
+      "label": "Price (updates with the selection)"
+    },
+    {
+      "id": "emiefk",
+      "name": "product-short-description",
+      "parent": "pbaifl",
+      "children": [],
+      "settings": {
+        "_cssClasses": "ph-pdp__intro"
+      },
+      "label": "Opening description (WooCommerce short description)"
+    },
+    {
+      "id": "nphckk",
+      "name": "div",
+      "parent": "pbaifl",
+      "children": [
+        "nhahep"
+      ],
+      "settings": {
+        "_cssClasses": "ph-pdp__buy"
+      }
+    },
+    {
+      "id": "nhahep",
+      "name": "product-add-to-cart",
+      "parent": "nphckk",
+      "children": [],
+      "settings": {},
+      "label": "Options, artwork upload and Add to Cart (from WooCommerce)"
+    },
+    {
+      "id": "koojbf",
+      "name": "div",
+      "parent": "pbaifl",
+      "children": [
+        "lnfcng",
+        "pdlhnc",
+        "jbeopd"
+      ],
+      "settings": {
+        "tag": "custom",
+        "customTag": "dl",
+        "_cssClasses": "ph-pdp__facts"
+      },
+      "label": "Ordering facts (keep visible)"
+    },
+    {
+      "id": "lnfcng",
+      "name": "text-basic",
+      "parent": "koojbf",
+      "children": [],
+      "settings": {
+        "text": "<dt>Artwork</dt><dd>[Accepted formats, e.g. PDF, PNG or JPG: list only what your upload accepts.] Size, bleed and resolution are covered in our <a href=\"/artwork-guidelines/\">artwork guidelines</a>.</dd>",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "pdlhnc",
+      "name": "text-basic",
+      "parent": "koojbf",
+      "children": [],
+      "settings": {
+        "text": "<dt>Proof</dt><dd>[Describe your actual proof step, e.g. when a proof is sent and how to approve it.]</dd>",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "jbeopd",
+      "name": "text-basic",
+      "parent": "koojbf",
+      "children": [],
+      "settings": {
+        "text": "<dt>Production &amp; shipping</dt><dd>[Verified production time]. [Verified shipping estimate]. See <a href=\"/shipping/\">shipping information</a>.</dd>",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "emiojf",
+      "name": "div",
+      "parent": "pbaifl",
+      "children": [
+        "elmcgm",
+        "hhldcp",
+        "hhcchd"
+      ],
+      "settings": {
+        "_cssClasses": "ph-pdp__help"
+      }
+    },
+    {
+      "id": "elmcgm",
+      "name": "heading",
+      "parent": "emiojf",
+      "children": [],
+      "settings": {
+        "text": "Need help with the artwork?",
+        "tag": "h2",
+        "_cssClasses": "ph-h3"
+      }
+    },
+    {
+      "id": "hhldcp",
+      "name": "text-basic",
+      "parent": "emiojf",
+      "children": [],
+      "settings": {
+        "text": "Our design studio can set up your file or design something new.",
+        "tag": "p",
+        "_cssClasses": "ph-body"
+      }
+    },
+    {
+      "id": "hhcchd",
+      "name": "text-link",
+      "parent": "emiojf",
+      "children": [],
+      "settings": {
+        "text": "Request Design Support",
+        "link": {
+          "type": "external",
+          "url": "/design-studio/#project-form"
+        },
+        "_cssClasses": "ph-link"
+      }
+    },
+    {
+      "id": "mkjmjp",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "bpjkbl"
+      ],
+      "settings": {
+        "_cssClasses": "ph-section ph-section--sand"
+      },
+      "label": "Description & guide"
+    },
+    {
+      "id": "bpjkbl",
+      "name": "container",
+      "parent": "mkjmjp",
+      "children": [
+        "ipddje"
+      ],
+      "settings": {
+        "_cssClasses": "ph-container"
+      }
+    },
+    {
+      "id": "ipddje",
+      "name": "div",
+      "parent": "bpjkbl",
+      "children": [
+        "aadele",
+        "jonlfp"
+      ],
+      "settings": {
+        "_cssClasses": "ph-approach"
+      }
+    },
+    {
+      "id": "aadele",
+      "name": "div",
+      "parent": "ipddje",
+      "children": [
+        "gnboge",
+        "nghpje"
+      ],
+      "settings": {
+        "_cssClasses": "ph-stack"
+      }
+    },
+    {
+      "id": "gnboge",
+      "name": "text-basic",
+      "parent": "aadele",
+      "children": [],
+      "settings": {
+        "text": "About this product",
+        "tag": "p",
+        "_cssClasses": "ph-label"
+      }
+    },
+    {
+      "id": "nghpje",
+      "name": "product-content",
+      "parent": "aadele",
+      "children": [],
+      "settings": {
+        "_cssClasses": "ph-pdp__content"
+      },
+      "label": "Full description (WooCommerce)"
+    },
+    {
+      "id": "jonlfp",
+      "name": "div",
+      "parent": "ipddje",
+      "children": [
+        "ifkdjb",
+        "aphgdl",
+        "nnlphj"
+      ],
+      "settings": {
+        "_cssClasses": "ph-stack"
+      }
+    },
+    {
+      "id": "ifkdjb",
+      "name": "text-basic",
+      "parent": "jonlfp",
+      "children": [],
+      "settings": {
+        "text": "Paper &amp; finish guide",
+        "tag": "p",
+        "_cssClasses": "ph-label"
+      }
+    },
+    {
+      "id": "aphgdl",
+      "name": "div",
+      "parent": "jonlfp",
+      "children": [
+        "haimpe",
+        "ihgjcb",
+        "fldoed",
+        "fbndoo"
+      ],
+      "settings": {
+        "tag": "custom",
+        "customTag": "dl",
+        "_cssClasses": "ph-glossary"
+      }
+    },
+    {
+      "id": "haimpe",
+      "name": "text-basic",
+      "parent": "aphgdl",
+      "children": [],
+      "settings": {
+        "text": "<dt>Raised spot UV</dt><dd>A little gloss where it counts. Raised spot UV adds shine and dimension to selected details: a glossy, raised finish you can see and feel.</dd>",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "ihgjcb",
+      "name": "text-basic",
+      "parent": "aphgdl",
+      "children": [],
+      "settings": {
+        "text": "<dt>[Confirm] Foil</dt><dd>A metallic finish applied to selected parts of your design, so it catches the light.</dd>",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "fldoed",
+      "name": "text-basic",
+      "parent": "aphgdl",
+      "children": [],
+      "settings": {
+        "text": "<dt>[Confirm] Embossing</dt><dd>A raised impression pressed into the paper, so your design can be felt as well as seen.</dd>",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "fbndoo",
+      "name": "text-basic",
+      "parent": "aphgdl",
+      "children": [],
+      "settings": {
+        "text": "<dt>Paper weight</dt><dd>How thick and substantial a stock feels. Heavier stocks feel more rigid in hand and show more of their edge.</dd>",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "nnlphj",
+      "name": "text-link",
+      "parent": "jonlfp",
+      "children": [],
+      "settings": {
+        "text": "Explore Paper &amp; Finishes",
+        "link": {
+          "type": "external",
+          "url": "/paper-and-finishes/"
+        },
+        "_cssClasses": "ph-link"
+      }
+    },
+    {
+      "id": "ldbkjj",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "bgpflp"
+      ],
+      "settings": {
+        "_cssClasses": "ph-section"
+      },
+      "label": "FAQs"
+    },
+    {
+      "id": "bgpflp",
+      "name": "container",
+      "parent": "ldbkjj",
+      "children": [
+        "afcblk",
+        "olpkgg"
+      ],
+      "settings": {
+        "_cssClasses": "ph-container"
+      }
+    },
+    {
+      "id": "afcblk",
+      "name": "div",
+      "parent": "bgpflp",
+      "children": [
+        "debdjl"
+      ],
+      "settings": {
+        "_cssClasses": "ph-head"
+      }
+    },
+    {
+      "id": "debdjl",
+      "name": "div",
+      "parent": "afcblk",
+      "children": [
+        "hbnlbk",
+        "mlimam"
+      ],
+      "settings": {}
+    },
+    {
+      "id": "hbnlbk",
+      "name": "text-basic",
+      "parent": "debdjl",
+      "children": [],
+      "settings": {
+        "text": "Questions",
+        "tag": "p",
+        "_cssClasses": "ph-label"
+      }
+    },
+    {
+      "id": "mlimam",
+      "name": "heading",
+      "parent": "debdjl",
+      "children": [],
+      "settings": {
+        "text": "Before you order",
+        "tag": "h2",
+        "_cssClasses": "ph-h2"
+      }
+    },
+    {
+      "id": "olpkgg",
+      "name": "div",
+      "parent": "bgpflp",
+      "children": [
+        "jdedlg",
+        "kdajgg",
+        "agcnmn",
+        "nabnip",
+        "eopijg"
+      ],
+      "settings": {
+        "_cssClasses": "ph-faq"
+      }
+    },
+    {
+      "id": "jdedlg",
+      "name": "text-basic",
+      "parent": "olpkgg",
+      "children": [],
+      "settings": {
+        "text": "<summary>What file types can I upload?</summary><p>[List only the formats your upload accepts, e.g. PDF, PNG or JPG.] Our <a href=\"/artwork-guidelines/\">artwork guidelines</a> cover size, bleed and resolution.</p>",
+        "tag": "custom",
+        "customTag": "details"
+      }
+    },
+    {
+      "id": "kdajgg",
+      "name": "text-basic",
+      "parent": "olpkgg",
+      "children": [],
+      "settings": {
+        "text": "<summary>Will I see a proof before you print?</summary><p>[Describe your actual proof process.]</p>",
+        "tag": "custom",
+        "customTag": "details"
+      }
+    },
+    {
+      "id": "agcnmn",
+      "name": "text-basic",
+      "parent": "olpkgg",
+      "children": [],
+      "settings": {
+        "text": "<summary>How long will my order take?</summary><p>[Verified production time], plus shipping. See <a href=\"/shipping/\">shipping information</a> for delivery estimates.</p>",
+        "tag": "custom",
+        "customTag": "details"
+      }
+    },
+    {
+      "id": "nabnip",
+      "name": "text-basic",
+      "parent": "olpkgg",
+      "children": [],
+      "settings": {
+        "text": "<summary>I don't have artwork yet. Can you help?</summary><p>Yes. Our design studio can set up your file or design something new. <a href=\"/design-studio/#project-form\">Request design support</a>.</p>",
+        "tag": "custom",
+        "customTag": "details"
+      }
+    },
+    {
+      "id": "eopijg",
+      "name": "text-basic",
+      "parent": "olpkgg",
+      "children": [],
+      "settings": {
+        "text": "<summary>What if something is wrong with my order?</summary><p>Contact us and we'll look into it. See <a href=\"/returns-and-order-issues/\">returns &amp; order issues</a>.</p>",
+        "tag": "custom",
+        "customTag": "details"
+      }
+    },
+    {
+      "id": "fddcba",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "dbfhab"
+      ],
+      "settings": {
+        "_cssClasses": "ph-section ph-section--flush"
+      },
+      "label": "Related products"
+    },
+    {
+      "id": "dbfhab",
+      "name": "container",
+      "parent": "fddcba",
+      "children": [
+        "oppkdj"
+      ],
+      "settings": {
+        "_cssClasses": "ph-container"
+      }
+    },
+    {
+      "id": "oppkdj",
+      "name": "div",
+      "parent": "dbfhab",
+      "children": [
+        "dibfab",
+        "ndmihc"
+      ],
+      "settings": {
+        "_cssClasses": "ph-rule"
+      }
+    },
+    {
+      "id": "dibfab",
+      "name": "div",
+      "parent": "oppkdj",
+      "children": [
+        "nlnlfb"
+      ],
+      "settings": {
+        "_cssClasses": "ph-head"
+      }
+    },
+    {
+      "id": "nlnlfb",
+      "name": "div",
+      "parent": "dibfab",
+      "children": [
+        "ilnfbe",
+        "bokeop"
+      ],
+      "settings": {}
+    },
+    {
+      "id": "ilnfbe",
+      "name": "text-basic",
+      "parent": "nlnlfb",
+      "children": [],
+      "settings": {
+        "text": "More to explore",
+        "tag": "p",
+        "_cssClasses": "ph-label"
+      }
+    },
+    {
+      "id": "bokeop",
+      "name": "heading",
+      "parent": "nlnlfb",
+      "children": [],
+      "settings": {
+        "text": "You may also like",
+        "tag": "h2",
+        "_cssClasses": "ph-h2"
+      }
+    },
+    {
+      "id": "ndmihc",
+      "name": "div",
+      "parent": "oppkdj",
+      "children": [
+        "cjeoli"
+      ],
+      "settings": {
+        "_cssClasses": "ph-related"
+      }
+    },
+    {
+      "id": "cjeoli",
+      "name": "product-related",
+      "parent": "ndmihc",
+      "children": [],
+      "settings": {},
+      "label": "Related products (WooCommerce)"
+    }
+  ],
+  "pageSettings": [],
+  "templateSettings": [],
+  "version": "1.10"
+}
