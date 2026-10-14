@@ -65,7 +65,8 @@ appears when those times are set.
   - **Shipping** is a dropdown in the order summary, with the chosen option's delivery estimate underneath.
   - **Add discount code** sits under shipping and slides open a code field with **Apply**. Codes apply without leaving
     the page, and the "Have a coupon?" bar above the form is removed.
-  - Clean 48px square-cornered fields (0px radius) with a black focus ring, payment methods in one bordered list, and a
+  - Clean 48px square-cornered fields and buttons (0px radius) with a black focus ring. Buttons turn
+    transparent with a black border on hover; payment methods in one bordered list, and a
     full-width **Pay now** button.
   - The header menu is hidden on checkout, so only the logo, account and cart show. Delete the first rule in `assets/checkout.css` to keep the menu.
   - On phones, the order summary sits above the form.

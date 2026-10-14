@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Printing Haus Site
  * Description: Loads the Printing Haus brand stylesheet for the Bricks templates and gives the WooCommerce checkout a calm, Shopify-style layout.
- * Version:     1.1.0
+ * Version:     1.1.1
  * Author:      Printing Haus
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -13,7 +13,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PH_SITE_VERSION', '1.1.0' );
+define( 'PH_SITE_VERSION', '1.1.1' );
 
 /**
  * Styles. Priority 20 so they load after Bricks and WooCommerce and win ties.
