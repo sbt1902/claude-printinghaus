@@ -58,24 +58,24 @@ appears when those times are set.
 
 - **Loads the brand stylesheet on every page** (`assets/printinghaus.css`, a copy of `bricks/printinghaus.css`) plus the
   interim fonts. Once it's active, clear the Bricks **Custom CSS** box so the styles aren't loaded twice.
-- **Shopify-style checkout** (classic WooCommerce checkout):
-  - Two columns: contact, billing and delivery fields, then **Payment** on the left. A sticky grey **Order summary**
-    on the right shows product thumbnails, print specs from Printing Haus Selector, shipping options with
-    delivery estimates, and a large total.
-  - **Shipping** is a dropdown in the order summary, with the chosen option's delivery estimate underneath.
-  - **Add discount code** sits under shipping and slides open a code field with **Apply**. Codes apply without leaving
-    the page, and the "Have a coupon?" bar above the form is removed.
-  - Clean 48px square-cornered fields and buttons (0px radius) with a black focus ring. Buttons turn
-    transparent with a black border on hover; payment methods in one bordered list, and a
-    full-width **Pay now** button.
-  - The header menu is hidden on checkout, so only the logo, account and cart show. Delete the first rule in `assets/checkout.css` to keep the menu.
-  - On phones, the order summary sits above the form.
-- PHP changes: payment moves under the address fields, with an "Order summary" heading, thumbnails in the summary,
-  "Pay now" button text, and "Billing details" renamed to "Contact & billing". None of this changes how orders,
-  payment gateways or the selector plugin work.
+- **Checkout finish for the Bricks Checkout (v2) template.** The layout stays in Bricks. The plugin restyles:
+  - fields as square, boxed 56px inputs that leave room for Bricks' floating labels (including the Country / State dropdowns)
+  - payment options as one bordered list
+  - **Pay now** as a full-width, square button that turns transparent with a black border on hover
+  - the order summary as a grey panel with 64px thumbnails
+- **Two shortcodes** for the Bricks order summary:
+  - `[ph_checkout_shipping]` shows shipping as a dropdown, with the chosen option's delivery estimate underneath. When there's
+    only one option (Printing Haus Selector often narrows it to the delivery the customer picked), it shows a single line.
+  - `[ph_checkout_coupon]` shows **Add discount code**, which slides open a code field with **Apply**, and lists applied
+    codes with [Remove]. While it's on the page, Bricks' own coupon box is hidden.
+  - Both refresh with the totals through WooCommerce's checkout updates.
 
-If the checkout page uses the WooCommerce **Checkout block** instead of the classic checkout, none of this applies.
-Switch the page to the `[woocommerce_checkout]` shortcode, or ask for block-checkout styles.
+### Adding the shortcodes in Bricks
+1. Open the checkout template in Bricks and expand **Order summary** in the Structure panel.
+2. Delete the totals row that shows "Free" (the shipping row).
+3. Add a **Shortcode** element there containing `[ph_checkout_shipping]`.
+4. Add a second **Shortcode** element below it containing `[ph_checkout_coupon]`.
+5. Save, and test with a real code and an address that has several shipping options.
 
 Preview: `preview/checkout.html`.
 
