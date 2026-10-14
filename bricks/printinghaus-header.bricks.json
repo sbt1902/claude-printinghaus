@@ -1,7 +1,7 @@
 {
   "title": "Printing Haus - Header",
   "templateType": "header",
-  "content": [
+  "header": [
     {
       "id": "peajhc",
       "name": "section",

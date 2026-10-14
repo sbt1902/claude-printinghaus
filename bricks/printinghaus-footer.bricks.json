@@ -1,7 +1,7 @@
 {
   "title": "Printing Haus - Footer",
   "templateType": "footer",
-  "content": [
+  "footer": [
     {
       "id": "naoino",
       "name": "section",

@@ -1059,7 +1059,8 @@ def build_json(key):
     return {
         "title": title,
         "templateType": ttype,
-        "content": flatten(nodes, key),
+        # Bricks keeps header and footer templates under their own key, not "content"
+        {"header": "header", "footer": "footer"}.get(ttype, "content"): flatten(nodes, key),
         "pageSettings": [],
         "templateSettings": [],
         "version": "1.10",
