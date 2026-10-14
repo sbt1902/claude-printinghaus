@@ -29,24 +29,28 @@ the *Printing Haus Brand System, Vol. 01* and the *Website Design & Brand Voice 
 
 ## Product page
 
-The product page is built from WooCommerce's own Bricks elements, so the gallery, name, price,
-options, artwork upload and Add to Cart all come from the store. Prices update as customers choose options.
+The product page is built from WooCommerce's own Bricks elements, together with the **Printing Haus Selector**
+plugin. The selector hooks into the Add to Cart element (`woocommerce_before_add_to_cart_button`), so it
+appears inside the template automatically. It provides the option buttons, the live price, artwork upload with
+file checks, *Design online*, and the delivery estimate. The template doesn't duplicate any of these.
 
-1. **Summary:** breadcrumbs, gallery, category, name, price and the short description as an opening line.
-   Then come the store's options, upload field and **Add to Cart**.
-2. **Ordering facts:** artwork formats, proofing, and production & shipping. These stay visible next to
-   Add to Cart instead of being hidden in tabs.
-3. **Design support:** "Need help with the artwork?" with a **Request Design Support** link.
-4. **About this product** (the full Woo description) beside a **paper & finish guide** in plain language.
-5. **FAQs:** native expanding questions that work with a keyboard.
-6. **Related products:** WooCommerce related items.
+1. **Summary:** breadcrumbs, gallery, category, name and the short description as an opening line.
+   The product's own price stays hidden on configured products, because the selector shows the live total.
+2. **Selector and Add to Cart:** the selector is restyled in `printinghaus.css` (rules starting `body .ph-phs .phs…`)
+   with square option buttons, a serif total, and brand colors and rules. The plugin itself is unchanged.
+3. **Ordering facts:** artwork, proof and delivery, written to match what the selector actually does.
+4. **Design support:** "Need help with the artwork?" with a **Request Design Support** link.
+5. **About this product** (the full Woo description) beside a plain-language **paper & finish guide**.
+6. **FAQs:** native expanding questions that work with a keyboard.
+7. **Related products:** WooCommerce related items. Selector products show "Priced to your specs".
 
 To install: import `printinghaus-product.bricks.json`, then in **Template settings → Conditions**
 apply it to *All products*. You can also apply it to one category first to test.
+If the selector doesn't appear, add a Shortcode element with `[phs_selector]` above the Add to Cart element.
 
-**To fill in before launch:** accepted upload formats (list only what the upload field accepts),
-the real proof process, verified production and shipping times, and the [Confirm] finishes in the guide.
-If these differ by product, they can come from per-product custom fields instead of fixed text.
+**Still to fill in:** the real proof process (the selector checks files, but it doesn't describe a proof step),
+the [Confirm] finishes in the guide, and delivery times in each shipping method. The delivery estimate only
+appears when those times are set.
 
 ## Visual system
 

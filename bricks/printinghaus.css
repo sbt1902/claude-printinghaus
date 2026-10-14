@@ -462,6 +462,7 @@ body .ph-pdp__title, body .ph-pdp__title h1 {
 
 /* ph-pdp__price */
 body .ph-pdp__price, body .ph-pdp__price .price { margin: 0 0 20px; font-size: 18px; font-weight: 500; color: var(--ph-ink); }
+body .ph-pdp__price:empty, body .ph-pdp__price .price:empty { display: none; }
 body .ph-pdp__price del { opacity: .55; margin-right: 8px; font-weight: 400; }
 body .ph-pdp__price ins { text-decoration: none; }
 
@@ -474,13 +475,15 @@ body .ph-pdp__buy form.cart { display: flex; flex-wrap: wrap; gap: 12px; margin:
 body .ph-pdp__buy table.variations { width: 100%; margin: 0 0 8px; border: 0; border-collapse: collapse; }
 body .ph-pdp__buy table.variations tr { display: block; margin-bottom: 16px; }
 body .ph-pdp__buy table.variations th, body .ph-pdp__buy table.variations td { display: block; padding: 0; border: 0; text-align: left; background: none; }
-body .ph-pdp__buy label { display: block; margin: 0 0 8px; font-size: 13px; font-weight: 500; color: var(--ph-ink); text-transform: none; letter-spacing: normal; }
-body .ph-pdp__buy select, body .ph-pdp__buy input[type=number], body .ph-pdp__buy input[type=text], body .ph-pdp__buy input[type=file], body .ph-pdp__buy textarea {
-  width: 100%; min-height: 48px; padding: 0 14px;
+/* Only WooCommerce's native variation fields and quantity are styled here.
+   The Printing Haus options plugin renders and styles its own controls. */
+body .ph-pdp__buy table.variations label { display: block; margin: 0 0 8px; font-size: 13px; font-weight: 500; color: var(--ph-ink); text-transform: none; letter-spacing: normal; }
+body .ph-pdp__buy table.variations select, body .ph-pdp__buy .quantity input.qty {
+  min-height: 48px; padding: 0 14px;
   border: 1px solid var(--ph-ink); border-radius: 0; background: var(--ph-paper);
   font-family: var(--ph-sans); font-size: 16px; color: var(--ph-ink);
 }
-body .ph-pdp__buy input[type=file] { padding: 12px 14px; }
+body .ph-pdp__buy table.variations select { width: 100%; }
 body .ph-pdp__buy .reset_variations { display: inline-block; margin-top: 8px; font-size: 13px; }
 body .ph-pdp__buy .single_variation_wrap, body .ph-pdp__buy .woocommerce-variation-add-to-cart { width: 100%; }
 body .ph-pdp__buy .woocommerce-variation-add-to-cart { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -496,6 +499,46 @@ body .ph-pdp__buy .single_add_to_cart_button {
 body .ph-pdp__buy .single_add_to_cart_button:hover { background: #2E2B28 !important; border-color: #2E2B28 !important; }
 body .ph-pdp__buy .single_add_to_cart_button.disabled { opacity: .45; cursor: not-allowed; }
 body .ph-pdp__buy .stock { width: 100%; margin: 0 0 8px; font-size: 14px; }
+
+/* ph-phs */
+body .ph-phs .phs {
+  --phs-ink: var(--ph-ink); --phs-mute: var(--ph-muted); --phs-line: var(--ph-rule);
+  --phs-bg: var(--ph-paper); --phs-accent: var(--ph-ink);
+  width: 100%; margin: 0 0 20px; padding: 0; border: 0; background: transparent;
+  font-family: var(--ph-sans); font-size: 15px; line-height: 1.5; color: var(--ph-ink);
+}
+body .ph-phs .phs-field { margin: 0 0 22px; }
+body .ph-phs .phs-label { margin: 0 0 10px; font-size: 13px; font-weight: 500; letter-spacing: normal; text-transform: none; }
+body .ph-phs .phs-help { font-size: 13px; color: var(--ph-muted); }
+body .ph-phs .phs-chips { gap: 8px; }
+body .ph-phs .phs-chip span {
+  display: flex; flex-direction: column; justify-content: center;
+  min-height: 46px; padding: 10px 16px;
+  border: 1px solid var(--ph-rule); border-radius: 0; background: var(--ph-paper);
+  font-size: 15px; transition: border-color .15s ease, background-color .15s ease;
+}
+body .ph-phs .phs-chip:hover span { border-color: var(--ph-ink); }
+body .ph-phs .phs-chip input:checked + span { border-color: var(--ph-ink); background: var(--ph-ink); color: var(--ph-paper); }
+body .ph-phs .phs-chip small { font-size: 12px; opacity: .75; }
+body .ph-phs .phs-number input, body .ph-phs .phs-ship-row select, body .ph-phs .phs-ship-row input {
+  min-height: 46px; padding: 0 14px; border: 1px solid var(--ph-ink); border-radius: 0;
+  background: var(--ph-paper); font: inherit; font-size: 16px; color: var(--ph-ink);
+}
+body .ph-phs .phs-quote { margin-top: 8px; padding-top: 20px; border-top: 1px solid var(--ph-rule); }
+body .ph-phs .phs-total { font-family: var(--ph-display); font-size: 36px; font-weight: 400; letter-spacing: -0.01em; line-height: 1; }
+body .ph-phs .phs-unit { font-size: 14px; color: var(--ph-muted); }
+body .ph-phs .phs-art { margin-top: 24px; padding: 20px; border: 1px solid var(--ph-rule); background: var(--ph-paper); }
+body .ph-phs .phs-art-title { margin: 0 0 12px; font-size: 13px; font-weight: 500; }
+body .ph-phs .phs-drop { min-height: 88px; display: flex; align-items: center; justify-content: center; padding: 16px; border: 1px dashed var(--ph-olive); color: var(--ph-muted); font-size: 14px; }
+body .ph-phs .phs-drop:hover, body .ph-phs .phs-drop.is-over { border-color: var(--ph-ink); color: var(--ph-ink); background: var(--ph-sand); }
+body .ph-phs .phs-btn { min-height: 46px; padding: 0 20px; border: 1px solid var(--ph-ink); border-radius: 0; background: transparent; color: var(--ph-ink); font-size: 15px; font-weight: 500; }
+body .ph-phs .phs-btn:hover { background: var(--ph-ink); color: var(--ph-paper); }
+body .ph-phs .phs-badge { padding: 2px 8px; font-size: 12px; font-weight: 500; }
+body .ph-phs .phs-ship { margin-top: 24px; }
+body .ph-phs .phs-ship-rates li { border-bottom-color: var(--ph-rule); }
+body .ph-phs .phs-eta { color: var(--ph-muted); opacity: 1; }
+body .ph-phs .phs-pill { border-radius: 2px; border-color: var(--ph-rule); background: var(--ph-paper); }
+body .ph-phs .phs-payin4 { color: var(--ph-muted); opacity: 1; }
 
 /* ph-pdp__facts */
 body .ph-pdp__facts { margin: 0; padding: 0; border-top: 1px solid var(--ph-rule); }

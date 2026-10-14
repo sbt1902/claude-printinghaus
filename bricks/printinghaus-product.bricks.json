@@ -133,7 +133,7 @@
         "nhahep"
       ],
       "settings": {
-        "_cssClasses": "ph-pdp__buy"
+        "_cssClasses": "ph-pdp__buy ph-phs"
       }
     },
     {
@@ -142,7 +142,7 @@
       "parent": "nphckk",
       "children": [],
       "settings": {},
-      "label": "Options, artwork upload and Add to Cart (from WooCommerce)"
+      "label": "Add to Cart: Printing Haus Selector renders options, price, artwork and delivery here"
     },
     {
       "id": "koojbf",
@@ -166,7 +166,7 @@
       "parent": "koojbf",
       "children": [],
       "settings": {
-        "text": "<dt>Artwork</dt><dd>[Accepted formats, e.g. PDF, PNG or JPG: list only what your upload accepts.] Size, bleed and resolution are covered in our <a href=\"/artwork-guidelines/\">artwork guidelines</a>.</dd>",
+        "text": "<dt>Artwork</dt><dd>Upload your file in the artwork box above. It lists the file types this product accepts, and we check your file as it uploads. Size and bleed are covered in our <a href=\"/artwork-guidelines/\">artwork guidelines</a>.</dd>",
         "tag": "div"
       }
     },
@@ -186,7 +186,7 @@
       "parent": "koojbf",
       "children": [],
       "settings": {
-        "text": "<dt>Production &amp; shipping</dt><dd>[Verified production time]. [Verified shipping estimate]. See <a href=\"/shipping/\">shipping information</a>.</dd>",
+        "text": "<dt>Delivery</dt><dd>Enter your ZIP code above for a delivery estimate, production included. Final shipping is confirmed at checkout. See <a href=\"/shipping/\">shipping information</a>.</dd>",
         "tag": "div"
       }
     },
@@ -489,7 +489,7 @@
       "parent": "olpkgg",
       "children": [],
       "settings": {
-        "text": "<summary>What file types can I upload?</summary><p>[List only the formats your upload accepts, e.g. PDF, PNG or JPG.] Our <a href=\"/artwork-guidelines/\">artwork guidelines</a> cover size, bleed and resolution.</p>",
+        "text": "<summary>What file types can I upload?</summary><p>The artwork box lists the file types and maximum file size for each product. We check your file as it uploads and tell you if anything needs attention. Our <a href=\"/artwork-guidelines/\">artwork guidelines</a> cover size, bleed and resolution.</p>",
         "tag": "custom",
         "customTag": "details"
       }
@@ -511,7 +511,7 @@
       "parent": "olpkgg",
       "children": [],
       "settings": {
-        "text": "<summary>How long will my order take?</summary><p>[Verified production time], plus shipping. See <a href=\"/shipping/\">shipping information</a> for delivery estimates.</p>",
+        "text": "<summary>How long will my order take?</summary><p>Enter your ZIP code on the product page for a delivery estimate. It includes production time, and your final shipping is confirmed at checkout. See <a href=\"/shipping/\">shipping information</a>.</p>",
         "tag": "custom",
         "customTag": "details"
       }

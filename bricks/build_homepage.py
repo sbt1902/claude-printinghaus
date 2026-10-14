@@ -768,6 +768,7 @@ CLASSES.update({
 """,
     "ph-pdp__price": """
 %root%, %root% .price { margin: 0 0 20px; font-size: 18px; font-weight: 500; color: var(--ph-ink); }
+%root%:empty, %root% .price:empty { display: none; }
 %root% del { opacity: .55; margin-right: 8px; font-weight: 400; }
 %root% ins { text-decoration: none; }
 """,
@@ -778,13 +779,15 @@ CLASSES.update({
 %root% table.variations { width: 100%; margin: 0 0 8px; border: 0; border-collapse: collapse; }
 %root% table.variations tr { display: block; margin-bottom: 16px; }
 %root% table.variations th, %root% table.variations td { display: block; padding: 0; border: 0; text-align: left; background: none; }
-%root% label { display: block; margin: 0 0 8px; font-size: 13px; font-weight: 500; color: var(--ph-ink); text-transform: none; letter-spacing: normal; }
-%root% select, %root% input[type=number], %root% input[type=text], %root% input[type=file], %root% textarea {
-  width: 100%; min-height: 48px; padding: 0 14px;
+/* Only WooCommerce's native variation fields and quantity are styled here.
+   The Printing Haus options plugin renders and styles its own controls. */
+%root% table.variations label { display: block; margin: 0 0 8px; font-size: 13px; font-weight: 500; color: var(--ph-ink); text-transform: none; letter-spacing: normal; }
+%root% table.variations select, %root% .quantity input.qty {
+  min-height: 48px; padding: 0 14px;
   border: 1px solid var(--ph-ink); border-radius: 0; background: var(--ph-paper);
   font-family: var(--ph-sans); font-size: 16px; color: var(--ph-ink);
 }
-%root% input[type=file] { padding: 12px 14px; }
+%root% table.variations select { width: 100%; }
 %root% .reset_variations { display: inline-block; margin-top: 8px; font-size: 13px; }
 %root% .single_variation_wrap, %root% .woocommerce-variation-add-to-cart { width: 100%; }
 %root% .woocommerce-variation-add-to-cart { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -800,6 +803,47 @@ CLASSES.update({
 %root% .single_add_to_cart_button:hover { background: #2E2B28 !important; border-color: #2E2B28 !important; }
 %root% .single_add_to_cart_button.disabled { opacity: .45; cursor: not-allowed; }
 %root% .stock { width: 100%; margin: 0 0 8px; font-size: 14px; }
+""",
+    # Printing Haus Selector plugin (.phs): brand skin over its own stylesheet
+    "ph-phs": """
+%root% .phs {
+  --phs-ink: var(--ph-ink); --phs-mute: var(--ph-muted); --phs-line: var(--ph-rule);
+  --phs-bg: var(--ph-paper); --phs-accent: var(--ph-ink);
+  width: 100%; margin: 0 0 20px; padding: 0; border: 0; background: transparent;
+  font-family: var(--ph-sans); font-size: 15px; line-height: 1.5; color: var(--ph-ink);
+}
+%root% .phs-field { margin: 0 0 22px; }
+%root% .phs-label { margin: 0 0 10px; font-size: 13px; font-weight: 500; letter-spacing: normal; text-transform: none; }
+%root% .phs-help { font-size: 13px; color: var(--ph-muted); }
+%root% .phs-chips { gap: 8px; }
+%root% .phs-chip span {
+  display: flex; flex-direction: column; justify-content: center;
+  min-height: 46px; padding: 10px 16px;
+  border: 1px solid var(--ph-rule); border-radius: 0; background: var(--ph-paper);
+  font-size: 15px; transition: border-color .15s ease, background-color .15s ease;
+}
+%root% .phs-chip:hover span { border-color: var(--ph-ink); }
+%root% .phs-chip input:checked + span { border-color: var(--ph-ink); background: var(--ph-ink); color: var(--ph-paper); }
+%root% .phs-chip small { font-size: 12px; opacity: .75; }
+%root% .phs-number input, %root% .phs-ship-row select, %root% .phs-ship-row input {
+  min-height: 46px; padding: 0 14px; border: 1px solid var(--ph-ink); border-radius: 0;
+  background: var(--ph-paper); font: inherit; font-size: 16px; color: var(--ph-ink);
+}
+%root% .phs-quote { margin-top: 8px; padding-top: 20px; border-top: 1px solid var(--ph-rule); }
+%root% .phs-total { font-family: var(--ph-display); font-size: 36px; font-weight: 400; letter-spacing: -0.01em; line-height: 1; }
+%root% .phs-unit { font-size: 14px; color: var(--ph-muted); }
+%root% .phs-art { margin-top: 24px; padding: 20px; border: 1px solid var(--ph-rule); background: var(--ph-paper); }
+%root% .phs-art-title { margin: 0 0 12px; font-size: 13px; font-weight: 500; }
+%root% .phs-drop { min-height: 88px; display: flex; align-items: center; justify-content: center; padding: 16px; border: 1px dashed var(--ph-olive); color: var(--ph-muted); font-size: 14px; }
+%root% .phs-drop:hover, %root% .phs-drop.is-over { border-color: var(--ph-ink); color: var(--ph-ink); background: var(--ph-sand); }
+%root% .phs-btn { min-height: 46px; padding: 0 20px; border: 1px solid var(--ph-ink); border-radius: 0; background: transparent; color: var(--ph-ink); font-size: 15px; font-weight: 500; }
+%root% .phs-btn:hover { background: var(--ph-ink); color: var(--ph-paper); }
+%root% .phs-badge { padding: 2px 8px; font-size: 12px; font-weight: 500; }
+%root% .phs-ship { margin-top: 24px; }
+%root% .phs-ship-rates li { border-bottom-color: var(--ph-rule); }
+%root% .phs-eta { color: var(--ph-muted); opacity: 1; }
+%root% .phs-pill { border-radius: 2px; border-color: var(--ph-rule); background: var(--ph-paper); }
+%root% .phs-payin4 { color: var(--ph-muted); opacity: 1; }
 """,
     "ph-pdp__facts": """
 %root% { margin: 0; padding: 0; border-top: 1px solid var(--ph-rule); }
@@ -879,17 +923,18 @@ PRODUCT = [
                 El("product-price", "ph-pdp__price", label="Price (updates with the selection)"),
                 El("product-short-description", "ph-pdp__intro",
                    label="Opening description (WooCommerce short description)"),
-                div("ph-pdp__buy", [El("product-add-to-cart", "",
-                                       label="Options, artwork upload and Add to Cart (from WooCommerce)")]),
+                div("ph-pdp__buy ph-phs", [El("product-add-to-cart", "",
+                                       label="Add to Cart: Printing Haus Selector renders options, price, artwork and delivery here")]),
                 div("ph-pdp__facts", [
                     fact("Artwork",
-                         "[Accepted formats, e.g. PDF, PNG or JPG: list only what your upload accepts.] "
-                         f"Size, bleed and resolution are covered in our <a href=\"{LINKS['artwork']}\">artwork guidelines</a>."),
+                         "Upload your file in the artwork box above. It lists the file types this product "
+                         "accepts, and we check your file as it uploads. Size and bleed are covered in our "
+                         f"<a href=\"{LINKS['artwork']}\">artwork guidelines</a>."),
                     fact("Proof",
                          "[Describe your actual proof step, e.g. when a proof is sent and how to approve it.]"),
-                    fact("Production &amp; shipping",
-                         "[Verified production time]. [Verified shipping estimate]. "
-                         f"See <a href=\"{LINKS['shipping']}\">shipping information</a>."),
+                    fact("Delivery",
+                         "Enter your ZIP code above for a delivery estimate, production included. Final "
+                         f"shipping is confirmed at checkout. See <a href=\"{LINKS['shipping']}\">shipping information</a>."),
                 ], tag="custom", customTag="dl", label="Ordering facts (keep visible)"),
                 div("ph-pdp__help", [
                     heading("Need help with the artwork?", "h2", "ph-h3"),
@@ -931,13 +976,15 @@ PRODUCT = [
         section_head("Questions", "Before you order"),
         div("ph-faq", [
             faq("What file types can I upload?",
-                "[List only the formats your upload accepts, e.g. PDF, PNG or JPG.] Our "
+                "The artwork box lists the file types and maximum file size for each product. We check "
+                "your file as it uploads and tell you if anything needs attention. Our "
                 f"<a href=\"{LINKS['artwork']}\">artwork guidelines</a> cover size, bleed and resolution."),
             faq("Will I see a proof before you print?",
                 "[Describe your actual proof process.]"),
             faq("How long will my order take?",
-                "[Verified production time], plus shipping. See "
-                f"<a href=\"{LINKS['shipping']}\">shipping information</a> for delivery estimates."),
+                "Enter your ZIP code on the product page for a delivery estimate. It includes production "
+                "time, and your final shipping is confirmed at checkout. See "
+                f"<a href=\"{LINKS['shipping']}\">shipping information</a>."),
             faq("I don't have artwork yet. Can you help?",
                 "Yes. Our design studio can set up your file or design something new. "
                 f"<a href=\"{LINKS['studio_brief']}\">Request design support</a>."),
@@ -1030,6 +1077,8 @@ img{max-width:100%;display:block}
 .brxe-container{display:flex;flex-direction:column;align-items:flex-start;width:1100px;max-width:100%;margin:0 auto}
 .brxe-button,.brxe-text-link{display:inline-flex}
 .brxe-logo{font:600 14px/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;border:1px dashed currentColor;padding:8px 10px;text-decoration:none}
+.phs-chips{display:flex;flex-wrap:wrap}.phs-chip{position:relative}.phs-chip input{position:absolute;opacity:0;inset:0;margin:0}
+.phs-quote{display:flex;justify-content:space-between;align-items:baseline}.phs-art-actions,.phs-ship-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.phs-drop{flex:1 1 14rem}
 .preview-flag{position:fixed;right:12px;bottom:12px;z-index:9;padding:8px 12px;background:#0A0A0A;color:#F9F7F3;font:12px/1.3 Helvetica,Arial,sans-serif}
 """
 
@@ -1104,18 +1153,35 @@ WOO_MOCK = {
                         '<p class="ph-media__label">[Real product photo from WooCommerce]</p></div>'
                         '<ol class="flex-control-thumbs">' + '<li><img alt="" style="aspect-ratio:1"></li>' * 5 + '</ol></div>'),
     "product-title": '<h1 class="product_title">[Product name]</h1>',
-    "product-price": '<p class="price">[Price from store; updates with options]</p>',
+    # Printing Haus Selector returns an empty price on configured products and shows its live total instead
+    "product-price": '<p class="price"></p>',
     "product-short-description": ('<p>[Short description, e.g. "A small introduction, thoughtfully made. '
                                   'Choose your paper and finish, then make it yours."]</p>'),
     "product-add-to-cart": (
-        '<form class="cart variations_form" onsubmit="return false"><table class="variations"><tbody>'
-        + "".join(f'<tr><th class="label"><label for="pv-{k}">{k.title()}</label></th><td class="value">'
-                  f'<select id="pv-{k}"><option>[{k.title()} options from WooCommerce]</option></select></td></tr>'
-                  for k in ("size", "paper", "finish", "quantity"))
-        + '<tr><th class="label"><label for="pv-file">Upload Your Artwork</label></th><td class="value">'
-          '<input id="pv-file" type="file"></td></tr></tbody></table>'
-          '<div class="woocommerce-variation-add-to-cart"><div class="quantity"><input class="qty" type="number" value="1" aria-label="Quantity"></div>'
-          '<button type="submit" class="single_add_to_cart_button button">Add to Cart</button></div></form>'),
+        '<form class="cart" onsubmit="return false"><div class="phs">'
+        '<div class="phs-field"><p class="phs-label">Size</p><div class="phs-chips">'
+        '<label class="phs-chip"><input type="radio" name="s" checked><span>[Size A]</span></label>'
+        '<label class="phs-chip"><input type="radio" name="s"><span>[Size B]</span></label></div></div>'
+        '<div class="phs-field"><p class="phs-label">Paper</p><div class="phs-chips">'
+        + "".join(f'<label class="phs-chip"><input type="radio" name="p"{" checked" if x == "A" else ""}>'
+                  f'<span>[Stock {x}]<small>[weight]</small></span></label>' for x in "ABC")
+        + '</div></div>'
+        '<div class="phs-field"><p class="phs-label">Finish</p><div class="phs-chips">'
+        '<label class="phs-chip"><input type="radio" name="f" checked><span>None</span></label>'
+        '<label class="phs-chip"><input type="radio" name="f"><span>Raised spot UV</span></label></div></div>'
+        '<div class="phs-field"><p class="phs-label">Quantity</p><div class="phs-chips">'
+        + "".join(f'<label class="phs-chip"><input type="radio" name="q"{" checked" if q == 100 else ""}>'
+                  f'<span>{q}</span></label>' for q in (50, 100, 250, 500))
+        + '</div></div>'
+        '<div class="phs-quote"><span class="phs-total">[$00.00]</span><span class="phs-unit">[$0.00 each]</span></div>'
+        '<div class="phs-art"><p class="phs-art-title">Your artwork</p><div class="phs-art-actions">'
+        '<label class="phs-drop">Drop a file here or choose one (PDF, PNG, JPG, JPEG, TIF, TIFF, AI, INDD, up to [N] MB)</label>'
+        '<button type="button" class="phs-btn">Design online</button></div></div>'
+        '<div class="phs-ship"><p class="phs-art-title">Delivery estimate</p><div class="phs-ship-row">'
+        '<select aria-label="Country"><option>United States</option></select>'
+        '<input class="phs-ship-zip" placeholder="ZIP or postal code" aria-label="ZIP or postal code"></div></div>'
+        '</div><div class="woocommerce-variation-add-to-cart">'
+        '<button type="submit" class="single_add_to_cart_button button">Add to Cart</button></div></form>'),
     "product-content": '<p>[Full product description from WooCommerce: sizes, stocks, finishes and what is included.]</p>',
     "product-related": ('<section class="related products"><h2>Related products</h2><ul class="products">'
                         + '<li class="product"><a href="#"><img alt=""><h2 class="woocommerce-loop-product__title">'
