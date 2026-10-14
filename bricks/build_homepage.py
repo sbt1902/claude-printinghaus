@@ -1225,4 +1225,10 @@ if __name__ == "__main__":
     OUT_PREVIEW.parent.mkdir(parents=True, exist_ok=True)
     OUT_PREVIEW.write_text(page("Printing Haus Homepage", HEADER + HOME + FOOTER))
     (OUT_PREVIEW.parent / "product.html").write_text(page("Printing Haus Product", HEADER + PRODUCT + FOOTER))
-    print("wrote preview/homepage.html and preview/product.html")
+    # Checkout preview: WooCommerce checkout markup + the plugin's checkout.css, inlined so it opens anywhere
+    tpl = (OUT_PREVIEW.parent / "checkout.template.html").read_text()
+    co_css = (plugin / "assets" / "checkout.css").read_text()
+    (OUT_PREVIEW.parent / "checkout.html").write_text(tpl.replace(
+        '<link rel="stylesheet" href="../wordpress/printing-haus-site/assets/checkout.css">',
+        f"<style>{co_css}</style>"))
+    print("wrote preview/homepage.html, preview/product.html and preview/checkout.html")
