@@ -24,15 +24,17 @@ OUT_PREVIEW = HERE.parent / "preview" / "homepage.html"
 # ---------------------------------------------------------------------------
 LINKS = {
     "shop": "/shop/",
-    "quote": "/contact/",
-    "consult": "/design-studio/",
     "business_cards": "/product-category/business-cards/",
+    "stationery": "/product-category/letterhead-envelopes/",
+    "notecards": "/product-category/notecards-postcards/",
     "invitations": "/product-category/invitations/",
-    "packaging": "/product-category/packaging/",
+    "packaging": "/product-category/packaging-labels/",
     "art_prints": "/product-category/art-prints/",
-    "studio": "/design-studio/",
-    "finishes": "/finishes/",
-    "instagram": "https://www.instagram.com/",
+    "paper": "/paper/",
+    "finishes": "/print-methods-finishes/",
+    "samples": "/sample-pack/",
+    "quote": "/request-a-quote/",
+    "contact": "/contact/",
 }
 
 # ---------------------------------------------------------------------------
@@ -306,22 +308,6 @@ CLASSES = {
 """,
     "ph-head__aside": "%root% { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; max-width: 420px; }",
     # Collection cards ----------------------------------------------------
-    "ph-cards": """
-%root% {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: clamp(28px, 3vw, 44px) clamp(16px, 2vw, 28px);
-}
-%root% > :nth-child(-n+2) { grid-column: span 3; }
-%root% > :nth-child(n+3) { grid-column: span 2; }
-%root% > :nth-child(-n+2) .ph-media { aspect-ratio: 5 / 4; }
-@media (max-width: 991px) {
-  %root% > :nth-child(n) { grid-column: span 3; }
-  %root% > :last-child { grid-column: 1 / -1; }
-  %root% > :last-child .ph-media { aspect-ratio: 16 / 9; }
-}
-@media (max-width: 600px) { %root% > :nth-child(n) { grid-column: 1 / -1; } }
-""",
     "ph-card": """
 %root% {
   display: flex;
@@ -332,9 +318,6 @@ CLASSES = {
 }
 %root%:hover .ph-media img { transform: scale(1.04); }
 %root%:hover .ph-card__more { gap: 16px; }
-""",
-    "ph-card__meta": """
-%root% { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
 """,
     "ph-card__title": """
 %root% { margin: 0; font-size: clamp(20px, 1.8vw, 26px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; }
@@ -425,6 +408,69 @@ CLASSES = {
   color: var(--ph-ink);
   background: rgba(255,255,255,.4);
 }
+""",
+    # Products ------------------------------------------------------------
+    "ph-products": """
+%root% {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(36px, 4vw, 56px) clamp(16px, 2vw, 28px);
+}
+@media (max-width: 991px) { %root% { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { %root% { gap: 32px 12px; } %root% .ph-card__text { display: none; } }
+""",
+    "ph-card__spec": """
+%root% { margin: -8px 0 0; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ph-olive); }
+""",
+    # Papers --------------------------------------------------------------
+    "ph-papers": """
+%root% {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+}
+@media (max-width: 991px) { %root% { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { %root% { grid-template-columns: 1fr; } }
+""",
+    "ph-paper": """
+%root% { display: flex; flex-direction: column; gap: 12px; }
+%root% .ph-media { margin-bottom: 10px; box-shadow: 0 24px 40px -28px rgba(10,10,10,.45); }
+""",
+    "ph-media--paper": """
+%root% { background: radial-gradient(120% 80% at 25% 20%, #fff, transparent 65%), linear-gradient(160deg, #FDFCFA 0%, #ECE8E1 100%); }
+""",
+    "ph-media--duplex": """
+%root% { background: linear-gradient(160deg, var(--ph-paper) 0%, var(--ph-sand) 100%); }
+%root%::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: var(--ph-oxblood); }
+""",
+    # Print methods -------------------------------------------------------
+    "ph-methods": "%root% { display: flex; flex-direction: column; border-bottom: 1px solid var(--ph-stone); }",
+    "ph-method": """
+%root% {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: baseline;
+  padding: 30px 0;
+  border-top: 1px solid var(--ph-stone);
+  transition: padding .3s ease, color .3s ease;
+}
+%root%:hover { padding-left: 12px; }
+%root%:hover .ph-method__title { color: var(--ph-oxblood); }
+@media (max-width: 767px) { %root% { grid-template-columns: 48px minmax(0, 1fr); } %root% > :last-child { grid-column: 2; } }
+""",
+    "ph-method__title": """
+%root% { margin: 0; font-size: clamp(26px, 3vw, 44px); font-weight: 500; letter-spacing: -0.03em; line-height: 1; transition: color .3s ease; }
+%root% em { font-family: var(--ph-serif); font-style: italic; font-weight: 400; }
+""",
+    "ph-methods__foot": "%root% { margin-top: 36px; }",
+    # Promise (on ink) ----------------------------------------------------
+    "ph-details--light": """
+%root% { border-top-color: rgba(249,247,243,.22); }
+%root% .ph-detail + .ph-detail { border-left-color: rgba(249,247,243,.22); }
+%root% .ph-detail__text { color: var(--ph-stone); }
+%root% .ph-detail__num { color: var(--ph-blush); }
+@media (max-width: 991px) { %root% .ph-detail { border-bottom-color: rgba(249,247,243,.22); } }
 """,
     # Closing CTA ---------------------------------------------------------
     "ph-cta": "%root% { text-align: center; }",
@@ -519,17 +565,33 @@ def media(variant="", alt=""):
 ARROW = "&rarr;"
 
 # ---------------------------------------------------------------------------
-# Page content (brand voice: refined, warm, design-literate, quietly playful)
+# Page content: an elevated printer, not a design studio.
+# Voice: refined but never precious; clear, warm, quietly confident about craft.
 # ---------------------------------------------------------------------------
-def collection_card(i, title, blurb, url, variant, alt):
+def product_card(title, spec, blurb, url, variant, alt):
     return link_block("ph-card", url, [
         media(variant, alt),
-        div("ph-card__meta", [
-            heading(title, "h3", "ph-card__title"),
-            text(f"{i:02d}", "ph-card__num"),
-        ]),
+        heading(title, "h3", "ph-card__title"),
+        text(spec, "ph-card__spec"),
         text(blurb, "ph-card__text"),
-        text(f"Explore {ARROW}", "ph-card__more", tag="span"),
+        text(f"Shop now {ARROW}", "ph-card__more", tag="span"),
+    ])
+
+
+def paper(name, feel, body, variant):
+    return div("ph-paper", [
+        media("ph-media--square " + variant, f"{name} paper swatch, close-up"),
+        heading(name, "h3", "ph-detail__title"),
+        text(feel, "ph-card__spec"),
+        text(body, "ph-detail__text"),
+    ])
+
+
+def method(num, title, body):
+    return div("ph-method", [
+        text(num, "ph-card__num"),
+        heading(title, "h3", "ph-method__title"),
+        text(body, "ph-detail__text"),
     ])
 
 
@@ -549,8 +611,16 @@ def step(num, title, body):
     ])
 
 
-FINISHES = ["Letterpress", "Foil stamping", "Blind embossing", "Painted edges",
-            "Duplex stocks", "Cotton paper", "Die cutting", "Spot gloss"]
+def section_head(eyebrow, title, lead=None, aside=None):
+    side = ([text(lead, "ph-lead")] if lead else []) + (aside or [])
+    return div("ph-head", [
+        div("", [text(eyebrow, "ph-eyebrow"), heading(title, "h2", "ph-h2")]),
+        div("ph-head__aside", side),
+    ])
+
+
+FINISHES = ["Letterpress", "Foil stamping", "Embossing", "Painted edges",
+            "Duplex stocks", "Cotton paper", "Debossing", "Die cutting"]
 marquee_html = "".join(
     f"<span>{f}</span><i aria-hidden=\"true\">/</i>" for f in FINISHES * 2
 )
@@ -560,29 +630,29 @@ PAGE = [
     section("ph-hero", [container([
         div("ph-hero__grid", [
             div("", [
-                text("Printing Haus &mdash; Design-led print studio", "ph-eyebrow"),
+                text("Premium printing &mdash; Cards, stationery &amp; packaging", "ph-eyebrow"),
                 heading("Good ideas look <em>better printed.</em>", "h1", "ph-hero__title"),
-                text("Business cards, stationery, invitations and packaging, thoughtfully "
-                     "produced on beautiful paper. Made to be held onto.",
-                     "ph-lead ph-hero__lead"),
+                text("Exceptional paper, specialty finishes and print you can feel the "
+                     "difference in. Upload your design, approve your proof, and we'll "
+                     "handle the rest.", "ph-lead ph-hero__lead"),
                 div("ph-actions", [
-                    button("Start your order", LINKS["shop"], "ph-btn--dark"),
-                    button("Book a design consult", LINKS["consult"], "ph-btn--ghost"),
+                    button("Shop business cards", LINKS["business_cards"], "ph-btn--dark"),
+                    button("Get a sample pack", LINKS["samples"], "ph-btn--ghost"),
                 ]),
             ]),
             div("ph-hero__visual", [
-                media("", "Letterpress business cards on textured cotton paper in soft daylight"),
+                media("", "Foil-stamped business cards on thick cotton paper in soft daylight"),
                 div("ph-hero__tag", [
                     text("Details you can feel.", "ph-hero__tag-title"),
-                    text("Foil, emboss and letterpress finishes on considered stocks.",
+                    text("Foil, letterpress and embossing on cotton, duplex and recycled stocks.",
                          "ph-hero__tag-text"),
                 ]),
             ]),
         ]),
         div("ph-hero__points", [
-            text("<strong>Considered paper</strong>Stocks chosen for how they look and how they feel in hand.", "ph-point"),
-            text("<strong>Specialty finishes</strong>Foil, embossing and letterpress for the moments that deserve them.", "ph-point"),
-            text("<strong>Design support</strong>Bring your files, or let our studio shape the idea with you.", "ph-point"),
+            text("<strong>Proof before print</strong>Every order is checked and proofed before it goes to press.", "ph-point"),
+            text("<strong>Premium papers</strong>Cotton, duplex and recycled stocks, chosen for feel and finish.", "ph-point"),
+            text("<strong>Specialty finishes</strong>Foil, letterpress, embossing and painted edges.", "ph-point"),
         ]),
     ])], "Hero"),
 
@@ -591,125 +661,150 @@ PAGE = [
         div("ph-marquee", [text(marquee_html, "ph-marquee__track", tag="div")]),
     ], "Finishes marquee"),
 
-    # 3. Collection -------------------------------------------------------
+    # 3. Shop by product --------------------------------------------------
     section("", [container([
-        div("ph-head", [
-            div("", [
-                text("01 / The collection", "ph-eyebrow"),
-                heading("Printed matter, <em>thoughtfully</em> produced.", "h2", "ph-h2"),
-            ]),
-            div("ph-head__aside", [
-                text("From the card you hand over to the box it arrives in, every piece "
-                     "is designed to make a quiet, lasting impression.", "ph-lead"),
-                text_link(f"Shop everything {ARROW}", LINKS["shop"]),
-            ]),
+        section_head("01 / Shop by product", "Everything worth <em>printing well.</em>",
+                     "Professional print for business and life's occasions, from a box of "
+                     "cards to a full stationery suite.",
+                     [text_link(f"Shop all products {ARROW}", LINKS["shop"])]),
+        div("ph-products", [
+            product_card("Business Cards", "Cotton &middot; Duplex &middot; Foil",
+                         "The card you hand over says it first. Make it weighty, tactile and unmistakably yours.",
+                         LINKS["business_cards"], "", "Stack of duplex business cards with a painted edge"),
+            product_card("Letterhead &amp; Envelopes", "Matching stationery",
+                         "Correspondence that feels considered, on stocks that pair with your cards.",
+                         LINKS["stationery"], "ph-media--paper", "Letterhead and envelopes on a linen surface"),
+            product_card("Notecards &amp; Postcards", "Flat &middot; Folded",
+                         "Thank-yous, notes and mailers worth keeping on the fridge.",
+                         LINKS["notecards"], "ph-media--olive", "Folded notecards with envelopes"),
+            product_card("Invitations", "Weddings &middot; Events",
+                         "Suites, save-the-dates and menus with a real sense of occasion.",
+                         LINKS["invitations"], "ph-media--blush", "Letterpress wedding invitation suite with wax seal"),
+            product_card("Packaging &amp; Labels", "Boxes &middot; Sleeves &middot; Stickers",
+                         "Branded packaging, tags and labels that make the unboxing part of the experience.",
+                         LINKS["packaging"], "ph-media--oxblood", "Branded boxes, sleeves and stickers"),
+            product_card("Art Prints", "Fine art papers",
+                         "Gallery-quality prints with rich colour and a beautiful surface.",
+                         LINKS["art_prints"], "", "Close-up of an art print on textured paper"),
         ]),
-        div("ph-cards", [
-            collection_card(1, "Business cards &amp; stationery",
-                            "First impressions, weighted properly. Cards, letterheads and notecards on stocks worth keeping.",
-                            LINKS["business_cards"], "", "Stack of premium business cards with foil detail"),
-            collection_card(2, "Invitations &amp; correspondence",
-                            "For the dates that matter. Suites, save-the-dates and thank-yous with a sense of occasion.",
-                            LINKS["invitations"], "ph-media--blush", "Wedding invitation suite with envelope and wax seal"),
-            collection_card(3, "Packaging &amp; collateral",
-                            "Boxes, sleeves, tags and stickers that make the unboxing part of the brand.",
-                            LINKS["packaging"], "ph-media--olive", "Branded packaging and tissue in warm neutrals"),
-            collection_card(4, "Art prints &amp; specialty finishes",
-                            "Gallery-quality prints and finishing touches you notice with your fingertips.",
-                            LINKS["art_prints"], "", "Close-up of an embossed art print on cotton paper"),
-            collection_card(5, "Bespoke design studio",
-                            "No artwork yet? Our designers will take you from idea to print-ready.",
-                            LINKS["studio"], "ph-media--oxblood", "Designer reviewing proofs at a studio table"),
-        ]),
-    ])], "Collection"),
+    ])], "Shop by product"),
 
-    # 4. Statement --------------------------------------------------------
+    # 4. Papers -----------------------------------------------------------
+    section("ph-section--sand", [container([
+        section_head("02 / Choose your paper", "It starts with <em>the paper.</em>",
+                     "The right stock changes everything: how a card feels, how ink sits, "
+                     "how it's remembered. Here's what we print on.",
+                     [text_link(f"Compare our papers {ARROW}", LINKS["paper"])]),
+        div("ph-papers", [
+            paper("Smooth", "Crisp &middot; Bright",
+                  "A refined everyday premium. Sharp detail and true colour on an elegant uncoated finish.",
+                  "ph-media--paper"),
+            paper("Cotton", "Soft &middot; Tactile",
+                  "Made from cotton fibres with a gentle tooth that takes letterpress and embossing beautifully.",
+                  ""),
+            paper("Duplex", "Thick &middot; Substantial",
+                  "Two sheets bonded together for serious weight and a contrasting colour edge.",
+                  "ph-media--duplex"),
+            paper("Recycled", "Natural &middot; Considered",
+                  "Characterful recycled stocks for brands who care how things are made.",
+                  "ph-media--olive"),
+        ]),
+    ])], "Papers"),
+
+    # 5. Print methods & finishes -----------------------------------------
+    section("", [container([
+        section_head("03 / Print methods &amp; finishes", "Printing methods, <em>done properly.</em>",
+                     "From fast, full-colour digital to traditional letterpress, we match the "
+                     "method to the piece."),
+        div("ph-methods", [
+            method("01", "Digital", "Sharp, vibrant and quick. Ideal for full-colour designs and shorter runs."),
+            method("02", "Offset", "Precise, consistent colour for larger runs and brand-critical work."),
+            method("03", "Letterpress", "Ink pressed deep into soft cotton paper for an impression you can feel."),
+            method("04", "Foil <em>stamping</em>", "Metallic and pigment foils that catch the light: gold, copper, silver and more."),
+            method("05", "Embossing", "Raised or recessed detail, with or without ink, for quiet, tactile impact."),
+            method("06", "Painted <em>edges</em>", "A flash of colour along the edge of thick stocks. A small detail with a big effect."),
+        ]),
+        div("ph-methods__foot", [
+            text_link(f"Not sure which? Talk to a print specialist {ARROW}", LINKS["contact"]),
+        ]),
+    ])], "Print methods"),
+
+    # 6. Statement --------------------------------------------------------
     section("ph-section--oxblood", [container([
         div("ph-split", [
-            media("ph-media--square", "Macro shot of paper fibres and a blind emboss"),
+            media("ph-media--square", "Macro shot of a blind emboss on cotton paper"),
             div("ph-stack", [
-                text("Our approach", "ph-eyebrow ph-eyebrow--light"),
+                text("Why Printing Haus", "ph-eyebrow ph-eyebrow--light"),
                 heading("Made to be <em>held onto.</em>", "h2", "ph-statement"),
-                text("Print is the part of your brand people can pick up. So we sweat the "
-                     "small things: the weight of the stock, the bite of the press, the edge "
-                     "of the card. Elevated, never precious, and always within reach.",
-                     "ph-lead"),
-                button("Explore our finishes", LINKS["finishes"], "ph-btn--light"),
+                text("Print is the part of your brand people can pick up. So we obsess over "
+                     "the details: the weight of the stock, the bite of the press, the colour "
+                     "on the edge. Elevated print, made accessible.", "ph-lead"),
+                button("Get a sample pack", LINKS["samples"], "ph-btn--light"),
             ]),
         ]),
     ])], "Statement"),
 
-    # 5. Details / material education -------------------------------------
-    section("ph-section--sand", [container([
-        div("ph-head", [
-            div("", [
-                text("02 / Details you can feel", "ph-eyebrow"),
-                heading("The difference is in <em>the details.</em>", "h2", "ph-h2"),
-            ]),
-            div("ph-head__aside", [
-                text("Not sure what to choose? Here's what we consider on every job, and "
-                     "we're always happy to talk it through.", "ph-lead"),
-            ]),
-        ]),
-        div("ph-details", [
-            detail("i.", "Paper", "Cotton, textured and recycled stocks, chosen for colour, weight and how they feel in hand."),
-            detail("ii.", "Finish", "Foil, blind embossing, letterpress and painted edges, used with restraint for maximum effect."),
-            detail("iii.", "Colour", "Warm neutrals and curated accents, matched carefully and checked before anything goes to press."),
-            detail("iv.", "Craft", "A real person reviews every file, so what arrives is exactly what you imagined."),
-        ]),
-    ])], "Details"),
-
-    # 6. Process ----------------------------------------------------------
+    # 7. How to order -----------------------------------------------------
     section("", [container([
+        section_head("04 / How to order", "From file to <em>in hand.</em>", None,
+                     [button("Start your order", LINKS["shop"], "ph-btn--dark")]),
+        div("ph-steps", [
+            step("01", "Pick your product", "Choose your format, paper and finish. Not sure? Order a sample pack first."),
+            step("02", "Upload your design", "Send print-ready artwork, or let our team set up your file for you."),
+            step("03", "Approve your proof", "We check every file and send a proof. Nothing prints until you're happy."),
+            step("04", "Printed &amp; shipped", "Carefully printed, finished and packed to arrive in perfect condition."),
+        ]),
+    ])], "How to order"),
+
+    # 8. The Haus promise -------------------------------------------------
+    section("ph-section--ink", [container([
         div("ph-head", [
             div("", [
-                text("03 / How it works", "ph-eyebrow"),
-                heading("From idea to <em>in hand.</em>", "h2", "ph-h2"),
-            ]),
-            div("ph-head__aside", [
-                button("Start your order", LINKS["shop"], "ph-btn--dark"),
+                text("The Haus promise", "ph-eyebrow ph-eyebrow--light"),
+                heading("Print you can <em>count on.</em>", "h2", "ph-h2"),
             ]),
         ]),
-        div("ph-steps", [
-            step("01", "Choose your piece", "Browse the collection and pick your format, paper and finish."),
-            step("02", "Upload or design with us", "Send print-ready artwork, or brief our studio and we'll design it for you."),
-            step("03", "Approve your proof", "We check your file and share a proof. Nothing prints until you're happy."),
-            step("04", "Printed &amp; delivered", "Carefully produced, packed with care and sent to your door."),
+        div("ph-details ph-details--light", [
+            detail("i.", "Checked by people", "A real person reviews every file before it goes to press."),
+            detail("ii.", "Proof before print", "Nothing is printed until you've approved your proof."),
+            detail("iii.", "Made right", "If something isn't right with your order, we'll make it right."),
+            detail("iv.", "Packed with care", "Protected, flat-packed and ready to hand out the day it arrives."),
         ]),
-    ])], "Process"),
+    ])], "Promise"),
 
-    # 7. Studio -----------------------------------------------------------
+    # 9. For business -----------------------------------------------------
     section("ph-section--sand", [container([
         div("ph-split ph-split--reverse", [
-            media("ph-media--blush", "Stationery suite laid out on a linen tablecloth with soft shadows"),
+            media("ph-media--blush", "Branded packaging and stationery for a boutique business"),
             div("ph-stack", [
-                text("04 / The Haus studio", "ph-eyebrow"),
-                heading("Need a designer? <em>We'd love to help.</em>", "h2", "ph-h2"),
-                text("From a single business card to a full identity and packaging system, our "
-                     "studio turns good ideas into things worth printing. Clear advice, no "
-                     "jargon, and a finished piece you'll be proud to hand over.", "ph-lead"),
+                text("05 / For business", "ph-eyebrow"),
+                heading("Your print partner, <em>run after run.</em>", "h2", "ph-h2"),
+                text("Larger runs, custom packaging, brand-matched colour and easy reorders. "
+                     "Tell us about your project and we'll put together a custom quote.",
+                     "ph-lead"),
                 div("ph-tags", [
-                    text("Small businesses", "ph-tag", tag="span"),
-                    text("Weddings &amp; events", "ph-tag", tag="span"),
-                    text("Studios &amp; agencies", "ph-tag", tag="span"),
-                    text("Hospitality", "ph-tag", tag="span"),
-                    text("Makers &amp; retail", "ph-tag", tag="span"),
+                    text("Bulk &amp; repeat orders", "ph-tag", tag="span"),
+                    text("Brand colour matching", "ph-tag", tag="span"),
+                    text("Custom packaging", "ph-tag", tag="span"),
+                    text("File setup &amp; design help", "ph-tag", tag="span"),
                 ]),
-                button("Book a design consult", LINKS["consult"], "ph-btn--dark"),
+                div("ph-actions", [
+                    button("Request a quote", LINKS["quote"], "ph-btn--dark"),
+                ]),
             ]),
         ]),
-    ])], "Studio"),
+    ])], "For business"),
 
-    # 8. Closing CTA ------------------------------------------------------
+    # 10. Closing CTA -----------------------------------------------------
     section("ph-section--ink ph-cta", [container([
         div("ph-cta__inner", [
-            text("Let's make something", "ph-eyebrow ph-eyebrow--light"),
+            text("Feel the difference", "ph-eyebrow ph-eyebrow--light"),
             heading("Good ideas look <em>better printed.</em>", "h2", "ph-cta__title"),
-            text("Tell us what you're working on and we'll help you choose the paper, "
-                 "finish and format to bring it to life.", "ph-lead ph-cta__lead"),
+            text("Not sure which paper is right? Order a sample pack and feel our stocks "
+                 "and finishes in hand before you print.", "ph-lead ph-cta__lead"),
             div("ph-actions ph-actions--center", [
-                button("Start your order", LINKS["shop"], "ph-btn--light"),
-                button("Talk to the studio", LINKS["quote"], "ph-btn--ghost-light"),
+                button("Shop business cards", LINKS["business_cards"], "ph-btn--light"),
+                button("Get a sample pack", LINKS["samples"], "ph-btn--ghost-light"),
             ]),
         ]),
     ])], "Closing CTA"),
@@ -762,7 +857,7 @@ def build_json():
         "templateSettings": [],
         "globalClasses": [
             {"id": class_ids[name], "name": name, "settings": {"_cssCustom": css.strip()}}
-            for name, css in CLASSES.items()
+            for name, css in CLASSES.items() if name in used
         ],
         "version": "1.10",
     }
