@@ -59,7 +59,8 @@ appears when those times are set.
 - **Loads the brand stylesheet on every page** (`assets/printinghaus.css`, a copy of `bricks/printinghaus.css`) plus the
   interim fonts. Once it's active, clear the Bricks **Custom CSS** box so the styles aren't loaded twice.
 - **Checkout finish for the Bricks Checkout (v2) template.** The layout stays in Bricks. The plugin restyles:
-  - fields as square, boxed 56px inputs that leave room for Bricks' floating labels (including the Country / State dropdowns)
+  - fields as square, boxed 56px inputs that leave room for Bricks' floating labels (including the Country / State dropdowns),
+    with first and last name side by side and City | State | ZIP in one row
   - payment options as one bordered list
   - **Pay now** as a full-width, square button that turns transparent with a black border on hover
   - the order summary as a grey panel with 64px thumbnails
@@ -73,7 +74,8 @@ appears when those times are set.
 ### Adding the shortcodes in Bricks
 1. Open the checkout template in Bricks and expand **Order summary** in the Structure panel.
 2. Delete the totals row that shows "Free" (the shipping row).
-3. Add a **Shortcode** element there containing `[ph_checkout_shipping]`.
+3. Add a **Shortcode** element containing `[ph_checkout_shipping]` **between the Subtotal row and the Tax row**,
+   so the summary reads Subtotal → Shipping → Tax → Total.
 4. Add a second **Shortcode** element below it containing `[ph_checkout_coupon]`.
 5. Save, and test with a real code and an address that has several shipping options.
 

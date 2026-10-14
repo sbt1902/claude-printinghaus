@@ -68,6 +68,35 @@ body.woocommerce-checkout form.woocommerce-checkout .select2-container--open .se
   box-shadow: 0 0 0 1px var(--co-ink);
 }
 
+/* Shopify-style pairing: first + last name side by side; City | State | ZIP in one row */
+body.woocommerce-checkout .brxe-woocommerce-checkout-billing-address,
+body.woocommerce-checkout .brxe-woocommerce-checkout-shipping-address {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+body.woocommerce-checkout .brxe-woocommerce-checkout-billing-address > .form-row,
+body.woocommerce-checkout .brxe-woocommerce-checkout-shipping-address > .form-row {
+  grid-column: 1 / -1;
+  width: auto !important;
+  max-width: none;
+  margin: 0 !important;
+  float: none;
+}
+body.woocommerce-checkout .brxe-woocommerce-checkout-billing-address > .form-row-first,
+body.woocommerce-checkout .brxe-woocommerce-checkout-shipping-address > .form-row-first { grid-column: 1 / span 3; }
+body.woocommerce-checkout .brxe-woocommerce-checkout-billing-address > .form-row-last,
+body.woocommerce-checkout .brxe-woocommerce-checkout-shipping-address > .form-row-last { grid-column: 4 / span 3; }
+body.woocommerce-checkout #billing_city_field, body.woocommerce-checkout #shipping_city_field { grid-column: 1 / span 2; }
+body.woocommerce-checkout #billing_state_field, body.woocommerce-checkout #shipping_state_field { grid-column: 3 / span 2; }
+body.woocommerce-checkout #billing_postcode_field, body.woocommerce-checkout #shipping_postcode_field { grid-column: 5 / span 2; }
+@media (max-width: 600px) {
+  body.woocommerce-checkout #billing_city_field, body.woocommerce-checkout #shipping_city_field { grid-column: 1 / -1; }
+  body.woocommerce-checkout #billing_state_field, body.woocommerce-checkout #shipping_state_field { grid-column: 1 / span 3; }
+  body.woocommerce-checkout #billing_postcode_field, body.woocommerce-checkout #shipping_postcode_field { grid-column: 4 / span 3; }
+}
+
 /* Country / State dropdowns (select2): value sits under the floated label */
 body.woocommerce-checkout form.woocommerce-checkout .select2-container .select2-selection--single { padding: 0; }
 body.woocommerce-checkout form.woocommerce-checkout .select2-container .select2-selection__rendered {
