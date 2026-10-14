@@ -23,8 +23,6 @@
 </header>
 
 <div class="page"><div class="woocommerce">
-  <div class="woocommerce-form-coupon-toggle"><div class="woocommerce-info">Have a coupon? <a href="#">Click here to enter your code</a></div></div>
-
   <form class="checkout woocommerce-checkout" onsubmit="return false">
     <div class="col2-set" id="customer_details">
       <div class="col-1"><div class="woocommerce-billing-fields">
@@ -81,14 +79,32 @@
         </tbody>
         <tfoot>
           <tr class="cart-subtotal"><th>Subtotal</th><td><span class="amount">[$00.00]</span></td></tr>
-          <tr class="woocommerce-shipping-totals shipping"><th>Shipping</th><td><ul id="shipping_method">
-            <li><input type="radio" name="sm" checked> <label>[Standard]: [$0.00]<br><small class="phs-eta">[Arrives in 5–8 business days]</small></label></li>
-            <li><input type="radio" name="sm"> <label>[Express]: [$0.00]<br><small class="phs-eta">[Arrives in 2–3 business days]</small></label></li></ul></td></tr>
+          <tr class="woocommerce-shipping-totals shipping ph-co-shipping"><th><label for="ph-shipping-method-0">Shipping</label></th><td>
+            <select id="ph-shipping-method-0" class="shipping_method ph-co-select"><option>[Standard]: [$0.00]</option><option>[Express]: [$0.00]</option></select>
+            <div class="ph-co-ship-detail"><small class="phs-eta">[Arrives in 5–8 business days]</small></div></td></tr>
+          <tr class="ph-co-coupon"><td colspan="2">
+            <button type="button" class="ph-co-coupon__toggle" aria-expanded="false" aria-controls="ph-co-coupon-panel">Add discount code</button>
+            <div class="ph-co-coupon__panel" id="ph-co-coupon-panel"><div class="ph-co-coupon__inner" inert><div class="ph-co-coupon__row">
+              <label class="screen-reader-text" for="ph-co-coupon-code">Discount code</label>
+              <input type="text" id="ph-co-coupon-code" class="input-text" placeholder="Discount code" autocomplete="off">
+              <button type="button" class="ph-co-coupon__apply">Apply</button></div></div></div>
+            <div class="ph-co-coupon__msg" aria-live="polite"></div></td></tr>
           <tr class="order-total"><th>Total</th><td><strong><span class="amount">[$00.00]</span></strong></td></tr>
         </tfoot>
       </table>
     </div>
   </form>
 </div></div>
+<script>
+  // Preview only: the open/close behaviour of assets/checkout.js (the live version also applies the code).
+  document.querySelector('.ph-co-coupon__toggle').addEventListener('click', function () {
+    var open = this.getAttribute('aria-expanded') !== 'true';
+    this.setAttribute('aria-expanded', open);
+    document.querySelector('.ph-co-coupon__panel').classList.toggle('is-open', open);
+    document.querySelector('.ph-co-coupon__inner').inert = !open;
+    if (open && !location.hash) setTimeout(function () { document.getElementById('ph-co-coupon-code').focus(); }, 200);
+  });
+  if (location.hash === '#open') document.querySelector('.ph-co-coupon__toggle').click();
+</script>
 <div class="preview-flag">Draft preview &middot; [bracketed] text is sample data</div>
 </body></html>

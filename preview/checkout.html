@@ -15,6 +15,7 @@ body.woocommerce-checkout {
   --co-panel: #F3F0EB;
   --co-paper: #F9F7F3;
   --co-radius: 5px;
+  --co-field-radius: 0;
   --co-sans: "Neue Haas Grotesk Text", "neue-haas-grotesk-text", "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --co-display: "Tiempos Headline", "Newsreader", Georgia, serif;
 }
@@ -135,7 +136,7 @@ body.woocommerce-checkout form.checkout .select2-container .select2-selection--s
   min-height: 48px;
   padding: 0 14px;
   border: 1px solid var(--co-line);
-  border-radius: var(--co-radius);
+  border-radius: var(--co-field-radius);
   background: var(--co-field);
   box-shadow: none;
   font-family: var(--co-sans);
@@ -318,17 +319,78 @@ body.woocommerce-checkout #order_review tfoot tr.order-total td strong { font-we
 body.woocommerce-checkout #order_review tfoot tr.order-total td .amount { font-size: 22px; }
 body.woocommerce-checkout #order_review tfoot tr.order-total small.includes_tax { display: block; font-size: 12px; font-weight: 400; color: var(--co-muted); }
 
-/* Shipping options inside the summary */
-body.woocommerce-checkout #order_review tr.woocommerce-shipping-totals th { padding-top: 10px; }
-body.woocommerce-checkout #order_review tr.woocommerce-shipping-totals td { padding-top: 10px; text-align: right; }
-body.woocommerce-checkout #order_review ul#shipping_method { margin: 0; padding: 0; list-style: none; }
-body.woocommerce-checkout #order_review ul#shipping_method li {
-  display: flex; justify-content: flex-end; align-items: flex-start; gap: 8px;
-  margin: 0 0 8px; padding: 0; text-indent: 0; text-align: right;
+/* Shipping: label above a full-width dropdown, delivery estimate underneath */
+body.woocommerce-checkout #order_review table.shop_table tr.ph-co-shipping { flex-direction: column; align-items: stretch; gap: 8px; padding-top: 10px; }
+body.woocommerce-checkout #order_review table.shop_table tfoot tr.ph-co-shipping th,
+body.woocommerce-checkout #order_review table.shop_table tfoot tr.ph-co-shipping td { padding: 0; text-align: left; white-space: normal; }
+body.woocommerce-checkout #order_review tr.ph-co-shipping th label { font-weight: 400; color: var(--co-ink); cursor: pointer; }
+body.woocommerce-checkout #order_review select.ph-co-select {
+  width: 100%; height: 48px; padding: 0 40px 0 14px;
+  border: 1px solid var(--co-line); border-radius: var(--co-field-radius);
+  background: var(--co-field) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%230A0A0A' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;
+  -webkit-appearance: none; appearance: none;
+  font-family: var(--co-sans); font-size: 15px; color: var(--co-ink); cursor: pointer;
 }
-body.woocommerce-checkout #order_review ul#shipping_method li input { margin-top: 2px; }
-body.woocommerce-checkout #order_review ul#shipping_method label { display: inline; font-size: 14px; }
-body.woocommerce-checkout #order_review .phs-eta { display: block; font-size: 12px; color: var(--co-muted); }
+body.woocommerce-checkout #order_review select.ph-co-select:focus { outline: none; border-color: var(--co-ink); box-shadow: 0 0 0 1px var(--co-ink); }
+body.woocommerce-checkout #order_review .ph-co-ship-detail { margin-top: 6px; font-size: 13px; color: var(--co-muted); }
+body.woocommerce-checkout #order_review .ph-co-ship-detail .phs-eta { display: inline; font-size: 13px; }
+body.woocommerce-checkout #order_review .ph-co-ship-note { margin: 0; font-size: 13px; color: var(--co-muted); }
+
+/* Discount code: a text button that slides open the code field */
+body.woocommerce-checkout #order_review table.shop_table tr.ph-co-coupon { display: block; padding: 14px 0 4px; }
+body.woocommerce-checkout #order_review table.shop_table tfoot tr.ph-co-coupon td { display: block; padding: 0; text-align: left; white-space: normal; }
+body.woocommerce-checkout .ph-co-coupon__toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 32px; margin: 0; padding: 0;
+  border: 0; background: none; color: var(--co-ink);
+  font-family: var(--co-sans); font-size: 14px; font-weight: 500;
+  text-decoration: underline; text-underline-offset: 4px; text-transform: none; letter-spacing: normal;
+  cursor: pointer;
+}
+body.woocommerce-checkout .ph-co-coupon__toggle::after {
+  content: ""; width: 7px; height: 7px; margin-top: -3px;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg); transition: transform .25s ease, margin .25s ease;
+}
+body.woocommerce-checkout .ph-co-coupon__toggle[aria-expanded="true"]::after { transform: rotate(-135deg); margin-top: 3px; }
+body.woocommerce-checkout .ph-co-coupon__toggle:focus-visible { outline: 2px solid var(--co-ink); outline-offset: 3px; }
+body.woocommerce-checkout .ph-co-coupon__panel {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows .3s ease;
+}
+body.woocommerce-checkout .ph-co-coupon__panel.is-open { grid-template-rows: 1fr; }
+body.woocommerce-checkout .ph-co-coupon__inner { overflow: hidden; min-height: 0; }
+body.woocommerce-checkout .ph-co-coupon__row { display: flex; gap: 8px; padding-top: 10px; }
+body.woocommerce-checkout .ph-co-coupon__row input.input-text {
+  flex: 1 1 auto; min-width: 0; height: 48px; padding: 0 14px;
+  border: 1px solid var(--co-line); border-radius: var(--co-field-radius); background: var(--co-field);
+  font-family: var(--co-sans); font-size: 15px; color: var(--co-ink); box-shadow: none;
+}
+body.woocommerce-checkout .ph-co-coupon__row input.input-text:focus { outline: none; border-color: var(--co-ink); box-shadow: 0 0 0 1px var(--co-ink); }
+body.woocommerce-checkout .ph-co-coupon__apply {
+  flex: 0 0 auto; height: 48px; padding: 0 20px;
+  border: 1px solid var(--co-ink); border-radius: var(--co-field-radius);
+  background: var(--co-ink); color: var(--co-paper);
+  font-family: var(--co-sans); font-size: 15px; font-weight: 500; text-transform: none; letter-spacing: normal; cursor: pointer;
+}
+body.woocommerce-checkout .ph-co-coupon__apply:hover { background: #2E2B28; }
+body.woocommerce-checkout .ph-co-coupon__apply[disabled] { opacity: .5; cursor: progress; }
+body.woocommerce-checkout .ph-co-coupon__msg:empty { display: none; }
+body.woocommerce-checkout .ph-co-coupon__msg { margin-top: 10px; font-size: 13px; }
+body.woocommerce-checkout .ph-co-coupon__msg ul,
+body.woocommerce-checkout .ph-co-coupon__msg .woocommerce-error,
+body.woocommerce-checkout .ph-co-coupon__msg .woocommerce-message,
+body.woocommerce-checkout .ph-co-coupon__msg .woocommerce-info { margin: 0; padding: 0; border: 0; background: none; font-size: 13px; list-style: none; }
+body.woocommerce-checkout .ph-co-coupon__msg .woocommerce-error,
+body.woocommerce-checkout .ph-co-coupon__error { margin: 0; color: #A3262A; }
+body.woocommerce-checkout .ph-co-coupon__msg .woocommerce-message { color: #1F6B45; }
+@media (prefers-reduced-motion: reduce) {
+  body.woocommerce-checkout .ph-co-coupon__panel, body.woocommerce-checkout .ph-co-coupon__toggle::after { transition: none; }
+}
+
+/* Applied discounts */
+body.woocommerce-checkout #order_review tr.cart-discount td { color: #1F6B45; }
+body.woocommerce-checkout #order_review .woocommerce-remove-coupon { margin-left: 6px; font-size: 12px; color: var(--co-muted); }
 
 /* ------------------------------------------------------------------ notices */
 body.woocommerce-checkout .woocommerce-form-coupon-toggle,
@@ -360,7 +422,7 @@ body.woocommerce-checkout form.checkout_coupon > p:first-child { flex: 1 1 100%;
 body.woocommerce-checkout form.checkout_coupon .form-row { flex: 1 1 200px; float: none; width: auto; margin: 0; padding: 0; }
 body.woocommerce-checkout form.checkout_coupon .form-row-last { flex: 0 0 auto; }
 body.woocommerce-checkout form.checkout_coupon input.input-text {
-  width: 100%; height: 48px; padding: 0 14px; border: 1px solid var(--co-line); border-radius: var(--co-radius); font-size: 15px;
+  width: 100%; height: 48px; padding: 0 14px; border: 1px solid var(--co-line); border-radius: var(--co-field-radius); font-size: 15px;
 }
 body.woocommerce-checkout form.checkout_coupon button.button {
   height: 48px; padding: 0 20px; border: 1px solid var(--co-ink); border-radius: var(--co-radius);
@@ -370,6 +432,12 @@ body.woocommerce-checkout form.checkout_coupon button.button:hover { background:
 
 @media (prefers-reduced-motion: reduce) {
   body.woocommerce-checkout form.checkout * { transition: none !important; }
+}
+
+/* Visually hidden labels (in case the theme doesn't define this) */
+body.woocommerce-checkout .screen-reader-text {
+  position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 </style>
 <style>
@@ -391,8 +459,6 @@ body.woocommerce-checkout form.checkout_coupon button.button:hover { background:
 </header>
 
 <div class="page"><div class="woocommerce">
-  <div class="woocommerce-form-coupon-toggle"><div class="woocommerce-info">Have a coupon? <a href="#">Click here to enter your code</a></div></div>
-
   <form class="checkout woocommerce-checkout" onsubmit="return false">
     <div class="col2-set" id="customer_details">
       <div class="col-1"><div class="woocommerce-billing-fields">
@@ -449,14 +515,32 @@ body.woocommerce-checkout form.checkout_coupon button.button:hover { background:
         </tbody>
         <tfoot>
           <tr class="cart-subtotal"><th>Subtotal</th><td><span class="amount">[$00.00]</span></td></tr>
-          <tr class="woocommerce-shipping-totals shipping"><th>Shipping</th><td><ul id="shipping_method">
-            <li><input type="radio" name="sm" checked> <label>[Standard]: [$0.00]<br><small class="phs-eta">[Arrives in 5–8 business days]</small></label></li>
-            <li><input type="radio" name="sm"> <label>[Express]: [$0.00]<br><small class="phs-eta">[Arrives in 2–3 business days]</small></label></li></ul></td></tr>
+          <tr class="woocommerce-shipping-totals shipping ph-co-shipping"><th><label for="ph-shipping-method-0">Shipping</label></th><td>
+            <select id="ph-shipping-method-0" class="shipping_method ph-co-select"><option>[Standard]: [$0.00]</option><option>[Express]: [$0.00]</option></select>
+            <div class="ph-co-ship-detail"><small class="phs-eta">[Arrives in 5–8 business days]</small></div></td></tr>
+          <tr class="ph-co-coupon"><td colspan="2">
+            <button type="button" class="ph-co-coupon__toggle" aria-expanded="false" aria-controls="ph-co-coupon-panel">Add discount code</button>
+            <div class="ph-co-coupon__panel" id="ph-co-coupon-panel"><div class="ph-co-coupon__inner" inert><div class="ph-co-coupon__row">
+              <label class="screen-reader-text" for="ph-co-coupon-code">Discount code</label>
+              <input type="text" id="ph-co-coupon-code" class="input-text" placeholder="Discount code" autocomplete="off">
+              <button type="button" class="ph-co-coupon__apply">Apply</button></div></div></div>
+            <div class="ph-co-coupon__msg" aria-live="polite"></div></td></tr>
           <tr class="order-total"><th>Total</th><td><strong><span class="amount">[$00.00]</span></strong></td></tr>
         </tfoot>
       </table>
     </div>
   </form>
 </div></div>
+<script>
+  // Preview only: the open/close behaviour of assets/checkout.js (the live version also applies the code).
+  document.querySelector('.ph-co-coupon__toggle').addEventListener('click', function () {
+    var open = this.getAttribute('aria-expanded') !== 'true';
+    this.setAttribute('aria-expanded', open);
+    document.querySelector('.ph-co-coupon__panel').classList.toggle('is-open', open);
+    document.querySelector('.ph-co-coupon__inner').inert = !open;
+    if (open && !location.hash) setTimeout(function () { document.getElementById('ph-co-coupon-code').focus(); }, 200);
+  });
+  if (location.hash === '#open') document.querySelector('.ph-co-coupon__toggle').click();
+</script>
 <div class="preview-flag">Draft preview &middot; [bracketed] text is sample data</div>
 </body></html>

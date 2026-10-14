@@ -62,7 +62,10 @@ appears when those times are set.
   - Two columns: contact, billing and delivery fields, then **Payment** on the left. A sticky grey **Order summary**
     on the right shows product thumbnails, print specs from Printing Haus Selector, shipping options with
     delivery estimates, and a large total.
-  - Clean 48px fields with a subtle radius and a black focus ring, payment methods in one bordered list, and a
+  - **Shipping** is a dropdown in the order summary, with the chosen option's delivery estimate underneath.
+  - **Add discount code** sits under shipping and slides open a code field with **Apply**. Codes apply without leaving
+    the page, and the "Have a coupon?" bar above the form is removed.
+  - Clean 48px square-cornered fields (0px radius) with a black focus ring, payment methods in one bordered list, and a
     full-width **Pay now** button.
   - The header menu is hidden on checkout, so only the logo, account and cart show. Delete the first rule in `assets/checkout.css` to keep the menu.
   - On phones, the order summary sits above the form.

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Printing Haus Site
  * Description: Loads the Printing Haus brand stylesheet for the Bricks templates and gives the WooCommerce checkout a calm, Shopify-style layout.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Printing Haus
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -13,7 +13,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PH_SITE_VERSION', '1.0.0' );
+define( 'PH_SITE_VERSION', '1.1.0' );
 
 /**
  * Styles. Priority 20 so they load after Bricks and WooCommerce and win ties.
@@ -27,6 +27,10 @@ add_action( 'wp_enqueue_scripts', function () {
 
 	if ( ph_site_is_checkout() ) {
 		wp_enqueue_style( 'ph-checkout', $url . 'checkout.css', array( 'ph-site' ), PH_SITE_VERSION );
+		wp_enqueue_script( 'ph-checkout', $url . 'checkout.js', array( 'jquery', 'wc-checkout' ), PH_SITE_VERSION, true );
+		wp_localize_script( 'ph-checkout', 'phCheckout', array(
+			'emptyCode' => __( 'Please enter a discount code.', 'printing-haus-site' ),
+		) );
 	}
 }, 20 );
 
@@ -58,6 +62,53 @@ add_action( 'init', function () {
 		echo '<h2 class="ph-co-heading ph-co-heading--summary">' . esc_html__( 'Order summary', 'printing-haus-site' ) . '</h2>';
 	}, 5 );
 }, 20 );
+
+/**
+ * Shipping options as a dropdown in the checkout summary (the cart page keeps WooCommerce's default).
+ */
+add_filter( 'wc_get_template', function ( $template, $template_name ) {
+	if ( 'cart/cart-shipping.php' === $template_name && function_exists( 'is_checkout' ) && is_checkout() ) {
+		return plugin_dir_path( __FILE__ ) . 'templates/cart-shipping.php';
+	}
+	return $template;
+}, 10, 2 );
+
+/**
+ * Discount code: a button under shipping that slides open a code field (handled by assets/checkout.js).
+ * Replaces the "Have a coupon?" bar above the form.
+ */
+add_action( 'init', function () {
+	if ( ! class_exists( 'WooCommerce' ) ) {
+		return;
+	}
+	remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+	add_action( 'woocommerce_review_order_before_order_total', 'ph_site_coupon_row' );
+}, 20 );
+
+function ph_site_coupon_row() {
+	if ( ! function_exists( 'wc_coupons_enabled' ) || ! wc_coupons_enabled() ) {
+		return;
+	}
+	?>
+	<tr class="ph-co-coupon">
+		<td colspan="2">
+			<button type="button" class="ph-co-coupon__toggle" aria-expanded="false" aria-controls="ph-co-coupon-panel">
+				<?php esc_html_e( 'Add discount code', 'printing-haus-site' ); ?>
+			</button>
+			<div class="ph-co-coupon__panel" id="ph-co-coupon-panel">
+				<div class="ph-co-coupon__inner" inert>
+					<div class="ph-co-coupon__row">
+						<label class="screen-reader-text" for="ph-co-coupon-code"><?php esc_html_e( 'Discount code', 'printing-haus-site' ); ?></label>
+						<input type="text" id="ph-co-coupon-code" class="input-text" placeholder="<?php esc_attr_e( 'Discount code', 'printing-haus-site' ); ?>" autocomplete="off" autocapitalize="characters">
+						<button type="button" class="ph-co-coupon__apply"><?php esc_html_e( 'Apply', 'printing-haus-site' ); ?></button>
+					</div>
+				</div>
+			</div>
+			<div class="ph-co-coupon__msg" aria-live="polite"></div>
+		</td>
+	</tr>
+	<?php
+}
 
 function ph_site_payment_heading() {
 	echo '<h2 class="ph-co-heading ph-co-heading--payment">' . esc_html__( 'Payment', 'printing-haus-site' ) . '</h2>';
