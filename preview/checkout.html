@@ -74,8 +74,10 @@ body.woocommerce-checkout form.woocommerce-checkout .select2-container--open .se
 }
 
 /* Shopify-style pairing: first + last name side by side; City | State | ZIP in one row */
-body.woocommerce-checkout .brxe-woocommerce-checkout-billing-address,
-body.woocommerce-checkout .brxe-woocommerce-checkout-shipping-address {
+/* Only while visible: WooCommerce hides the shipping block with an inline display:none until
+   "Ship to a different address?" is ticked, and that must keep working. */
+body.woocommerce-checkout .brxe-woocommerce-checkout-billing-address:not([style*="none"]),
+body.woocommerce-checkout .brxe-woocommerce-checkout-shipping-address:not([style*="none"]) {
   display: grid !important;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 12px;

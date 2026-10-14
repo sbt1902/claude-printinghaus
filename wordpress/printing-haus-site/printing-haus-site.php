@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Printing Haus Site
  * Description: Loads the Printing Haus brand stylesheet for the Bricks templates and gives the Bricks (Checkout v2) WooCommerce checkout a calm, Shopify-style finish, with a shipping dropdown, a slide-open discount code and a USPS address check.
- * Version:     1.3.0
+ * Version:     1.3.1
  * Author:      Printing Haus
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -13,7 +13,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PH_SITE_VERSION', '1.3.0' );
+define( 'PH_SITE_VERSION', '1.3.1' );
 
 require_once __DIR__ . '/includes/class-ph-address-check.php';
 add_action( 'plugins_loaded', array( 'PH_Address_Check', 'init' ) );
