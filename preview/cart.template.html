@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Printing Haus Cart</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../wordpress/printing-haus-site/assets/cart.css">
+<style>
+  /* Preview only: stands in for Bricks' base element styles and the Tray template's own layout rules */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { background: #F3F0E8; } body { margin: 0; font-family: "Inter Tight", Helvetica, sans-serif; font-size: 14px; line-height: 1.2; }
+  .brxe-container { width: 1100px; max-width: 100%; margin: 0 auto; display: flex; flex-direction: column; padding: 48px 20px; }
+  .brxe-block { display: flex; flex-direction: column; width: 100%; }
+  .brxe-divider .line { border-top: 1px solid #101010; width: 100%; }
+  #vymplw { padding-left: 10px; margin-bottom: 32px; }
+  #grid { display: grid; gap: 20px; grid-template-columns: 1.5fr 1fr; align-items: flex-start; padding: 2rem 0; }
+  #items { padding: 0 20px; gap: 1rem; }
+  #summary { position: sticky; top: 16px; }
+  .head { display: flex; justify-content: space-between; } .head > div { font-weight: 600; }
+  .cart_item { position: relative; padding: 1rem 0; }
+  .row { display: flex; width: 100%; column-gap: 1rem; justify-content: space-between; }
+  .thumb { width: 80px; height: 80px; position: relative; }
+  .thumb img { display: block; width: 100%; height: 100%; background: linear-gradient(135deg, #e7e1d6, #cfc8bc); }
+  .details { display: flex; flex-direction: column; flex: 1 1 0; }
+  .qtyrow { display: flex; align-items: center; flex-wrap: wrap; column-gap: 1rem; }
+  .price { display: flex; flex-direction: column; align-items: flex-end; }
+  .brx-cart-item-data { display: flex; flex-wrap: wrap; gap: 4px; font-size: 1.1rem; }
+  .cart_totals { padding: 5px 20px 10px; row-gap: 1rem; }
+  .line-row { display: flex; justify-content: space-between; width: 100%; }
+  .bricks-button { display: inline-flex; justify-content: center; padding: 20px; background: #000; color: #fff; text-transform: uppercase; text-decoration: none; border: 2px solid #000; }
+  .brxe-woocommerce-cart-coupon .coupon button { width: 30%; }
+  .wcpay-express-checkout-wrapper span { display: flex; align-items: center; justify-content: center; height: 40px; border: 1px solid #000; border-radius: 4px; background: #fff; font-weight: 600; margin-top: 8px; }
+  .preview-flag { position: fixed; right: 12px; bottom: 12px; z-index: 9; padding: 8px 12px; background: #0A0A0A; color: #F9F7F3; font: 12px/1.3 Helvetica, Arial, sans-serif; }
+  @media (max-width: 767px) { #grid { grid-template-columns: 1fr; } #summary { position: static; } }
+</style>
+</head>
+<body class="woocommerce-cart woocommerce-page">
+<main id="brx-content"><section class="brxe-section"><div class="brxe-container">
+  <div id="vymplw" class="brxe-block"><h1 class="brxe-heading">Your Tray</h1></div>
+  <div class="brxe-woocommerce-cart-v2 woocommerce brx-wc-cart-v2--cart"><div class="woocommerce">
+    <div id="grid" class="brxe-block brx-grid">
+      <div id="items" class="brxe-block">
+        <form class="brxe-woocommerce-cart-form woocommerce-cart-form" onsubmit="return false"><div class="woocommerce-cart-form__contents">
+          <div class="brxe-div"><div class="head"><div>Product</div><div>Total</div></div><div class="brxe-divider horizontal"><div class="line"></div></div></div>
+
+          <div class="brxe-div woocommerce-cart-form__cart-item cart_item">
+            <div class="brxe-div row">
+              <div class="brxe-div thumb"><img class="brxe-image" alt=""></div>
+              <div class="brxe-div details">
+                <div class="brxe-block"><div class="brxe-text-basic">Standard Business Cards</div></div>
+                <div class="brxe-woocommerce-cart-item-data brx-cart-item-data">
+                  <div class="brx-cart-item-data__item"><span class="brx-cart-item-data__label">Paper Stock:</span><div class="brx-cart-item-data__value">15pt Cover, Gloss 1 Side (30% PCW)</div></div>
+                  <span class="brx-cart-item-data__separator" aria-hidden="true">/</span>
+                  <div class="brx-cart-item-data__item"><span class="brx-cart-item-data__label">Artwork:</span><div class="brx-cart-item-data__value">Bold-Business-Cards.pdf (Passed)</div></div>
+                </div>
+                <div class="brxe-div qtyrow">
+                  <div class="brxe-woocommerce-cart-quantity product-quantity"><span class="phs-cart-qty">100</span></div>
+                  <a href="?remove_item=sample" aria-label="Remove product" class="bricks-link-wrapper"><i class="ti-trash brxe-icon product-remove">🗑</i></a>
+                </div>
+              </div>
+              <div class="brxe-div price"><div class="brxe-text-basic"><span class="woocommerce-Price-amount amount">$52.50</span></div></div>
+            </div>
+            <div class="brxe-divider horizontal"><div class="line"></div></div>
+          </div>
+        </div></form>
+      </div>
+
+      <div id="summary" class="brxe-block">
+        <div class="brxe-block cart_totals">
+          <div class="brxe-woocommerce-dynamic-fragment"></div>
+          <div class="brxe-div line-row"><div class="brxe-text-basic">Subtotal</div><div class="brxe-text-basic"><span class="woocommerce-Price-amount amount">$52.50</span></div></div>
+          <div class="brxe-div"><div class="brxe-block"><div class="brxe-div line-row"><div class="brxe-text-basic">Tax</div><div class="brxe-text-basic"><span class="woocommerce-Price-amount amount">$5.90</span></div></div></div></div>
+          <div class="brxe-div line-row"><div class="brxe-text-basic">Standard Press</div><div class="brxe-text-basic"><span class="woocommerce-Price-amount amount">$14.00</span></div></div>
+          <div class="brxe-divider horizontal"><div class="line"></div></div>
+          <div class="brxe-div line-row"><div class="brxe-text-basic">Total</div><div class="brxe-text-basic"><span class="woocommerce-Price-amount amount">$72.40</span> USD</div></div>
+          <a class="brxe-button bricks-button bricks-background-primary" href="#checkout">Proceed to checkout</a>
+          <form class="brxe-woocommerce-cart-coupon" onsubmit="return false"><div class="coupon">
+            <label for="coupon_code">Coupon:</label>
+            <input type="text" name="coupon_code" class="input-text" id="coupon_code" placeholder="Coupon code">
+            <button type="submit" class="button" name="apply_coupon">Apply</button>
+          </div></form>
+          <div id="payment-method-message">[Pay in 4 interest-free payments with Klarna or Afterpay]</div>
+          <div class="wcpay-express-checkout-wrapper"><span>Apple Pay</span><span>G Pay</span></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div></section></main>
+<script src="../wordpress/printing-haus-site/assets/cart.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function () { if (location.hash === '#open') document.querySelector('.ph-cart-promo').click(); });</script>
+<div class="preview-flag">Draft preview &middot; [bracketed] text is sample data</div>
+</body></html>

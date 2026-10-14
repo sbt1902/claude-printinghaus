@@ -79,6 +79,19 @@ appears when those times are set.
 4. Add a second **Shortcode** element below it containing `[ph_checkout_coupon]`.
 5. Save, and test with a real code and an address that has several shipping options.
 
+### Cart ("Your Tray")
+
+Restyles the Bricks **Cart (v2)** template like lululemon's bag. This needs no Bricks edits:
+- the heading sits at a calmer size, and the "Product / Total" header row is hidden
+- each item is a white card with a 140px image, a bold name, the selector's print specs one per line,
+  "Qty: 100" and a **Remove** link (instead of the trash icon)
+- the order summary is a white panel titled "Order summary", with a bold total
+- **Have a promo code?** slides open the coupon field, above a full-width square **Proceed to checkout**
+  button, with pay-later and express pay underneath
+- on phones the image sits on the left with the details and price beside it, and the summary follows
+
+Code: `assets/cart.css` and `assets/cart.js`. Preview: `preview/cart.html`.
+
 ### USPS address check
 
 When a customer clicks **Pay now**, the delivery address (US and territories) is checked with the USPS Addresses API

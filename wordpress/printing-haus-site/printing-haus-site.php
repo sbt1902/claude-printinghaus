@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Printing Haus Site
  * Description: Loads the Printing Haus brand stylesheet for the Bricks templates and gives the Bricks (Checkout v2) WooCommerce checkout a calm, Shopify-style finish, with a shipping dropdown, a slide-open discount code and a USPS address check.
- * Version:     1.3.1
+ * Version:     1.4.0
  * Author:      Printing Haus
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -13,7 +13,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PH_SITE_VERSION', '1.3.1' );
+define( 'PH_SITE_VERSION', '1.4.0' );
 
 require_once __DIR__ . '/includes/class-ph-address-check.php';
 add_action( 'plugins_loaded', array( 'PH_Address_Check', 'init' ) );
@@ -27,6 +27,11 @@ add_action( 'wp_enqueue_scripts', function () {
 	// Interim open-source fonts. Remove once licensed Tiempos + Neue Haas Grotesk are added in Bricks > Custom fonts.
 	wp_enqueue_style( 'ph-site-fonts', 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400&display=swap', array(), null );
 	wp_enqueue_style( 'ph-site', $url . 'printinghaus.css', array( 'ph-site-fonts' ), PH_SITE_VERSION );
+
+	if ( function_exists( 'is_cart' ) && is_cart() ) {
+		wp_enqueue_style( 'ph-cart', $url . 'cart.css', array( 'ph-site' ), PH_SITE_VERSION );
+		wp_enqueue_script( 'ph-cart', $url . 'cart.js', array(), PH_SITE_VERSION, true );
+	}
 
 	if ( ph_site_is_checkout() ) {
 		wp_enqueue_style( 'ph-checkout', $url . 'checkout.css', array( 'ph-site' ), PH_SITE_VERSION );

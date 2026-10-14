@@ -1,0 +1,242 @@
+/* Printing Haus cart ("Your Tray"): lululemon-style bag for the Bricks "Cart (v2)" element.
+   Loaded only on the cart page by printing-haus-site.php. Layout (two columns, sticky summary)
+   stays in the Bricks template; this file styles the items, summary, promo code and buttons. */
+
+body.woocommerce-cart {
+  --cart-ink: #0A0A0A;
+  --cart-muted: #5E5A54;
+  --cart-line: #D6D1CA;
+  --cart-card: #FFFFFF;
+  --cart-sans: "neue-haas-grotesk-text", "Neue Haas Grotesk Text", "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --cart-display: "neue-haas-grotesk-display", "Neue Haas Grotesk Display", "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Page heading: calmer than the 75px default */
+body.woocommerce-cart #brx-content h1.brxe-heading {
+  font-family: var(--cart-display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 0;
+}
+
+body.woocommerce-cart .brx-wc-cart-v2--cart { font-family: var(--cart-sans); color: var(--cart-ink); }
+
+/* ----------------------------------------------------------------- items */
+/* No "Product / Total" header row */
+body.woocommerce-cart .woocommerce-cart-form__contents > .brxe-div:not(.cart_item):first-child { display: none; }
+
+body.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item {
+  margin: 0 0 16px;
+  padding: 24px !important;
+  background: var(--cart-card);
+  border: 1px solid #E6E1D9;
+}
+body.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item > .brxe-divider { display: none; }
+body.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item > .brxe-div { align-items: flex-start; gap: 20px; }
+
+/* Larger product image */
+body.woocommerce-cart .cart_item .brxe-div:has(> img.brxe-image) {
+  flex: 0 0 auto;
+  width: 140px !important;
+  height: 140px !important;
+  overflow: hidden;
+  background: #F3F0E8;
+}
+body.woocommerce-cart .cart_item .brxe-div:has(> img.brxe-image) img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Name and price */
+body.woocommerce-cart .cart_item .brxe-block > .brxe-text-basic:first-child {
+  font-family: var(--cart-display);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: none;
+}
+body.woocommerce-cart .cart_item .woocommerce-Price-amount { font-size: 16px; font-weight: 600; white-space: nowrap; }
+
+/* Print specs, one per line */
+body.woocommerce-cart .cart_item .brx-cart-item-data {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin: 4px 0 14px;
+  font-size: 14px !important;
+  line-height: 1.4;
+  color: var(--cart-muted);
+}
+body.woocommerce-cart .cart_item .brx-cart-item-data__separator { display: none; }
+body.woocommerce-cart .cart_item .brx-cart-item-data__item { display: flex; gap: 6px; flex-wrap: wrap; }
+body.woocommerce-cart .cart_item .brx-cart-item-data__label { font-weight: 500; color: var(--cart-ink); }
+
+/* Quantity and Remove */
+body.woocommerce-cart .cart_item .product-quantity { font-size: 14px; }
+body.woocommerce-cart .cart_item .product-quantity .phs-cart-qty::before { content: "Qty: "; color: var(--cart-muted); }
+body.woocommerce-cart .cart_item .product-quantity input.qty {
+  width: 72px; height: 44px; padding: 0 8px;
+  border: 1px solid var(--cart-line); border-radius: 0; background: var(--cart-card);
+  font: inherit; font-size: 15px; text-align: center;
+}
+body.woocommerce-cart .cart_item a.bricks-link-wrapper[href*="remove_item"] {
+  display: inline-flex; align-items: center; min-height: 32px;
+  color: var(--cart-ink); font-size: 14px; text-decoration: underline; text-underline-offset: 4px;
+}
+body.woocommerce-cart .cart_item a.bricks-link-wrapper[href*="remove_item"] i { display: none; }
+body.woocommerce-cart .cart_item a.bricks-link-wrapper[href*="remove_item"]::before { content: "Remove"; }
+body.woocommerce-cart .cart_item a.bricks-link-wrapper[href*="remove_item"]:hover { opacity: .65; }
+
+@media (max-width: 600px) {
+  body.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item { padding: 16px !important; }
+  /* Image on the left; details, then price, on the right */
+  body.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item > .brxe-div:first-child {
+    display: grid !important;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 6px 16px;
+  }
+  body.woocommerce-cart .cart_item .brxe-div:has(> img.brxe-image) { grid-row: 1 / span 2; width: 96px !important; height: 96px !important; }
+  body.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item > .brxe-div:first-child > :last-child { grid-column: 2; align-items: flex-start !important; }
+}
+
+/* ---------------------------------------------------------- order summary */
+body.woocommerce-cart .cart_totals {
+  display: flex;
+  flex-direction: column;
+  gap: 14px !important;
+  padding: 28px !important;
+  background: var(--cart-card);
+  border: 1px solid #E6E1D9;
+  font-size: 15px;
+}
+body.woocommerce-cart .cart_totals::before {
+  content: "Order summary";
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--cart-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+body.woocommerce-cart .cart_totals .brxe-divider .line { border-top-color: var(--cart-line) !important; }
+/* Total row: the row just before the checkout button */
+body.woocommerce-cart .cart_totals > .brxe-div:has(+ a.bricks-button) { font-size: 18px; font-weight: 600; }
+
+/* Order inside the panel: rows, then promo code, then Checkout, then pay-later and express pay */
+body.woocommerce-cart .cart_totals > .ph-cart-promo,
+body.woocommerce-cart .cart_totals > .brxe-woocommerce-cart-coupon { order: 1; }
+body.woocommerce-cart .cart_totals > a.bricks-button { order: 2; }
+body.woocommerce-cart .cart_totals > #payment-method-message,
+body.woocommerce-cart .cart_totals > .wcpay-express-checkout-wrapper { order: 3; }
+
+/* Checkout: full width, square, transparent with a black border on hover */
+body.woocommerce-cart .cart_totals > a.bricks-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 56px;
+  margin-top: 6px;
+  padding: 0 24px !important;
+  border: 2px solid var(--cart-ink) !important;
+  border-radius: 0 !important;
+  background-color: var(--cart-ink) !important;
+  color: #FFFFFF !important;
+  font-family: var(--cart-sans);
+  font-size: 16px !important;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none !important;
+  text-decoration: none;
+  transition: background-color .2s ease, color .2s ease;
+}
+body.woocommerce-cart .cart_totals > a.bricks-button:hover { background-color: transparent !important; color: var(--cart-ink) !important; }
+body.woocommerce-cart .cart_totals > a.bricks-button:focus-visible { outline: 2px solid var(--cart-ink); outline-offset: 3px; }
+
+body.woocommerce-cart .cart_totals > #payment-method-message:empty { display: none; }
+body.woocommerce-cart .cart_totals > #payment-method-message { font-size: 13px; color: var(--cart-muted); text-align: center; }
+
+/* ----------------------------------------------------------- promo code */
+body.woocommerce-cart .ph-cart-promo {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  margin: 4px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--cart-ink);
+  font-family: var(--cart-sans);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: none;
+  letter-spacing: normal;
+  cursor: pointer;
+}
+body.woocommerce-cart .ph-cart-promo::after {
+  content: "";
+  width: 7px; height: 7px; margin-top: -3px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .25s ease, margin .25s ease;
+}
+body.woocommerce-cart .ph-cart-promo[aria-expanded="true"]::after { transform: rotate(-135deg); margin-top: 3px; }
+body.woocommerce-cart .ph-cart-promo:hover { opacity: .7; }
+body.woocommerce-cart .ph-cart-promo:focus-visible { outline: 2px solid var(--cart-ink); outline-offset: 3px; }
+
+/* The coupon form slides open under the link (hidden until opened once the script runs) */
+body.woocommerce-cart .ph-cart-promo-ready .brxe-woocommerce-cart-coupon {
+  display: grid;
+  grid-template-rows: 0fr;
+  margin: 0 !important;
+  transition: grid-template-rows .3s ease;
+}
+body.woocommerce-cart .ph-cart-promo-ready .brxe-woocommerce-cart-coupon.is-open { grid-template-rows: 1fr; }
+body.woocommerce-cart .ph-cart-promo-ready .brxe-woocommerce-cart-coupon > .coupon { overflow: hidden; min-height: 0; }
+
+body.woocommerce-cart .brxe-woocommerce-cart-coupon .coupon { display: flex; gap: 8px; }
+body.woocommerce-cart .brxe-woocommerce-cart-coupon label { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+body.woocommerce-cart .brxe-woocommerce-cart-coupon input.input-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 48px;
+  margin: 0;
+  padding: 0 14px;
+  border: 1px solid var(--cart-line) !important;
+  border-radius: 0 !important;
+  background: var(--cart-card) !important;
+  font-family: var(--cart-sans);
+  font-size: 15px;
+  color: var(--cart-ink);
+}
+body.woocommerce-cart .brxe-woocommerce-cart-coupon input.input-text::placeholder { color: var(--cart-muted) !important; }
+body.woocommerce-cart .brxe-woocommerce-cart-coupon input.input-text:focus { outline: none; border-color: var(--cart-ink) !important; box-shadow: 0 0 0 1px var(--cart-ink); }
+body.woocommerce-cart .brxe-woocommerce-cart-coupon button {
+  flex: 0 0 auto;
+  width: auto !important;
+  height: 48px;
+  padding: 0 20px !important;
+  border: 2px solid var(--cart-ink) !important;
+  border-radius: 0 !important;
+  background: var(--cart-ink) !important;
+  color: #FFFFFF !important;
+  font-family: var(--cart-sans);
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  letter-spacing: normal;
+  transition: background-color .2s ease, color .2s ease;
+}
+body.woocommerce-cart .brxe-woocommerce-cart-coupon button:hover { background: transparent !important; color: var(--cart-ink) !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  body.woocommerce-cart .ph-cart-promo::after,
+  body.woocommerce-cart .ph-cart-promo-ready .brxe-woocommerce-cart-coupon,
+  body.woocommerce-cart .cart_totals > a.bricks-button { transition: none; }
+}

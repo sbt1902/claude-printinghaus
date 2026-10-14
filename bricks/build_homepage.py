@@ -1231,4 +1231,11 @@ if __name__ == "__main__":
     (OUT_PREVIEW.parent / "checkout.html").write_text(tpl.replace(
         '<link rel="stylesheet" href="../wordpress/printing-haus-site/assets/checkout.css">',
         f"<style>{co_css}</style>"))
-    print("wrote preview/homepage.html, preview/product.html and preview/checkout.html")
+    # Cart preview: Bricks cart markup + the plugin's cart.css and cart.js, inlined
+    tpl = (OUT_PREVIEW.parent / "cart.template.html").read_text()
+    tpl = tpl.replace('<link rel="stylesheet" href="../wordpress/printing-haus-site/assets/cart.css">',
+                      "<style>" + (plugin / "assets" / "cart.css").read_text() + "</style>")
+    tpl = tpl.replace('<script src="../wordpress/printing-haus-site/assets/cart.js"></script>',
+                      "<script>" + (plugin / "assets" / "cart.js").read_text() + "</script>")
+    (OUT_PREVIEW.parent / "cart.html").write_text(tpl)
+    print("wrote preview/homepage.html, product.html, checkout.html and cart.html")
