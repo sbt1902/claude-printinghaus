@@ -90,6 +90,10 @@ Restyles the Bricks **Cart (v2)** template like lululemon's bag. This needs no B
   button, with pay-later and express pay underneath
 - on phones the image sits on the left with the details and price beside it, and the summary follows
 
+- the product image and name link back to the product page. Printing Haus Selector items also get an **Edit**
+  link: the product page reopens with the same choices, quantity and artwork, the button reads **Update item**,
+  and saving replaces the old Tray item and returns to the Tray. This needs Printing Haus Selector 0.7.2 or later.
+
 Code: `assets/cart.css` and `assets/cart.js`. Preview: `preview/cart.html`.
 
 ### USPS address check

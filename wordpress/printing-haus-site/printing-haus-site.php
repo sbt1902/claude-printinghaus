@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Printing Haus Site
  * Description: Loads the Printing Haus brand stylesheet for the Bricks templates and gives the Bricks (Checkout v2) WooCommerce checkout a calm, Shopify-style finish, with a shipping dropdown, a slide-open discount code and a USPS address check.
- * Version:     1.4.0
+ * Version:     1.5.0
  * Author:      Printing Haus
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -13,7 +13,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PH_SITE_VERSION', '1.4.0' );
+define( 'PH_SITE_VERSION', '1.5.0' );
 
 require_once __DIR__ . '/includes/class-ph-address-check.php';
 add_action( 'plugins_loaded', array( 'PH_Address_Check', 'init' ) );
@@ -31,6 +31,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	if ( function_exists( 'is_cart' ) && is_cart() ) {
 		wp_enqueue_style( 'ph-cart', $url . 'cart.css', array( 'ph-site' ), PH_SITE_VERSION );
 		wp_enqueue_script( 'ph-cart', $url . 'cart.js', array(), PH_SITE_VERSION, true );
+		wp_localize_script( 'ph-cart', 'phCart', array( 'items' => ph_site_cart_links() ) );
 	}
 
 	if ( ph_site_is_checkout() ) {
@@ -175,6 +176,30 @@ function ph_site_coupon_html() {
 	</div>
 	<?php
 	return ob_get_clean();
+}
+
+/**
+ * Product links for the cart page, keyed by cart item key. Printing Haus Selector items link back
+ * with ?phs_edit=<key> so the product page reopens with the same choices and artwork (selector 0.7.2+).
+ */
+function ph_site_cart_links() {
+	$links = array();
+	if ( ! function_exists( 'WC' ) || ! WC()->cart ) {
+		return $links;
+	}
+	foreach ( WC()->cart->get_cart() as $key => $item ) {
+		$product = isset( $item['data'] ) ? $item['data'] : null;
+		if ( ! $product || ! $product->is_visible() ) {
+			continue;
+		}
+		$url      = $product->get_permalink( $item );
+		$editable = ! empty( $item['phs'] );
+		$links[ $key ] = array(
+			'url'  => $editable ? add_query_arg( 'phs_edit', $key, $url ) : $url,
+			'edit' => $editable,
+		);
+	}
+	return $links;
 }
 
 /** Plain, standard button wording. */

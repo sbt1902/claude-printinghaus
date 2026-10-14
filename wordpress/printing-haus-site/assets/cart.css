@@ -37,17 +37,20 @@ body.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item > .brxe-divide
 body.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item > .brxe-div { align-items: flex-start; gap: 20px; }
 
 /* Larger product image */
-body.woocommerce-cart .cart_item .brxe-div:has(> img.brxe-image) {
+body.woocommerce-cart .cart_item .brxe-div:has(> img.brxe-image),
+body.woocommerce-cart .cart_item .brxe-div:has(> .ph-cart-link > img.brxe-image) {
   flex: 0 0 auto;
   width: 140px !important;
   height: 140px !important;
   overflow: hidden;
   background: #F3F0E8;
 }
-body.woocommerce-cart .cart_item .brxe-div:has(> img.brxe-image) img { width: 100%; height: 100%; object-fit: cover; }
+body.woocommerce-cart .cart_item .brxe-div:has(> img.brxe-image) img,
+body.woocommerce-cart .cart_item .brxe-div:has(> .ph-cart-link > img.brxe-image) img { width: 100%; height: 100%; object-fit: cover; }
 
 /* Name and price */
-body.woocommerce-cart .cart_item .brxe-block > .brxe-text-basic:first-child {
+body.woocommerce-cart .cart_item .brxe-block > .brxe-text-basic:first-child,
+body.woocommerce-cart .cart_item .brxe-block > .ph-cart-link:first-child > .brxe-text-basic {
   font-family: var(--cart-display);
   font-size: 18px;
   font-weight: 700;
@@ -95,7 +98,8 @@ body.woocommerce-cart .cart_item a.bricks-link-wrapper[href*="remove_item"]:hove
     grid-template-columns: 96px minmax(0, 1fr);
     gap: 6px 16px;
   }
-  body.woocommerce-cart .cart_item .brxe-div:has(> img.brxe-image) { grid-row: 1 / span 2; width: 96px !important; height: 96px !important; }
+  body.woocommerce-cart .cart_item .brxe-div:has(> img.brxe-image),
+body.woocommerce-cart .cart_item .brxe-div:has(> .ph-cart-link > img.brxe-image) { grid-row: 1 / span 2; width: 96px !important; height: 96px !important; }
   body.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item > .brxe-div:first-child > :last-child { grid-column: 2; align-items: flex-start !important; }
 }
 
@@ -240,3 +244,13 @@ body.woocommerce-cart .brxe-woocommerce-cart-coupon button:hover { background: t
   body.woocommerce-cart .ph-cart-promo-ready .brxe-woocommerce-cart-coupon,
   body.woocommerce-cart .cart_totals > a.bricks-button { transition: none; }
 }
+
+/* Links back to the product page */
+body.woocommerce-cart .ph-cart-link { display: block; width: 100%; height: 100%; color: inherit; text-decoration: none; }
+body.woocommerce-cart .ph-cart-link:hover .brxe-text-basic { text-decoration: underline; text-underline-offset: 4px; }
+body.woocommerce-cart .ph-cart-link:focus-visible { outline: 2px solid var(--cart-ink); outline-offset: 3px; }
+body.woocommerce-cart .ph-cart-edit {
+  display: inline-flex; align-items: center; min-height: 32px;
+  color: var(--cart-ink); font-size: 14px; text-decoration: underline; text-underline-offset: 4px;
+}
+body.woocommerce-cart .ph-cart-edit:hover { opacity: .65; }
