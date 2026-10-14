@@ -12,9 +12,7 @@
       "settings": {
         "tag": "custom",
         "customTag": "header",
-        "_cssGlobalClasses": [
-          "mmpacd"
-        ]
+        "_cssClasses": "ph-header"
       },
       "label": "Header"
     },
@@ -26,9 +24,7 @@
         "illgba"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
+        "_cssClasses": "ph-container"
       }
     },
     {
@@ -41,9 +37,7 @@
         "dodfna"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "mlnjkm"
-        ]
+        "_cssClasses": "ph-header__bar"
       }
     },
     {
@@ -56,9 +50,7 @@
           "type": "external",
           "url": "/"
         },
-        "_cssGlobalClasses": [
-          "elnaja"
-        ]
+        "_cssClasses": "ph-logo"
       },
       "label": "Logo (choose the approved logo file)"
     },
@@ -68,10 +60,7 @@
       "parent": "illgba",
       "children": [],
       "settings": {
-        "_cssGlobalClasses": [
-          "emjcnd",
-          "mogech"
-        ]
+        "_cssClasses": "ph-nav ph-hide-mobile"
       },
       "label": "Primary menu: Shop / Design Studio / About / Contact"
     },
@@ -86,9 +75,7 @@
         "ppcclk"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "hhpiio"
-        ]
+        "_cssClasses": "ph-utility"
       }
     },
     {
@@ -98,9 +85,7 @@
       "children": [],
       "settings": {
         "searchType": "overlay",
-        "_cssGlobalClasses": [
-          "mogech"
-        ]
+        "_cssClasses": "ph-hide-mobile"
       },
       "label": "Search"
     },
@@ -115,9 +100,7 @@
           "type": "external",
           "url": "/my-account/"
         },
-        "_cssGlobalClasses": [
-          "mogech"
-        ]
+        "_cssClasses": "ph-hide-mobile"
       }
     },
     {
@@ -135,56 +118,12 @@
       "children": [],
       "settings": {
         "mobileMenu": "always",
-        "_cssGlobalClasses": [
-          "pikoio"
-        ]
+        "_cssClasses": "ph-show-mobile-only"
       },
       "label": "Mobile menu (same WP menu)"
     }
   ],
   "pageSettings": [],
   "templateSettings": [],
-  "globalClasses": [
-    {
-      "id": "oaihfg",
-      "name": "ph-container",
-      "settings": {}
-    },
-    {
-      "id": "mmpacd",
-      "name": "ph-header",
-      "settings": {}
-    },
-    {
-      "id": "mlnjkm",
-      "name": "ph-header__bar",
-      "settings": {}
-    },
-    {
-      "id": "elnaja",
-      "name": "ph-logo",
-      "settings": {}
-    },
-    {
-      "id": "emjcnd",
-      "name": "ph-nav",
-      "settings": {}
-    },
-    {
-      "id": "hhpiio",
-      "name": "ph-utility",
-      "settings": {}
-    },
-    {
-      "id": "mogech",
-      "name": "ph-hide-mobile",
-      "settings": {}
-    },
-    {
-      "id": "pikoio",
-      "name": "ph-show-mobile-only",
-      "settings": {}
-    }
-  ],
   "version": "1.10"
 }

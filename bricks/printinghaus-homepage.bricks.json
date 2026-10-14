@@ -10,10 +10,7 @@
         "lmdohc"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi",
-          "aobjkp"
-        ]
+        "_cssClasses": "ph-section ph-hero"
       },
       "label": "A. Hero"
     },
@@ -25,9 +22,7 @@
         "ggiimk"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
+        "_cssClasses": "ph-container"
       }
     },
     {
@@ -39,9 +34,7 @@
         "dkeiaf"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "ggfpfh"
-        ]
+        "_cssClasses": "ph-hero__grid"
       }
     },
     {
@@ -63,9 +56,7 @@
       "settings": {
         "text": "Make an Impression.",
         "tag": "h1",
-        "_cssGlobalClasses": [
-          "lfhblh"
-        ]
+        "_cssClasses": "ph-hero__title"
       }
     },
     {
@@ -76,10 +67,7 @@
       "settings": {
         "text": "Considered paper. Distinctive finishes. Print that feels like you.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "bkklom",
-          "ikjnfo"
-        ]
+        "_cssClasses": "ph-lead ph-hero__lead"
       }
     },
     {
@@ -91,9 +79,7 @@
         "ajpcep"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "pnljbb"
-        ]
+        "_cssClasses": "ph-actions"
       }
     },
     {
@@ -107,10 +93,7 @@
           "type": "external",
           "url": "/shop/"
         },
-        "_cssGlobalClasses": [
-          "gigmbh",
-          "hodbfg"
-        ]
+        "_cssClasses": "ph-btn ph-btn--dark"
       }
     },
     {
@@ -124,9 +107,7 @@
           "type": "external",
           "url": "/design-studio/"
         },
-        "_cssGlobalClasses": [
-          "nmifba"
-        ]
+        "_cssClasses": "ph-link"
       }
     },
     {
@@ -148,10 +129,7 @@
         "hbhklf"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "ofijmm"
-        ]
+        "_cssClasses": "ph-media ph-media--hero"
       },
       "label": "Photo slot"
     },
@@ -163,9 +141,7 @@
       "settings": {
         "text": "[Photo: one strong product composition, e.g. business cards showing their edge and raised spot UV in natural light]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -184,9 +160,7 @@
       "settings": {
         "text": "[Shown: product name, stock and finish]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "eljmmp"
-        ]
+        "_cssClasses": "ph-caption"
       }
     },
     {
@@ -197,10 +171,7 @@
         "ljkdmi"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi",
-          "baffgj"
-        ]
+        "_cssClasses": "ph-section ph-section--flush"
       },
       "label": "B. Shop by category"
     },
@@ -213,9 +184,7 @@
         "iebokl"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
+        "_cssClasses": "ph-container"
       }
     },
     {
@@ -227,9 +196,7 @@
         "glgfek"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cajggf"
-        ]
+        "_cssClasses": "ph-head"
       }
     },
     {
@@ -250,9 +217,7 @@
       "settings": {
         "text": "Shop",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "lofmpg"
-        ]
+        "_cssClasses": "ph-label"
       }
     },
     {
@@ -263,9 +228,7 @@
       "settings": {
         "text": "Shop by category",
         "tag": "h2",
-        "_cssGlobalClasses": [
-          "fcehpe"
-        ]
+        "_cssClasses": "ph-h2"
       }
     },
     {
@@ -279,9 +242,7 @@
           "type": "external",
           "url": "/shop/"
         },
-        "_cssGlobalClasses": [
-          "nmifba"
-        ]
+        "_cssClasses": "ph-link"
       }
     },
     {
@@ -292,9 +253,7 @@
         "fhjhkh"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "pidfbc"
-        ]
+        "_cssClasses": "ph-grid-3"
       }
     },
     {
@@ -320,9 +279,7 @@
           "number": "6",
           "hide_empty": true
         },
-        "_cssGlobalClasses": [
-          "fcohbo"
-        ]
+        "_cssClasses": "ph-card"
       },
       "label": "Category loop (live WooCommerce product categories)"
     },
@@ -334,9 +291,7 @@
         "ikgnhe"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle"
-        ]
+        "_cssClasses": "ph-media"
       },
       "label": "Photo slot"
     },
@@ -361,9 +316,7 @@
       "settings": {
         "text": "{term_name}",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -374,10 +327,7 @@
         "bgejpe"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi",
-          "baffgj"
-        ]
+        "_cssClasses": "ph-section ph-section--flush"
       },
       "label": "C. Featured products"
     },
@@ -389,9 +339,7 @@
         "epblak"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
+        "_cssClasses": "ph-container"
       }
     },
     {
@@ -403,9 +351,7 @@
         "lajhak"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cnhppl"
-        ]
+        "_cssClasses": "ph-rule"
       }
     },
     {
@@ -417,9 +363,7 @@
         "djjoga"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cajggf"
-        ]
+        "_cssClasses": "ph-head"
       }
     },
     {
@@ -440,9 +384,7 @@
       "settings": {
         "text": "Featured",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "lofmpg"
-        ]
+        "_cssClasses": "ph-label"
       }
     },
     {
@@ -453,9 +395,7 @@
       "settings": {
         "text": "A few favorites",
         "tag": "h2",
-        "_cssGlobalClasses": [
-          "fcehpe"
-        ]
+        "_cssClasses": "ph-h2"
       }
     },
     {
@@ -469,9 +409,7 @@
           "type": "external",
           "url": "/shop/"
         },
-        "_cssGlobalClasses": [
-          "nmifba"
-        ]
+        "_cssClasses": "ph-link"
       }
     },
     {
@@ -482,9 +420,7 @@
         "leidef"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "mkogab"
-        ]
+        "_cssClasses": "ph-grid-4"
       }
     },
     {
@@ -512,9 +448,7 @@
           "orderby": "menu_order",
           "order": "ASC"
         },
-        "_cssGlobalClasses": [
-          "fcohbo"
-        ]
+        "_cssClasses": "ph-card"
       },
       "label": "Featured product loop (filter Query to featured products)"
     },
@@ -526,10 +460,7 @@
         "aogeae"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fioghi"
-        ]
+        "_cssClasses": "ph-media ph-media--square"
       },
       "label": "Photo slot"
     },
@@ -554,9 +485,7 @@
       "settings": {
         "text": "{post_title}",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -567,9 +496,7 @@
       "settings": {
         "text": "{woo_product_price}",
         "tag": "div",
-        "_cssGlobalClasses": [
-          "hajbpb"
-        ]
+        "_cssClasses": "ph-price"
       }
     },
     {
@@ -580,10 +507,7 @@
         "jebeei"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi",
-          "kgkkif"
-        ]
+        "_cssClasses": "ph-section ph-section--sand"
       },
       "label": "D. Paper & finishes"
     },
@@ -597,9 +521,7 @@
         "jlmhdp"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
+        "_cssClasses": "ph-container"
       }
     },
     {
@@ -611,9 +533,7 @@
         "bhhjek"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cajggf"
-        ]
+        "_cssClasses": "ph-head"
       }
     },
     {
@@ -634,9 +554,7 @@
       "settings": {
         "text": "Paper &amp; finishes",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "lofmpg"
-        ]
+        "_cssClasses": "ph-label"
       }
     },
     {
@@ -647,9 +565,7 @@
       "settings": {
         "text": "Details you can feel",
         "tag": "h2",
-        "_cssGlobalClasses": [
-          "fcehpe"
-        ]
+        "_cssClasses": "ph-h2"
       }
     },
     {
@@ -660,9 +576,7 @@
       "settings": {
         "text": "What each paper and finish looks and feels like, in plain language. Not sure which to choose? We're happy to help.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -680,9 +594,7 @@
         "iciheo"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "celpph"
-        ]
+        "_cssClasses": "ph-materials"
       }
     },
     {
@@ -693,10 +605,7 @@
       "settings": {
         "text": "Paper",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "lofmpg",
-          "hmcfbp"
-        ]
+        "_cssClasses": "ph-label ph-material__group"
       }
     },
     {
@@ -709,9 +618,7 @@
         "pnlaga"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "lmpbgh"
-        ]
+        "_cssClasses": "ph-material"
       }
     },
     {
@@ -723,10 +630,7 @@
         "lpgpjk"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fmnglg"
-        ]
+        "_cssClasses": "ph-media ph-media--landscape"
       },
       "label": "Photo slot"
     },
@@ -738,9 +642,7 @@
       "settings": {
         "text": "[Photo: smooth matte stock in raking light]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -759,9 +661,7 @@
       "settings": {
         "text": "[Confirm stock] Smooth matte",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -772,9 +672,7 @@
       "settings": {
         "text": "A soft matte surface. Smooth to the touch, with even, true color.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -787,9 +685,7 @@
         "delcjh"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "lmpbgh"
-        ]
+        "_cssClasses": "ph-material"
       }
     },
     {
@@ -801,10 +697,7 @@
         "cghejb"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fmnglg"
-        ]
+        "_cssClasses": "ph-media ph-media--landscape"
       },
       "label": "Photo slot"
     },
@@ -816,9 +709,7 @@
       "settings": {
         "text": "[Photo: textured stock close-up, paper fibers visible]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -837,9 +728,7 @@
       "settings": {
         "text": "[Confirm stock] Textured",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -850,9 +739,7 @@
       "settings": {
         "text": "Paper with presence. A gentle texture you can feel under your fingertips.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -865,9 +752,7 @@
         "ebfanf"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "lmpbgh"
-        ]
+        "_cssClasses": "ph-material"
       }
     },
     {
@@ -879,10 +764,7 @@
         "fdefbn"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fmnglg"
-        ]
+        "_cssClasses": "ph-media ph-media--landscape"
       },
       "label": "Photo slot"
     },
@@ -894,9 +776,7 @@
       "settings": {
         "text": "[Photo: stack of thick cards showing the edge]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -915,9 +795,7 @@
       "settings": {
         "text": "[Confirm stock] Heavyweight",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -928,9 +806,7 @@
       "settings": {
         "text": "A substantial stock with a visible edge, so your card feels considered in hand.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -941,10 +817,7 @@
       "settings": {
         "text": "Finishes",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "lofmpg",
-          "hmcfbp"
-        ]
+        "_cssClasses": "ph-label ph-material__group"
       }
     },
     {
@@ -957,9 +830,7 @@
         "mpknog"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "lmpbgh"
-        ]
+        "_cssClasses": "ph-material"
       }
     },
     {
@@ -971,10 +842,7 @@
         "fgbfdg"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fmnglg"
-        ]
+        "_cssClasses": "ph-media ph-media--landscape"
       },
       "label": "Photo slot"
     },
@@ -986,9 +854,7 @@
       "settings": {
         "text": "[Photo: light catching raised spot UV]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -1007,9 +873,7 @@
       "settings": {
         "text": "Raised spot UV",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -1020,9 +884,7 @@
       "settings": {
         "text": "A little gloss where it counts. Raised spot UV adds shine and dimension to selected details.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -1035,9 +897,7 @@
         "mekclf"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "lmpbgh"
-        ]
+        "_cssClasses": "ph-material"
       }
     },
     {
@@ -1049,10 +909,7 @@
         "gnbpon"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fmnglg"
-        ]
+        "_cssClasses": "ph-media ph-media--landscape"
       },
       "label": "Photo slot"
     },
@@ -1064,9 +921,7 @@
       "settings": {
         "text": "[Photo: foil detail on a textured stock]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -1085,9 +940,7 @@
       "settings": {
         "text": "[Confirm] Foil",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -1098,9 +951,7 @@
       "settings": {
         "text": "A metallic finish applied to selected parts of your design, so it catches the light.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -1113,9 +964,7 @@
         "camcdl"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "lmpbgh"
-        ]
+        "_cssClasses": "ph-material"
       }
     },
     {
@@ -1127,10 +976,7 @@
         "nnpeai"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle",
-          "fmnglg"
-        ]
+        "_cssClasses": "ph-media ph-media--landscape"
       },
       "label": "Photo slot"
     },
@@ -1142,9 +988,7 @@
       "settings": {
         "text": "[Photo: embossed detail in soft side light]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -1163,9 +1007,7 @@
       "settings": {
         "text": "[Confirm] Embossing",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -1176,9 +1018,7 @@
       "settings": {
         "text": "A raised impression pressed into the paper, so your design can be felt as well as seen.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -1189,9 +1029,7 @@
         "fbcnnb"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "pnljbb"
-        ]
+        "_cssClasses": "ph-actions"
       }
     },
     {
@@ -1205,10 +1043,7 @@
           "type": "external",
           "url": "/paper-and-finishes/"
         },
-        "_cssGlobalClasses": [
-          "gigmbh",
-          "pchbdf"
-        ]
+        "_cssClasses": "ph-btn ph-btn--outline"
       }
     },
     {
@@ -1219,10 +1054,7 @@
         "ccbcjh"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi",
-          "jdgjck"
-        ]
+        "_cssClasses": "ph-section ph-section--oxblood"
       },
       "label": "E. Design studio"
     },
@@ -1234,9 +1066,7 @@
         "dhildd"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
+        "_cssClasses": "ph-container"
       }
     },
     {
@@ -1248,9 +1078,7 @@
         "njkald"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "gkmobc"
-        ]
+        "_cssClasses": "ph-split"
       }
     },
     {
@@ -1265,9 +1093,7 @@
         "nknhhn"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "aofpme"
-        ]
+        "_cssClasses": "ph-stack"
       }
     },
     {
@@ -1278,10 +1104,7 @@
       "settings": {
         "text": "Design Studio",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "lofmpg",
-          "kbajbo"
-        ]
+        "_cssClasses": "ph-label ph-label--light"
       }
     },
     {
@@ -1292,9 +1115,7 @@
       "settings": {
         "text": "An idea worth putting on paper.",
         "tag": "h2",
-        "_cssGlobalClasses": [
-          "fcehpe"
-        ]
+        "_cssClasses": "ph-h2"
       }
     },
     {
@@ -1305,9 +1126,7 @@
       "settings": {
         "text": "Something more individual? Our design studio brings a considered eye to your next print project, from the first idea to the finishing detail.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "bkklom"
-        ]
+        "_cssClasses": "ph-lead"
       }
     },
     {
@@ -1318,9 +1137,7 @@
       "settings": {
         "tag": "ul",
         "text": "<li>Custom artwork</li><li>Stationery</li><li>Packaging</li><li>[Confirm any other studio services]</li>",
-        "_cssGlobalClasses": [
-          "ofikhl"
-        ]
+        "_cssClasses": "ph-list"
       },
       "label": "Studio services"
     },
@@ -1332,9 +1149,7 @@
         "jecikn"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "pnljbb"
-        ]
+        "_cssClasses": "ph-actions"
       }
     },
     {
@@ -1348,10 +1163,7 @@
           "type": "external",
           "url": "/design-studio/#project-form"
         },
-        "_cssGlobalClasses": [
-          "gigmbh",
-          "ldfdbc"
-        ]
+        "_cssClasses": "ph-btn ph-btn--light"
       }
     },
     {
@@ -1363,9 +1175,7 @@
         "jcbnmc"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle"
-        ]
+        "_cssClasses": "ph-media"
       },
       "label": "Photo slot"
     },
@@ -1377,9 +1187,7 @@
       "settings": {
         "text": "[Photo: studio table with proofs, paper samples and a finished stationery set]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -1398,9 +1206,7 @@
         "decjgn"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi"
-        ]
+        "_cssClasses": "ph-section"
       },
       "label": "F. Customer work"
     },
@@ -1413,9 +1219,7 @@
         "eakmlg"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
+        "_cssClasses": "ph-container"
       }
     },
     {
@@ -1427,9 +1231,7 @@
         "inmali"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cajggf"
-        ]
+        "_cssClasses": "ph-head"
       }
     },
     {
@@ -1450,9 +1252,7 @@
       "settings": {
         "text": "Customer work",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "lofmpg"
-        ]
+        "_cssClasses": "ph-label"
       }
     },
     {
@@ -1463,9 +1263,7 @@
       "settings": {
         "text": "Recently printed",
         "tag": "h2",
-        "_cssGlobalClasses": [
-          "fcehpe"
-        ]
+        "_cssClasses": "ph-h2"
       }
     },
     {
@@ -1476,9 +1274,7 @@
       "settings": {
         "text": "[Approved customer projects only. Hide this section in Bricks until you have them.]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "nekelh"
-        ]
+        "_cssClasses": "ph-small"
       }
     },
     {
@@ -1491,9 +1287,7 @@
         "cjppnl"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "pidfbc"
-        ]
+        "_cssClasses": "ph-grid-3"
       }
     },
     {
@@ -1506,9 +1300,7 @@
         "ahffcg"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "fcohbo"
-        ]
+        "_cssClasses": "ph-card"
       }
     },
     {
@@ -1520,9 +1312,7 @@
         "omffhc"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle"
-        ]
+        "_cssClasses": "ph-media"
       },
       "label": "Photo slot"
     },
@@ -1534,9 +1324,7 @@
       "settings": {
         "text": "[Photo: approved customer project]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -1555,9 +1343,7 @@
       "settings": {
         "text": "[Customer or project name]",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -1568,9 +1354,7 @@
       "settings": {
         "text": "[Product &middot; stock &middot; finish]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -1583,9 +1367,7 @@
         "hebcap"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "fcohbo"
-        ]
+        "_cssClasses": "ph-card"
       }
     },
     {
@@ -1597,9 +1379,7 @@
         "mkihel"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle"
-        ]
+        "_cssClasses": "ph-media"
       },
       "label": "Photo slot"
     },
@@ -1611,9 +1391,7 @@
       "settings": {
         "text": "[Photo: approved customer project]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -1632,9 +1410,7 @@
       "settings": {
         "text": "[Customer or project name]",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -1645,9 +1421,7 @@
       "settings": {
         "text": "[Product &middot; stock &middot; finish]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -1660,9 +1434,7 @@
         "hecheg"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "fcohbo"
-        ]
+        "_cssClasses": "ph-card"
       }
     },
     {
@@ -1674,9 +1446,7 @@
         "gcoojo"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cdogle"
-        ]
+        "_cssClasses": "ph-media"
       },
       "label": "Photo slot"
     },
@@ -1688,9 +1458,7 @@
       "settings": {
         "text": "[Photo: approved customer project]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "jgodhd"
-        ]
+        "_cssClasses": "ph-media__label"
       }
     },
     {
@@ -1709,9 +1477,7 @@
       "settings": {
         "text": "[Customer or project name]",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -1722,9 +1488,7 @@
       "settings": {
         "text": "[Product &middot; stock &middot; finish]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -1735,10 +1499,7 @@
         "ojnldf"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi",
-          "baffgj"
-        ]
+        "_cssClasses": "ph-section ph-section--flush"
       },
       "label": "G. Material approach"
     },
@@ -1750,9 +1511,7 @@
         "aaejfl"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
+        "_cssClasses": "ph-container"
       }
     },
     {
@@ -1764,10 +1523,7 @@
         "oapfod"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "cnhppl",
-          "efnbbo"
-        ]
+        "_cssClasses": "ph-rule ph-approach"
       }
     },
     {
@@ -1788,9 +1544,7 @@
       "settings": {
         "text": "Material approach",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "lofmpg"
-        ]
+        "_cssClasses": "ph-label"
       }
     },
     {
@@ -1801,9 +1555,7 @@
       "settings": {
         "text": "How we choose and print",
         "tag": "h2",
-        "_cssGlobalClasses": [
-          "fcehpe"
-        ]
+        "_cssClasses": "ph-h2"
       }
     },
     {
@@ -1817,9 +1569,7 @@
         "cgcacj"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "fnjpkk"
-        ]
+        "_cssClasses": "ph-facts"
       }
     },
     {
@@ -1831,9 +1581,7 @@
         "niphod"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "pohgdb"
-        ]
+        "_cssClasses": "ph-fact"
       }
     },
     {
@@ -1844,9 +1592,7 @@
       "settings": {
         "text": "Paper first",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -1857,9 +1603,7 @@
       "settings": {
         "text": "We choose each stock for how it prints and how it feels in hand, then match the finish to the paper.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -1871,9 +1615,7 @@
         "hepmec"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "pohgdb"
-        ]
+        "_cssClasses": "ph-fact"
       }
     },
     {
@@ -1884,9 +1626,7 @@
       "settings": {
         "text": "Our printing partners",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -1897,9 +1637,7 @@
       "settings": {
         "text": "We work with printing partners that hold FSC certifications. If certified paper matters for your project, ask us about the options.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -1911,9 +1649,7 @@
         "dajpni"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "pohgdb"
-        ]
+        "_cssClasses": "ph-fact"
       }
     },
     {
@@ -1924,9 +1660,7 @@
       "settings": {
         "text": "[Verified practice]",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -1937,9 +1671,7 @@
       "settings": {
         "text": "[Add a specific, verified sourcing or production practice.]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -1951,9 +1683,7 @@
         "fdffpm"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "pohgdb"
-        ]
+        "_cssClasses": "ph-fact"
       }
     },
     {
@@ -1964,9 +1694,7 @@
       "settings": {
         "text": "[Verified practice]",
         "tag": "h3",
-        "_cssGlobalClasses": [
-          "ohcajg"
-        ]
+        "_cssClasses": "ph-h3"
       }
     },
     {
@@ -1977,9 +1705,7 @@
       "settings": {
         "text": "[Add a specific, verified sourcing or production practice.]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj"
-        ]
+        "_cssClasses": "ph-body"
       }
     },
     {
@@ -1990,10 +1716,7 @@
         "bhhnob"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "gehlmi",
-          "kgkkif"
-        ]
+        "_cssClasses": "ph-section ph-section--sand"
       },
       "label": "H. Email sign-up"
     },
@@ -2005,9 +1728,7 @@
         "ldhiic"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
+        "_cssClasses": "ph-container"
       }
     },
     {
@@ -2019,9 +1740,7 @@
         "bendll"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "aejgpb"
-        ]
+        "_cssClasses": "ph-signup"
       }
     },
     {
@@ -2033,9 +1752,7 @@
         "mmhjfe"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "aofpme"
-        ]
+        "_cssClasses": "ph-stack"
       }
     },
     {
@@ -2046,9 +1763,7 @@
       "settings": {
         "text": "Notes from the Haus.",
         "tag": "h2",
-        "_cssGlobalClasses": [
-          "fcehpe"
-        ]
+        "_cssClasses": "ph-h2"
       }
     },
     {
@@ -2059,9 +1774,7 @@
       "settings": {
         "text": "New collections, paper discoveries, and studio news. A considered addition to your inbox.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "bkklom"
-        ]
+        "_cssClasses": "ph-lead"
       }
     },
     {
@@ -2073,9 +1786,7 @@
         "innfia"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "aofpme"
-        ]
+        "_cssClasses": "ph-stack"
       }
     },
     {
@@ -2100,9 +1811,7 @@
         "emailSubject": "New newsletter sign-up",
         "emailTo": "admin_email",
         "successMessage": "Thank you. You're on the list.",
-        "_cssGlobalClasses": [
-          "idpjno"
-        ]
+        "_cssClasses": "ph-form"
       },
       "label": "Newsletter form (connect your email platform)"
     },
@@ -2114,240 +1823,11 @@
       "settings": {
         "text": "Unsubscribe at any time. See our <a href=\"/privacy-policy/\">privacy policy</a>.",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "nekelh"
-        ]
+        "_cssClasses": "ph-small"
       }
     }
   ],
   "pageSettings": [],
   "templateSettings": [],
-  "globalClasses": [
-    {
-      "id": "gehlmi",
-      "name": "ph-section",
-      "settings": {}
-    },
-    {
-      "id": "kgkkif",
-      "name": "ph-section--sand",
-      "settings": {}
-    },
-    {
-      "id": "jdgjck",
-      "name": "ph-section--oxblood",
-      "settings": {}
-    },
-    {
-      "id": "baffgj",
-      "name": "ph-section--flush",
-      "settings": {}
-    },
-    {
-      "id": "oaihfg",
-      "name": "ph-container",
-      "settings": {}
-    },
-    {
-      "id": "cnhppl",
-      "name": "ph-rule",
-      "settings": {}
-    },
-    {
-      "id": "lofmpg",
-      "name": "ph-label",
-      "settings": {}
-    },
-    {
-      "id": "kbajbo",
-      "name": "ph-label--light",
-      "settings": {}
-    },
-    {
-      "id": "fcehpe",
-      "name": "ph-h2",
-      "settings": {}
-    },
-    {
-      "id": "ohcajg",
-      "name": "ph-h3",
-      "settings": {}
-    },
-    {
-      "id": "cbhfjj",
-      "name": "ph-body",
-      "settings": {}
-    },
-    {
-      "id": "bkklom",
-      "name": "ph-lead",
-      "settings": {}
-    },
-    {
-      "id": "nmifba",
-      "name": "ph-link",
-      "settings": {}
-    },
-    {
-      "id": "gigmbh",
-      "name": "ph-btn",
-      "settings": {}
-    },
-    {
-      "id": "hodbfg",
-      "name": "ph-btn--dark",
-      "settings": {}
-    },
-    {
-      "id": "pchbdf",
-      "name": "ph-btn--outline",
-      "settings": {}
-    },
-    {
-      "id": "ldfdbc",
-      "name": "ph-btn--light",
-      "settings": {}
-    },
-    {
-      "id": "pnljbb",
-      "name": "ph-actions",
-      "settings": {}
-    },
-    {
-      "id": "cdogle",
-      "name": "ph-media",
-      "settings": {}
-    },
-    {
-      "id": "jgodhd",
-      "name": "ph-media__label",
-      "settings": {}
-    },
-    {
-      "id": "fmnglg",
-      "name": "ph-media--landscape",
-      "settings": {}
-    },
-    {
-      "id": "fioghi",
-      "name": "ph-media--square",
-      "settings": {}
-    },
-    {
-      "id": "ofijmm",
-      "name": "ph-media--hero",
-      "settings": {}
-    },
-    {
-      "id": "eljmmp",
-      "name": "ph-caption",
-      "settings": {}
-    },
-    {
-      "id": "aobjkp",
-      "name": "ph-hero",
-      "settings": {}
-    },
-    {
-      "id": "ggfpfh",
-      "name": "ph-hero__grid",
-      "settings": {}
-    },
-    {
-      "id": "lfhblh",
-      "name": "ph-hero__title",
-      "settings": {}
-    },
-    {
-      "id": "ikjnfo",
-      "name": "ph-hero__lead",
-      "settings": {}
-    },
-    {
-      "id": "cajggf",
-      "name": "ph-head",
-      "settings": {}
-    },
-    {
-      "id": "pidfbc",
-      "name": "ph-grid-3",
-      "settings": {}
-    },
-    {
-      "id": "mkogab",
-      "name": "ph-grid-4",
-      "settings": {}
-    },
-    {
-      "id": "fcohbo",
-      "name": "ph-card",
-      "settings": {}
-    },
-    {
-      "id": "hajbpb",
-      "name": "ph-price",
-      "settings": {}
-    },
-    {
-      "id": "celpph",
-      "name": "ph-materials",
-      "settings": {}
-    },
-    {
-      "id": "lmpbgh",
-      "name": "ph-material",
-      "settings": {}
-    },
-    {
-      "id": "hmcfbp",
-      "name": "ph-material__group",
-      "settings": {}
-    },
-    {
-      "id": "gkmobc",
-      "name": "ph-split",
-      "settings": {}
-    },
-    {
-      "id": "aofpme",
-      "name": "ph-stack",
-      "settings": {}
-    },
-    {
-      "id": "ofikhl",
-      "name": "ph-list",
-      "settings": {}
-    },
-    {
-      "id": "efnbbo",
-      "name": "ph-approach",
-      "settings": {}
-    },
-    {
-      "id": "fnjpkk",
-      "name": "ph-facts",
-      "settings": {}
-    },
-    {
-      "id": "pohgdb",
-      "name": "ph-fact",
-      "settings": {}
-    },
-    {
-      "id": "aejgpb",
-      "name": "ph-signup",
-      "settings": {}
-    },
-    {
-      "id": "idpjno",
-      "name": "ph-form",
-      "settings": {}
-    },
-    {
-      "id": "nekelh",
-      "name": "ph-small",
-      "settings": {}
-    }
-  ],
   "version": "1.10"
 }

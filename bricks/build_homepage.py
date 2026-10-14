@@ -10,7 +10,7 @@ Outputs:
 
 Styling lives in ONE stylesheet, bricks/printinghaus.css, which is pasted into
 Bricks > Settings > Custom code > Custom CSS. The templates only carry the
-ph-* class names, so the look never depends on per-class CSS being generated.
+ph-* class names in each element's plain CSS classes field.
 
 Categories and featured products are Bricks *query loops* over the live
 WooCommerce catalog, so names, images and prices always come from the store.
@@ -397,7 +397,6 @@ def _id(seed: str) -> str:
     return "".join(chr(97 + int(c, 16) % 26) for c in h[:6])
 
 
-class_ids = {name: _id("class:" + name) for name in CLASSES}
 
 
 class El:
@@ -756,7 +755,9 @@ def flatten(nodes, prefix):
         entry = {"id": eid, "name": node.name, "parent": parent, "children": [],
                  "settings": dict(node.settings)}
         if node.classes:
-            entry["settings"]["_cssGlobalClasses"] = [class_ids[c] for c in node.classes]
+            # Plain "CSS classes" field (Style > CSS), written straight into the
+            # HTML. Not global classes: those are not carried over by template import.
+            entry["settings"]["_cssClasses"] = " ".join(node.classes)
         if node.label:
             entry["label"] = node.label
         out.append(entry)
@@ -772,17 +773,13 @@ def flatten(nodes, prefix):
 
 def build_json(key):
     title, ttype, nodes = TEMPLATES[key]
-    used = used_classes(nodes)
+    used_classes(nodes)  # asserts every class has CSS
     return {
         "title": title,
         "templateType": ttype,
         "content": flatten(nodes, key),
         "pageSettings": [],
         "templateSettings": [],
-        "globalClasses": [
-            {"id": class_ids[n], "name": n, "settings": {}}
-            for n in CLASSES if n in used
-        ],
         "version": "1.10",
     }
 

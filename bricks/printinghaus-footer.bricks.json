@@ -12,9 +12,7 @@
       "settings": {
         "tag": "custom",
         "customTag": "footer",
-        "_cssGlobalClasses": [
-          "dikkak"
-        ]
+        "_cssClasses": "ph-footer"
       },
       "label": "Footer"
     },
@@ -27,9 +25,7 @@
         "dockcp"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "oaihfg"
-        ]
+        "_cssClasses": "ph-container"
       }
     },
     {
@@ -43,9 +39,7 @@
         "gmhfdg"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "onafcp"
-        ]
+        "_cssClasses": "ph-footer__grid"
       }
     },
     {
@@ -57,9 +51,7 @@
         "fdlfoa"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "bedndl"
-        ]
+        "_cssClasses": "ph-footer__col"
       }
     },
     {
@@ -72,9 +64,7 @@
           "type": "external",
           "url": "/"
         },
-        "_cssGlobalClasses": [
-          "elnaja"
-        ]
+        "_cssClasses": "ph-logo"
       },
       "label": "Logo (choose the approved light logo file)"
     },
@@ -86,10 +76,7 @@
       "settings": {
         "text": "[Email address]<br>[Phone number]<br>[Studio address or service area]",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "cbhfjj",
-          "gmmipf"
-        ]
+        "_cssClasses": "ph-body ph-body--light"
       }
     },
     {
@@ -103,9 +90,7 @@
         "hoaiei"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "bedndl"
-        ]
+        "_cssClasses": "ph-footer__col"
       }
     },
     {
@@ -116,9 +101,7 @@
       "settings": {
         "text": "Shop",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "kcpceg"
-        ]
+        "_cssClasses": "ph-footer__head"
       }
     },
     {
@@ -172,9 +155,7 @@
         "kggigm"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "bedndl"
-        ]
+        "_cssClasses": "ph-footer__col"
       }
     },
     {
@@ -185,9 +166,7 @@
       "settings": {
         "text": "Help",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "kcpceg"
-        ]
+        "_cssClasses": "ph-footer__head"
       }
     },
     {
@@ -253,9 +232,7 @@
         "gfkioj"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "bedndl"
-        ]
+        "_cssClasses": "ph-footer__col"
       }
     },
     {
@@ -266,9 +243,7 @@
       "settings": {
         "text": "Printing Haus",
         "tag": "p",
-        "_cssGlobalClasses": [
-          "kcpceg"
-        ]
+        "_cssClasses": "ph-footer__head"
       }
     },
     {
@@ -319,9 +294,7 @@
         "jdmkag"
       ],
       "settings": {
-        "_cssGlobalClasses": [
-          "lbnaim"
-        ]
+        "_cssClasses": "ph-footer__legal"
       }
     },
     {
@@ -376,52 +349,5 @@
   ],
   "pageSettings": [],
   "templateSettings": [],
-  "globalClasses": [
-    {
-      "id": "oaihfg",
-      "name": "ph-container",
-      "settings": {}
-    },
-    {
-      "id": "cbhfjj",
-      "name": "ph-body",
-      "settings": {}
-    },
-    {
-      "id": "gmmipf",
-      "name": "ph-body--light",
-      "settings": {}
-    },
-    {
-      "id": "elnaja",
-      "name": "ph-logo",
-      "settings": {}
-    },
-    {
-      "id": "dikkak",
-      "name": "ph-footer",
-      "settings": {}
-    },
-    {
-      "id": "onafcp",
-      "name": "ph-footer__grid",
-      "settings": {}
-    },
-    {
-      "id": "bedndl",
-      "name": "ph-footer__col",
-      "settings": {}
-    },
-    {
-      "id": "kcpceg",
-      "name": "ph-footer__head",
-      "settings": {}
-    },
-    {
-      "id": "lbnaim",
-      "name": "ph-footer__legal",
-      "settings": {}
-    }
-  ],
   "version": "1.10"
 }
